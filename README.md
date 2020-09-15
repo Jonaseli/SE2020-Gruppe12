@@ -2,3 +2,5 @@
 
 # Oppgaven
 Registrere parkeringsplass, reservere parkeringsplasser fra tid til tid.
+
+Håkon
