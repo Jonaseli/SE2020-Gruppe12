@@ -37,4 +37,3 @@ Hver deltaker på gruppa skal levere
     - arbeidsfordeling og lærdom til senere prosjekter
 
 "Merk at prosjektoppgaven skal inneholde minst to forskjellige diagram fra hver av deltakerne igruppa. Disse diagrammene kan være enten dataflytdiagram, sekvensdiagram,tilstandsdiagram eller aktivitetsdiagram. Diagrammene skal vise ulike funksjoner i systemet."
-
