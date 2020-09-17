@@ -1,7 +1,5 @@
 # SE2020-Gruppe12
 
-TESTING git -Jonas
-
 # Oppgaven - En forenkling
 
 En prototype
