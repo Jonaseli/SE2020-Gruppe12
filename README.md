@@ -16,7 +16,6 @@ En dokumentasjon som
 - inneholder kravene til systemet, forklart på en måte at eksterne selskap kan videreutvikle, teste og evaluere systemet.
 
 "Hvert krav skal inneholde gruppens eget estimat til utviklingsomfang og forretningsnytte i henhold til 'T-Shirt sizing'-estimeringsmetoden (Small/Medium/Large/X-Large)"
-
 Testing
 - automatiske tester som viser at prototypen tilfredstiller kravene i dokumentasjonen
 - testene skal vise hvordan funksjonene fungerer
