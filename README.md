@@ -36,4 +36,4 @@ Hver deltaker på gruppa skal levere
     - fokus på hvordan organisasjonen av arbeidet i gruppa fungerte (positiver/negativer)
     - arbeidsfordeling og lærdom til senere prosjekter
 
-"Merk at prosjektoppgaven skal inneholde minst to forskjellige diagram fra hver av deltakerne i gruppa. Disse diagrammene kan være enten dataflytdiagram, sekvensdiagram,tilstandsdiagram eller aktivitetsdiagram. Diagrammene skal vise ulike funksjoner i systemet."
+"Merk at prosjektoppgaven skal inneholde minst to forskjellige diagram fra alle deltakerne i gruppa. Disse diagrammene kan være enten dataflytdiagram, sekvensdiagram,tilstandsdiagram eller aktivitetsdiagram. Diagrammene skal vise ulike funksjoner i systemet."
