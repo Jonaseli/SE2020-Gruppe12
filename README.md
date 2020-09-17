@@ -18,7 +18,7 @@ En dokumentasjon som
 "Hvert krav skal inneholde gruppens eget estimat til utviklingsomfang og forretningsnytte i henhold til 'T-Shirt sizing'-estimeringsmetoden (Small/Medium/Large/X-Large)"
 
 Testing
-- automatiske tester som viser at prototypen tilfredstilelr kravene i dokumentasjonen
+- automatiske tester som viser at prototypen tilfredstiller kravene i dokumentasjonen
 - testene skal vise hvordan funksjonene fungerer
 - testene skal eksponere feilsituasjonene som kan oppstå under bruk
 
