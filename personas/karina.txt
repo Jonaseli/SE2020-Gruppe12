@@ -1,0 +1,27 @@
+parkeringsplass-reservasjon app
+
+--
+
+navn
+	- Karina
+
+alder
+	- 22
+
+beskrivelse
+	- Bruker rullestol
+
+
+--
+
+motivasjon
+	- Vil helst parkere så nærme som mulig, men vil ikke risikere tilfelle stedet ikke tilbyr parkeringsplass for handicap.
+	
+mål
+	- Være sikker på å få en plass
+
+Behov
+	- Et system som sier om det er en tilgjengelig handicap-plass
+
+tekniske ferdigheter
+	- Gode
