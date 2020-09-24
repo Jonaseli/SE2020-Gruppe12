@@ -1,0 +1,31 @@
+@startuml klassediagram
+
+Abstract Class Account {
+    -username: String
+    -password: String
+}
+
+Class Administrator {
+    -reportUser()
+}
+
+Class User {
+    -rating: float
+
+    -rateuser(): void
+    -postParkingspot(): void
+    -deleteParkingspot(): void
+}
+
+Class Register {
+    
+}
+
+Feed -- Register
+Register -- Account
+Account <|-- Administrator
+Account <|-- User
+Register -- Parkingspot
+Parkingspot -- GeograficalPlace
+
+@enduml
