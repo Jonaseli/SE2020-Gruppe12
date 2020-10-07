@@ -1,0 +1,122 @@
+@startuml UML-v0.2.0
+
+
+/' ------------------------- '/
+/' ----- ABSTRACT CLASS ---- '/
+/' ------------------------- '/
+
+Abstract Class Account {
+    -suspended: boolean
+    -displayname: String
+    -ID: UUID
+}
+
+/' ------------------------- '/
+/' ------- Interface ------- '/
+/' ------------------------- '/
+
+Interface Buyer {
+    createReservation(): void
+    deleteReservation(): void
+
+}
+
+Interface Seller {
+    createParkingspot(): void
+    deleteParkingspot(): void
+    createPost(): void
+    deletePost(): void
+}
+
+Interface IRepository {
+    getPost(): Post
+    addPost(): void
+    deletePost(): void
+    getParkingspot(): Parkingspot
+    addParkingspot(): void
+    deleteParkingspot(): void
+}
+
+/' ------------------------- '/
+/' --------- USERS --------- '/
+/' ------------------------- '/
+
+Class Admin {
+    -suspendAccount(): void
+    -deletePost(): void
+}
+
+Class Corporation {
+
+}
+
+Class User {
+
+}
+
+/' ------------------------- '/
+/' ------- ADDITIONAL ------ '/
+/' ------------------------- '/
+
+Class Reservation {
+    reservatedPost: Post
+    userID: UUID
+    ID: UUID
+}
+
+Class Repository {
+    -file: File
+    -accounts: List<Account>
+    -posts: List<Post>
+    -parkingspots: List<Parkingspot>
+
+    -readData(): List<Post>
+    -writeData(): void
+    +readFromFile(): void
+}
+
+Class Post {
+    -description: String
+    -availablePeriod: Period
+    -price: Float
+}
+
+Class Parkingspot {
+    -parkinglot: Parkinglot
+    -owner: Account
+    -type: String
+    -available: Boolean
+    -widthInCentimeters: int
+    -lengthInCentimeters: int
+    -postalCode: String
+    -streetAdress: String
+    -streetNumber: String
+    -pictureURL: String
+}
+
+/' ------------------------- '/
+/' ------- Relations ------- '/
+/' ------------------------- '/
+
+User ..|> Seller
+User ..|> Buyer
+
+Corporation ..|> Seller
+
+Account <|-- User
+Account <|-- Corporation
+Account <|-- Admin
+
+Reservation o-- "1" User
+
+Post -- Reservation
+
+Repository -- Parkingspot
+Repository -- Account
+Repository o-- "1..*" Post
+
+IRepository <|.. Repository 
+
+Parkingspot <-- Account
+
+@enduml
