@@ -1,21 +1,16 @@
-parkeringsplass-reservasjon app
---
-navn
-	- Mikael Skott
+Navn: Mikael Skott
+Alder: 42
+Jobb/Rolle: Ledelse i bedrift
 
-alder
-	- 42
+Beskrivelse:
+Jobber i ledelsen i en bedrift. Det er ikke alltid han får en plass til å parkere i
+byen når han skal på jobb.
 
-stilling
-	- ledelse i bedrift
+Motivasjon:
+Parkeringsplassene i byen er fullstappa
 
---
-motivasjon
-	- Stappa fulle parkeringsplasser i byen
-	
-mål
-	- parkere nærmere arbeidsplassen
-	- sikre seg en parkeringplass ved et møte
+Mål:
+- Parkere nærmere arbeidsplassen
+- Sikre seg parkeringplass ved et møte
 
-tekniske ferdigheter
-	- Gode	
+Tekniske ferdigheter: Gode
