@@ -1,9 +1,11 @@
 package repository;
 
-import model.Account;
-import model.Post;
 import model.ParkingSpot;
+
+import java.util.ArrayList;
+
 public interface IRepository {
+    /*
     //Accounts
     //Method for finding account object by ID (or Name?)
     Account getAccount(String accountID);
@@ -15,6 +17,7 @@ public interface IRepository {
     Post getPost(String postID);
     //Get all posts stored in repo
     ArrayList<Post> getPosts();
+     */
 
     //-------------------
     //Method for finding parkingSpot object by ID

@@ -1,51 +1,49 @@
 package repository;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import model.ParkingSpot;
+
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Repository implements IRepository{
     private File file;
     //TODO create these classes
-    private ArrayList<Account> accounts;
+    //private ArrayList<Account> accounts;
     private ArrayList<ParkingSpot> parkingSpots;
-    private ArrayList<Post> posts;
+    //private ArrayList<Post> posts;
 
     public Repository(File file){
         this.file = file;
-        //input file in constructor
-        //method for reading file here.
+        parkingSpots = readValues();
+
+        //Some code to test if object were created, remove later.
+        System.out.println(parkingSpots);
+        System.out.println(parkingSpots.get(0).getOwner());
     }
 
-    //TODO method for reading from file.
+    private ArrayList<ParkingSpot> readValues(){
+        List<ParkingSpot> parkingSpots = new ArrayList<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            ParkingSpot[] parkingSpotsArray = (objectMapper.readValue(file, ParkingSpot[].class));
+            parkingSpots = Arrays.asList(parkingSpotsArray);
+        } catch(IOException e) {
+            e.printStackTrace(System.out);
+        }
+        return new ArrayList<>(parkingSpots);
+    }
+
     //TODO method for writing to file.
-    //Need to know how the JSON file looks before creating these.
 
     @Override
-    public Account getAccount(String accountID) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Account> getAccounts() {
-        return null;
-    }
-
-    @Override
-    public Post getPost(String postID) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Post> getPosts() {
-        return null;
-    }
-
-    @Override
-    public ParkingSpot getParkingSpot(String spotID) {
-        return null;
-    }
+    public ParkingSpot getParkingSpot(String spotID) { return null; }
 
     @Override
     public ArrayList<ParkingSpot> getParkingSpots() {
-        return null;
+        return parkingSpots;
     }
 }
