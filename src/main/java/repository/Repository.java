@@ -27,6 +27,8 @@ public class Repository implements IRepository{
         reservations = readReservationValues();
     }
 
+    //Parking spots read/write
+
     private ArrayList<ParkingSpot> readParkingSpotValues(){
         List<ParkingSpot> parkingSpots = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -38,6 +40,17 @@ public class Repository implements IRepository{
         }
         return new ArrayList<>(parkingSpots);
     }
+
+    private void writeParkingSpotValues() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[0]), parkingSpots);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    //Accounts read/write
 
     private ArrayList<Account> readAccountValues(){
         List<Account> accounts = new ArrayList<>();
@@ -51,6 +64,17 @@ public class Repository implements IRepository{
         return new ArrayList<>(accounts);
     }
 
+    private void writeAccountValues() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[1]), accounts);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    //Posts read/write
+
     private ArrayList<Post> readPostValues(){
         List<Post> posts = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -62,6 +86,17 @@ public class Repository implements IRepository{
         }
         return new ArrayList<>(posts);
     }
+
+    private void writePostValues() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[2]), posts);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    //Reservation read/write
 
     private ArrayList<Reservation> readReservationValues(){
         List<Reservation> reservations = new ArrayList<>();
@@ -75,7 +110,14 @@ public class Repository implements IRepository{
         return new ArrayList<>(reservations);
     }
 
-    //TODO method for writing to file.
+    private void writeReservationValues() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[3]), reservations);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }
+    }
 
     @Override
     public Account getAccount(String accountID) { return null; }
@@ -84,10 +126,22 @@ public class Repository implements IRepository{
     public ArrayList<Account> getAccounts() { return accounts; }
 
     @Override
+    public void createAccount(String accountID, String displayName, boolean suspended) {
+        accounts.add(new Account(accountID, displayName, suspended));
+        writeAccountValues();
+    }
+
+    @Override
     public Post getPost(String postID) { return null; }
 
     @Override
     public ArrayList<Post> getPosts() { return posts; }
+
+    @Override
+    public void createPost(String parkingSpotID, String availablePeriod, double price) {
+        posts.add(new Post(parkingSpotID, availablePeriod, price));
+        writePostValues();
+    }
 
     @Override
     public ParkingSpot getParkingSpot(String spotID) { return null; }
@@ -98,8 +152,20 @@ public class Repository implements IRepository{
     }
 
     @Override
+    public void createParkingSpot(String owner, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
+        parkingSpots.add(new ParkingSpot(owner, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
+        writeParkingSpotValues();
+    }
+
+    @Override
     public Reservation getReservation(String reservationID) { return null; }
 
     @Override
     public ArrayList<Reservation> getReservations() { return reservations; }
+
+    @Override
+    public void createReservation(String reservedPostID, String userID, String reservationID) {
+        reservations.add(new Reservation(reservedPostID, userID, reservationID));
+        writeReservationValues();
+    }
 }
