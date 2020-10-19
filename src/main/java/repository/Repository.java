@@ -25,19 +25,6 @@ public class Repository implements IRepository{
         accounts = readAccountValues();
         posts = readPostValues();
         reservations = readReservationValues();
-
-        //Some code to test if object were created, remove later.
-        System.out.println(accounts);
-        System.out.println(accounts.get(0).getAccountID());
-
-        System.out.println(parkingSpots);
-        System.out.println(parkingSpots.get(0).getOwner());
-
-        System.out.println(posts);
-        System.out.println(posts.get(0).getParkingSpotID());
-
-        System.out.println(reservations);
-        System.out.println(reservations.get(0).getReservationID());
     }
 
     private ArrayList<ParkingSpot> readParkingSpotValues(){
@@ -91,24 +78,16 @@ public class Repository implements IRepository{
     //TODO method for writing to file.
 
     @Override
-    public Account getAccount(String accountID) {
-        return null;
-    }
+    public Account getAccount(String accountID) { return null; }
 
     @Override
-    public ArrayList<Account> getAccounts() {
-        return null;
-    }
+    public ArrayList<Account> getAccounts() { return accounts; }
 
     @Override
-    public Post getPost(String postID) {
-        return null;
-    }
+    public Post getPost(String postID) { return null; }
 
     @Override
-    public ArrayList<Post> getPosts() {
-        return null;
-    }
+    public ArrayList<Post> getPosts() { return posts; }
 
     @Override
     public ParkingSpot getParkingSpot(String spotID) { return null; }
@@ -119,12 +98,8 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Reservation getReservation(String reservationID) {
-        return null;
-    }
+    public Reservation getReservation(String reservationID) { return null; }
 
     @Override
-    public ArrayList<Reservation> getReservations() {
-        return null;
-    }
+    public ArrayList<Reservation> getReservations() { return reservations; }
 }
