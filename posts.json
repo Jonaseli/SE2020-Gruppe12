@@ -1,0 +1,17 @@
+[ {
+  "parkingSpotID" : "1",
+  "availablePeriod" : "testDate1",
+  "price" : 80.0
+}, {
+  "parkingSpotID" : "2",
+  "availablePeriod" : "testDate2",
+  "price" : 50.0
+}, {
+  "parkingSpotID" : "3",
+  "availablePeriod" : "testDate3",
+  "price" : 40.0
+}, {
+  "parkingSpotID" : "test5",
+  "availablePeriod" : "test5",
+  "price" : 50.5
+} ]

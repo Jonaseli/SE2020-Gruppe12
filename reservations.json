@@ -1,0 +1,17 @@
+[ {
+  "reservedPostID" : "postID1",
+  "userID" : "userID1",
+  "reservationID" : "reservationID1"
+}, {
+  "reservedPostID" : "postID2",
+  "userID" : "userID2",
+  "reservationID" : "reservationID2"
+}, {
+  "reservedPostID" : "postID3",
+  "userID" : "userID3",
+  "reservationID" : "reservationID3"
+}, {
+  "reservedPostID" : "test5",
+  "userID" : "test5",
+  "reservationID" : "test5"
+} ]
