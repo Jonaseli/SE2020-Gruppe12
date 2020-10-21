@@ -2,6 +2,8 @@ package model;
 
 public class Corporation extends Account {
 
+    public Corporation(){}
+
     public Corporation(String accountID, String displayName, boolean suspended) {
         super(accountID, displayName, suspended);
     }
