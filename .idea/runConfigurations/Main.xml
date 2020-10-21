@@ -4,8 +4,8 @@
     <module name="SE2020-Gruppe12" />
     <method v="2">
       <option name="Make" enabled="true" />
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="does_JSON_files_exist" run_configuration_type="JUnit" />
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="reading_from_file" run_configuration_type="JUnit" />
+      <option name="RunConfigurationTask" enabled="true" />
+      <option name="RunConfigurationTask" enabled="true" />
       <option name="LaunchBrowser.Before.Run" url="http://localhost:7000/" />
     </method>
   </configuration>
