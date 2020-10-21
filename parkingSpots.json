@@ -1,0 +1,41 @@
+[ {
+  "owner" : "Ole",
+  "type" : "normal",
+  "available" : true,
+  "width" : 250,
+  "height" : 400,
+  "postalCode" : "1650",
+  "streetAddress" : "parkgata",
+  "streetNumber" : "15",
+  "pictureURL" : ""
+}, {
+  "owner" : "Hans",
+  "type" : "normal",
+  "available" : true,
+  "width" : 300,
+  "height" : 400,
+  "postalCode" : "1750",
+  "streetAddress" : "parkvegen",
+  "streetNumber" : "8",
+  "pictureURL" : ""
+}, {
+  "owner" : "Tom",
+  "type" : "normal",
+  "available" : true,
+  "width" : 280,
+  "height" : 390,
+  "postalCode" : "1850",
+  "streetAddress" : "dårlig gate",
+  "streetNumber" : "3",
+  "pictureURL" : ""
+}, {
+  "owner" : "test5",
+  "type" : "test5",
+  "available" : true,
+  "width" : 50,
+  "height" : 50,
+  "postalCode" : "test5",
+  "streetAddress" : "test5",
+  "streetNumber" : "test5",
+  "pictureURL" : "test5"
+} ]
