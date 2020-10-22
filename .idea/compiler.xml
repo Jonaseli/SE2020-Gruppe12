@@ -9,7 +9,7 @@
         <module name="SE2020-Gruppe12" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="SE2020-Gruppe12" target="14" />
     </bytecodeTargetLevel>
   </component>
