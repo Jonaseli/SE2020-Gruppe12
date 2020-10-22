@@ -3,20 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>no.hiof.gruppe12</groupId>
     <artifactId>SE2020-Gruppe12</artifactId>
     <version>1.0-SNAPSHOT</version>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.javalin/javalin -->
         <dependency>
             <groupId>io.javalin</groupId>
             <artifactId>javalin</artifactId>
-            <version>3.7.0</version>
+            <version>3.11.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -52,7 +49,6 @@
             <version>2.9.9</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -67,5 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
