@@ -15,7 +15,6 @@ public class Main {
         filesPaths[2] = "posts.json";
         filesPaths[3] = "reservations.json";
 
-
         app.get("/", new VueComponent("login-page"));
 
         //Vue
