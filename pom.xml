@@ -43,6 +43,8 @@
             <artifactId>vue-property-decorator</artifactId>
             <version>8.3.0</version>
         </dependency>
+
+        <!-- Disse er fra et annet prosjekt. Vi hadde feil dependencies som gjorde at vue ikke fungerte riktig. Må fjerne de vi ikke trenger -->
         <dependency>
             <groupId>io.javalin</groupId>
             <artifactId>javalin</artifactId>
