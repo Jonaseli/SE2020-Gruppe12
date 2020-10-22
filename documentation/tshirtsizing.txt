@@ -1,0 +1,28 @@
+T-shirt sizing
+Viktighet, vanskelighetsgrad
+
+7 Konto - XL, S
+7 Bruker, kan logge inn som bruker - XL, S
+0 Bruker, må oppgi skiltnummer - S, S
+0 Bruker, bestille parkeringsplass - XL, XL
+-6 Bruker, kan se tilgjengelige parkeringsplasser - M, XL
+
+7 Parkeringsplass - XL, S
+-1 P-plass, bilde - S, M
+
+0 Lokasjon-klasse - S, S
+-1 Tid - S, M
+
+7 Reservasjon - XL, S
+0 Reservasjon, skiltnummer - S, S
+
+7 Innlegg - XL, S
+
+0 Database controller - XL, XL
+0 Database repository - XL, XL
+
+7 Utleier - XL, S
+-7 Utleier, redigere innlegg - S, XL
+-2 Utleier, slette inlegg - M, L
+0 Utleier, legge ut innlegg - XL, XL
+-3 Utleier, se egne innlegg - S, L
