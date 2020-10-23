@@ -1,7 +1,11 @@
 <template id ="login">
     <div>
-        <h1>Login Page</h1>
-        <button id="userBttn">Logg in as User</button>
+        <header>
+            <h1>Login Page</h1>
+        </header>
+        <main>
+            <button id="userBttn" class="center">Logg in as User</button>
+        </main>
     </div>
 </template>
 <script>
@@ -18,4 +22,15 @@
     }
 </script>
 <style>
+    header {
+        text-align: center;
+    }
+
+    main {
+        text-align: center;
+    }
+
+    main, button {
+        height: 50px;
+    }
 </style>
