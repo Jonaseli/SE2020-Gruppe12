@@ -13,110 +13,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Repository implements IRepository{
-    private String[] filePaths;
     private ArrayList<Account> accounts;
     private ArrayList<ParkingSpot> parkingSpots;
     private ArrayList<Post> posts;
     private ArrayList<Reservation> reservations;
 
-    public Repository(String[] filePaths){
-        this.filePaths = filePaths;
-        parkingSpots = readParkingSpotValues();
-        accounts = readAccountValues();
-        posts = readPostValues();
-        reservations = readReservationValues();
-    }
+    private Account account = new Account();
+    private ParkingSpot parkingSpot = new ParkingSpot();
+    private Post post = new Post();
+    private Reservation reservation = new Reservation();
 
-    //Parking spots read/write
+    private final String accountPath = "accounts.json";
+    private final String parkingSpotPath = "parkingSpots.json";
+    private final String postPath = "posts.json";
+    private final String reservationPath = "reservations.json";
 
-    private ArrayList<ParkingSpot> readParkingSpotValues(){
-        List<ParkingSpot> parkingSpots = new ArrayList<>();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            ParkingSpot[] parkingSpotsArray = (objectMapper.readValue(new File(filePaths[0]), ParkingSpot[].class));
-            parkingSpots = Arrays.asList(parkingSpotsArray);
-        } catch(IOException e) {
-            e.printStackTrace(System.out);
-        }
-        return new ArrayList<>(parkingSpots);
-    }
-
-    private void writeParkingSpotValues() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[0]), parkingSpots);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
-        }
-    }
-
-    //Accounts read/write
-
-    private ArrayList<Account> readAccountValues(){
-        List<Account> accounts = new ArrayList<>();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            Account[] accountsArray = (objectMapper.readValue(new File(filePaths[1]), Account[].class));
-            accounts = Arrays.asList(accountsArray);
-        } catch(IOException e) {
-            e.printStackTrace(System.out);
-        }
-        return new ArrayList<>(accounts);
-    }
-
-    private void writeAccountValues() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[1]), accounts);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
-        }
-    }
-
-    //Posts read/write
-
-    private ArrayList<Post> readPostValues(){
-        List<Post> posts = new ArrayList<>();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            Post[] postsArray = (objectMapper.readValue(new File(filePaths[2]), Post[].class));
-            posts = Arrays.asList(postsArray);
-        } catch(IOException e) {
-            e.printStackTrace(System.out);
-        }
-        return new ArrayList<>(posts);
-    }
-
-    private void writePostValues() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[2]), posts);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
-        }
-    }
-
-    //Reservation read/write
-
-    private ArrayList<Reservation> readReservationValues(){
-        List<Reservation> reservations = new ArrayList<>();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            Reservation[] reservationsArray = (objectMapper.readValue(new File(filePaths[3]), Reservation[].class));
-            reservations = Arrays.asList(reservationsArray);
-        } catch(IOException e) {
-            e.printStackTrace(System.out);
-        }
-        return new ArrayList<>(reservations);
-    }
-
-    private void writeReservationValues() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePaths[3]), reservations);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
-        }
+    public Repository(){
+        accounts = account.readFromFile(accountPath, Account[].class);
+        parkingSpots = parkingSpot.readFromFile(parkingSpotPath, ParkingSpot[].class);
+        posts = post.readFromFile(postPath, Post[].class);
+        reservations = reservation.readFromFile(reservationPath, Reservation[].class);
     }
 
     @Override
@@ -128,7 +44,7 @@ public class Repository implements IRepository{
     @Override
     public void createAccount(String accountID, String displayName, boolean suspended) {
         accounts.add(new Account(accountID, displayName, suspended));
-        writeAccountValues();
+        account.writeToFile(accountPath, accounts);
     }
 
     @Override
@@ -140,7 +56,7 @@ public class Repository implements IRepository{
     @Override
     public void createPost(String parkingSpotID, String availablePeriod, double price) {
         posts.add(new Post(parkingSpotID, availablePeriod, price));
-        writePostValues();
+        post.writeToFile(postPath, posts);
     }
 
     @Override
@@ -154,7 +70,7 @@ public class Repository implements IRepository{
     @Override
     public void createParkingSpot(String owner, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
         parkingSpots.add(new ParkingSpot(owner, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
-        writeParkingSpotValues();
+        parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
     @Override
@@ -166,6 +82,6 @@ public class Repository implements IRepository{
     @Override
     public void createReservation(String reservedPostID, String userID, String reservationID) {
         reservations.add(new Reservation(reservedPostID, userID, reservationID));
-        writeReservationValues();
+        reservation.writeToFile(reservationPath, reservations);
     }
 }
