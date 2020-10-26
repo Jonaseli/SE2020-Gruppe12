@@ -1,16 +1,11 @@
 package repository;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Account;
 import model.ParkingSpot;
 import model.Post;
 import model.Reservation;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Repository implements IRepository{
     private ArrayList<Account> accounts;
