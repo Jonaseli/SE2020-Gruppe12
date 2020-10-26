@@ -3,11 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>no.hiof.gruppe12</groupId>
     <artifactId>SE2020-Gruppe12</artifactId>
     <version>1.0-SNAPSHOT</version>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.javalin/javalin -->
@@ -38,14 +36,19 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars.npm/vue -->
         <dependency>
             <groupId>org.webjars.npm</groupId>
-            <artifactId>vue-property-decorator</artifactId>
-            <version>8.3.0</version>
+            <artifactId>vue</artifactId>
+            <version>2.6.10</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+            <version>2.9.9</version>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -60,5 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
