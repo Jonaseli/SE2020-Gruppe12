@@ -9,20 +9,15 @@ public class Main {
 
         app.config.enableWebjars();
 
-        String[] filesPaths = new String[4];
-
-        filesPaths[0] = "parkingSpots.json";
-        filesPaths[1] = "accounts.json";
-        filesPaths[2] = "posts.json";
-        filesPaths[3] = "reservations.json";
-
-
         //Vue
         //Får opp blank side, så vue fungerer, lurer på om det er lurt å separate repo objekter for hver import
         //dersom vi ikke får inn all info på samme side
         app.get("/parkingSpot", new VueComponent("parkingSpots-overview"));
 
-        Repository repo = new Repository(filesPaths);
+        Repository repo = new Repository();
+
+        System.out.println("Got here");
+        System.out.println(repo.getReservations().get(0).getReservationID());
 
         //api
         Controller parkingSpotController = new Controller(repo);
