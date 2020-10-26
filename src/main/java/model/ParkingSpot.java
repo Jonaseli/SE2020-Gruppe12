@@ -1,6 +1,6 @@
 package model;
 
-public class ParkingSpot {
+public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
     private String owner;
     private String type;
     private boolean available;

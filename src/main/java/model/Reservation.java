@@ -1,6 +1,6 @@
 package model;
 
-public class Reservation {
+public class Reservation implements JSONReadable<Reservation>, JSONWritable<Reservation>{
 
     private String reservedPostID, userID, reservationID;
 

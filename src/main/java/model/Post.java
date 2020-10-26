@@ -1,6 +1,6 @@
 package model;
 
-public class Post {
+public class Post implements JSONReadable<Post>, JSONWritable<Post>{
 
     private String parkingSpotID, availablePeriod;
     private double price;

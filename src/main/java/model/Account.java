@@ -1,6 +1,6 @@
 package model;
 
-public class Account {
+public class Account implements JSONReadable<Account>, JSONWritable<Account>{
 
     private String accountID, displayName;
     private boolean suspended;
