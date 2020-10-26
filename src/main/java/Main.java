@@ -16,9 +16,6 @@ public class Main {
 
         Repository repo = new Repository();
 
-        System.out.println("Got here");
-        System.out.println(repo.getReservations().get(0).getReservationID());
-
         //api
         Controller parkingSpotController = new Controller(repo);
         app.get("api/parkingSpot", parkingSpotController :: getAllSpots);
