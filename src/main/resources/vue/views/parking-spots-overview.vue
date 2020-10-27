@@ -1,10 +1,10 @@
-<template id="parkingSpots-overview">
+<template id="parking-spots-overview">
    <div>
-       <h1>Planet systems</h1>
-        <ul class="parkingSpots-overview-list">
+       <h1>Parking</h1>
+        <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in parkingSpots">
-                <a :href="`/posts/${parkingSpot.streetAddress.trim()}`" class="link-to-parkingSpot-details">
-                    <div class="single-parkingSpot-container" >
+                <a :href="`/parking-spot/${parkingSpot.streetAddress}`" class="link-to-parking-spot-details">
+                    <div class="single-parking-spot-container" >
                         <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
                         <h1>{{parkingSpot.owner}}</h1>
                     </div>
@@ -14,17 +14,16 @@
    </div>
 </template>
 <script>
-    Vue.component("parkingSpots-overview", {
-        template: "#parkingSpots-overview",
+
+    Vue.component("parking-spots-overview", {
+        template: "#parking-spots-overview",
         data: () => ({
             parkingSpots: [],
         }),
         created() {
-            fetch("/api/parkingSpots")
+            fetch("/api/parking-spot")
                 .then(res => res.json())
-                .then(res => {
-                   this.parkingSpots = res;
-                })
+                .then(res => this.parkingSpots = res)
                 .catch(() => alert("Error while fetching parkingspots"));
         }
     });
@@ -34,26 +33,26 @@
         list-style-type: none;
     }
 
-    .parkingSpots-overview-list{
+    .parking-spots-overview-list{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .parkingSpot-overview-list li{
+    .parking-spot-overview-list li{
         padding: 10px;
         border: 1px solid white;
         border-radius: 15px;
     }
 
-    .link-to-parkingSpot-details{
+    .link-to-parking-spot-details{
         width: 400px;
         height:100px;
         text-decoration: none;
         color: white;
     }
 
-    div.single-parkingSpot-container{
+    div.single-parking-spot-container{
         overflow: hidden;
         width: 500px;
         background-color: #000000;
@@ -62,7 +61,7 @@
         text-align: center;
     }
 
-    div.single-parkingSpot-container:hover{
+    div.single-parking-spot-container:hover{
         opacity: 1.0;
         overflow: hidden;
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
