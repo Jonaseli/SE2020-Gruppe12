@@ -10,9 +10,9 @@ public class test_Corporation_functions {
         Corporation testCorporation_ID = new Corporation();
 
         assertEquals("ID"
-                ,testCorporation_ID.getAccountId("ID"));
+                ,testCorporation_ID.getAccountId());
         assertEquals("3221"
-                ,testCorporation_ID.getAccountId("3221"));
+                ,testCorporation_ID.getAccountId());
     }
 
     @Test
@@ -20,9 +20,9 @@ public class test_Corporation_functions {
         Corporation testCorporation_Name = new Corporation();
 
         assertEquals("Olav",
-                testCorporation_Name.getDisplayName("Olav"));
+                testCorporation_Name.getDisplayName());
         assertEquals("Lise",
-                testCorporation_Name.getDisplayName("Lise"));
+                testCorporation_Name.getDisplayName());
     }
 
 

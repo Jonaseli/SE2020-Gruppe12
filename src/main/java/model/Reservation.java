@@ -4,15 +4,15 @@ import java.util.UUID;
 
 public class Reservation {
 
-    private UUID reservationId, postId;
-    private String userId, parkingTime;
+    private UUID reservationId, postId, accountId;
+    private String parkingTime;
 
     public Reservation(){}
 
-    public Reservation(UUID postId, String userId, String parkingTime){
+    public Reservation(UUID postId, UUID accountId, String parkingTime){
         this.reservationId = UUID.randomUUID();
         this.postId = postId;
-        this.userId = userId;
+        this.accountId = accountId;
         this.parkingTime = parkingTime;
     }
 
@@ -24,8 +24,8 @@ public class Reservation {
         return postId;
     }
 
-    public String getUserId() {
-        return userId;
+    public UUID getAccountId() {
+        return accountId;
     }
 
     public String getParkingTime() {

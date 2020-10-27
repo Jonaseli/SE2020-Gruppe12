@@ -165,7 +165,7 @@ public class Repository implements IRepository{
     public ArrayList<Reservation> getReservations() { return reservations; }
 
     @Override
-    public void createReservation(UUID postId, String userId, String parkingTime) {
+    public void createReservation(UUID postId, UUID userId, String parkingTime) {
         reservations.add(new Reservation(postId, userId, parkingTime));
         writeReservationValues();
     }
