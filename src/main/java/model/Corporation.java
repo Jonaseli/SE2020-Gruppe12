@@ -6,8 +6,8 @@ public class Corporation extends Account {
 
     public Corporation(){}
 
-    public Corporation(String displayName, boolean suspended) {
-        super(displayName, suspended);
+    public Corporation(String displayName) {
+        super(displayName);
     }
 
     //TODO

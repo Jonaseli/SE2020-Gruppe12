@@ -6,7 +6,7 @@
                 <a :href="`/posts/${parkingSpot.streetAddress.trim()}`" class="link-to-parkingSpot-details">
                     <div class="single-parkingSpot-container" >
                         <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.owner}}</h1>
+                        <h1>{{parkingSpot.ownerId}}</h1>
                     </div>
                 </a>
             </li>
