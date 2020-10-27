@@ -6,41 +6,42 @@ import model.Post;
 import model.Reservation;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public interface IRepository {
 
     //Accounts
-    //Method for finding account object by ID (or Name?)
-    Account getAccount(String accountID);
+    //Method for finding account object by Id (or Name?)
+    Account getAccount(UUID accountId);
     //Get all accounts stored in repo
     ArrayList<Account> getAccounts();
     //Add a single account
-    void createAccount(String accountID, String displayName, boolean suspended);
+    void createAccount(String displayName);
 
     //-------------------
     //Method for finding post object by ID
-    Post getPost(String postID);
+    Post getPost(String postId);
     //Get all posts stored in repo
     ArrayList<Post> getPosts();
     //Add a single post
-    void createPost(String parkingSpotID, String availablePeriod, double price);
+    void createPost(UUID parkingSpotId, String availablePeriod, double price);
 
     //-------------------
     //Method for finding parkingSpot object by ID
-    ParkingSpot getParkingSpot(String spotID);
+    ParkingSpot getParkingSpot(UUID parkingSpotId);
     //Get all parking spots stored in repo
     ArrayList<ParkingSpot> getParkingSpots();
     //Add a single parking spot
-    void createParkingSpot(String owner, String type, boolean available, int width,
+    void createParkingSpot(UUID ownerId, String type, boolean available, int width,
                            int height, String postalCode, String streetAddress,
                            String streetNumber, String pictureURL);
 
     //-------------------
     //Method for finding reservation object by ID
-    Reservation getReservation(String reservationID);
+    Reservation getReservation(UUID reservationId);
     //Get all reservations stored in repo
     ArrayList<Reservation> getReservations();
     //Add a single reservation
-    void createReservation(String userId, String reservationId);
+    void createReservation(UUID postId, String userId, String parkingTime);
 
 }

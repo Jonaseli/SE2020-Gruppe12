@@ -10,10 +10,10 @@ public class Account {
 
     public Account(){}
 
-    public Account(String displayName, boolean suspended){
+    public Account(String displayName){
         this.accountId = UUID.randomUUID();
         this.displayName = displayName;
-        this.suspended = suspended;
+        this.suspended = false;
     }
 
     public UUID getAccountId() {

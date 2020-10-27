@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class Repository implements IRepository{
     private String[] filePaths;
@@ -120,14 +121,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Account getAccount(String accountID) { return null; }
+    public Account getAccount(UUID accountId) { return null; }
 
     @Override
     public ArrayList<Account> getAccounts() { return accounts; }
 
     @Override
-    public void createAccount(String accountID, String displayName, boolean suspended) {
-        accounts.add(new Account(displayName, suspended));
+    public void createAccount(String displayName) {
+        accounts.add(new Account(displayName));
         writeAccountValues();
     }
 
@@ -138,13 +139,13 @@ public class Repository implements IRepository{
     public ArrayList<Post> getPosts() { return posts; }
 
     @Override
-    public void createPost(String parkingSpotID, String availablePeriod, double price) {
-        posts.add(new Post(parkingSpotID, availablePeriod, price));
+    public void createPost(UUID parkingSpotId, String availablePeriod, double price) {
+        posts.add(new Post(parkingSpotId, availablePeriod, price));
         writePostValues();
     }
 
     @Override
-    public ParkingSpot getParkingSpot(String spotID) { return null; }
+    public ParkingSpot getParkingSpot(UUID spotId) { return null; }
 
     @Override
     public ArrayList<ParkingSpot> getParkingSpots() {
@@ -152,20 +153,20 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public void createParkingSpot(String owner, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
-        parkingSpots.add(new ParkingSpot(owner, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
+    public void createParkingSpot(UUID ownerId, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
+        parkingSpots.add(new ParkingSpot(ownerId, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
         writeParkingSpotValues();
     }
 
     @Override
-    public Reservation getReservation(String reservationID) { return null; }
+    public Reservation getReservation(UUID reservationId) { return null; }
 
     @Override
     public ArrayList<Reservation> getReservations() { return reservations; }
 
     @Override
-    public void createReservation(String userId, String reservationId) {
-        reservations.add(new Reservation(userId, reservationId));
+    public void createReservation(UUID postId, String userId, String parkingTime) {
+        reservations.add(new Reservation(postId, userId, parkingTime));
         writeReservationValues();
     }
 }
