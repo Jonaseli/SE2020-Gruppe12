@@ -4,7 +4,7 @@
             <h1>Login Page</h1>
         </header>
         <main>
-            <button id="userBttn" class="center">Logg in as User</button>
+            <button id="userBtn" class="center">Login as User</button>
         </main>
     </div>
 </template>
@@ -15,8 +15,8 @@
 
     window.onload = startup;
     function startup(){
-        var bttn = document.getElementById("userBttn");
-        bttn.addEventListener("click", function () {
+        const btn = document.getElementById("userBtn");
+        btn.addEventListener("click", function () {
                 console.log("clicked");
         });
     }
