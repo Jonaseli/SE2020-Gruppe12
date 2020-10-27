@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class test_Corporation_functions {
 
     @Test
-    public void get_Corporation_ID(){
+    public void get_Corporation_Id(){
         Corporation testCorporation_ID = new Corporation();
 
         assertEquals("ID"
-                ,testCorporation_ID.getCorporation_ID("ID"));
+                ,testCorporation_ID.getCorporation_Id("ID"));
         assertEquals("3221"
-                ,testCorporation_ID.getCorporation_ID("3221"));
+                ,testCorporation_ID.getCorporation_Id("3221"));
     }
 
     @Test

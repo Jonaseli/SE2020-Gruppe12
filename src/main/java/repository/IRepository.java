@@ -41,6 +41,6 @@ public interface IRepository {
     //Get all reservations stored in repo
     ArrayList<Reservation> getReservations();
     //Add a single reservation
-    void createReservation(String reservedPostID, String userID, String reservationID);
+    void createReservation(String userId, String reservationId);
 
 }

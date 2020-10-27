@@ -1,24 +1,28 @@
 package model;
 
+import java.util.UUID;
+
 public class Post {
 
-    private String parkingSpotID, availablePeriod;
+    private UUID postId, parkingSpotId;
+    private String availablePeriod;
     private double price;
 
     public Post(){}
 
-    public Post(String parkingSpotID, String availablePeriod, double price){
-        this.parkingSpotID = parkingSpotID;
+    public Post(UUID parkingSpotId, String availablePeriod, double price){
+        this.postId = UUID.randomUUID();
+        this.parkingSpotId = parkingSpotId;
         this.availablePeriod = availablePeriod;
         this.price = price;
     }
 
-    public String getParkingSpotID() {
-        return parkingSpotID;
+    public UUID getPostId() {
+        return postId;
     }
 
-    public void setParkingSpotID(String parkingSpotID) {
-        this.parkingSpotID = parkingSpotID;
+    public UUID getParkingSpotId() {
+        return parkingSpotId;
     }
 
     public String getAvailablePeriod() {

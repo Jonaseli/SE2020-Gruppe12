@@ -127,7 +127,7 @@ public class Repository implements IRepository{
 
     @Override
     public void createAccount(String accountID, String displayName, boolean suspended) {
-        accounts.add(new Account(accountID, displayName, suspended));
+        accounts.add(new Account(displayName, suspended));
         writeAccountValues();
     }
 
@@ -164,8 +164,8 @@ public class Repository implements IRepository{
     public ArrayList<Reservation> getReservations() { return reservations; }
 
     @Override
-    public void createReservation(String reservedPostID, String userID, String reservationID) {
-        reservations.add(new Reservation(reservedPostID, userID, reservationID));
+    public void createReservation(String userId, String reservationId) {
+        reservations.add(new Reservation(userId, reservationId));
         writeReservationValues();
     }
 }
