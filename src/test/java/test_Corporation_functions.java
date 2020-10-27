@@ -10,19 +10,19 @@ public class test_Corporation_functions {
         Corporation testCorporation_ID = new Corporation();
 
         assertEquals("ID"
-                ,testCorporation_ID.getAccountId());
+                ,testCorporation_ID.getAccountId("ID"));
         assertEquals("3221"
-                ,testCorporation_ID.getAccountId());
+                ,testCorporation_ID.getAccountId("3221"));
     }
 
     @Test
     public void get_Corporation_Name(){
-        Corporation testCorporation_Name = new Corporation();
+        Corporation testgCorporation_Name = new Corporation();
 
         assertEquals("Olav",
-                testCorporation_Name.getDisplayName());
+                testgCorporation_Name.getDisplayName("Olav"));
         assertEquals("Lise",
-                testCorporation_Name.getDisplayName());
+                testgCorporation_Name.getDisplayName("Lise"));
     }
 
 
@@ -31,8 +31,8 @@ public class test_Corporation_functions {
         Corporation testCorporation_Suspended = new Corporation();
 
         assertEquals(true,
-                testCorporation_Suspended.isSuspended());
+                testCorporation_Suspended.isSuspended(true));
         assertEquals(false,
-                testCorporation_Suspended.isSuspended());
+                testCorporation_Suspended.isSuspended(false));
     }
 }
