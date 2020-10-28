@@ -1,19 +1,27 @@
-\documentclass[12pt]{article}%
+% preamble %
+\documentclass[12pt]{article}
 \usepackage{amsfonts}
 \usepackage{fancyhdr}
 \usepackage{comment}
-\usepackage[a4paper, top=1cm, bottom=1.5cm, left=2cm, right=2cm]%
-{geometry}
+\usepackage[a4paper, top=1cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
 \usepackage{enumitem}
 \usepackage{times}
 \usepackage{changepage}
 \usepackage{amssymb}
-\usepackage{graphicx}%
+\usepackage{graphicx}
+\usepackage{tabularx}
 
+% settings %
+\renewcommand{\contentsname}{Innholdsfortegnelse}
+
+% commands %
+
+
+% document %
 \begin{document}
-
-% meta
-\title{Prosjektoppgave - Software Engineering}
+\title{%
+    Kravspesifikasjon\\
+    \large Parkeringsplass reservasjons-app }
 \author{Gruppe 12}
 \date{}
 \maketitle
@@ -24,8 +32,40 @@
 
 \newpage
 
-\section{Hello Verden}
+\section{Hensikt}
+En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delingsøkonomi. Siden parkeringsplasser er en ressurs som tilstrekkelig, valgte de det. Du har sikkert vært på utkikk etter en ledig parkeringsplass den dagen du skulle shoppe med noen venner, delta i et viktig møte eller rekke et tog, men samme hvor du ser står det en bil. Det kan være både frustrerende og leit, spesielt når tiden er avgjørende. Dette ønsker en oppstartsbedrift å løse ved å lage en tjeneste der enkeltpersoner og bedrifter kan leie ut parkeringsplassene sine til andre.
 
-\section{Hei World}
+\section{Scope}
+
+\section{Definisjoner}
+
+\begin{center}
+    \begin{tabular}{|p{4cm}|p{12cm}| } 
+        \hline
+        \bf Begrep & \bf Beskrivelse \\
+        \hline
+        Bruker & Besøkende som samhandler med systemet \\
+        \hline
+        Eier & ... \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\section{Krav}
+
+\subsection{Innlogging}
+Ved første øyeblikk skal bruker bli møtt med en innloggingsside, der bruker kan opprette en konto. De kan opprette en brukerkonto eller en bedriftskonto.
+
+\subsubsection{Funksjonelt krav - Bruker skal kunne opprette en brukerkonto}
+Bruker må oppgi unike brukernavn, passord og e-post.
+
+\subsubsection{Funksjonelt krav - Bruker skal kunne opprette en bedriftskonto}
+Bruker må oppgi unike brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
+
+\subsubsection{Funksjonelt krav - Registreringen skal bli verifisert av systemet}
+Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+
+\subsubsection{Funksjonelt krav - Bruker skal kunne logge inn}
+BES: Når bruker logger inn på tjenesten må bruker oppgi riktig informasjon. Ved innlogging skal bruker bli ført til startsiden på tjenesten
 
 \end{document}
