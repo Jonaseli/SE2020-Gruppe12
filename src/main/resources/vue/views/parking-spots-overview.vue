@@ -3,7 +3,7 @@
        <h1>Parking</h1>
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in parkingSpots">
-                <a :href="`/parking-spot/${parkingSpot.streetAddress}`" class="link-to-parking-spot-details">
+                <a :href="`/parking-spot/${parkingSpot.streetAddress}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
                         <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
                         <h1>{{parkingSpot.owner}}</h1>
@@ -45,7 +45,7 @@
         border-radius: 15px;
     }
 
-    .link-to-parking-spot-details{
+    .link-to-parking-spot-detail{
         width: 400px;
         height:100px;
         text-decoration: none;
