@@ -20,6 +20,7 @@ public class Main {
         //Får opp blank side, så vue fungerer, lurer på om det er lurt å separate repo objekter for hver import
         //dersom vi ikke får inn all info på samme side
         app.get("/parking-spot", new VueComponent("parking-spots-overview"));
+        app.get("/parking-spot/:parking-spot-id", new VueComponent("parking-spot-detail"));
 
         Repository repo = new Repository(filesPaths);
 
@@ -27,6 +28,7 @@ public class Main {
         //api
         Controller parkingSpotController = new Controller(repo);
         app.get("api/parking-spot", parkingSpotController :: getParkingSpots);
+        app.get("api/parking-spot/:parking-spot-id", parkingSpotController :: getParking);
 
     }
 
