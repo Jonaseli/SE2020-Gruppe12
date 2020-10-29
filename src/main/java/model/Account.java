@@ -1,24 +1,23 @@
 package model;
 
+import java.util.UUID;
+
 public class Account {
 
-    private String accountID, displayName;
+    private UUID accountId;
+    private String displayName;
     private boolean suspended;
 
     public Account(){}
 
-    public Account(String accountID, String displayName, boolean suspended){
-        this.accountID = accountID;
+    public Account(String displayName){
+        this.accountId = UUID.randomUUID();
         this.displayName = displayName;
-        this.suspended = suspended;
+        this.suspended = false;
     }
 
-    public String getAccountID() {
-        return accountID;
-    }
-
-    public void setAccountID(String accountID) {
-        this.accountID = accountID;
+    public UUID getAccountId() {
+        return accountId;
     }
 
     public String getDisplayName() {

@@ -6,7 +6,7 @@
                 <a :href="`/parking-spot/${parkingSpot.streetAddress}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
                         <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.owner}}</h1>
+                        <h1>{{parkingSpot.ownerId}}</h1>
                     </div>
                 </a>
             </li>

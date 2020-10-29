@@ -1,38 +1,35 @@
 package model;
 
+import java.util.UUID;
+
 public class Reservation {
 
-    private String reservedPostID, userID, reservationID;
+    private UUID reservationId, postId, accountId;
+    private String parkingTime;
 
     public Reservation(){}
 
-    public Reservation(String reservedPostID, String userID, String reservationID){
-        this.reservedPostID = reservedPostID;
-        this.userID = userID;
-        this.reservationID = reservationID;
+    public Reservation(UUID postId, UUID accountId, String parkingTime){
+        this.reservationId = UUID.randomUUID();
+        this.postId = postId;
+        this.accountId = accountId;
+        this.parkingTime = parkingTime;
     }
 
-    public String getReservedPostID() {
-        return reservedPostID;
+    public UUID getReservationId() {
+        return reservationId;
     }
 
-    public void setReservedPostID(String reservedPostID) {
-        this.reservedPostID = reservedPostID;
+    public UUID getReservedPostId() {
+        return postId;
     }
 
-    public String getUserID() {
-        return userID;
+    public UUID getAccountId() {
+        return accountId;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public String getParkingTime() {
+        return parkingTime;
     }
 
-    public String getReservationID() {
-        return reservationID;
-    }
-
-    public void setReservationID(String reservationID) {
-        this.reservationID = reservationID;
-    }
 }

@@ -4,7 +4,7 @@
             <h1>Login Page</h1>
         </header>
         <main>
-            <button id="userBttn" class="center" @click = "redirect">Logg in as User</button>
+            <button id="userBtn" class="center" @click = "redirect">Login as User</button>
         </main>
     </div>
 </template>
@@ -20,7 +20,7 @@
 
 
     /*function startup(){
-        var bttn = document.getElementById("userBttn");
+        var bttn = document.getElementById("userBtn");
         bttn.addEventListener("click", function () {
                 console.log("clicked");
         });

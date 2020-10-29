@@ -1,7 +1,9 @@
 package model;
 
+import java.util.UUID;
+
 public class ParkingSpot {
-    private String owner;
+    private UUID parkingSpotId, ownerId;
     private String type;
     private boolean available;
     private int width, height;
@@ -10,10 +12,11 @@ public class ParkingSpot {
 
     public ParkingSpot(){}
 
-    public ParkingSpot(String owner, String type, boolean available, int width,
+    public ParkingSpot(UUID owner, String type, boolean available, int width,
                        int height, String postalCode, String streetAddress,
                        String streetNumber, String pictureURL){
-        this.owner = owner;
+        this.parkingSpotId = UUID.randomUUID();
+        this.ownerId = owner;
         this.type = type;
         this.available = available;
         this.width = width;
@@ -24,12 +27,12 @@ public class ParkingSpot {
         this.pictureURL = pictureURL;
     }
 
-    public String getOwner() {
-        return owner;
+    public UUID getParkingSpotId() {
+        return parkingSpotId;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public UUID getOwnerId() {
+        return ownerId;
     }
 
     public String getType() {
