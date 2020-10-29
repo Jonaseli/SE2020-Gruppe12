@@ -2,8 +2,8 @@ package model;
 
 import java.util.UUID;
 
-public class Post {
-
+public class Post implements JSONReadable<Post>, JSONWritable<Post>{
+    
     private UUID postId, parkingSpotId;
     private String availablePeriod;
     private double price;

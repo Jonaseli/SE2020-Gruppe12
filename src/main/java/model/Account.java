@@ -2,8 +2,8 @@ package model;
 
 import java.util.UUID;
 
-public class Account {
-
+public class Account implements JSONReadable<Account>, JSONWritable<Account>{
+    
     private UUID accountId;
     private String displayName;
     private boolean suspended;

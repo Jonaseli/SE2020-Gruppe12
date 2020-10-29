@@ -9,20 +9,15 @@ public class Main {
         Javalin app = Javalin.create().start(7000);
         app.config.enableWebjars();
 
-        String[] filesPaths = new String[4];
-        filesPaths[0] = "parkingSpots.json";
-        filesPaths[1] = "accounts.json";
-        filesPaths[2] = "posts.json";
-        filesPaths[3] = "reservations.json";
-
         app.get("/", new VueComponent("login-page"));
+
         //Vue
         //Får opp blank side, så vue fungerer, lurer på om det er lurt å separate repo objekter for hver import
         //dersom vi ikke får inn all info på samme side
         app.get("/parking-spot", new VueComponent("parking-spots-overview"));
         app.get("/parking-spot/:parking-spot-id", new VueComponent("parking-spot-detail"));
 
-        Repository repo = new Repository(filesPaths);
+        Repository repo = new Repository();
 
 
         //api

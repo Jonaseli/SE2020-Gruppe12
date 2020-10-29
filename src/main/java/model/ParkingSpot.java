@@ -2,7 +2,8 @@ package model;
 
 import java.util.UUID;
 
-public class ParkingSpot {
+public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot>{
+    
     private UUID parkingSpotId, ownerId;
     private String type;
     private boolean available;

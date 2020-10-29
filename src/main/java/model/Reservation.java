@@ -2,8 +2,8 @@ package model;
 
 import java.util.UUID;
 
-public class Reservation {
-
+public class Reservation implements JSONReadable<Reservation>, JSONWritable<Reservation>{
+    
     private UUID reservationId, postId, accountId;
     private String parkingTime;
 
