@@ -1,24 +1,28 @@
 package model;
 
-public class Post implements JSONReadable<Post>, JSONWritable<Post>{
+import java.util.UUID;
 
-    private String parkingSpotID, availablePeriod;
+public class Post implements JSONReadable<Post>, JSONWritable<Post>{
+    
+    private UUID postId, parkingSpotId;
+    private String availablePeriod;
     private double price;
 
     public Post(){}
 
-    public Post(String parkingSpotID, String availablePeriod, double price){
-        this.parkingSpotID = parkingSpotID;
+    public Post(UUID parkingSpotId, String availablePeriod, double price){
+        this.postId = UUID.randomUUID();
+        this.parkingSpotId = parkingSpotId;
         this.availablePeriod = availablePeriod;
         this.price = price;
     }
 
-    public String getParkingSpotID() {
-        return parkingSpotID;
+    public UUID getPostId() {
+        return postId;
     }
 
-    public void setParkingSpotID(String parkingSpotID) {
-        this.parkingSpotID = parkingSpotID;
+    public UUID getParkingSpotId() {
+        return parkingSpotId;
     }
 
     public String getAvailablePeriod() {
