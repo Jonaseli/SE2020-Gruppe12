@@ -4,22 +4,28 @@
             <h1>Login Page</h1>
         </header>
         <main>
-            <button id="userBtn" class="center">Login as User</button>
+            <button id="userBttn" class="center" @click = "redirect">Logg in as User</button>
         </main>
     </div>
 </template>
 <script>
+
+
     Vue.component("login-page",
         {   template : "#login"
         })
 
-    window.onload = startup;
-    function startup(){
-        const btn = document.getElementById("userBtn");
-        btn.addEventListener("click", function () {
+
+    //window.onload = startup;
+
+
+    /*function startup(){
+        var bttn = document.getElementById("userBttn");
+        bttn.addEventListener("click", function () {
                 console.log("clicked");
         });
-    }
+    }*/
+
 </script>
 <style>
     header {
