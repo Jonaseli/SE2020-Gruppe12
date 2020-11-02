@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.3)  29 OCT 2020 00:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.3)  2 NOV 2020 07:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -206,20 +206,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `prosjektdok.toc'.
 
- [2] [3] (c:/Users/lars erik/Documents/operation_se/documentation/latex/prosjektdok.aux) ) 
+ [2] [3] [4] (c:/Users/lars erik/Documents/operation_se/documentation/latex/prosjektdok.aux) ) 
 Here is how much of TeX's memory you used:
  2875 strings out of 480893
  40580 string characters out of 5911973
- 284483 words of memory out of 5000000
+ 285483 words of memory out of 5000000
  18456 multiletter control sequences out of 15000+600000
  552472 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,8n,45p,669b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "c:/Users/lars erik/Documents/operation_se/documentation/latex/prosjektdok.pdf" (3 pages, 30964 bytes).
+Output written on "c:/Users/lars erik/Documents/operation_se/documentation/latex/prosjektdok.pdf" (4 pages, 31962 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 26 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

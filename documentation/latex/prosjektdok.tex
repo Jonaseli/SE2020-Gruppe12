@@ -51,21 +51,34 @@ En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delin
     \end{tabular}
 \end{center}
 
-\section{Krav}
+\section{Funksjonelle krav}
 
 \subsection{Innlogging}
-Ved første øyeblikk skal bruker bli møtt med en innloggingsside, der bruker kan opprette en konto. De kan opprette en brukerkonto eller en bedriftskonto.
 
-\subsubsection{Funksjonelt krav - Bruker skal kunne opprette en brukerkonto}
-Bruker må oppgi unike brukernavn, passord og e-post.
+\subsubsection{Bruker skal kunne opprette en brukerkonto}
+Bruker må oppgi brukernavn, passord og e-post som ikke allerede er lagret i systemet.
 
-\subsubsection{Funksjonelt krav - Bruker skal kunne opprette en bedriftskonto}
-Bruker må oppgi unike brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
+\subsubsection{Bruker skal kunne opprette en bedriftskonto}
+Bruker må oppgi unike brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer som ikke allerede er lagret i systemet.
 
-\subsubsection{Funksjonelt krav - Registreringen skal bli verifisert av systemet}
-Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+\subsubsection{Systemet verifiserer registreringen}
+Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database.
 
-\subsubsection{Funksjonelt krav - Bruker skal kunne logge inn}
-BES: Når bruker logger inn på tjenesten må bruker oppgi riktig informasjon. Ved innlogging skal bruker bli ført til startsiden på tjenesten
+\subsubsection{Derigere opprettet bruker}
+Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+
+\subsubsection{Bruker skal kunne logge inn}
+Bruker skal kunne velge å logge inn som en brukerkonto eller en bedriftskonto, og må deretter oppgi riktig innloggingsopplysninger.
+
+\subsubsection{Derigere innlogget bruker}
+Etter vellykket innlogging skal bruker bli ført til startsiden.
+
+\subsubsection{Systemet skal verifisere innloggingen}
+Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+
+\subsection{Håndtering av parkeringsplasser}
+
+\subsubsection{Bruker skal kunne registrere en eller flere parkeringsplasser}
+Bruker må oppgi minst 
 
 \end{document}
