@@ -26,6 +26,11 @@ public class Main {
         app.get("api/parking-spot", parkingSpotController :: getParkingSpots);
         app.get("api/parking-spot/:parking-spot-id", parkingSpotController :: getParking);
 
+        app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
+            //parkingSpotController.createPayment(ctx);
+            ctx.redirect("/parking-spot");
+        });
+
     }
 
 }

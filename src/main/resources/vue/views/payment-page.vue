@@ -26,6 +26,7 @@
     Vue.component("payment-page", {
         template: "#payment-page",
         data: () => ({
+            parkingSpotId: null,
             startDate: null,
             endDate: null,
             errors: []
@@ -36,7 +37,7 @@
                 .then(res => {
                     this.available = res.available
                 })
-                .catch(() => alert("Error finding when parkingspot is available"))
+                .catch(() => alert("Error finding parking spot availability"))
         },
         methods:{
             checkForm:function(e) {
