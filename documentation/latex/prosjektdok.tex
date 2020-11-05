@@ -46,7 +46,11 @@ En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delin
         \hline
         Bruker & Besøkende som samhandler med systemet \\
         \hline
-        Eier & ... \\
+        Systemet & Tjenesten dokumentasjonen omhandler \\
+        \hline
+        ID & Identifikator \\
+        \hline
+        Eier & eier av en parkeringsplass \\
         \hline
     \end{tabular}
 \end{center}
@@ -76,9 +80,23 @@ Etter vellykket innlogging skal bruker bli ført til startsiden.
 \subsubsection{Systemet skal verifisere innloggingen}
 Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-\subsection{Håndtering av parkeringsplasser}
+\subsection{Opprette parkeringsplasser}
 
 \subsubsection{Bruker skal kunne registrere en eller flere parkeringsplasser}
-Bruker må oppgi minst 
+Bruker må oppgi minst bredde og lengde i centimeter, postaddresse, gateaddresse og gatenummer.
+
+\subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
+Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
+
+\subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
+Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
+
+\subsection{Feed}
+
+\subsection{Lagring}
+
+\subsubsection{}
+
+
 
 \end{document}
