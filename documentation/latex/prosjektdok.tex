@@ -46,11 +46,13 @@ En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delin
         \hline
         Bruker & Besøkende som samhandler med systemet \\
         \hline
-        Systemet & Tjenesten dokumentasjonen omhandler \\
+        Tjenesten & Tjenesten denne dokumentasjonen omhandler \\
+        \hline
+        Systemet & Det underliggende systemet til tjenesten \\
         \hline
         ID & Identifikator \\
         \hline
-        Eier & eier av en parkeringsplass \\
+        Feed & Opplisting av innlegg \\
         \hline
     \end{tabular}
 \end{center}
@@ -91,11 +93,24 @@ Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
 \subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
 Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
 
+\subsection{Lagring av data}
+
+\subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
+Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
+
+\subsection{Lesing av data}
+
+\subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
+Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
+
 \subsection{Feed}
 
-\subsection{Lagring}
+\subsubsection{Feeden skal vise brukerinnlegg}
 
-\subsubsection{}
+\subsubsection{Bruker skal kunne velge et filter på feeden}
+
+\subsection{Brukerinnlegg}
+
 
 
 
