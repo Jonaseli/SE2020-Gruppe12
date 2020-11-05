@@ -30,7 +30,7 @@ public class Repository implements IRepository{
         accounts = account.readFromFile(accountPath, Account[].class);
         parkingSpots = parkingSpot.readFromFile(parkingSpotPath, ParkingSpot[].class);
         posts = post.readFromFile(postPath, Post[].class);
-        reservations = reservation.readFromFile(reservationPath, Reservation[].class);
+        //reservations = reservation.readFromFile(reservationPath, Reservation[].class);
     }
 
     @Override

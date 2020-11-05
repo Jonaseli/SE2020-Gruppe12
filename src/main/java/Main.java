@@ -16,6 +16,7 @@ public class Main {
         //dersom vi ikke får inn all info på samme side
         app.get("/parking-spot", new VueComponent("parking-spots-overview"));
         app.get("/parking-spot/:parking-spot-id", new VueComponent("parking-spot-detail"));
+        app.get("/parking-spot/:parking-spot-id/payment", new VueComponent("payment-page"));
 
         Repository repo = new Repository();
 

@@ -15,7 +15,7 @@ public class Controller {
     }
 
     public void getParking(Context ctx){
-        String parkingSpot = ctx.pathParam(":parking-spot-id");
-        ctx.json(repo.getParkingSpot(parkingSpot));
+        //String parkingSpot = ctx.pathParam(":parking-spot-id");
+        //ctx.json(repo.getParkingSpot(parkingSpot));
     }
 }
