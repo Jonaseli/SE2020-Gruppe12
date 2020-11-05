@@ -4,28 +4,18 @@
             <h1>Login Page</h1>
         </header>
         <main>
-            <button id="userBtn" class="center" @click = "redirect">Login as User</button>
+            <button id="userBtn" v-on:click="redirect" class="center">Login as User</button>
         </main>
     </div>
 </template>
 <script>
-
-
-    Vue.component("login-page",
-        {   template : "#login"
-        })
-
-
-    //window.onload = startup;
-
-
-    /*function startup(){
-        var bttn = document.getElementById("userBtn");
-        bttn.addEventListener("click", function () {
-                console.log("clicked");
-        });
-    }*/
-
+    Vue.component("login-page",{
+        template : "#login",
+        methods: {
+            redirect: function (event) {
+                window.location.href = 'parking-spot';
+            }
+        }});
 </script>
 <style>
     header {
