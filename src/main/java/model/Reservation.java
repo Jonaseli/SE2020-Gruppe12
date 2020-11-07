@@ -20,6 +20,10 @@ public class Reservation implements JSONReadable<Reservation>, JSONWritable<Rese
         return reservationId;
     }
 
+    public UUID getPostId() {
+        return postId;
+    }
+
     public UUID getReservedPostId() {
         return postId;
     }

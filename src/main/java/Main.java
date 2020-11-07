@@ -10,16 +10,11 @@ public class Main {
         app.config.enableWebjars();
 
         app.get("/", new VueComponent("login-page"));
-
-        //Vue
-        //Får opp blank side, så vue fungerer, lurer på om det er lurt å separate repo objekter for hver import
-        //dersom vi ikke får inn all info på samme side
         app.get("/parking-spot", new VueComponent("parking-spots-overview"));
         app.get("/parking-spot/:parking-spot-id", new VueComponent("parking-spot-detail"));
         app.get("/parking-spot/:parking-spot-id/payment", new VueComponent("payment-page"));
 
         Repository repo = new Repository();
-
 
         //api
         Controller parkingSpotController = new Controller(repo);

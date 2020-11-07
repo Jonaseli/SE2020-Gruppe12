@@ -30,7 +30,7 @@ public class Repository implements IRepository{
         accounts = account.readFromFile(accountPath, Account[].class);
         parkingSpots = parkingSpot.readFromFile(parkingSpotPath, ParkingSpot[].class);
         posts = post.readFromFile(postPath, Post[].class);
-        //reservations = reservation.readFromFile(reservationPath, Reservation[].class);
+        reservations = reservation.readFromFile(reservationPath, Reservation[].class);
     }
 
     @Override
@@ -59,7 +59,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public ParkingSpot getParkingSpot(UUID spotId) { return null; }
+    public ParkingSpot getParkingSpot(UUID spotId) {
+        for (ParkingSpot spot : parkingSpots){
+            if (spot.getParkingSpotId().equals(spotId)){
+                return spot;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<ParkingSpot> getParkingSpots() {
