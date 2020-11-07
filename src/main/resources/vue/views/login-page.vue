@@ -5,6 +5,8 @@
         </header>
         <main>
             <button id="userBtn" v-on:click="redirect" class="center">Login as User</button>
+            <button id="corpBtn" v-on:click="redirect" class="center">Login as Corporation</button>
+            <button id="adminBtn" v-on:click="redirect" class="center">Login as Admin</button>
         </main>
     </div>
 </template>
