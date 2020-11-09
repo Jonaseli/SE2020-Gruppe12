@@ -1,0 +1,15 @@
+{
+  "name": "testing-jest-vue",
+  "version": "1.0.0",
+  "description": "Testing yarn with jest for vue.",
+  "main": "index.js",
+  "repository": "https://github.com/Jonaseli/SE2020-Gruppe12.git",
+  "author": "norwen3 <matsengelien@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.3",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^26.6.3"
+  }
+}
