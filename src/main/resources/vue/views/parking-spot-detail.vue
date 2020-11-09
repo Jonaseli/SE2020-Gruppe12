@@ -3,11 +3,7 @@
         <div v-if="parkingSpot" class ="detail-parking-spot-container">
             <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
             <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
-
-            {{console.log(this.parkingSpot)}}
-
             <h1>{{parkingSpot.owner}}</h1>
-
         </div>
     </div>
 </template>
@@ -22,16 +18,15 @@
         }),
         created() {
             const parkingSpotId = this.$javalin.pathParams["parking-spot-id"];
-
-            fetch('api/parking-spots/${parkingSpotId}')
+            fetch(`api/parking-spot/${parkingSpotId}`)
                 .then(res => res.json())
                 .then(res => this.parkingSpot = res)
-            .catch(() => alert("Error while fetching parkingspot"))
+                .catch(() => alert("Error while fetching parkingspot"))
             const postId = this.$javalin.pathParams['post-id'];
-            fetch('api/parking-spots/${parkingSpotId}/posts/${postId}')
-            .then(res => res.json())
-            .then(res => this.post = res)
-            .catch(() => alert("Error while fetching posts"));
+                fetch(`api/parking-spot/${parkingSpotId}/posts/${postId}`)
+                .then(res => res.json())
+                .then(res => this.post = res)
+                .catch(() => alert("Error while fetching posts"));
 
         }
     });

@@ -1,7 +1,9 @@
 package controller;
 import io.javalin.http.Context;
 import repository.IRepository;
-import io.javalin.http.NotFoundResponse;
+
+import java.util.UUID;
+
 public class Controller {
 
     private IRepository repo;
@@ -15,7 +17,8 @@ public class Controller {
     }
 
     public void getParking(Context ctx){
-        String parkingSpot = ctx.pathParam(":parking-spot-id");
+        System.out.println(ctx.pathParam(":parking-spot-id"));
+        UUID parkingSpot = UUID.fromString(ctx.pathParam(":parking-spot-id"));
         ctx.json(repo.getParkingSpot(parkingSpot));
     }
 }

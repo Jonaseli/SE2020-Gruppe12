@@ -59,7 +59,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public ParkingSpot getParkingSpot(UUID spotId) { return null; }
+    public ParkingSpot getParkingSpot(UUID spotId) {
+        for (ParkingSpot spot : parkingSpots){
+            if (spot.getParkingSpotId().equals(spotId)){
+                return spot;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<ParkingSpot> getParkingSpots() {
