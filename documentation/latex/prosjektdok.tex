@@ -33,9 +33,16 @@
 \newpage
 
 % Hensikt %
-\section{Probelm stilling}{For en som trenger parkeringsplass}
+\section{Probelm stilling}
+% Dette er en ide for hva man kan bruke i denne problem stillingen, en av de "Type x" vil bli igjen eller slått sammen %
+
+% Gamle %
+\subsection{Type 1}
 En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delingsøkonomi. Siden parkeringsplasser er en ressurs som tilstrekkelig, valgte de det. Du har sikkert vært på utkikk etter en ledig parkeringsplass den dagen du skulle shoppe med noen venner, delta i et viktig møte eller rekke et tog, men samme hvor du ser står det en bil. Det kan være både frustrerende og leit, spesielt når tiden er avgjørende. Dette ønsker en oppstartsbedrift å løse ved å lage en tjeneste der enkeltpersoner og bedrifter kan leie ut parkeringsplassene sine til andre.
 
+% Nye %
+\subsection{Type 2}
+Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, om det skulle ha vert på et kjøpesenter, mitt i byen eller det å finne det best tilbudet som passer seg selv best. Det kan også hende at noen vil også bli en del av markede, i å eie sinn egen parkeringsplass som en enkeltperson eller som en bedrift, der det er enkelt og greit å sette opp parkeringsplass for leier ut til andre personer som trenger en kjapp og enkel parkeringsplass. 
 
 % Scope %
 \section{Scope}
@@ -48,7 +55,13 @@ En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delin
         \hline
         \bf Begrep & \bf Beskrivelse \\
         \hline
+        Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført \\
+        \hline
         Bruker & Besøkende som samhandler med systemet \\
+        \hline
+        Brukerkonto & En som kan kun leie parkeringsplasser \\
+        \hline
+        Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre \\
         \hline
         Tjenesten & Tjenesten denne dokumentasjonen omhandler \\
         \hline
@@ -67,13 +80,13 @@ En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delin
 \subsection{Innlogging}
 
 \subsubsection{Bruker skal kunne opprette en brukerkonto}
-Bruker må oppgi brukernavn, passord og e-post som ikke allerede er lagret i systemet.
+Bruker må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
 
 \subsubsection{Bruker skal kunne opprette en bedriftskonto}
-Bruker må oppgi unike brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer som ikke allerede er lagret i systemet.
+Bruker/Bedrift må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk), hvis ikke de har lagt seg til i systemet.
 
 \subsubsection{Systemet verifiserer registreringen}
-Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database.
+Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Hvis denne brukeren er en Bedriftskonto kan/vil det følle opp mer verifisering.
 
 \subsubsection{Derigere opprettet bruker}
 Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
@@ -89,14 +102,29 @@ Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i bruker
 
 \subsection{Opprette parkeringsplasser}
 
-\subsubsection{Bruker skal kunne registrere en eller flere parkeringsplasser}
-Bruker må oppgi minst bredde og lengde i centimeter, postaddresse, gateaddresse og gatenummer.
+\subsubsection{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
+For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
 
 \subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
 Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
 
 \subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
 Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
+
+\subsection{Leie en parkeringsplass}
+
+\subsubsection{Hvordan finne en parkerinsplass område}
+Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+
+\subsubsection{Når og hvor kan en bruker leie}
+En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass område. 
+
+\subsubsection{Hvordan leie en parkeringsplass}
+Som en brukerkonto skal man kunne leie parkeringsplasser, ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), plass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betalle for parkeringsplassen.
+
+% Splitte opp i to underklasser??? -> tid og betaling%
+\subsubsection{Tid og betaling}
+Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass sånn at enn annen kan ta over eller å fylle på med mer tide. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
 
 \subsection{Lagring av data}
 
