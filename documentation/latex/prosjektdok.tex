@@ -10,12 +10,17 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{titlesec}
 
 % settings %
 \renewcommand{\contentsname}{Innholdsfortegnelse}
+\setcounter{secnumdepth}{4}
 
 % commands %
-
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % document %
 \begin{document}
@@ -37,12 +42,12 @@
 % Dette er en ide for hva man kan bruke i denne problem stillingen, en av de "Type x" vil bli igjen eller slått sammen %
 
 % Gamle %
-\subsection{Type 1}
-En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delingsøkonomi. Siden parkeringsplasser er en ressurs som tilstrekkelig, valgte de det. Du har sikkert vært på utkikk etter en ledig parkeringsplass den dagen du skulle shoppe med noen venner, delta i et viktig møte eller rekke et tog, men samme hvor du ser står det en bil. Det kan være både frustrerende og leit, spesielt når tiden er avgjørende. Dette ønsker en oppstartsbedrift å løse ved å lage en tjeneste der enkeltpersoner og bedrifter kan leie ut parkeringsplassene sine til andre.
+    \subsection{Type 1}
+    En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delingsøkonomi. Siden parkeringsplasser er en ressurs som tilstrekkelig, valgte de det. Du har sikkert vært på utkikk etter en ledig parkeringsplass den dagen du skulle shoppe med noen venner, delta i et viktig møte eller rekke et tog, men samme hvor du ser står det en bil. Det kan være både frustrerende og leit, spesielt når tiden er avgjørende. Dette ønsker en oppstartsbedrift å løse ved å lage en tjeneste der enkeltpersoner og bedrifter kan leie ut parkeringsplassene sine til andre.
 
 % Nye %
-\subsection{Type 2}
-Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, om det skulle ha vert på et kjøpesenter, mitt i byen eller det å finne det best tilbudet som passer seg selv best. Det kan også hende at noen vil også bli en del av markede, i å eie sinn egen parkeringsplass som en enkeltperson eller som en bedrift, der det er enkelt og greit å sette opp parkeringsplass for leier ut til andre personer som trenger en kjapp og enkel parkeringsplass. 
+    \subsection{Type 2}
+    Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, om det skulle ha vert på et kjøpesenter, mitt i byen eller det å finne det best tilbudet som passer seg selv best. Det kan også hende at noen vil også bli en del av markede, i å eie sinn egen parkeringsplass som en enkeltperson eller som en bedrift, der det er enkelt og greit å sette opp parkeringsplass for leier ut til andre personer som trenger en kjapp og enkel parkeringsplass. 
 
 % Scope %
 \section{Scope}
@@ -63,105 +68,161 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \hline
         Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre \\
         \hline
+        Feed & Opplisting av innlegg \\
+        \hline
+        ID & Identifikator \\
+        \hline
         Tjenesten & Tjenesten denne dokumentasjonen omhandler \\
         \hline
         Systemet & Det underliggende systemet til tjenesten \\
         \hline
-        ID & Identifikator \\
-        \hline
-        Feed & Opplisting av innlegg \\
-        \hline
     \end{tabular}
 \end{center}
+
+% Presonas %
+\section{Personas}
 
 % Funksjonelle krav %
 \section{Funksjonelle krav}
 
-\subsection{Innlogging}
+    \subsection{Bruker klasse: Brukerkonto}
 
-\subsubsection{Bruker skal kunne opprette en brukerkonto}
-Bruker må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
+        \subsubsection{Innlogging}
+            Bruker må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
 
-\subsubsection{Bruker skal kunne opprette en bedriftskonto}
-Bruker/Bedrift må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk), hvis ikke de har lagt seg til i systemet.
+            \paragraph{Systemet verifiserer registreringen}
+            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database.
 
-\subsubsection{Systemet verifiserer registreringen}
-Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Hvis denne brukeren er en Bedriftskonto kan/vil det følle opp mer verifisering.
+            \paragraph{Derigere opprettet bruker}
+            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
 
-\subsubsection{Derigere opprettet bruker}
-Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+            \paragraph{Derigere innlogget bruker}
+            Etter vellykket innlogging skal bruker bli ført til startsiden.
 
-\subsubsection{Bruker skal kunne logge inn}
-Bruker skal kunne velge å logge inn som en brukerkonto eller en bedriftskonto, og må deretter oppgi riktig innloggingsopplysninger.
+            \paragraph{Systemet skal verifisere innloggingen}
+            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-\subsubsection{Derigere innlogget bruker}
-Etter vellykket innlogging skal bruker bli ført til startsiden.
+            % Har ikke lyst til å ha med denne delen -Håkon %
+            \paragraph{Bruker skal kunne logge inn}
+            Bruker skal kunne velge å logge inn som en brukerkonto eller en bedriftskonto, og må deretter oppgi riktig innloggingsopplysninger.
+        
+        \subsubsection{Leie en parkeringsplass}
 
-\subsubsection{Systemet skal verifisere innloggingen}
-Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+            \paragraph{Hvordan finne en parkeringsplass område}
+            Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
 
-\subsection{Opprette parkeringsplasser}
+            \paragraph{Når og hvor kan en bruker leie}
+            En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass området.
 
-\subsubsection{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
-For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
+            \paragraph{Hvordan leie en parkeringsplass}
+            Som en brukerkonto skal man kunne leie parkeringsplasser, ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), plass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betalle for parkeringsplassen.
 
-\subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
-Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
+            % Splitte opp i to underklasser??? -> tid og betaling%
+            \paragraph{Tid og betaling}
+            Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass sånn at enn annen kan ta over eller å fylle på med mer tide. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
 
-\subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
-Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
+        \subsubsection{Komentere og rangering}
 
-\subsection{Leie en parkeringsplass}
+            \paragraph{Komentering}
+            En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
 
-\subsubsection{Hvordan finne en parkerinsplass område}
-Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+            \paragraph{Rangering}
+            En bruker skal kunne rangere en parkeringsplass fra 1 til 5 (der 1 er svært dårlig og 5 er kjempe bra), på en parkeringsplass de har vært på.
 
-\subsubsection{Når og hvor kan en bruker leie}
-En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass område. 
+    \subsection{Bruker klasse: Bedriftskonto}
 
-\subsubsection{Hvordan leie en parkeringsplass}
-Som en brukerkonto skal man kunne leie parkeringsplasser, ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), plass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betalle for parkeringsplassen.
+        \subsubsection{Innlogging}
+            Bruker/Bedrift må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk), hvis ikke de har lagt seg til i systemet.
 
-% Splitte opp i to underklasser??? -> tid og betaling%
-\subsubsection{Tid og betaling}
-Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass sånn at enn annen kan ta over eller å fylle på med mer tide. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
+            % Ta en titt%
+            \paragraph{Systemet verifiserer registreringen}
+            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Hvis denne brukeren er en Bedriftskonto kan/vil det følle opp mer verifisering.
 
-\subsection{Lagring av data}
+            \paragraph{Derigere opprettet bruker}
+            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
 
-\subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
-Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
+            \paragraph{Derigere innlogget bruker}
+            Etter vellykket innlogging skal bruker bli ført til startsiden.
 
-\subsection{Lesing av data}
+            \paragraph{Systemet skal verifisere innloggingen}
+            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-\subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
-Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
+        \subsubsection{Opprette parkeringsplasser}
 
-\subsection{Feed}
+            \paragraph{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
+            For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
 
-\subsubsection{Feeden skal vise brukerinnlegg}
+            \paragraph{Systemet skal knytte parkeringsplassen til en unik ID}
+            Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
 
-\subsubsection{Bruker skal kunne velge et filter på feeden}
+            \paragraph{Systemet skal knytte parkeringsplassen til en bruker}
+            Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
 
-\subsection{Brukerinnlegg}
+        \subsubsection{Betaling og regler}
 
+            \paragraph{Pris}
+            Eieren av en parkeringsplassen som kan justere prisen på parkeringsplass (i timen).
+
+            \paragraph{Tid}
+            Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
+
+            \paragraph{Regler}
+            Eieren av en parkeringsplass skal kunne lage sinnge enge regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
+        
+        \subsubsection{Hindre andre i å missbruker parkeringsplass applikasjonen}
+
+            \paragraph{Banlyse}
+            En bedriftskonto skal kunne banlyse en brukerkonto som missbruker applikasjonen. Dette kan/vil hinde en bruker som er banlyst fra å kunne leie fra dem igjen.
+
+            \paragraph{Fjenre kommentarer}
+            En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
+
+    \subsection{Bruker klasse: Administrator}
+    
 % Ikke funksjonelle krav %
 \section{Ikke funksjonelle krav}
+
+% Interface %
+\section{Interface}
+
+% Systemfunksjoner %
+\section{Systemfunksjoner}
 
 
 % Diagramer fra hver student %
 \section{Diagramer}
 % Vi må alle lage 2 forskjellige  diagrame hver -> dataflytdiagram, sekvensdiagram, tilstandsdiagram eller aktivitetsdiagram %
 
-\subsection{Charis}
+    \subsection{Charis}
 
-\subsection{Håkon}
+    \subsection{Håkon}
 
-\subsection{Jonas}
+    \subsection{Jonas}
 
-\subsection{Lars}
+    \subsection{Lars}
 
-\subsection{Mats}
+    \subsection{Mats}
 
 \section{Estemering}
+
+\section{Ta en titt på dette}
+% Dette her trenger plass %
+    \subsection{Lagring av data}
+
+    \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
+    Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
+
+    \subsection{Lesing av data}
+
+    \subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
+    Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
+
+    \subsection{Feed}
+
+    \subsubsection{Feeden skal vise brukerinnlegg}
+
+    \subsubsection{Bruker skal kunne velge et filter på feeden}
+
+    \subsection{Brukerinnlegg}
 
 \end{document}
