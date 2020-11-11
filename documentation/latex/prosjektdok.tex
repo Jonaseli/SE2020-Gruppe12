@@ -76,11 +76,31 @@
         \hline
         Systemet & Det underliggende systemet til tjenesten \\
         \hline
+        Personas & Er et annet ord for rollefigur, enkeltmenneske, karakterpersonlighet\\
+        \hline
     \end{tabular}
 \end{center}
 
+% Referanser %
+\section{Referanser}
+
 % Presonas %
-\section{Personas}
+\section{Personaer}
+
+    \subsection{Persona type 1}
+    \textbf{Alder:} 34 \\\textbf{Jobb/Rolle:} Økonom\\\textbf{Beskrivelse:}\\Jobber som økonom. Han skal grave i gården og lage ny parkeringsplass. Han vet ikke hvor lang tid det kommer til å ta, og han kommer ikke til å ha et sted å parkere i mellomtiden.\\\textbf{Motivasjon:}\\Han har ikke parkeringsplass hjemme, så han trenger en parkeringsplass i nærheten.\\\textbf{Behov:}\\Han må kunne forlenge antall dager han låner en parkeringsplass\\\textbf{Tekniske ferdigheter:} Gode
+
+    \subsection{Persona type 2}
+    \textbf{Alder:} 42\\\textbf{Jobb/Rolle:} Ledelse i bedrift\\\textbf{Beskrivelse:}\\Jobber i ledelsen i en bedrift. Det er ikke alltid han får en plass til å parkere i byen når han skal på jobb.\\\textbf{Motivasjon:}\\ Parkeringsplassene i byen er fullstappa.\\\textbf{Behov:}\\Han må kunne parkere nærmere arbeidsplassen og sikre seg parkeringplass ved et møte.\\\textbf{Tekniske ferdigheter:} Gode
+
+    \subsection{Persona type 3}
+    \textbf{Alder:} 22\\\textbf{Jobb/Rolle:} Uføre\\\textbf{Beskrivelse:}\\Karina er en rullestolbruker som trenger handicap-parkering. Hun vil helst parkere så nærme målet sitt som mulig, men vet ikke om det finnes en ledig handicap-parkeringsplass. Hun vil heller ikke risikere at stedet ikke tilbyr parkeringsplass for handicappede.\\\textbf{Motivasjon:}\\Hun trenger en oversikt over ledige handicap-parkeringsplasser.\\\textbf{Behov:}\\Hun må være sikker på at hun får en handicap-parkeringsplass.\\\textbf{Tekniske ferdigheter:} Gode
+
+    \subsection{Persona type 4}
+    \textbf{Alder:} 34 \\\textbf{Jobb/Rolle:} Selger\\\textbf{Beskrivelse:}\\Karin er dør-til-dør selger, hun kjører til nabolagene hun jobber i hver dag, men det er vanskelig å finne parkering, som gjør at hun taper tid og penger mens hun leter. Derfor åpner hun appen og booker parkeringsplasser for områdene hun skal jobbe den neste måneden. Nå føler Karin at hun har en mindre ting å tenke på.\\\textbf{Motivasjon:}\\Han har ikke parkeringsplass hjemme, så han trenger en parkeringsplass i nærheten\\\textbf{Mål:}\\Karin ønsker å eliminere en del av hverdagen som er unødvendig og som koster henne tid og penger. Karin forventer at hun skal finne parkering, og kunne booke det for måneden fremover, eller på dagen om nødvendig.\\\textbf{Reisen:}\\For å oppnå dette er Karin nødt til å finne utleiere som ønsker kort-tid/dagsutleie, så hun er nødt til å søke området hun skal til, og filtrere til dette alternativet. Deretter kan hun velge sted å parkere basert på beliggenhet og pris i forhold til området hun utvalgte seg.\\\textbf{Følelser:}\\Karin føler seg frustrert når hun kjører rundt nabolaget hun skal banke dører i, men aldri klarer å finne et sted det er lov å parkere. Karin er på sitt lykkeligste når hun åpner appen for å sjekke hvor hun har bestilt parkering, og vet at hun ikke trenger å tenke på å lete igje\\\textbf{Tekniske ferdigheter:} Gode
+
+    \subsection{Persona type 5}
+    \textbf{Alder:} 56\\\textbf{Jobb/Rolle:} Bonde\\\textbf{Beskrivelse:}\\Jørn bor i nærheten av et vakkert tjern som er populært blant unge å bade i, men siden det ikke er noen parkeringsplass der må folk parkere langs veien. Jørn eier en fin tomt i nærheten der folk kan parkere tryggere.\\\textbf{Motivasjon:}\\Han vil at tilby parkeringsplasser slik at ungdommene mer sannsynligvis kommer tilbake til tjernet og bader.\\\textbf{Behov:}\\En omtale system som kan bidra å spre det gode rykte videre. Han vil leie ut tomten for en inntekt ved siden av gårsdriften.\\\textbf{Tekniske ferdigheter:} Dårlig
 
 % Funksjonelle krav %
 \section{Funksjonelle krav}
@@ -88,7 +108,7 @@
     \subsection{Bruker klasse: Brukerkonto}
 
         \subsubsection{Innlogging}
-            Bruker må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
+            Bruken må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
 
             \paragraph{Systemet verifiserer registreringen}
             Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database.
@@ -136,7 +156,7 @@
 
             % Ta en titt%
             \paragraph{Systemet verifiserer registreringen}
-            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database. Hvis denne brukeren er en Bedriftskonto kan/vil det følle opp mer verifisering.
+            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database, det kan/vil følle opp mer verifisering når man skal lage en bedriftskonto.
 
             \paragraph{Derigere opprettet bruker}
             Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
@@ -178,6 +198,20 @@
             En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
 
     \subsection{Bruker klasse: Administrator}
+
+        \subsubsection{Holde orden på brukerne}
+
+            \paragraph{Banlyse}
+            Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
+
+            \paragraph{Slette/fjenre gamle/inaktive brukere}
+            Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
+
+            \paragraph{Slette/fjenre kommentarer}
+            Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
+
+            \paragraph{Slette/fjerne rangering}
+            Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
     
 % Ikke funksjonelle krav %
 \section{Ikke funksjonelle krav}
@@ -206,7 +240,7 @@
 \section{Estemering}
 
 \section{Ta en titt på dette}
-% Dette her trenger plass %
+% Dette her trenger en plass %
     \subsection{Lagring av data}
 
     \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
