@@ -1,0 +1,50 @@
+[
+  {
+    "parkingSpotId": "079433fa-d2fc-42b6-9514-7cdaabf35909",
+    "ownerId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+    "type": "normal",
+    "available": true,
+    "width": 250,
+    "height": 400,
+    "postalCode": "1650",
+    "streetAddress": "parkgata",
+    "streetNumber": "15",
+    "pictureURL": "picture url 1"
+  },
+  {
+    "parkingSpotId": "a88c0610-6dc7-4ea3-b871-f3d1672c1730",
+    "ownerId": "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f",
+    "type": "normal",
+    "available": true,
+    "width": 300,
+    "height": 400,
+    "postalCode": "1750",
+    "streetAddress": "parkvegen",
+    "streetNumber": "8",
+    "pictureURL": "picture url 2"
+  },
+  {
+    "parkingSpotId": "95d610af-3a5f-4e67-8c72-384aeb562a5b",
+    "ownerId": "d7d77c76-5b91-4fb4-8eab-80389a90d427",
+    "type": "normal",
+    "available": true,
+    "width": 280,
+    "height": 390,
+    "postalCode": "1850",
+    "streetAddress": "dårlig gate",
+    "streetNumber": "3",
+    "pictureURL": "picture url 3"
+  },
+  {
+    "parkingSpotId": "30b0d0c3-bdb1-4d56-bb7d-f3c99c6bd57b",
+    "ownerId": "283ec2b6-a35c-40f6-a7e2-f7feef3ac8d7",
+    "type": "test5",
+    "available": true,
+    "width": 50,
+    "height": 50,
+    "postalCode": "test5",
+    "streetAddress": "test5",
+    "streetNumber": "test5",
+    "pictureURL": "picture url 4"
+  }
+]

@@ -20,7 +20,7 @@ public interface IRepository {
 
     //-------------------
     //Method for finding post object by ID
-    Post getPost(String postId);
+    Post getPost(UUID postId);
     //Get all posts stored in repo
     ArrayList<Post> getPosts();
     //Add a single post

@@ -21,10 +21,11 @@ public class Repository implements IRepository{
     private Post post = new Post();
     private Reservation reservation = new Reservation();
 
-    private final String accountPath = "accounts.json";
-    private final String parkingSpotPath = "parkingSpots.json";
-    private final String postPath = "posts.json";
-    private final String reservationPath = "reservations.json";
+    private final String prepath = "src/main/resources/json/";
+    private final String accountPath = prepath + "accounts.json";
+    private final String parkingSpotPath = prepath + "parkingSpots.json";
+    private final String postPath = prepath + "posts.json";
+    private final String reservationPath = prepath + "reservations.json";
 
     public Repository(){
         accounts = account.readFromFile(accountPath, Account[].class);
@@ -34,7 +35,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Account getAccount(UUID accountId) { return null; }
+    public Account getAccount(UUID accountId) {
+        for (Account account: accounts) {
+            if (account.getAccountId().equals(accountId)) {
+                return account;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<Account> getAccounts() { return accounts; }
@@ -46,7 +54,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Post getPost(String postID) { return null; }
+    public Post getPost(UUID postId) {
+        for (Post post : posts){
+            if (post.getParkingSpotId().equals(postId)){
+                return post;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<Post> getPosts() { return posts; }
@@ -59,10 +74,10 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public ParkingSpot getParkingSpot(UUID spotId) {
-        for (ParkingSpot spot : parkingSpots){
-            if (spot.getParkingSpotId().equals(spotId)){
-                return spot;
+    public ParkingSpot getParkingSpot(UUID parkingSpotId) {
+        for (ParkingSpot parkingSpot : parkingSpots){
+            if (parkingSpot.getParkingSpotId().equals(parkingSpotId)){
+                return parkingSpot;
             }
         }
         return null;
