@@ -1,25 +1,35 @@
 <template id="payment-page">
-    <div class="form-style">
-        <h2>Create new reservation for {{parkingSpotId}}</h2>
-        <form class="create" @submit="checkForm" :action=`/api/parking-spot/${parkingSpotId}/payment` method="post">
-            <div v-if="errors.length">
-                <b>Please correct the following error(s):</b>
-                <ul>
-                    <li v-for="error in errors">{{ error }}</li>
-                </ul>
-            </div>
-            <p>
-                <label for="name">Start date<label>
-                <input type="text" name="startDate" id="startDate" v-model="startDate">
-            </p>
-            <p>
-                <label for="name">End date<label>
-                <input type="text" name="endDate" id="endDate" v-model="endDate">
-            </p>
-            <p>
-                <input type="submit" value="Create Payment">
-            </p>
-        </form>
+    <div>
+        <header>
+            <h1>Parking App</h1>
+        </header>
+        <nav id="normalNav">
+            <a href="/parking-spot">Home</a>
+            <a href="">My Parking spots</a>
+            <a id="lastLink" href="/">Logout</a>
+        </nav>
+        <div class="form-style">
+            <h2>Create new reservation for {{parkingSpotId}}</h2>
+            <form class="create" @submit="checkForm" :action=`/api/parking-spot/${parkingSpotId}/payment` method="post">
+                <div v-if="errors.length">
+                    <b>Please correct the following error(s):</b>
+                    <ul>
+                        <li v-for="error in errors">{{ error }}</li>
+                    </ul>
+                </div>
+                <p>
+                    <label for="name">Start date<label>
+                    <input type="text" name="startDate" id="startDate" v-model="startDate">
+                </p>
+                <p>
+                    <label for="name">End date<label>
+                    <input type="text" name="endDate" id="endDate" v-model="endDate">
+                </p>
+                <p>
+                    <input type="submit" value="Create Payment">
+                </p>
+            </form>
+        </div>
     </div>
 </template>
 <script>
