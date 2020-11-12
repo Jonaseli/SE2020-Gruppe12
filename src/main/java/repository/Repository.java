@@ -34,7 +34,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Account getAccount(UUID accountId) { return null; }
+    public Account getAccount(UUID accountId) {
+        for (Account account : accounts){
+            if (account.getAccountId().equals(accountId)){
+                return account;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<Account> getAccounts() { return accounts; }

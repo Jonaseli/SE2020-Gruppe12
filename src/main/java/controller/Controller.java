@@ -17,8 +17,16 @@ public class Controller {
     }
 
     public void getParking(Context ctx){
-        System.out.println(ctx.pathParam(":parking-spot-id"));
         UUID parkingSpot = UUID.fromString(ctx.pathParam(":parking-spot-id"));
         ctx.json(repo.getParkingSpot(parkingSpot));
+    }
+
+    public void getAccounts(Context ctx) {
+        ctx.json(repo.getAccounts());
+    }
+
+    public void getAccount(Context ctx) {
+        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
+        ctx.json(repo.getAccount(account));
     }
 }
