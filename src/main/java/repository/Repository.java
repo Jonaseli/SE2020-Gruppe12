@@ -81,6 +81,33 @@ public class Repository implements IRepository{
     }
 
     @Override
+    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId) {
+        ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<ParkingSpot>();
+        for (ParkingSpot parking : parkingSpots){
+            if(parking.getOwnerId().equals(accountId)){
+                ownedParkingSpots.add(parking);
+            }
+        }
+        return ownedParkingSpots;
+    }
+
+    @Override
+    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId) {
+        ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<ParkingSpot>();
+        for (Reservation reservation : reservations) {
+            if (reservation.getAccountId().equals(accountId)) {
+                UUID posId = reservation.getPostId();
+                for (Post post : posts) {
+                    if (post.getPostId().equals(posId)) {
+                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpotId()));
+                    }
+                }
+            }
+        }
+        return rentedParkingSpots;
+    }
+
+    @Override
     public void createParkingSpot(UUID ownerId, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
         parkingSpots.add(new ParkingSpot(ownerId, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);

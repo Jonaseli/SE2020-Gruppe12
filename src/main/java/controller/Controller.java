@@ -29,4 +29,14 @@ public class Controller {
         UUID account = UUID.fromString(ctx.pathParam(":account-id"));
         ctx.json(repo.getAccount(account));
     }
+
+    public void getOwnedParkingSpots(Context ctx) {
+        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
+        ctx.json(repo.getOwnedParkingSpots(account));
+    }
+
+    public void getRentedParkingSpots(Context ctx) {
+        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
+        ctx.json(repo.getRentedParkingSpots(account));
+    }
 }

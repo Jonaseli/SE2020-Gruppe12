@@ -27,6 +27,8 @@ public class Main {
 
         app.get("api/account", parkingSpotController :: getAccounts);
         app.get("api/account/:account-id", parkingSpotController :: getAccount);
+        app.get("api/account/:account-id/my-parking-spots/owned-parking-spots", parkingSpotController :: getOwnedParkingSpots);
+        app.get("api/account/:account-id/my-parking-spots/rented-parking-spots", parkingSpotController :: getRentedParkingSpots);
 
         app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
             //parkingSpotController.createPayment(ctx);
@@ -37,7 +39,5 @@ public class Main {
             //parkingSpotController.createPayment(ctx);
             ctx.redirect("/parking-spot");
         });
-
     }
-
 }
