@@ -39,15 +39,7 @@
 
 % Hensikt %
 \section{Probelm stilling}
-% Dette er en ide for hva man kan bruke i denne problem stillingen, en av de "Type x" vil bli igjen eller slått sammen %
-
-% Gamle %
-    \subsection{Type 1}
-    En oppstartsbedrift ønsker å utvikle en tjeneste basert på konseptet om delingsøkonomi. Siden parkeringsplasser er en ressurs som tilstrekkelig, valgte de det. Du har sikkert vært på utkikk etter en ledig parkeringsplass den dagen du skulle shoppe med noen venner, delta i et viktig møte eller rekke et tog, men samme hvor du ser står det en bil. Det kan være både frustrerende og leit, spesielt når tiden er avgjørende. Dette ønsker en oppstartsbedrift å løse ved å lage en tjeneste der enkeltpersoner og bedrifter kan leie ut parkeringsplassene sine til andre.
-
-% Nye %
-    \subsection{Type 2}
-    Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, om det skulle ha vert på et kjøpesenter, mitt i byen eller det å finne det best tilbudet som passer seg selv best. Det kan også hende at noen vil også bli en del av markede, i å eie sinn egen parkeringsplass som en enkeltperson eller som en bedrift, der det er enkelt og greit å sette opp parkeringsplass for leier ut til andre personer som trenger en kjapp og enkel parkeringsplass. 
+Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, om det skulle ha vert på et kjøpesenter, mitt i byen eller det å finne det best tilbudet som passer seg selv best. Det kan også hende at noen vil også bli en del av markede, i å eie sinn egen parkeringsplass som en enkeltperson eller som en bedrift, der det er enkelt og greit å sette opp parkeringsplass for leier ut til andre personer som trenger en kjapp og enkel parkeringsplass. 
 
 % Scope %
 \section{Scope}
@@ -67,6 +59,8 @@
         Brukerkonto & En som kan kun leie parkeringsplasser \\
         \hline
         Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre \\
+        \hline
+        EsID & Estemering identifikator \\
         \hline
         Feed & Opplisting av innlegg \\
         \hline
@@ -108,110 +102,116 @@
     \subsection{Bruker klasse: Brukerkonto}
 
         \subsubsection{Innlogging}
-            Bruken må oppgi brukernavn, passord, e-post og telefonnummer, hvis ikke de har allerede lagret en bruker fra før.
+        
+            \paragraph{Lage en brukerkonto}
+            \textbf{EsID: 1.1.1}\\Bruken må oppgi brukernavn, passord, e-post og telefonnummer.
 
             \paragraph{Systemet verifiserer registreringen}
-            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database.
+            \textbf{EsID: 1.1.2}\\Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når den 4-sifra koden er skrevet inn i tekst-feltet og det stemmer på nettsiden, skal brukeren bli lagret i databasen.
 
             \paragraph{Derigere opprettet bruker}
-            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+            \textbf{EsID: 1.1.3}\\Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
 
             \paragraph{Derigere innlogget bruker}
-            Etter vellykket innlogging skal bruker bli ført til startsiden.
+            \textbf{EsID: 1.1.4}\\Etter vellykket innlogging skal bruker bli ført til startsiden.
 
             \paragraph{Systemet skal verifisere innloggingen}
-            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+            \textbf{EsID: 1.1.5}\\Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-            % Har ikke lyst til å ha med denne delen -Håkon %
             \paragraph{Bruker skal kunne logge inn}
-            Bruker skal kunne velge å logge inn som en brukerkonto eller en bedriftskonto, og må deretter oppgi riktig innloggingsopplysninger.
+            \textbf{EsID: 1.1.6}\\Bruker skal kunne logge inn som en brukerkonto.
         
         \subsubsection{Leie en parkeringsplass}
 
             \paragraph{Hvordan finne en parkeringsplass område}
-            Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+            \textbf{EsID: 1.2.1}\\Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+
+            \paragraph{Filter søking}
+            \textbf{EsID: 1.2.2}\\Skal kunne velge filter for å få opp de søkene man trenger.
 
             \paragraph{Når og hvor kan en bruker leie}
-            En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass området.
+            \textbf{EsID: 1.2.3}\\En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass området.
 
             \paragraph{Hvordan leie en parkeringsplass}
-            Som en brukerkonto skal man kunne leie parkeringsplasser, ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), plass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betalle for parkeringsplassen.
+            \textbf{EsID: 1.2.4}\\Som en brukerkonto skal man kunne leie parkeringsplasser, ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), plass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betalle for parkeringsplassen.
 
-            % Splitte opp i to underklasser??? -> tid og betaling%
+            % Splitte opp i to underklasser??? -> tid og betaling %
             \paragraph{Tid og betaling}
-            Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass sånn at enn annen kan ta over eller å fylle på med mer tide. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
+            \textbf{EsID: 1.2.5}\\Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass sånn at enn annen kan ta over eller å fylle på med mer tide. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
 
         \subsubsection{Komentere og rangering}
 
             \paragraph{Komentering}
-            En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
+            \textbf{EsID: 1.3.1}\\En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
 
             \paragraph{Rangering}
-            En bruker skal kunne rangere en parkeringsplass fra 1 til 5 (der 1 er svært dårlig og 5 er kjempe bra), på en parkeringsplass de har vært på.
+            \textbf{EsID: 1.3.2}\\En bruker skal kunne rangere en parkeringsplass fra 1 til 5 (der 1 er svært dårlig og 5 er kjempe bra), på en parkeringsplass de har vært på.
 
     \subsection{Bruker klasse: Bedriftskonto}
 
         \subsubsection{Innlogging}
-            Bruker/Bedrift må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk), hvis ikke de har lagt seg til i systemet.
+            
+            \paragraph{Opprette en Bedriftskonto}
+            \textbf{EsID: 2.1.1}\\Bruker/Bedrift må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk), hvis ikke de har lagt seg til i systemet.
 
             % Ta en titt%
             \paragraph{Systemet verifiserer registreringen}
-            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database, det kan/vil følle opp mer verifisering når man skal lage en bedriftskonto.
+            \textbf{EsID: 2.1.2}\\Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når koden er skrevet inn i tekst-feltet på nettsiden skal dataen lagres i en database, det kan/vil følle opp mer verifisering når man skal lage en bedriftskonto.
 
             \paragraph{Derigere opprettet bruker}
-            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+            \textbf{EsID: 2.1.3}\\Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
 
             \paragraph{Derigere innlogget bruker}
-            Etter vellykket innlogging skal bruker bli ført til startsiden.
+            \textbf{EsID: 2.1.4}\\Etter vellykket innlogging skal bruker bli ført til startsiden.
 
             \paragraph{Systemet skal verifisere innloggingen}
-            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+            \textbf{EsID: 2.1.5}\\Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
         \subsubsection{Opprette parkeringsplasser}
 
             \paragraph{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
-            For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
+            \textbf{EsID: 2.2.1}\\For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
 
             \paragraph{Systemet skal knytte parkeringsplassen til en unik ID}
-            Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
+            \textbf{EsID: 2.2.2}\\Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
 
             \paragraph{Systemet skal knytte parkeringsplassen til en bruker}
-            Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
+            \textbf{EsID: 2.2.3}\\Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
 
         \subsubsection{Betaling og regler}
 
             \paragraph{Pris}
-            Eieren av en parkeringsplassen som kan justere prisen på parkeringsplass (i timen).
+            \textbf{EsID: 2.3.1}\\Eieren av en parkeringsplassen som kan justere prisen på parkeringsplass (i timen).
 
             \paragraph{Tid}
-            Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
+            \textbf{EsID: 2.3.2}\\Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
 
             \paragraph{Regler}
-            Eieren av en parkeringsplass skal kunne lage sinnge enge regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
+            \textbf{EsID: 2.3.3}\\Eieren av en parkeringsplass skal kunne lage sinnge enge regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
         
         \subsubsection{Hindre andre i å missbruker parkeringsplass applikasjonen}
 
             \paragraph{Banlyse}
-            En bedriftskonto skal kunne banlyse en brukerkonto som missbruker applikasjonen. Dette kan/vil hinde en bruker som er banlyst fra å kunne leie fra dem igjen.
+            \textbf{EsID: 2.4.1}\\En bedriftskonto skal kunne banlyse en brukerkonto som missbruker applikasjonen. Dette kan/vil hinde en bruker som er banlyst fra å kunne leie fra dem igjen.
 
             \paragraph{Fjenre kommentarer}
-            En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
+            \textbf{EsID: 2.4.2}\\En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
 
     \subsection{Bruker klasse: Administrator}
 
         \subsubsection{Holde orden på brukerne}
 
             \paragraph{Banlyse}
-            Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
+            \textbf{EsID: 3.1.1}\\Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
 
             \paragraph{Slette/fjenre gamle/inaktive brukere}
-            Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
+            \textbf{EsID: 3.1.2}\\Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
 
             \paragraph{Slette/fjenre kommentarer}
-            Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
+            \textbf{EsID: 3.1.3}\\Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
 
             \paragraph{Slette/fjerne rangering}
-            Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
+            \textbf{EsID: 3.1.4}\\Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
     
 % Ikke funksjonelle krav %
 \section{Ikke funksjonelle krav}
@@ -221,7 +221,6 @@
 
 % Systemfunksjoner %
 \section{Systemfunksjoner}
-
 
 % Diagramer fra hver student %
 \section{Diagramer}
@@ -239,7 +238,85 @@
 
 \section{Estemering}
 
+    \subsection{Av funksjonelle krav for en ...}
+
+        \subsubsection{Brukerkonto}
+        \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+            \hline
+            \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+            \hline
+            1.1.1 & NULL & NULL & NULL\\
+            \hline
+            1.1.2 & NULL & NULL & NULL\\
+            \hline
+            1.1.3 & NULL & NULL & NULL\\
+            \hline
+            1.1.4 & NULL & NULL & NULL\\
+            \hline
+            1.1.5 & NULL & NULL & NULL\\
+            \hline
+            1.1.6 & NULL & NULL & NULL\\
+            \hline
+            1.2.1 & NULL & NULL & NULL\\
+            \hline
+            1.2.2 & NULL & NULL & NULL\\
+            \hline
+            1.2.3 & NULL & NULL & NULL\\
+            \hline
+            1.2.4 & NULL & NULL & NULL\\
+            \hline
+            1.2.5 & NULL & NULL & NULL\\
+            \hline
+            1.3.1 & NULL & NULL & NULL\\
+            \hline
+            1.3.2 & NULL & NULL & NULL\\
+            \hline
+        \end{tabular}
+    
+        \subsubsection{Bedriftkonto}
+        \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+            \hline
+            \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+            \hline
+            2.1.1 & NULL & NULL & NULL\\
+            \hline
+            2.1.2 & NULL & NULL & NULL\\
+            \hline
+            2.1.3 & NULL & NULL & NULL\\
+            \hline
+            2.1.4 & NULL & NULL & NULL\\
+            \hline
+            2.1.5 & NULL & NULL & NULL\\
+            \hline
+            2.2.1 & NULL & NULL & NULL\\
+            \hline
+            2.2.2 & NULL & NULL & NULL\\
+            \hline
+            2.2.3 & NULL & NULL & NULL\\
+            \hline
+            2.3.1 & NULL & NULL & NULL\\
+            \hline
+            2.3.2 & NULL & NULL & NULL\\
+            \hline
+            2.3.3 & NULL & NULL & NULL\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Administrator}
+        \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+            \hline
+            \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+            \hline
+            3.1.1 & NULL & NULL & NULL\\
+            \hline
+            3.1.2 & NULL & NULL & NULL\\
+            \hline
+            3.1.3 & NULL & NULL & NULL\\
+            \hline
+        \end{tabular}
 \section{Ta en titt på dette}
+
+% ------------------------------------------------------------------------------------ %
 % Dette her trenger en plass %
     \subsection{Lagring av data}
 
