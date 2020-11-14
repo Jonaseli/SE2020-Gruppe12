@@ -1,0 +1,9 @@
+{
+  "name": "se2020-gruppe12",
+  "version": "0.0.1",
+  "description": "MVP of SE2020 project by Gruppe 12",
+  "scripts": {
+    "prebuild": "npm install",
+    "build": "gulp"
+  }
+}
