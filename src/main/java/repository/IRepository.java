@@ -6,6 +6,8 @@ import model.Post;
 import model.Reservation;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public interface IRepository {
@@ -22,9 +24,8 @@ public interface IRepository {
     ArrayList<ParkingSpot> getParkingSpots();
     ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId);
     ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId);
-    void createParkingSpot(UUID ownerId, String type, boolean available, int width,
-                           int height, String postalCode, String streetAddress,
-                           String streetNumber, String pictureURL);
+
+    void createParkingSpot(Map<String, List<String>> values);
 
     Reservation getReservation(UUID reservationId);
     ArrayList<Reservation> getReservations();

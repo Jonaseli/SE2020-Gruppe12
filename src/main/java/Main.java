@@ -36,7 +36,7 @@ public class Main {
         });
 
         app.post("/api/account/:account-id/my-parking-spots/create-parking", ctx -> {
-            //parkingSpotController.createPayment(ctx);
+            parkingSpotController.createParking(ctx);
             ctx.redirect("/parking-spot");
         });
     }
