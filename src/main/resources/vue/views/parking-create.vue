@@ -10,7 +10,7 @@
         </nav>
         <div class="form-style">
             <h2>Create new parking spot</h2>
-            <form class="create" @submit="checkForm" :action=`/api/user/${ownerId}/createParking` method="post">
+            <form class="create" @submit="checkForm" :action=`/api/account/${accountId}/my-parking-spots/create-parking` method="post">
                 <div v-if="errors.length">
                     <b>Please correct the following error(s):</b>
                     <ul>
@@ -46,7 +46,7 @@
                     <input type="text" name="streetNumber" id="streetNumber" v-model="streetNumber">
                 </p>
                 <p>
-                    <input type="submit" value="Create Child">
+                    <input type="submit" value="Create Parking">
                 </p>
 
             </form>
@@ -58,7 +58,7 @@
     Vue.component("parking-create", {
         template: "#parking-create",
         data: () => ({
-            ownerId: null,
+            accountId: null,
             type: null,
             available: null,
             width: null,
@@ -70,17 +70,16 @@
             errors: []
         }),
         created() {
-            fetch(`/api/user/${ownerId}`)
+            const accountId = this.$javalin.pathParams["account-id"];
+            fetch(`/api/account/${accountId}`)
                 .then(res => res.json())
-                .then(res => {
-                    this.ownerId = res.accountId
-                })
+                .then(res => {this.account = res.accountId})
                 .catch(() => alert("User not found"))
         },
         methods:{
             checkForm:function(e) {
                 const urlRegex = "/^(?:(?:(?:https?|ftp):)?\\/\\/)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\\.(?:[a-z\u00a1-\uffff]{2,})))(?::\\d{2,5})?(?:[/?#]\\S*)?$/i";
-                if(this.Type && this.available && this.width && this.height && this.postalCode && this.streetAddress && this.streetNumber) return true;
+                if(this.type && this.available && this.width && this.height && this.postalCode && this.streetAddress && this.streetNumber) return true;
                 this.errors = [];
                 if (!this.type) this.errors.push("Type required");
                 if (!this.available) this.errors.push("Available required");

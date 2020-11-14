@@ -8,6 +8,15 @@
             <a href="/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots">My Parking spots</a>
             <a id="lastLink" href="/">Logout</a>
         </nav>
+        <ul class="parking-spots-overview-list">
+            <li>
+                <a :href="`/account/${account}/my-parking-spots/create-parking`" class="link-to-parking-spot-detail">
+                    <div class="single-parking-spot-container" >
+                        <h1>Create new parking spot</h1>
+                    </div>
+                </a>
+            </li>
+        </ul>
         <h1>Owned parking spots</h1>
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in ownedParkingSpots">
@@ -36,13 +45,17 @@
     Vue.component("my-parking-spots", {
         template: "#my-parking-spots",
         data: () => ({
-            accountId: null,
+            account: null,
             ownedParkingSpots: [],
             rentedParkingSpots: [],
             historyParkingSpots: [],
         }),
         created() {
             const accountId = this.$javalin.pathParams["account-id"];
+            fetch(`/api/account/${accountId}`)
+                .then(res => res.json())
+                .then(res => {this.account = res.accountId})
+                .catch(() => alert("User not found"))
             fetch(`/api/account/${accountId}/my-parking-spots/owned-parking-spots`)
                 .then(res => res.json())
                 .then(res => this.ownedParkingSpots = res)
