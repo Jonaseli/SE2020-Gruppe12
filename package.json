@@ -3,10 +3,45 @@
   "version": "0.0.1",
   "description": "MVP of SE2020 project by Gruppe 12",
   "dependencies": {
+    "@babel/core": "7.12.3",
+    "@babel/preset-env": "7.12.1",
     "@vue/test-utils": "1.1.1",
-    "jest": "26.6.3"
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "26.6.3",
+    "jest": "26.6.3",
+    "vue-jest": "3.0.7"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
+    "testMatch": [
+      "**/test/vue/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "scripts": {
-    "prebuild": "npm install"
+    "prebuild": "npm install",
+    "test": "jest"
   }
 }
