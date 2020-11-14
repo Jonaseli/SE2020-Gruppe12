@@ -11,6 +11,8 @@
     </div>
 </template>
 <script>
+    //import Vue from 'vue'
+    //window.Vue = require('vue');
     Vue.component("login-page",{
         template : "#login",
         methods: {
