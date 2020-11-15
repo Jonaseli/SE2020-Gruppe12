@@ -3,8 +3,7 @@
     <option name="MAIN_CLASS_NAME" value="Main" />
     <module name="SE2020-Gruppe12" />
     <method v="2">
-      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="com.github.eirslett:frontend-maven-plugin:1.9.1:install-node-and-npm" />
-      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="com.github.eirslett:frontend-maven-plugin:1.9.1:npm" />
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="compile" />
       <option name="Make" enabled="true" />
     </method>
   </configuration>

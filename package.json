@@ -41,6 +41,9 @@
       "@babel/preset-env"
     ]
   },
+  "vue": {
+    "runtimeCompiler": true
+  },
   "scripts": {
     "prebuild": "npm install",
     "test": "jest"
