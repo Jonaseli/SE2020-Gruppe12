@@ -13,6 +13,7 @@
 <script>
     //import Vue from 'vue'
     //window.Vue = require('vue');
+    console.log(window);
     Vue.component("login-page",{
         template : "#login",
         methods: {
