@@ -37,12 +37,7 @@
                 .then(res => res.json())
                 .then(res => this.post = res)
                 .catch(() => alert("Error while fetching posts"));
-<<<<<<< HEAD
-
              */
-=======
-            */
->>>>>>> 25511376f98c545bdfed476980c412d55c604834
         }
     });
 </script>
