@@ -1,6 +1,14 @@
 <template id="parking-spots-overview">
    <div>
-       <h1>Parking</h1>
+        <header>
+            <h1>Parking App</h1>
+        </header>
+        <nav id="normalNav">
+            <a href="/parking-spot">Home</a>
+            <a href="">My Parking spots</a>
+            <a id="lastLink" href="/">Logout</a>
+        </nav>
+        <h1>Parking</h1>
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in parkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
@@ -14,7 +22,6 @@
    </div>
 </template>
 <script>
-
     Vue.component("parking-spots-overview", {
         template: "#parking-spots-overview",
         data: () => ({
@@ -29,6 +36,45 @@
     });
 </script>
 <style>
+
+    nav {
+        margin: 10px;
+    }
+
+   #normalNav {
+    grid-area: nav;
+    display: flex;
+    background-color: #000000;
+    }
+
+    #normalNav a {
+        opacity: 0.96;
+        flex-grow: 1;
+        display: block;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        line-height: 30px;
+        min-width: 50px;
+        overflow: hidden;
+        text-decoration: none;
+        margin: 5px;
+        box-sizing: border-box;
+        border-right: 1px solid white;
+    }
+
+    #normalNav #lastLink {
+        border-right: 0;
+    }
+
+    #normalNav a:hover{
+        opacity: 1.0;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+    }
+
     li{
         list-style-type: none;
     }
@@ -75,5 +121,4 @@
         padding-bottom: 20px;
         max-height: 280px;
     }
-
 </style>
