@@ -6,7 +6,7 @@
         </header>
         <nav id="normalNav">
             <a href="/parking-spot">Home</a>
-            <a href="">My Parking spots</a>
+            <a href="/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots">My Parking spots</a>
             <a id="lastLink" href="/">Logout</a>
         </nav>
         <div v-if="parkingSpot" class ="detail-parking-spot-container">
@@ -37,8 +37,12 @@
                 .then(res => res.json())
                 .then(res => this.post = res)
                 .catch(() => alert("Error while fetching posts"));
+<<<<<<< HEAD
 
              */
+=======
+            */
+>>>>>>> 25511376f98c545bdfed476980c412d55c604834
         }
     });
 </script>

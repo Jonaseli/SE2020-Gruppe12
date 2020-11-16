@@ -15,6 +15,10 @@ public class Main {
         app.get("/parking-spot/:parking-spot-id/posts/:post-id", new VueComponent("parking-spot-detail"));
         app.get("/parking-spot/:parking-spot-id/payment", new VueComponent("payment-page"));
 
+        app.get("/account", new VueComponent("accounts-overview"));
+        app.get("/account/:account-id/my-parking-spots", new VueComponent("my-parking-spots"));
+        app.get("/account/:account-id/my-parking-spots/create-parking", new VueComponent("parking-create"));
+
         Repository repo = new Repository();
 
         //api
@@ -23,11 +27,19 @@ public class Main {
         app.get("api/parking-spot/:parking-spot-id", parkingSpotController :: getParkingSpot);
         app.get("api/parking-spot/:parking-spot-id/posts/:post-id", parkingSpotController :: getPost);
 
+        app.get("api/account", parkingSpotController :: getAccounts);
+        app.get("api/account/:account-id", parkingSpotController :: getAccount);
+        app.get("api/account/:account-id/my-parking-spots/owned-parking-spots", parkingSpotController :: getOwnedParkingSpots);
+        app.get("api/account/:account-id/my-parking-spots/rented-parking-spots", parkingSpotController :: getRentedParkingSpots);
+
         app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
             //parkingSpotController.createPayment(ctx);
             ctx.redirect("/parking-spot");
         });
 
+        app.post("/api/account/:account-id/my-parking-spots/create-parking", ctx -> {
+            parkingSpotController.createParking(ctx);
+            ctx.redirect("/parking-spot");
+        });
     }
-
 }
