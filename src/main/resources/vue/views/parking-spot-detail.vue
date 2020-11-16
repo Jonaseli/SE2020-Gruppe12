@@ -1,6 +1,5 @@
 <template id = "parking-spot-detail">
     <div class = "content-wrapper">
-        <div v-if="parkingSpot" class="detail-parking-spot-container">
         <header>
             <h1>Parking App</h1>
         </header>
@@ -11,7 +10,7 @@
         </nav>
         <div v-if="parkingSpot" class ="detail-parking-spot-container">
             <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
-            <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
+            <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png%22%3E">
             <h1>{{parkingSpot.ownerId}}</h1>
         </div>
     </div>
