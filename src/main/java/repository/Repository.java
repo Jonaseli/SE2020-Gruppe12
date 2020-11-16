@@ -5,10 +5,7 @@ import model.ParkingSpot;
 import model.Post;
 import model.Reservation;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class Repository implements IRepository{
     private ArrayList<Account> accounts;
@@ -34,7 +31,14 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public Account getAccount(UUID accountId) { return null; }
+    public Account getAccount(UUID accountId) {
+        for (Account account : accounts){
+            if (account.getAccountId().equals(accountId)){
+                return account;
+            }
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<Account> getAccounts() { return accounts; }
@@ -74,7 +78,45 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public void createParkingSpot(UUID ownerId, String type, boolean available, int width, int height, String postalCode, String streetAddress, String streetNumber, String pictureURL) {
+    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId) {
+        ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<ParkingSpot>();
+        for (ParkingSpot parking : parkingSpots){
+            if(parking.getOwnerId().equals(accountId)){
+                ownedParkingSpots.add(parking);
+            }
+        }
+        return ownedParkingSpots;
+    }
+
+    @Override
+    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId) {
+        ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<ParkingSpot>();
+        for (Reservation reservation : reservations) {
+            if (reservation.getAccountId().equals(accountId)) {
+                UUID posId = reservation.getPostId();
+                for (Post post : posts) {
+                    if (post.getPostId().equals(posId)) {
+                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpotId()));
+                    }
+                }
+            }
+        }
+        return rentedParkingSpots;
+    }
+
+    @Override
+    public void createParkingSpot(Map<String, List<String>> values) {
+        //TODO change ownerId and available so its not hardcoded
+        UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
+        String type = values.get("type").get(0);
+        boolean available = true;
+        int width = Integer.parseInt(values.get("width").get(0));
+        int height = Integer.parseInt(values.get("height").get(0));
+        String postalCode = values.get("postalCode").get(0);
+        String streetAddress = values.get("streetAddress").get(0);
+        String streetNumber = values.get("streetNumber").get(0);
+        String pictureURL = "";
+
         parkingSpots.add(new ParkingSpot(ownerId, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
