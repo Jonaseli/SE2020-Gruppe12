@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Component from 'main/resources/vue/components/login-buttons.vue'
+import Component from 'main/resources/vue/components/login-page-component.vue'
 
 test('mount a vue component', () => {
     const wrapper = mount(Component)
