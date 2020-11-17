@@ -1,9 +1,6 @@
 package repository;
 
-import model.Account;
-import model.ParkingSpot;
-import model.Post;
-import model.Reservation;
+import model.*;
 
 import java.util.*;
 
@@ -64,9 +61,8 @@ public class Repository implements IRepository{
     public ArrayList<Post> getPosts() { return posts; }
 
     @Override
-
-    public void createPost(UUID parkingSpotId, String availablePeriod, double price) {
-        posts.add(new Post(parkingSpotId, availablePeriod, price));
+    public void createPost(UUID parkingSpotId, ArrayList<Time> reservations, double price) {
+        posts.add(new Post(parkingSpotId, reservations, price));
         post.writeToFile(postPath, posts);
     }
 
@@ -136,8 +132,9 @@ public class Repository implements IRepository{
     public ArrayList<Reservation> getReservations() { return reservations; }
 
     @Override
-    public void createReservation(UUID postId, UUID userId, String parkingTime) {
-        reservations.add(new Reservation(postId, userId, parkingTime));
+    public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
+        post.addReservationTime(startTime, endTime);
+        reservations.add(new Reservation(postId, userId, startTime, endTime));
         reservation.writeToFile(reservationPath, reservations);
     }
 }

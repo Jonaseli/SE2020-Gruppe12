@@ -6,17 +6,17 @@ import java.util.UUID;
 public class Post implements JSONReadable<Post>, JSONWritable<Post>{
     
     private UUID postId, parkingSpotId;
+
     // [["15:00", "18:00"],["25.10 12:14", "25.10 12:50"]]
     private ArrayList<Time> reservations;
-    private String availablePeriod;
     private double price;
 
     public Post(){}
 
-    public Post(UUID parkingSpotId, String availablePeriod, double price){
+    public Post(UUID parkingSpotId, ArrayList<Time> reservations, double price){
         this.postId = UUID.randomUUID();
         this.parkingSpotId = parkingSpotId;
-        this.availablePeriod = availablePeriod;
+        this.reservations = new ArrayList<>();
         this.price = price;
     }
 
@@ -28,12 +28,12 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post>{
         return parkingSpotId;
     }
 
-    public String getAvailablePeriod() {
-        return availablePeriod;
+    public ArrayList<Time> getReservationTimes() {
+        return reservations;
     }
 
-    public void setAvailablePeriod(String availablePeriod) {
-        this.availablePeriod = availablePeriod;
+    public void addReservationTime(String startTime, String endTime) {
+        reservations.add(new Time(startTime, endTime));
     }
 
     public double getPrice() {
