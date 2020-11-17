@@ -10,6 +10,11 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
+#Node
+node/
+node_modules/
+
+
 # TeX
 .aux
 .fdb_latexmk
