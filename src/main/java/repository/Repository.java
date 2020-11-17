@@ -62,7 +62,7 @@ public class Repository implements IRepository{
 
     @Override
     public void createPost(UUID parkingSpotId, ArrayList<Time> reservations, double price) {
-        posts.add(new Post(parkingSpotId, reservations, price));
+        posts.add(new Post(parkingSpotId, price));
         post.writeToFile(postPath, posts);
     }
 

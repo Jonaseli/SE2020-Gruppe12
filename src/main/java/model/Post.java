@@ -13,7 +13,7 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post>{
 
     public Post(){}
 
-    public Post(UUID parkingSpotId, ArrayList<Time> reservations, double price){
+    public Post(UUID parkingSpotId, double price){
         this.postId = UUID.randomUUID();
         this.parkingSpotId = parkingSpotId;
         this.reservations = new ArrayList<>();
