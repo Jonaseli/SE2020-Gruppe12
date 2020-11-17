@@ -113,7 +113,6 @@ public class Repository implements IRepository{
         //TODO change ownerId and available so its not hardcoded
         UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
         String type = values.get("type").get(0);
-        boolean available = true;
         int width = Integer.parseInt(values.get("width").get(0));
         int height = Integer.parseInt(values.get("height").get(0));
         String postalCode = values.get("postalCode").get(0);
@@ -121,7 +120,7 @@ public class Repository implements IRepository{
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, type, true, width, height, postalCode, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
