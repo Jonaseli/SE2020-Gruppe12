@@ -1,10 +1,13 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Post implements JSONReadable<Post>, JSONWritable<Post>{
     
     private UUID postId, parkingSpotId;
+    // [["15:00", "18:00"],["25.10 12:14", "25.10 12:50"]]
+    private ArrayList<Time> reservations;
     private String availablePeriod;
     private double price;
 
