@@ -21,7 +21,7 @@
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in ownedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
-                    <div class="single-parking-spot-container" >
+                    <div class="single-parking-spot-container">
                         <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
                         <h1>{{parkingSpot.ownerId}}</h1>
                     </div>

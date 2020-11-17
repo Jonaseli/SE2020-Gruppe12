@@ -15,7 +15,7 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
 
     public ParkingSpot(UUID owner, String type, boolean available, int width,
                        int height, String postalCode, String streetAddress,
-                       String streetNumber, String pictureURL){
+                       String streetNumber, String pictureURL) {
         this.parkingSpotId = UUID.randomUUID();
         this.ownerId = owner;
         this.type = type;

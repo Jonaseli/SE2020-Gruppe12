@@ -8,7 +8,4 @@ public class User extends Account{
         super(displayName);
     }
 
-    //TODO
-    //interface funksjon under
-
 }
