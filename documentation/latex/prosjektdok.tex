@@ -14,13 +14,16 @@
 \usepackage{hyperref}
 
 % settings %
+\setcounter{secnumdepth}{2} % enumerate
+\setcounter{tocdepth}{2}    % TOC entries
 \renewcommand{\contentsname}{Innholdsfortegnelse}
 \newcounter{esidcounter}
-\setcounter{secnumdepth}{4} % enumerate paragraph
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% settings for paragraph
+% 
+% \titleformat{\paragraph}
+% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \titlespacing*{\paragraph}
+% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % commands %
 \newcommand*{\EsID}{\stepcounter{esidcounter}\textbf{EsID: FK\arabic{esidcounter}\\}}
@@ -102,77 +105,70 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
 % Funksjonelle krav %
 \section{Funksjonelle krav}
 
-    \subsection{Innlogging}
+    \subsection{Kontoopprettelse}
         
-        \subsubsection{Lage en brukerkonto}
+        \subsubsection{Bruker skal kunne opprette en brukerkonto}
         \EsID
-        Bruken må oppgi brukernavn, passord, e-post og telefonnummer.
+        For å oppgi en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
 
-        \subsubsection{Systemet verifiserer registreringen}
+        \subsubsection{Bruker skal kunne opprette en bedriftskonto}
         \EsID
-        Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når den 4-sifra koden er skrevet inn i tekst-feltet og det stemmer på nettsiden, skal brukeren bli lagret i databasen.
+        For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
 
-        \subsubsection{Derigere opprettet bruker}
+        \subsubsection{Bruker skal få verifiseringskode}
         \EsID
-        Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+        Etter registrering av konto skal bruker bli tilsendt en 4-sifret kode via e-post, samt midlertidig lagre denne koden i databasen. Koden skrives inn i et tekst-felt for verifisering.
 
-        \subsubsection{Derigere innlogget bruker}
+        \subsubsection{Systemet skal verifisere registreringen via kode}
         \EsID
-        Etter vellykket innlogging skal bruker bli ført til startsiden.
-
-        \subsubsection{Systemet skal verifisere innloggingen}
-        \EsID
-        Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
-
-        \subsubsection{Bruker skal kunne logge inn}
-        \EsID
-        Bruker skal kunne logge inn som en brukerkonto.
-        
-        \subsubsection{Opprette en Bedriftskonto}
-        \EsID
-        For å opprette en bedriftskonto, må bruker må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk).
-
-        \subsubsection{Kode for bekreftelse}
-        \EsID
-        Etter registrering av konto skal bli tilsendt en 4-sifret kode via e-post. Koden må så skrives inn i et tekst-felt på en verifiseringsside
-
-        \subsubsection{Systemet skal verifisere registreringen}
-        \EsID
-        asd
+        Den 4-sifra koden fra brukeren skal sjekkes opp den eksisterende koden i databasen, hvis den stemmer er kontoopprettelsen verifisert, og koden slettes fra databasen.
 
         \subsubsection{Systemet skal lagre dataen}
         \EsID
-        nettsiden skal denne koden dataen lagres i en database, det kan/vil følge opp mer verifisering når man skal lage en bedriftskonto.
+        Etter at brukeropprettelsen er verifisert, blir data fra opprettelsen lagret i databasen.
 
         \subsubsection{Derigere opprettet bruker}
         \EsID
-        Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+        Etter opprettelse av konto skal bruker bli ført til startsiden.
+    
+    \subsection{Innlogging}
+
+        \subsubsection{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}
+        \EsID
+        Bruker skal kunne velge å logge inn som en brukerkonto eller bedriftskonto, og så fylle ut tekst-felter med data som stemmer i forhold til opprettelsen av kontoen.
+
+        \subsubsection{Systemet skal verifisere innloggingen}
+        \EsID
+        Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli logget inn. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
         \subsubsection{Derigere innlogget bruker}
         \EsID
         Etter vellykket innlogging skal bruker bli ført til startsiden.
 
-        \subsubsection{Systemet skal verifisere innloggingen}
+    \subsection{Presentasjon av parkeringsplasser (Feed)}
+        Feeden er der brukeren lettest kan finne parkeringsplasser å leie.
+
+        \subsubsection{Feeden skal vise en liste over relevante parkeringsplasser}
         \EsID
-        Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+        Opplistingen skal bestå av innlegg av parkeringsplasser fra andre brukere.
         
-    \subsection{Leie en parkeringsplass}
-
-        \subsubsection{Hvordan finne en parkeringsplass område}
+        \subsubsection{Bruker skal kunne sette et filter på feeden}
         \EsID
-        Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+        Opplistingen rangeres via et brukervalgt filter. Filteret bestemmer om opplastingen rangeres basert på nærmest avstand, lavest til høyest pris, høyest til lavest pris, parkeringsplasstype og om den leies ut av en brukerkonto eller bedriftskonto. Standardinnstillingen skal være nærmest avstand.
 
-        \subsubsection{Filtert søk}
+        \subsubsection{Bruker skal kunne søke etter en adresse}
         \EsID
-        Skal kunne velge et filter på feeden, slik at innleggene oppfyller brukers behov.
+        Feeden skal rangere parkeringsplassene basert på avstand i forhold til denne adressen.
 
-        \subsubsection{Når og hvor kan en bruker leie}
+        \subsubsection{Bruker skal kunne søke etter koordinater}
         \EsID
-        En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass området.
+        Feeden skal rangere parkeringsplassene basert på avstand i forhold til koordinatene.
 
-        \subsubsection{Hvordan leie en parkeringsplass}
+    \subsection{Leie parkeringsplass}
+
+        \subsubsection{Bruker skal kunne leie parkeringsplass som en brukerkonto}
         \EsID
-        Som en brukerkonto skal man kunne leie parkeringsplasser ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), parkeringsplass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betale for parkeringsplassen.
+        Som en brukerkonto skal bruker kunne leie en eller flere parkeringsplasser
 
         % Splitte opp i to underklasser??? -> tid og betaling %
         \subsubsection{Tid og betaling}
