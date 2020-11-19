@@ -6,18 +6,20 @@ import dataHandler.JSONWritable;
 import java.util.UUID;
 
 public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
-    
+
     private UUID parkingSpotId, ownerId;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
-    private String postalCode, poststed, streetAddress, streetNumber;
+    private String postalCode, city, streetAddress, streetNumber;
     private String pictureURL;
 
-    public ParkingSpot(){}
-
+    public ParkingSpot() {
+    }
+    
     public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
-                       int length, int height, String postalCode, String poststed, String streetAddress,
+                       int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL){
+
         this.parkingSpotId = UUID.randomUUID();
         this.ownerId = owner;
         this.handicap = handicap;
@@ -27,7 +29,7 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         this.length = length;
         this.height = height;
         this.postalCode = postalCode;
-        this.poststed = poststed;
+        this.city = city;
         this.streetAddress = streetAddress;
         this.streetNumber = streetNumber;
         this.pictureURL = pictureURL;
@@ -73,9 +75,13 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         this.width = width;
     }
 
-    public int getLength() { return length; };
+    public int getLength() {
+        return length;
+    }
 
-    public void setLength(int length) { this.length = length; }
+    public void setLength(int length) {
+        this.length = length;
+    }
 
     public int getHeight() {
         return height;
@@ -93,12 +99,12 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         this.postalCode = postalCode;
     }
 
-    public String getPoststed() {
-        return poststed;
+    public String getCity() {
+        return city;
     }
 
-    public void setPoststed(String poststed) {
-        this.poststed = poststed;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getStreetAddress() {
