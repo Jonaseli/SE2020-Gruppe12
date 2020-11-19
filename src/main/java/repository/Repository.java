@@ -116,7 +116,22 @@ public class Repository implements IRepository {
     public void createParkingSpot(Map<String, List<String>> values) {
         //TODO change ownerId and available so its not hardcoded
         UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
-        String type = values.get("type").get(0);
+
+        boolean available = true;
+        boolean handicap;
+        try{
+            handicap = values.get("handicap").get(0) != null;
+        } catch(Exception e) {
+            handicap = false;
+        }
+
+        boolean chargingStation;
+        try{
+            chargingStation = values.get("chargingStation").get(0) != null;
+        } catch(Exception e) {
+            chargingStation = false;
+        }
+
         int width = Integer.parseInt(values.get("width").get(0));
         int length = Integer.parseInt(values.get("length").get(0));
         int height = Integer.parseInt(values.get("height").get(0));
@@ -126,7 +141,7 @@ public class Repository implements IRepository {
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, type, true, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, available, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 

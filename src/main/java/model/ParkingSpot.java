@@ -8,20 +8,22 @@ import java.util.UUID;
 public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
 
     private UUID parkingSpotId, ownerId;
-    private String type;
-    private boolean available;
+    private boolean available, handicap, chargingStation;
     private int width, length, height;
     private String postalCode, city, streetAddress, streetNumber;
     private String pictureURL;
 
     public ParkingSpot() {
     }
+    
+    public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
+                       int length, int height, String postalCode, String city, String streetAddress,
+                       String streetNumber, String pictureURL){
 
-    public ParkingSpot(UUID owner, String type, boolean available, int width, int length, int height,
-                       String postalCode, String city, String streetAddress, String streetNumber, String pictureURL) {
         this.parkingSpotId = UUID.randomUUID();
         this.ownerId = owner;
-        this.type = type;
+        this.handicap = handicap;
+        this.chargingStation = chargingStation;
         this.available = available;
         this.width = width;
         this.length = length;
@@ -41,12 +43,20 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         return ownerId;
     }
 
-    public String getType() {
-        return type;
+    public boolean getHandicap() {
+        return handicap;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setHandicap(boolean handicap) {
+        this.handicap = handicap;
+    }
+
+    public boolean getChargingStation() {
+        return chargingStation;
+    }
+
+    public void setChargingStation(boolean chargingStation) {
+        this.chargingStation = chargingStation;
     }
 
     public boolean isAvailable() {
