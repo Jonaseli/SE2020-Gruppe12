@@ -78,6 +78,10 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \hline
         Personas & Er et annet ord for rollefigur, enkeltmenneske, karakterpersonlighet\\
         \hline
+        FK & Funksjonelt Krav (brukes til EsID)\\
+        \hline
+        Innlegg & Brukerinnlegg i systemet (post) som består av en eller flere parkeringsplasser\\
+        \hline
     \end{tabular}
 \end{center}
 
@@ -115,15 +119,15 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \EsID
         For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
 
-        \subsubsection{Bruker skal få verifiseringskode}
+        \subsubsection{Systemet skal sende verifiseringskode til bruker}
         \EsID
         Etter registrering av konto skal bruker bli tilsendt en 4-sifret kode via e-post, samt midlertidig lagre denne koden i databasen. Koden skrives inn i et tekst-felt for verifisering.
 
-        \subsubsection{Systemet skal verifisere registreringen via kode}
+        \subsubsection{Systemet skal verifisere registreringen}
         \EsID
         Den 4-sifra koden fra brukeren skal sjekkes opp den eksisterende koden i databasen, hvis den stemmer er kontoopprettelsen verifisert, og koden slettes fra databasen.
 
-        \subsubsection{Systemet skal lagre dataen}
+        \subsubsection{Systemet skal lagre dataen til den brukeren}
         \EsID
         Etter at brukeropprettelsen er verifisert, blir data fra opprettelsen lagret i databasen.
 
@@ -146,7 +150,6 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         Etter vellykket innlogging skal bruker bli ført til startsiden.
 
     \subsection{Presentasjon av parkeringsplasser (Feed)}
-        Feeden er der brukeren lettest kan finne parkeringsplasser å leie.
 
         \subsubsection{Feeden skal vise en liste over relevante parkeringsplasser}
         \EsID
@@ -175,16 +178,18 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \EsID
         Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass slik at andre brukere kan ta over eller å fylle på med mer tid. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
 
-    \subsection{Komentere og rangering}
+    \subsection{Tilbakemelding på innlegg}
 
-        \subsubsection{Komentering}
+        \subsubsection{Bruker skal kunne gi tilbakemelding på et innlegg}
         \EsID
-        En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
+        Dersom brukeren har brukt en parkeringsplass, skal de kunne gi tilbakemelding på innlegget til den parkeringsplassen. Innlegget må minst bestå av en poengsum fra 1 til 5, der 5 er den høyeste poengsummen. Om ønskelig kan bruker også legge til en kommentar på maks 130 tegn. Tilbakemeldingen skal lagres i databasen og tilknyttes innlegget.
 
-        \subsubsection{Rangering}
+        \subsubsection{Tilbakemeldinger skal vises på hvert innlegg}
         \EsID
-        En bruker skal kunne vurdere andre brukeres parkeringsplass som de har leiet ved å sette en poengsum fra 1 til 5.
+        Alle innlegg som tilhører et innlegg skal vises som en liste på innlegget, der nyeste tilbakemelding ligger øverst. Hver tilbakemelding skal vise poengsummen, kommentaren og brukernavn til de som lagde den. I tillegg skal en endelig rangering vises på innlegget som består av gjennomsnittet av poengsummer fra alle tilbakemeldinger knyttet til innlegget.
 
+        \subsubsection{Utleier skal kunne få tilbakemeldinger via mail}
+        Ved valg har utleier mulighet til å få alle tilbakemeldinger sendt på mail.
 
     \subsection{Opprette parkeringsplasser}
 
@@ -195,10 +200,10 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
         \EsID
         Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
-
-        \subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
+        
+        \subsubsection{Systemet skal lagre parkeringsplassen i en database}
         \EsID
-        Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
+        Den nylig registrerte parkeringsplassen lagres i en database, der den knyttes til en bruker (eier av parkeringsplassen).
 
     \subsection{Betaling og regler}
 
@@ -224,23 +229,39 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \EsID
         En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
 
-    \subsection{Holde orden på brukerne}
+    \subsection{Administrering}
 
-        \subsubsection{Banlyse}
+        \subsubsection{Administrator skal kunne bannlyse bruker}
         \EsID
-        Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
+        Administrator skal ha full rett til å bannlyse en vilkårlig bruker. Den bannlyste brukeren skal få beskjed om bannlysingen via e-post og direkte i systemet. 
 
-        \subsubsection{Slette/fjenre gamle/inaktive brukere}
+        \subsubsection{Administrator skal kunne slette bruker}
         \EsID
-        Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
+        Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen. Den slettede brukeren skal få beskjed om slettingen via e-post.
 
-        \subsubsection{Slette/fjenre kommentarer}
+        \subsubsection{Administrator skal kunne slette tilbakemeldinger}
         \EsID
-        Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
+        Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
 
-        \subsubsection{Slette/fjerne rangering}
+        \subsubsection{Administrator skal kunne slette innlegg}
         \EsID
-        Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
+        Administrator skal ha full rett til å slette individuelle innlegg. Bruker som lagde innlegget skal få beskjed om slettingen via e-post og direkte i systemet.
+
+        \subsubsection{Administrator skal kunne slette parkeringsplasser}
+        \EsID
+        Administrator skal ha full rett til å slette individuelle parkeringsplasser. Bruker som opprettet parkeringsplassen skal få beskjed om slettingen via e-post og direkte i systemet.
+
+        \subsubsection{Administrator skal kunne slette reservasjoner}
+        \EsID
+        Bla bla bla skirv etterpå
+
+        \subsubsection{Bruker skal kunne rapportere andre brukere sine innlegg}
+        \EsID
+        Brukere har frihet til å rapportere andre brukere sine innlegg. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+
+        \subsubsection{Bruker skal kunne rapportere andre brukere}
+        \EsID
+        Brukere har frihet til å rapportere andre brukere. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
     
     \subsection{Lagring av data}
 
@@ -253,14 +274,6 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
         \subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
         \EsID
         Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
-
-    \subsection{Feed}
-
-    \subsubsection{Feeden skal vise brukerinnlegg}
-
-    \subsubsection{Bruker skal kunne velge et filter på feeden}
-
-    \subsection{Brukerinnlegg}
 
            
 \section{Andre funksjoner}
