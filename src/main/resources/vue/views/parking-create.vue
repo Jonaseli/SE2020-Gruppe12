@@ -7,6 +7,7 @@
         data: () => ({
             accountId: null,
             handicap: null,
+            chargingStation: null,
             width: null,
             length: null,
             height: null,

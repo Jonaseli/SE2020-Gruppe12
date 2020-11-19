@@ -116,6 +116,13 @@ public class Repository implements IRepository{
             handicap = false;
         }
 
+        boolean chargingStation;
+        try{
+            chargingStation = values.get("chargingStation").get(0) != null;
+        } catch(Exception e) {
+            chargingStation = false;
+        }
+
         int width = Integer.parseInt(values.get("width").get(0));
         int length = Integer.parseInt(values.get("length").get(0));
         int height = Integer.parseInt(values.get("height").get(0));
@@ -125,7 +132,7 @@ public class Repository implements IRepository{
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, handicap, available, width, length, height, postalCode, poststed, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, available, width, length, height, postalCode, poststed, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
