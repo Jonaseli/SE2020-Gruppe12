@@ -58,25 +58,15 @@
   "parkingSpotId" : "71a02cbe-e80c-4dca-9082-cf6f97c9446f",
   "ownerId" : "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
   "available" : true,
-<<<<<<< HEAD:parkingSpots.json
   "handicap" : true,
   "chargingStation" : false,
   "width" : 554,
   "length" : 523,
   "height" : 423,
   "postalCode" : "1700",
-  "poststed" : "bestepoststed",
+  "city" : "bestepoststed",
   "streetAddress" : "Bestegate",
   "streetNumber" : "36",
-=======
-  "width" : 155,
-  "length": 300,
-  "height" : 270,
-  "postalCode" : "1783",
-  "city": "Halden",
-  "streetAddress" : "B R A veien",
-  "streetNumber" : "6D H0109",
->>>>>>> develop:src/main/resources/json/parkingSpots.json
   "pictureURL" : ""
 }, {
   "parkingSpotId" : "ee792d38-76c7-461b-ac0f-679e22c19031",
@@ -88,7 +78,7 @@
   "length" : 15,
   "height" : 52,
   "postalCode" : "1234",
-  "poststed" : "testet",
+  "city" : "testet",
   "streetAddress" : "testing",
   "streetNumber" : "testing",
   "pictureURL" : ""
