@@ -109,7 +109,13 @@ public class Repository implements IRepository{
         //TODO change ownerId and available so its not hardcoded
         UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
         boolean available = true;
-        boolean handicap = Boolean.parseBoolean(values.get("handicap").get(0));
+        boolean handicap;
+        try{
+            handicap = values.get("handicap").get(0) != null;
+        } catch(Exception e) {
+            handicap = false;
+        }
+
         int width = Integer.parseInt(values.get("width").get(0));
         int length = Integer.parseInt(values.get("length").get(0));
         int height = Integer.parseInt(values.get("height").get(0));

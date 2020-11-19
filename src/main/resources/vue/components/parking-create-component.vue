@@ -38,10 +38,10 @@
                     </p>
                 </div>
                 <div>
-                <p>Types</p>
+                <p>Special Types</p>
                 <p>
                     <label for="name"><label>
-                    <input type="checkbox" name="type" id="type" v-model="type"><span class="label"></span>
+                    <input type="checkbox" name="handicap" id="handicap" v-model="handicap" value="checked"><span class="label"></span>
                 </p>
                 </div>
                 <div class="sameLine3Input">
