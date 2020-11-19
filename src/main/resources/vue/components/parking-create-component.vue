@@ -44,15 +44,15 @@
                 <div class="sameLine3Input">
                     <p>
                         <label for="name">Width (cm)<label>
-                        <input type="number" name="width" id="width" v-model="width" placeholder="0">
+                        <input type="number" name="width" id="width" v-model="width" placeholder="0" min="0" max="999">
                     </p>
                    <p>
                         <label for="name">Length (cm)<label>
-                        <input type="number" name="length" id="length" v-model="length" placeholder="0">
+                        <input type="number" name="length" id="length" v-model="length" placeholder="0" min="0" max="999">
                     </p>
                     <p>
                         <label for="name">Height (cm)<label>
-                        <input type="number" name="height" id="height" v-model="height" placeholder="0">
+                        <input type="number" name="height" id="height" v-model="height" placeholder="0" min="0" max="999">
                     </p>
                 </div>
                 <p>
