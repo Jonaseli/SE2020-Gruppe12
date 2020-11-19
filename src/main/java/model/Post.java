@@ -1,8 +1,11 @@
 package model;
 
+import dataHandler.JSONReadable;
+import dataHandler.JSONWritable;
+
 import java.util.UUID;
 
-public class Post implements JSONReadable<Post>, JSONWritable<Post>{
+public class Post implements JSONReadable<Post>, JSONWritable<Post> {
     
     private UUID postId, parkingSpotId;
     private String availablePeriod;
