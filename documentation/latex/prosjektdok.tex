@@ -14,15 +14,18 @@
 \usepackage{hyperref}
 
 % settings %
+\setcounter{secnumdepth}{2} % enumerate
+\setcounter{tocdepth}{2}    % TOC entries
 \renewcommand{\contentsname}{Innholdsfortegnelse}
-\setcounter{secnumdepth}{4}
 \newcounter{esidcounter}
+% settings for paragraph
+% 
+% \titleformat{\paragraph}
+% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \titlespacing*{\paragraph}
+% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % commands %
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \newcommand*{\EsID}{\stepcounter{esidcounter}\textbf{EsID: FK\arabic{esidcounter}\\}}
 
 % document %
@@ -102,166 +105,154 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
 % Funksjonelle krav %
 \section{Funksjonelle krav}
 
-    \subsection{Bruker klasse: Brukerkonto}
-
-        \subsubsection{Innlogging}
+    \subsection{Kontoopprettelse}
         
-            \paragraph{Lage en brukerkonto}
-            \EsID
-            Bruken må oppgi brukernavn, passord, e-post og telefonnummer.
+        \subsubsection{Bruker skal kunne opprette en brukerkonto}
+        \EsID
+        For å oppgi en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
 
-            \paragraph{Systemet verifiserer registreringen}
-            \EsID
-            Når bruker har registrert konto skal de bli tilsendt 4-sifret kode via e-post. Når den 4-sifra koden er skrevet inn i tekst-feltet og det stemmer på nettsiden, skal brukeren bli lagret i databasen.
+        \subsubsection{Bruker skal kunne opprette en bedriftskonto}
+        \EsID
+        For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
 
-            \paragraph{Derigere opprettet bruker}
-            \EsID
-            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+        \subsubsection{Bruker skal få verifiseringskode}
+        \EsID
+        Etter registrering av konto skal bruker bli tilsendt en 4-sifret kode via e-post, samt midlertidig lagre denne koden i databasen. Koden skrives inn i et tekst-felt for verifisering.
 
-            \paragraph{Derigere innlogget bruker}
-            \EsID
-            Etter vellykket innlogging skal bruker bli ført til startsiden.
+        \subsubsection{Systemet skal verifisere registreringen via kode}
+        \EsID
+        Den 4-sifra koden fra brukeren skal sjekkes opp den eksisterende koden i databasen, hvis den stemmer er kontoopprettelsen verifisert, og koden slettes fra databasen.
 
-            \paragraph{Systemet skal verifisere innloggingen}
-            \EsID
-            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+        \subsubsection{Systemet skal lagre dataen}
+        \EsID
+        Etter at brukeropprettelsen er verifisert, blir data fra opprettelsen lagret i databasen.
 
-            \paragraph{Bruker skal kunne logge inn}
-            \EsID
-            Bruker skal kunne logge inn som en brukerkonto.
+        \subsubsection{Derigere opprettet bruker}
+        \EsID
+        Etter opprettelse av konto skal bruker bli ført til startsiden.
+    
+    \subsection{Innlogging}
+
+        \subsubsection{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}
+        \EsID
+        Bruker skal kunne velge å logge inn som en brukerkonto eller bedriftskonto, og så fylle ut tekst-felter med data som stemmer i forhold til opprettelsen av kontoen.
+
+        \subsubsection{Systemet skal verifisere innloggingen}
+        \EsID
+        Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli logget inn. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+
+        \subsubsection{Derigere innlogget bruker}
+        \EsID
+        Etter vellykket innlogging skal bruker bli ført til startsiden.
+
+    \subsection{Presentasjon av parkeringsplasser (Feed)}
+        Feeden er der brukeren lettest kan finne parkeringsplasser å leie.
+
+        \subsubsection{Feeden skal vise en liste over relevante parkeringsplasser}
+        \EsID
+        Opplistingen skal bestå av innlegg av parkeringsplasser fra andre brukere.
         
-        \subsubsection{Leie en parkeringsplass}
+        \subsubsection{Bruker skal kunne sette et filter på feeden}
+        \EsID
+        Opplistingen rangeres via et brukervalgt filter. Filteret bestemmer om opplastingen rangeres basert på nærmest avstand, lavest til høyest pris, høyest til lavest pris, parkeringsplasstype og om den leies ut av en brukerkonto eller bedriftskonto. Standardinnstillingen skal være nærmest avstand.
 
-            \paragraph{Hvordan finne en parkeringsplass område}
-            \EsID
-            Hvis en bruker skal finne et sted for å parkere så kan de søke opp et område i applikasjonen og finne den plassen som passer best eller det å skrive inn naven på parkeringsplass området.
+        \subsubsection{Bruker skal kunne søke etter en adresse}
+        \EsID
+        Feeden skal rangere parkeringsplassene basert på avstand i forhold til denne adressen.
 
-            \paragraph{Filtert søk}
-            \EsID
-            Skal kunne velge et filter på feeden, slik at innleggene oppfyller brukers behov.
+        \subsubsection{Bruker skal kunne søke etter koordinater}
+        \EsID
+        Feeden skal rangere parkeringsplassene basert på avstand i forhold til koordinatene.
 
-            \paragraph{Når og hvor kan en bruker leie}
-            \EsID
-            En bruker skal kunne leie hvor og når enn de vil, hvis ikke det er noen bestemte regler for parkeringsplass området.
+    \subsection{Leie parkeringsplass}
 
-            \paragraph{Hvordan leie en parkeringsplass}
-            \EsID
-            Som en brukerkonto skal man kunne leie parkeringsplasser ved å velge en bil (som man har lagt til i systemet sitt selv eller registrere en bil), parkeringsplass og hvor lang tid de skal stå der. Når brukeren har gjordt dette så skal de kunne betale for parkeringsplassen.
+        \subsubsection{Bruker skal kunne leie parkeringsplass som en brukerkonto}
+        \EsID
+        Som en brukerkonto skal bruker kunne leie en eller flere parkeringsplasser
 
-            % Splitte opp i to underklasser??? -> tid og betaling %
-            \paragraph{Tid og betaling}
-            \EsID
-            Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass slik at andre brukere kan ta over eller å fylle på med mer tid. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
+        % Splitte opp i to underklasser??? -> tid og betaling %
+        \subsubsection{Tid og betaling}
+        \EsID
+        Hvis tiden på parkeringsplass holder på å gå ut, så vil brukeren som har leid parkeringsplassen få en melding på mobilen og/eller e-post om at den holde på å gå ut. Da kan de velge om å forlatte parkeringsplass slik at andre brukere kan ta over eller å fylle på med mer tid. Hvis brukeren kommer tilbake før tiden har gått ut skal brukeren få tilbake resten av pengene for den tiden de ikke sto der.
 
-        \subsubsection{Komentere og rangering}
+    \subsection{Komentere og rangering}
 
-            \paragraph{Komentering}
-            \EsID
-            En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
+        \subsubsection{Komentering}
+        \EsID
+        En bruker skal kunne skrive komentarer til en parkeringsplass de har vært på. 
 
-            \paragraph{Rangering}
-            \EsID
-            En bruker skal kunne vurdere andre brukeres parkeringsplass som de har leiet ved å sette en poengsum fra 1 til 5.
+        \subsubsection{Rangering}
+        \EsID
+        En bruker skal kunne vurdere andre brukeres parkeringsplass som de har leiet ved å sette en poengsum fra 1 til 5.
 
-    \subsection{Bruker klasse: Bedriftskonto}
 
-        \subsubsection{Innlogging}
-            
-            \paragraph{Opprette en Bedriftskonto}
-            \EsID
-            For å opprette en bedriftskonto, må bruker må oppgi unik brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer (evt. andre opplysinger om lovverk).
+    \subsection{Opprette parkeringsplasser}
 
-            \paragraph{Kode for bekreftelse}
-            \EsID
-            Etter registrering av konto skal bli tilsendt en 4-sifret kode via e-post. Koden må så skrives inn i et tekst-felt på en verifiseringsside
+        \subsubsection{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
+        \EsID
+        For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
 
-            \paragraph{Systemet skal verifisere registreringen}
-            \EsID
-            asd
+        \subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
+        \EsID
+        Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
 
-            \paragraph{Systemet skal lagre dataen}
-            \EsID
-            nettsiden skal denne koden dataen lagres i en database, det kan/vil følge opp mer verifisering når man skal lage en bedriftskonto.
+        \subsubsection{Systemet skal knytte parkeringsplassen til en bruker}
+        \EsID
+        Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
 
-            \paragraph{Derigere opprettet bruker}
-            \EsID
-            Etter opprettelse av konto skal bruker bli ført til innloggingssiden.
+    \subsection{Betaling og regler}
 
-            \paragraph{Derigere innlogget bruker}
-            \EsID
-            Etter vellykket innlogging skal bruker bli ført til startsiden.
+        \subsubsection{Pris}
+        \EsID
+        Eieren av en parkeringsplassen som kan justere prisen på parkeringsplass (i timen).
 
-            \paragraph{Systemet skal verifisere innloggingen}
-            \EsID
-            Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli ført til forsiden. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
+        \subsubsection{Tid}
+        \EsID
+        Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
 
-        \subsubsection{Opprette parkeringsplasser}
-
-            \paragraph{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
-            \EsID
-            For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
-
-            \paragraph{Systemet skal knytte parkeringsplassen til en unik ID}
-            \EsID
-            Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
-
-            \paragraph{Systemet skal knytte parkeringsplassen til en bruker}
-            \EsID
-            Den nylig registrerte parkeringsplassen skal knyttes til en bruker (eier av parkeringsplassen).
-
-        \subsubsection{Betaling og regler}
-
-            \paragraph{Pris}
-            \EsID
-            Eieren av en parkeringsplassen som kan justere prisen på parkeringsplass (i timen).
-
-            \paragraph{Tid}
-            \EsID
-            Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
-
-            \paragraph{Regler}
-            \EsID
-            Eieren av en parkeringsplass skal kunne lage sinnge enge regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
+        \subsubsection{Regler}
+        \EsID
+        Eieren av en parkeringsplass skal kunne lage sinnge enge regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
         
-        \subsubsection{Hindre andre i å missbruker parkeringsplass applikasjonen}
+    \subsection{Hindre andre i å missbruker parkeringsplass applikasjonen}
 
-            \paragraph{Banlyse}
-            \EsID
-            En bedriftskonto skal kunne banlyse en brukerkonto som missbruker applikasjonen. Dette kan/vil hinde en bruker som er banlyst fra å kunne leie fra dem igjen.
+        \subsubsection{Banlyse}
+        \EsID
+        En bedriftskonto skal kunne banlyse en brukerkonto som missbruker applikasjonen. Dette kan/vil hinde en bruker som er banlyst fra å kunne leie fra dem igjen.
 
-            \paragraph{Fjenre kommentarer}
-            \EsID
-            En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
+        \subsubsection{Fjenre kommentarer}
+        \EsID
+        En bedriftskonto skal kunne fjenre innlegg, som har blit skrevet på sinn egen parkeringsplass.
 
-    \subsection{Bruker klasse: Administrator}
+    \subsection{Holde orden på brukerne}
 
-        \subsubsection{Holde orden på brukerne}
+        \subsubsection{Banlyse}
+        \EsID
+        Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
 
-            \paragraph{Banlyse}
-            \EsID
-            Skal kunne banlyse andre bruker (bedriftskontoer og brukerkontoer).
+        \subsubsection{Slette/fjenre gamle/inaktive brukere}
+        \EsID
+        Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
 
-            \paragraph{Slette/fjenre gamle/inaktive brukere}
-            \EsID
-            Skal kunne slette/fjenre gamle/inaktive brukere som ikke er i bruk.
+        \subsubsection{Slette/fjenre kommentarer}
+        \EsID
+        Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
 
-            \paragraph{Slette/fjenre kommentarer}
-            \EsID
-            Skal kunne slette/fjenre komentarer som er skrevet av andre brukere.
+        \subsubsection{Slette/fjerne rangering}
+        \EsID
+        Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
+    
+    \subsection{Lagring av data}
 
-            \paragraph{Slette/fjerne rangering}
-            \EsID
-            Skal kunne slette/fjenre andres rangeringer til parkeringsplassen.
-        
-            \subsection{Lagring av data}
-
-    \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
-    Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
+        \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
+        \EsID
+        Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
 
     \subsection{Lesing av data}
 
-    \subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
-    Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
+        \subsubsection{Systemet skal hente data om en spesifikk parkeringsplass via ID}
+        \EsID
+        Systemet skal kunne hente data om en spesifikk parkeringsplass via den spesifikke parkeringsplassen sin ID.
 
     \subsection{Feed}
 
@@ -317,10 +308,10 @@ Mange har sikkert slitet med å finne en parkeringsplass ett eller annet sted, o
 
         \subsubsection{Fremtidige funksjoner}
 
-            \paragraph{Bruker kan ha flere biler}
+            \subsubsection{Bruker kan ha flere biler}
             Når en kunde skal resevere en parkeringsplass, så kan det hende at de har tilgang på flere biler og de skal de bilen være lagret etter bruk i brukerns database.
 
-            \paragraph{Lagre/Favorit}
+            \subsubsection{Lagre/Favorit}
             En kunde kan bruke den samme parkeringsplassen flere ganger og vil sikkert ha en kjapp måtte å koble seg opp mot den bestemte parkeringsplassen.
 
 % Diagramer fra hver student %
