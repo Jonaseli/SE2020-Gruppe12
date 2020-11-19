@@ -13,8 +13,8 @@
             <li v-for="parkingSpot in parkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.ownerId}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>
             </li>
