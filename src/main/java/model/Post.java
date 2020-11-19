@@ -1,22 +1,21 @@
 package model;
 
-import java.util.ArrayList;
+import dataHandler.JSONReadable;
+import dataHandler.JSONWritable;
+
 import java.util.UUID;
 
-public class Post implements JSONReadable<Post>, JSONWritable<Post>{
-    
-    private UUID postId, parkingSpotId;
+public class Post implements JSONReadable<Post>, JSONWritable<Post> {
 
-    // [["15:00", "18:00"],["25.10 12:14", "25.10 12:50"]]
-    private ArrayList<Time> reservations;
+    private UUID postId, parkingSpotId;
     private double price;
 
-    public Post(){}
+    public Post() {
+    }
 
-    public Post(UUID parkingSpotId, double price){
+    public Post(UUID parkingSpotId, double price) {
         this.postId = UUID.randomUUID();
         this.parkingSpotId = parkingSpotId;
-        this.reservations = new ArrayList<>();
         this.price = price;
     }
 
@@ -26,14 +25,6 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post>{
 
     public UUID getParkingSpotId() {
         return parkingSpotId;
-    }
-
-    public ArrayList<Time> getReservationTimes() {
-        return reservations;
-    }
-
-    public void addReservationTime(String startTime, String endTime) {
-        reservations.add(new Time(startTime, endTime));
     }
 
     public double getPrice() {

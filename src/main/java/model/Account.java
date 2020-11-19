@@ -1,16 +1,20 @@
 package model;
 
+import dataHandler.JSONReadable;
+import dataHandler.JSONWritable;
+
 import java.util.UUID;
 
-public class Account implements JSONReadable<Account>, JSONWritable<Account>{
-    
+public class Account implements JSONReadable<Account>, JSONWritable<Account> {
+
     private UUID accountId;
     private String displayName;
     private boolean suspended;
 
-    public Account(){}
+    public Account() {
+    }
 
-    public Account(String displayName){
+    public Account(String displayName) {
         this.accountId = UUID.randomUUID();
         this.displayName = displayName;
         this.suspended = false;

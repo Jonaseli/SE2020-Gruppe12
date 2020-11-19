@@ -6,6 +6,7 @@
   "width" : 250,
   "height" : 400,
   "postalCode" : "1650",
+  "city": "Halden",
   "streetAddress" : "parkgata",
   "streetNumber" : "15",
   "pictureURL" : ""
@@ -17,6 +18,7 @@
   "width" : 300,
   "height" : 400,
   "postalCode" : "1750",
+  "city": "Halden",
   "streetAddress" : "parkvegen",
   "streetNumber" : "8",
   "pictureURL" : ""
@@ -28,6 +30,7 @@
   "width" : 280,
   "height" : 390,
   "postalCode" : "1850",
+  "city": "Halden",
   "streetAddress" : "dårlig gate",
   "streetNumber" : "3",
   "pictureURL" : ""
@@ -39,6 +42,7 @@
   "width" : 50,
   "height" : 50,
   "postalCode" : "test5",
+  "city": "Halden",
   "streetAddress" : "test5",
   "streetNumber" : "test5",
   "pictureURL" : ""
@@ -50,6 +54,7 @@
   "width" : 155,
   "height" : 270,
   "postalCode" : "1783",
+  "city": "Halden",
   "streetAddress" : "B R A veien",
   "streetNumber" : "6D H0109",
   "pictureURL" : ""

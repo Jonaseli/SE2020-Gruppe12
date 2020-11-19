@@ -4,24 +4,24 @@ import model.*;
 
 import java.util.*;
 
-public class Repository implements IRepository{
-    private ArrayList<Account> accounts;
-    private ArrayList<ParkingSpot> parkingSpots;
-    private ArrayList<Post> posts;
-    private ArrayList<Reservation> reservations;
+public class Repository implements IRepository {
+    private final ArrayList<Account> accounts;
+    private final ArrayList<ParkingSpot> parkingSpots;
+    private final ArrayList<Post> posts;
+    private final ArrayList<Reservation> reservations;
 
-    private Account account = new Account();
-    private ParkingSpot parkingSpot = new ParkingSpot();
-    private Post post = new Post();
-    private Reservation reservation = new Reservation();
+    private final Account account = new Account();
+    private final ParkingSpot parkingSpot = new ParkingSpot();
+    private final Post post = new Post();
+    private final Reservation reservation = new Reservation();
 
-    private final String prepath = "src/main/resources/json/";
-    private final String accountPath = prepath + "accounts.json";
-    private final String parkingSpotPath = prepath + "parkingSpots.json";
-    private final String postPath = prepath + "posts.json";
-    private final String reservationPath = prepath + "reservations.json";
+    private final String prePath = "src/main/resources/json/";
+    private final String accountPath = prePath + "accounts.json";
+    private final String parkingSpotPath = prePath + "parkingSpots.json";
+    private final String postPath = prePath + "posts.json";
+    private final String reservationPath = prePath + "reservations.json";
 
-    public Repository(){
+    public Repository() {
         accounts = account.readFromFile(accountPath, Account[].class);
         parkingSpots = parkingSpot.readFromFile(parkingSpotPath, ParkingSpot[].class);
         posts = post.readFromFile(postPath, Post[].class);
@@ -30,7 +30,7 @@ public class Repository implements IRepository{
 
     @Override
     public Account getAccount(UUID accountId) {
-        for (Account account: accounts) {
+        for (Account account : accounts) {
             if (account.getAccountId().equals(accountId)) {
                 return account;
             }
@@ -39,7 +39,9 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public ArrayList<Account> getAccounts() { return accounts; }
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }
 
     @Override
     public void createAccount(String displayName) {
@@ -49,8 +51,8 @@ public class Repository implements IRepository{
 
     @Override
     public Post getPost(UUID postId) {
-        for (Post post : posts){
-            if (post.getParkingSpotId().equals(postId)){
+        for (Post post : posts) {
+            if (post.getParkingSpotId().equals(postId)) {
                 return post;
             }
         }
@@ -58,18 +60,20 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public ArrayList<Post> getPosts() { return posts; }
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
 
     @Override
-    public void createPost(UUID parkingSpotId, ArrayList<Time> reservations, double price) {
+    public void createPost(UUID parkingSpotId, double price) {
         posts.add(new Post(parkingSpotId, price));
         post.writeToFile(postPath, posts);
     }
 
     @Override
     public ParkingSpot getParkingSpot(UUID parkingSpotId) {
-        for (ParkingSpot parkingSpot : parkingSpots){
-            if (parkingSpot.getParkingSpotId().equals(parkingSpotId)){
+        for (ParkingSpot parkingSpot : parkingSpots) {
+            if (parkingSpot.getParkingSpotId().equals(parkingSpotId)) {
                 return parkingSpot;
             }
         }
@@ -83,9 +87,9 @@ public class Repository implements IRepository{
 
     @Override
     public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId) {
-        ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<ParkingSpot>();
-        for (ParkingSpot parking : parkingSpots){
-            if(parking.getOwnerId().equals(accountId)){
+        ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<>();
+        for (ParkingSpot parking : parkingSpots) {
+            if (parking.getOwnerId().equals(accountId)) {
                 ownedParkingSpots.add(parking);
             }
         }
@@ -94,7 +98,7 @@ public class Repository implements IRepository{
 
     @Override
     public ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId) {
-        ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<ParkingSpot>();
+        ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<>();
         for (Reservation reservation : reservations) {
             if (reservation.getAccountId().equals(accountId)) {
                 UUID posId = reservation.getPostId();
@@ -114,25 +118,30 @@ public class Repository implements IRepository{
         UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
         String type = values.get("type").get(0);
         int width = Integer.parseInt(values.get("width").get(0));
+        int length = Integer.parseInt(values.get("length").get(0));
         int height = Integer.parseInt(values.get("height").get(0));
         String postalCode = values.get("postalCode").get(0);
+        String city = values.get("city").get(0);
         String streetAddress = values.get("streetAddress").get(0);
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, type, true, width, height, postalCode, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, type, true, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
     @Override
-    public Reservation getReservation(UUID reservationId) { return null; }
+    public Reservation getReservation(UUID reservationId) {
+        return null;
+    }
 
     @Override
-    public ArrayList<Reservation> getReservations() { return reservations; }
+    public ArrayList<Reservation> getReservations() {
+        return reservations;
+    }
 
     @Override
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
-        post.addReservationTime(startTime, endTime);
         reservations.add(new Reservation(postId, userId, startTime, endTime));
         reservation.writeToFile(reservationPath, reservations);
     }

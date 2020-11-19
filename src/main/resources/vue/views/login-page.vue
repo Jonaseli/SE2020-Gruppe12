@@ -1,34 +1,8 @@
-<template id ="login">
-    <div>
-        <header>
-            <h1>Login Page</h1>
-        </header>
-        <main>
-            <button id="userBtn" v-on:click="redirect" class="center">Login as User</button>
-            <button id="corpBtn" v-on:click="redirect" class="center">Login as Corporation</button>
-            <button id="adminBtn" v-on:click="redirect" class="center">Login as Admin</button>
-        </main>
-    </div>
+<template>
+    <script type="module" src="components/login-page-component.vue"></script>
 </template>
 <script>
-    Vue.component("login-page",{
-        template : "#login",
-        methods: {
-            redirect: function (event) {
-                window.location.href = 'parking-spot';
-            }
-        }});
+    Vue.component("login-page",{template : "#login-buttons"});
 </script>
 <style>
-    header {
-        text-align: center;
-    }
-
-    main {
-        text-align: center;
-    }
-
-    main, button {
-        height: 50px;
-    }
 </style>

@@ -1,8 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="runMain" type="Application" factoryName="Application">
+  <configuration default="false" name="MavenBuild" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="Main" />
     <module name="SE2020-Gruppe12" />
     <method v="2">
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="compile" />
       <option name="Make" enabled="true" />
     </method>
   </configuration>

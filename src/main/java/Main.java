@@ -4,7 +4,7 @@ import io.javalin.plugin.rendering.vue.VueComponent;
 import repository.Repository;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Javalin app = Javalin.create().start(7000);
         app.config.enableWebjars();
@@ -23,14 +23,14 @@ public class Main {
 
         //api
         Controller parkingSpotController = new Controller(repo);
-        app.get("api/parking-spot", parkingSpotController :: getParkingSpots);
-        app.get("api/parking-spot/:parking-spot-id", parkingSpotController :: getParkingSpot);
-        app.get("api/parking-spot/:parking-spot-id/posts/:post-id", parkingSpotController :: getPost);
+        app.get("api/parking-spot", parkingSpotController::getParkingSpots);
+        app.get("api/parking-spot/:parking-spot-id", parkingSpotController::getParkingSpot);
+        app.get("api/parking-spot/:parking-spot-id/posts/:post-id", parkingSpotController::getPost);
 
-        app.get("api/account", parkingSpotController :: getAccounts);
-        app.get("api/account/:account-id", parkingSpotController :: getAccount);
-        app.get("api/account/:account-id/my-parking-spots/owned-parking-spots", parkingSpotController :: getOwnedParkingSpots);
-        app.get("api/account/:account-id/my-parking-spots/rented-parking-spots", parkingSpotController :: getRentedParkingSpots);
+        app.get("api/account", parkingSpotController::getAccounts);
+        app.get("api/account/:account-id", parkingSpotController::getAccount);
+        app.get("api/account/:account-id/my-parking-spots/owned-parking-spots", parkingSpotController::getOwnedParkingSpots);
+        app.get("api/account/:account-id/my-parking-spots/rented-parking-spots", parkingSpotController::getRentedParkingSpots);
 
         app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
             //parkingSpotController.createPayment(ctx);
