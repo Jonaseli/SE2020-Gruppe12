@@ -1,4 +1,4 @@
-\BOOKMARK [1][-]{section.1}{Probelm stilling}{}% 1
+\BOOKMARK [1][-]{section.1}{Problem stilling}{}% 1
 \BOOKMARK [1][-]{section.2}{Scope}{}% 2
 \BOOKMARK [1][-]{section.3}{Definisjoner}{}% 3
 \BOOKMARK [1][-]{section.4}{Referanser}{}% 4
@@ -13,26 +13,33 @@
 \BOOKMARK [2][-]{subsection.6.2}{Innlogging}{section.6}% 13
 \BOOKMARK [2][-]{subsection.6.3}{Presentasjon av parkeringsplasser \(Feed\)}{section.6}% 14
 \BOOKMARK [2][-]{subsection.6.4}{Leie parkeringsplass}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.5}{Komentere og rangering}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.5}{Tilbakemelding p\345 innlegg}{section.6}% 16
 \BOOKMARK [2][-]{subsection.6.6}{Opprette parkeringsplasser}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.7}{Leie bettinglese}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.7}{Leie betingeleser}{section.6}% 18
 \BOOKMARK [2][-]{subsection.6.8}{Betaling}{section.6}% 19
 \BOOKMARK [2][-]{subsection.6.9}{Hindre andre i \345 missbruker parkeringsplass applikasjonen}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.10}{Holde orden p\345 brukerne}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.10}{Administrering}{section.6}% 21
 \BOOKMARK [2][-]{subsection.6.11}{Lagring av data}{section.6}% 22
 \BOOKMARK [2][-]{subsection.6.12}{Lesing av data}{section.6}% 23
-\BOOKMARK [2][-]{subsection.6.13}{Feed}{section.6}% 24
-\BOOKMARK [2][-]{subsection.6.14}{Brukerinnlegg}{section.6}% 25
-\BOOKMARK [1][-]{section.7}{Andre funksjoner}{}% 26
-\BOOKMARK [2][-]{subsection.7.1}{Ikke funksjonelle krav}{section.7}% 27
-\BOOKMARK [2][-]{subsection.7.2}{Interface}{section.7}% 28
-\BOOKMARK [2][-]{subsection.7.3}{Systemfunksjoner}{section.7}% 29
-\BOOKMARK [1][-]{section.8}{Diagramer}{}% 30
-\BOOKMARK [2][-]{subsection.8.1}{Charis}{section.8}% 31
-\BOOKMARK [2][-]{subsection.8.2}{H\345kon}{section.8}% 32
-\BOOKMARK [2][-]{subsection.8.3}{Jonas}{section.8}% 33
-\BOOKMARK [2][-]{subsection.8.4}{Lars}{section.8}% 34
-\BOOKMARK [2][-]{subsection.8.5}{Mats}{section.8}% 35
-\BOOKMARK [1][-]{section.9}{Estemering}{}% 36
-\BOOKMARK [2][-]{subsection.9.1}{Av funksjonelle krav for en ...}{section.9}% 37
-\BOOKMARK [1][-]{section.10}{Ta en titt p\345 dette}{}% 38
+\BOOKMARK [1][-]{section.7}{Ikke funksjonelle krav}{}% 24
+\BOOKMARK [2][-]{subsection.7.1}{Tilgjengelighet}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.2}{Sikkerhetskopi\(Backup\)}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.3}{Dependency p\345 tredjepart}{section.7}% 27
+\BOOKMARK [2][-]{subsection.7.4}{Legal and licensing issues}{section.7}% 28
+\BOOKMARK [2][-]{subsection.7.5}{Nettverkstopologi}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.6}{Preformance / response time}{section.7}% 30
+\BOOKMARK [2][-]{subsection.7.7}{Personvern}{section.7}% 31
+\BOOKMARK [2][-]{subsection.7.8}{Kvalitet}{section.7}% 32
+\BOOKMARK [2][-]{subsection.7.9}{Sikkerhet}{section.7}% 33
+\BOOKMARK [2][-]{subsection.7.10}{Supportability}{section.7}% 34
+\BOOKMARK [2][-]{subsection.7.11}{Testability}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.12}{Interface}{section.7}% 36
+\BOOKMARK [1][-]{section.8}{Diagrammer}{}% 37
+\BOOKMARK [2][-]{subsection.8.1}{Charis}{section.8}% 38
+\BOOKMARK [2][-]{subsection.8.2}{H\345kon}{section.8}% 39
+\BOOKMARK [2][-]{subsection.8.3}{Jonas}{section.8}% 40
+\BOOKMARK [2][-]{subsection.8.4}{Lars}{section.8}% 41
+\BOOKMARK [2][-]{subsection.8.5}{Mats}{section.8}% 42
+\BOOKMARK [1][-]{section.9}{Estemering}{}% 43
+\BOOKMARK [2][-]{subsection.9.1}{Av funksjonelle krav for en ...}{section.9}% 44
+\BOOKMARK [1][-]{section.10}{Ta en titt p\345 dette}{}% 45
