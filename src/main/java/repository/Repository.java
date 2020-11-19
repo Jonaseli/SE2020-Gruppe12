@@ -111,13 +111,15 @@ public class Repository implements IRepository{
         String type = values.get("type").get(0);
         boolean available = true;
         int width = Integer.parseInt(values.get("width").get(0));
+        int length = Integer.parseInt(values.get("length").get(0));
         int height = Integer.parseInt(values.get("height").get(0));
         String postalCode = values.get("postalCode").get(0);
+        String poststed = values.get("poststed").get(0);
         String streetAddress = values.get("streetAddress").get(0);
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, type, available, width, height, postalCode, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, type, available, width, length, height, postalCode, poststed, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
