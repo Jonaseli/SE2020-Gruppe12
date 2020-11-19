@@ -6,17 +6,16 @@ import dataHandler.JSONWritable;
 import java.util.UUID;
 
 public class Post implements JSONReadable<Post>, JSONWritable<Post> {
-    
+
     private UUID postId, parkingSpotId;
-    private String availablePeriod;
     private double price;
 
-    public Post(){}
+    public Post() {
+    }
 
-    public Post(UUID parkingSpotId, String availablePeriod, double price){
+    public Post(UUID parkingSpotId, double price) {
         this.postId = UUID.randomUUID();
         this.parkingSpotId = parkingSpotId;
-        this.availablePeriod = availablePeriod;
         this.price = price;
     }
 
@@ -26,14 +25,6 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post> {
 
     public UUID getParkingSpotId() {
         return parkingSpotId;
-    }
-
-    public String getAvailablePeriod() {
-        return availablePeriod;
-    }
-
-    public void setAvailablePeriod(String availablePeriod) {
-        this.availablePeriod = availablePeriod;
     }
 
     public double getPrice() {
