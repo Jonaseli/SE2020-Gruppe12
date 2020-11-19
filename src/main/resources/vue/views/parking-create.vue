@@ -8,8 +8,10 @@
             accountId: null,
             type: null,
             width: null,
+            length: null,
             height: null,
             postalCode: null,
+            poststed: null,
             streetAddress: null,
             streetNumber: null,
             pictureURL: null,
@@ -29,8 +31,10 @@
                 this.errors = [];
                 if (!this.type) this.errors.push("Type required");
                 if (!this.width) this.errors.push("Width required");
+                if (!this.length) this.errors.push("Length required");
                 if (!this.height) this.errors.push("Height required");
                 if (!this.postalCode) this.errors.push("Postal code required");
+                if (!this.poststed) this.errors.push("Poststed required");
                 if (!this.streetAddress) this.errors.push("Street address required");
                 if (!this.streetNumber) this.errors.push("Street number required");
                 e.preventDefault();

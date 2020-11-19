@@ -1,8 +1,11 @@
 package model;
 
+import dataHandler.JSONReadable;
+import dataHandler.JSONWritable;
+
 import java.util.UUID;
 
-public class Account implements JSONReadable<Account>, JSONWritable<Account>{
+public class Account implements JSONReadable<Account>, JSONWritable<Account> {
     
     private UUID accountId;
     private String displayName;

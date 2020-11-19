@@ -1,7 +1,7 @@
 <template id="my-parking-spots">
    <div>
         <header>
-            <h1>Parking App</h1>
+            <h1>EZpark</h1>
         </header>
         <nav id="normalNav">
             <a href="/parking-spot">Home</a>
@@ -22,8 +22,8 @@
             <li v-for="parkingSpot in ownedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.ownerId}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>
             </li>
@@ -33,8 +33,8 @@
             <li v-for="parkingSpot in rentedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.ownerId}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>
             </li>
@@ -109,10 +109,12 @@
     div.single-parking-spot-container{
         overflow: hidden;
         width: 500px;
-        background-color: #000000;
+        background-color: #191919;
         margin: 0 auto;
         opacity: 0.96;
         text-align: center;
+        border-style: groove;
+        border-color: dimgray;
     }
 
     div.single-parking-spot-container:hover{

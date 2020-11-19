@@ -1,7 +1,7 @@
 <template id="parking-spots-overview">
    <div>
         <header>
-            <h1>Parking App</h1>
+            <h1>EZpark</h1>
         </header>
         <nav id="normalNav">
             <a href="/parking-spot">Home</a>
@@ -13,8 +13,8 @@
             <li v-for="parkingSpot in parkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>{{parkingSpot.available}} - {{parkingSpot.streetAddress}}</h1>
-                        <h1>{{parkingSpot.ownerId}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>
             </li>
@@ -32,7 +32,7 @@
    #normalNav {
     grid-area: nav;
     display: flex;
-    background-color: #000000;
+    background-color: #1f1f23;
     }
 
     #normalNav a {
@@ -58,9 +58,9 @@
     #normalNav a:hover{
         opacity: 1.0;
         overflow: hidden;
-        -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
-        -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
-        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        -webkit-box-shadow: 0px 0px 5px 0px gray;
+        -moz-box-shadow: 0px 0px 5px 0px gray;
+        box-shadow: 0px 0px 5px 0px gray;
     }
 
     li{
@@ -89,10 +89,12 @@
     div.single-parking-spot-container{
         overflow: hidden;
         width: 500px;
-        background-color: #000000;
+        background-color: #191919;
         margin: 0 auto;
         opacity: 0.96;
         text-align: center;
+        border-style: groove;
+        border-color: dimgray;
     }
 
     div.single-parking-spot-container:hover{

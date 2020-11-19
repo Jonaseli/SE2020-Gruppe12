@@ -1,28 +1,33 @@
 package model;
 
+import dataHandler.JSONReadable;
+import dataHandler.JSONWritable;
+
 import java.util.UUID;
 
-public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot>{
+public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
     
     private UUID parkingSpotId, ownerId;
     private String type;
     private boolean available;
-    private int width, height;
-    private String postalCode, streetAddress, streetNumber;
+    private int width, length, height;
+    private String postalCode, poststed, streetAddress, streetNumber;
     private String pictureURL;
 
     public ParkingSpot(){}
 
     public ParkingSpot(UUID owner, String type, boolean available, int width,
-                       int height, String postalCode, String streetAddress,
+                       int length, int height, String postalCode, String poststed, String streetAddress,
                        String streetNumber, String pictureURL){
         this.parkingSpotId = UUID.randomUUID();
         this.ownerId = owner;
         this.type = type;
         this.available = available;
         this.width = width;
+        this.length = length;
         this.height = height;
         this.postalCode = postalCode;
+        this.poststed = poststed;
         this.streetAddress = streetAddress;
         this.streetNumber = streetNumber;
         this.pictureURL = pictureURL;
@@ -60,6 +65,10 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         this.width = width;
     }
 
+    public int getLength() { return length; };
+
+    public void setLength(int length) { this.length = length; }
+
     public int getHeight() {
         return height;
     }
@@ -74,6 +83,14 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getPoststed() {
+        return poststed;
+    }
+
+    public void setPoststed(String poststed) {
+        this.poststed = poststed;
     }
 
     public String getStreetAddress() {
