@@ -109,10 +109,12 @@
     div.single-parking-spot-container{
         overflow: hidden;
         width: 500px;
-        background-color: #000000;
+        background-color: #191919;
         margin: 0 auto;
         opacity: 0.96;
         text-align: center;
+        border-style: groove;
+        border-color: dimgray;
     }
 
     div.single-parking-spot-container:hover{

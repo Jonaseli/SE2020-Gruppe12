@@ -32,7 +32,7 @@
    #normalNav {
     grid-area: nav;
     display: flex;
-    background-color: #000000;
+    background-color: #1f1f23;
     }
 
     #normalNav a {
@@ -58,9 +58,9 @@
     #normalNav a:hover{
         opacity: 1.0;
         overflow: hidden;
-        -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
-        -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
-        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        -webkit-box-shadow: 0px 0px 5px 0px gray;
+        -moz-box-shadow: 0px 0px 5px 0px gray;
+        box-shadow: 0px 0px 5px 0px gray;
     }
 
     li{
@@ -89,10 +89,12 @@
     div.single-parking-spot-container{
         overflow: hidden;
         width: 500px;
-        background-color: #000000;
+        background-color: #191919;
         margin: 0 auto;
         opacity: 0.96;
         text-align: center;
+        border-style: groove;
+        border-color: dimgray;
     }
 
     div.single-parking-spot-container:hover{
