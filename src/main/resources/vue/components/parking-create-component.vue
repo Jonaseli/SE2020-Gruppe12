@@ -1,7 +1,7 @@
 <template id="parking-create" @parking-submitted="createParking">
     <div>
         <header>
-            <h1>Parking App</h1>
+            <h1>EZpark</h1>
         </header>
         <nav id="normalNav">
             <a href="/parking-spot">Home</a>
