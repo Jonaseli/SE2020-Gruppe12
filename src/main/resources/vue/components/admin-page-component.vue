@@ -14,6 +14,18 @@
                     <div class="single-parking-spot-container" >
                         <h1>ID: {{account.accountId}}</h1>
                         <h1>Display Name: {{account.displayName}}</h1>
+                        <div>
+                            <a :href="`/`" class="link-to-parking-spot-detail">
+                                 <div class="admin-controls">
+                                     <h1>Suspend</h1>
+                                 </div>
+                            </a>
+                            <a :href="`/`" class="link-to-parking-spot-detail">
+                                <div class="admin-controls">
+                                    <h1>Delete</h1>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </a>
             </li>
@@ -25,6 +37,13 @@
                     <div class="single-parking-spot-container" >
                         <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
                         <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
+                        <div>
+                            <a :href="`/`" class="link-to-parking-spot-detail">
+                                <div class="admin-controls">
+                                    <h1>Delete</h1>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </a>
             </li>
@@ -36,6 +55,13 @@
                     <div class="single-parking-spot-container" >
                         <h1>ID: {{post.postId}}</h1>
                         <h1>Price: {{post.price}}</h1>
+                        <div>
+                            <a :href="`/`" class="link-to-parking-spot-detail">
+                                <div class="admin-controls">
+                                    <h1>Delete</h1>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </a>
             </li>
@@ -47,6 +73,13 @@
                     <div class="single-parking-spot-container" >
                         <h1>ID: {{reservation.reservationId}}</h1>
                         <h1>Time: {{reservation.startTime}} - {{reservation.endTime}}</h1>
+                        <div>
+                            <a :href="`/`" class="link-to-parking-spot-detail">
+                                <div class="admin-controls">
+                                    <h1>Delete</h1>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </a>
             </li>
@@ -56,4 +89,25 @@
 <script>
 </script>
 <style>
+
+    div.admin-controls{
+        overflow: hidden;
+        width: 500px;
+        background-color: #5a0606f5;
+        margin: 0 auto;
+        opacity: 0.96;
+        text-align: center;
+        border-top-style: groove;
+        border-color: dimgray;
+    }
+
+    div.admin-controls div{
+        float: left;
+    }
+
+
+    div.admin-controls:hover{
+        background-color: #7b0606f5;
+    }
+
 </style>

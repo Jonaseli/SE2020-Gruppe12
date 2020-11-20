@@ -67,6 +67,10 @@
         list-style-type: none;
     }
 
+    ul{
+    padding-inline-start: 0px;
+    }
+
     .parking-spots-overview-list{
         display: flex;
         flex-wrap: wrap;
@@ -87,22 +91,16 @@
     }
 
     div.single-parking-spot-container{
-        overflow: hidden;
         width: 500px;
         background-color: #191919;
         margin: 0 auto;
-        opacity: 0.96;
         text-align: center;
         border-style: groove;
         border-color: dimgray;
     }
 
     div.single-parking-spot-container:hover{
-        opacity: 1.0;
-        overflow: hidden;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        background-color: #0d0d0d;
     }
 
     img.cover-image-frontpage {
