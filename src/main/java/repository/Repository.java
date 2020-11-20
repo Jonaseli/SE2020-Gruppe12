@@ -141,7 +141,7 @@ public class Repository implements IRepository {
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, available, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, true, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
