@@ -12,7 +12,7 @@
             length: null,
             height: null,
             postalCode: null,
-            poststed: null,
+            city: null,
             streetAddress: null,
             streetNumber: null,
             pictureURL: null,
@@ -28,13 +28,13 @@
         methods:{
             checkForm:function(e) {
                 const urlRegex = "/^(?:(?:(?:https?|ftp):)?\\/\\/)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\\.(?:[a-z\u00a1-\uffff]{2,})))(?::\\d{2,5})?(?:[/?#]\\S*)?$/i";
-                if(this.width && this.length && this.height && this.postalCode && this.poststed && this.streetAddress && this.streetNumber) return true;
+                if(this.width && this.length && this.height && this.postalCode && this.city && this.streetAddress && this.streetNumber) return true;
                 this.errors = [];
                 if (!this.width) this.errors.push("Width required");
                 if (!this.length) this.errors.push("Length required");
                 if (!this.height) this.errors.push("Height required");
                 if (!this.postalCode) this.errors.push("Postal code required");
-                if (!this.poststed) this.errors.push("Poststed required");
+                if (!this.city) this.errors.push("City required");
                 if (!this.streetAddress) this.errors.push("Street address required");
                 if (!this.streetNumber) this.errors.push("Street number required");
                 e.preventDefault();

@@ -33,8 +33,8 @@
                         <input type="text" name="postalCode" id="postalCode" v-model="postalCode" placeholder="postal code">
                     </p>
                     <p>
-                        <label for="name">Poststed<label>
-                        <input type="text" name="poststed" id="poststed" v-model="poststed" placeholder="poststed">
+                        <label for="name">City<label>
+                        <input type="text" name="city" id="city" v-model="city" placeholder="city">
                     </p>
                 </div>
                 <div>
