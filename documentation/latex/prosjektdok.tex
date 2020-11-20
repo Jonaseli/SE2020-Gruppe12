@@ -12,21 +12,21 @@
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{changepage}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
 \setcounter{tocdepth}{2}    % TOC entries
 \renewcommand{\contentsname}{Innholdsfortegnelse}
 \newcounter{esidcounter}
-% settings for paragraph
-% 
-% \titleformat{\paragraph}
-% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-% \titlespacing*{\paragraph}
-% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph}{\parindent}{1ex}{1em}
+\setlength{\parindent}{1cm}
 
 % commands %
 \newcommand*{\EsID}{\stepcounter{esidcounter}\textbf{EsID: FK\arabic{esidcounter}\\}}
+
+% environments %
+\newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
 
 % document %
 \begin{document}
@@ -88,6 +88,8 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         FK & Funksjonelt Krav (brukes til EsID)\\
         \hline
         Innlegg & Brukerinnlegg i systemet (post) som består av en eller flere parkeringsplasser\\
+        \hline
+        Kunde & Gruppe som eier produktet\\
         \hline
     \end{tabular}
 \end{center}
@@ -164,11 +166,15 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         
         \subsubsection{Bruker skal kunne opprette en brukerkonto}
         \EsID
-        For å oppgi en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
+        For å oppgrette en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
 
         \subsubsection{Bruker skal kunne opprette en bedriftskonto}
         \EsID
         For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
+
+        \subsubsection{Kunden skal kunne opprette brukerkonto med administratorrettigheter}
+        \EsID
+        Kunde har spesialtilgang til å opprette en administrator. 
 
         \subsubsection{Systemet skal sende verifiseringskode til bruker}
         \EsID
@@ -177,6 +183,12 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         \subsubsection{Systemet skal verifisere registreringen}
         \EsID
         Den 4-sifra koden fra brukeren skal sjekkes opp den eksisterende koden i databasen, hvis den stemmer er kontoopprettelsen verifisert, og koden slettes fra databasen.
+
+            \paragraph{Bruh}
+            \begin{subreq}
+                \EsID
+                Bruh lalala
+            \end{subreq}
 
         \subsubsection{Systemet skal lagre dataen til den brukeren}
         \EsID
@@ -289,9 +301,10 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         \EsID
         Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen. Den slettede brukeren skal få beskjed om slettingen via e-post.
 
-        \subsubsection{Administrator skal kunne slette tilbakemeldinger}
-        \EsID
-        Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
+        % @TODO: slette?
+        % \subsubsection{Administrator skal kunne slette tilbakemeldinger}
+        % \EsID
+        % Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
 
         \subsubsection{Administrator skal kunne slette innlegg}
         \EsID
@@ -305,9 +318,9 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         \EsID
         Administrator skal ha full rett til å slette individuelle reservasjoner. Bruker som opprettet reservasjoner skal få beskjed om slettingen via e-post og direkte i systemet.
 
-        \subsubsection{Bedrift skal ha administrerende rettigheter på deres innlegg}
+        \subsubsection{Bedrift skal ha administrerende rettigheter på deres egne innlegg}
         \EsID
-        Dette innebærer at bedriften kan blokkere brukere av deres parkeringsplasser fra å bruke de igjen og slette tilbakemeldinger på deres innlegg.
+        Dette innebærer at bedriften kan blokkere brukere av deres egne parkeringsplasser fra å bruke de igjen og slette tilbakemeldinger på deres egne innlegg.
 
         \subsubsection{Bruker skal kunne rapportere andre brukere sine innlegg}
         \EsID
