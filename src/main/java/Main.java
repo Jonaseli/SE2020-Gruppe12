@@ -43,11 +43,7 @@ public class Main {
             ctx.redirect("/parking-spot");
         });
 
-
-
-
         //Admin controls
-
         app.get("/api/admin/account/suspend/:account-id", ctx -> {
             parkingSpotController.suspendAccount(ctx);
             ctx.redirect("/admin-page");
