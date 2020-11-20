@@ -176,18 +176,14 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
         \EsID
         Kunde har spesialtilgang til å opprette en administrator. 
 
-        \subsubsection{Systemet skal sende verifiseringskode til bruker}
-        \EsID
-        Etter registrering av konto skal bruker bli tilsendt en 4-sifret kode via e-post, samt midlertidig lagre denne koden i databasen. Koden skrives inn i et tekst-felt for verifisering.
-
         \subsubsection{Systemet skal verifisere registreringen}
         \EsID
-        Den 4-sifra koden fra brukeren skal sjekkes opp den eksisterende koden i databasen, hvis den stemmer er kontoopprettelsen verifisert, og koden slettes fra databasen.
+        Systemet må verifisere registreringen via en kode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden brukeren skriver inn stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden.
 
-            \paragraph{Bruh}
+            \paragraph{Koden skal være fire-sifret}
             \begin{subreq}
                 \EsID
-                Bruh lalala
+                
             \end{subreq}
 
         \subsubsection{Systemet skal lagre dataen til den brukeren}
