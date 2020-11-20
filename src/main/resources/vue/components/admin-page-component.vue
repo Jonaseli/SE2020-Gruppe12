@@ -15,7 +15,7 @@
                         <h1>ID: {{account.accountId}}</h1>
                         <h1>Display Name: {{account.displayName}}</h1>
                         <div>
-                            <a :href="`/admin-page`" class="link-to-parking-spot-detail">
+                            <a :href="`/api/admin/account/suspend/${account.accountId}`" class="link-to-parking-spot-detail">
                                  <div class="admin-controls">
                                      <h1>Suspend</h1>
                                  </div>

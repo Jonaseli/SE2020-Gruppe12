@@ -43,7 +43,16 @@ public class Main {
             ctx.redirect("/parking-spot");
         });
 
-        //Admin deletion
+
+
+
+        //Admin controls
+
+        app.get("/api/admin/account/suspend/:account-id", ctx -> {
+            parkingSpotController.suspendAccount(ctx);
+            ctx.redirect("/admin-page");
+        });
+
         app.get("/api/admin/account/:account-id", ctx -> {
             parkingSpotController.deleteAccount(ctx);
             ctx.redirect("/admin-page");

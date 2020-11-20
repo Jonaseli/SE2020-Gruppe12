@@ -189,4 +189,10 @@ public class Repository implements IRepository {
         parkingSpots.remove(getParkingSpot(parkingSpotId));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
+
+    @Override
+    public void suspendAccount(UUID accountId) {
+        getAccount(accountId).setSuspended(true);
+        account.writeToFile(accountPath, accounts);
+    }
 }

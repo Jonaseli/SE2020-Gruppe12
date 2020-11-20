@@ -44,4 +44,6 @@ public interface IRepository {
     void deletePost(UUID postId);
 
     void deleteParkingSpot(UUID parkingSpotId);
+
+    void suspendAccount(UUID accountId);
 }

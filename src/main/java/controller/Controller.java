@@ -83,4 +83,8 @@ public class Controller {
         repo.deleteReservation(reservationId);
     }
 
+    public void suspendAccount(Context ctx) {
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        repo.suspendAccount(accountId);
+    }
 }

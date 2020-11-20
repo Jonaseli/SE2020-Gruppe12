@@ -1,22 +1,17 @@
-[
-  {
-    "accountId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
-    "displayName": "Ole Hansen",
-    "suspended": false
-  },
-  {
-    "accountId": "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f",
-    "displayName": "Tom Jørnstad",
-    "suspended": false
-  },
-  {
-    "accountId": "d7d77c76-5b91-4fb4-8eab-80389a90d427",
-    "displayName": "Nvidia",
-    "suspended": false
-  },
-  {
-    "accountId": "283ec2b6-a35c-40f6-a7e2-f7feef3ac8d7",
-    "displayName": "Trine Magnusson",
-    "suspended": false
-  }
-]
+[ {
+  "accountId" : "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+  "displayName" : "Ole Hansen",
+  "suspended" : true
+}, {
+  "accountId" : "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f",
+  "displayName" : "Tom Jørnstad",
+  "suspended" : false
+}, {
+  "accountId" : "d7d77c76-5b91-4fb4-8eab-80389a90d427",
+  "displayName" : "Nvidia",
+  "suspended" : false
+}, {
+  "accountId" : "283ec2b6-a35c-40f6-a7e2-f7feef3ac8d7",
+  "displayName" : "Trine Magnusson",
+  "suspended" : false
+} ]
