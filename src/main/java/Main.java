@@ -19,6 +19,8 @@ public class Main {
         app.get("/account/:account-id/my-parking-spots", new VueComponent("my-parking-spots"));
         app.get("/account/:account-id/my-parking-spots/create-parking", new VueComponent("parking-create"));
 
+        app.get("/admin-page", new VueComponent("admin-page"));
+
         Repository repo = new Repository();
 
         //api
@@ -31,6 +33,10 @@ public class Main {
         app.get("api/account/:account-id", parkingSpotController::getAccount);
         app.get("api/account/:account-id/my-parking-spots/owned-parking-spots", parkingSpotController::getOwnedParkingSpots);
         app.get("api/account/:account-id/my-parking-spots/rented-parking-spots", parkingSpotController::getRentedParkingSpots);
+
+        app.get("api/post", parkingSpotController::getPosts);
+
+        app.get("api/reservation", parkingSpotController::getReservations);
 
         app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
             //parkingSpotController.createPayment(ctx);

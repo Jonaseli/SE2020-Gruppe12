@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class Controller {
 
-    private IRepository repo;
+    private final IRepository repo;
 
     public Controller(IRepository repo){
         this.repo = repo;
@@ -21,8 +21,12 @@ public class Controller {
         ctx.json(repo.getParkingSpot(UUID.fromString(parkingSpotId)));
     }
 
+    public void getPosts(Context ctx){
+        ctx.json(repo.getPosts());
+    }
+
     public void getPost(Context ctx) {
-        String postId = ctx.pathParam(":parking-spot-id");
+        String postId = ctx.pathParam(":post-id");
         ctx.json(repo.getPost(UUID.fromString(postId)));
     }
 
@@ -31,8 +35,17 @@ public class Controller {
     }
 
     public void getAccount(Context ctx) {
-        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
-        ctx.json(repo.getAccount(account));
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        ctx.json(repo.getAccount(accountId));
+    }
+
+    public void getReservations(Context ctx) {
+        ctx.json(repo.getReservations());
+    }
+
+    public void getReservation(Context ctx) {
+        UUID reservationId = UUID.fromString(ctx.pathParam(":reservation-id"));
+        ctx.json(repo.getReservation(reservationId));
     }
 
     public void getOwnedParkingSpots(Context ctx) {

@@ -11,7 +11,7 @@
                 <a href="/parking-spot">Login as Corporation</a>
             </div>
             <div class="login-button">
-                <a href="/parking-spot">Login as Admin</a>
+                <a href="/admin-page">Login as Admin</a>
             </div>
         </main>
     </div>
