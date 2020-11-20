@@ -18,7 +18,7 @@
             fetch(`api/parking-spot`)
                 .then(res => res.json())
                 .then(res => this.allParkingSpots = res)
-                .catch(() => alert("Error while fetching parkingspots"));
+                .catch(() => alert("Error while fetching parking spots"));
             fetch(`api/post`)
                 .then(res => res.json())
                 .then(res => this.allPosts = res)

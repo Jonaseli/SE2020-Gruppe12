@@ -15,12 +15,12 @@
                         <h1>ID: {{account.accountId}}</h1>
                         <h1>Display Name: {{account.displayName}}</h1>
                         <div>
-                            <a :href="`/`" class="link-to-parking-spot-detail">
+                            <a :href="`/admin-page`" class="link-to-parking-spot-detail">
                                  <div class="admin-controls">
                                      <h1>Suspend</h1>
                                  </div>
                             </a>
-                            <a :href="`/`" class="link-to-parking-spot-detail">
+                            <a :href="`/api/admin/account/${account.accountId}`" class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
                                     <h1>Delete</h1>
                                 </div>
@@ -34,11 +34,11 @@
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in allParkingSpots">
                 <a :href="`/admin-page`" class="link-to-parking-spot-detail">
-                    <div class="single-parking-spot-container" >
+                    <div class="single-parking-spot-container">
                         <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
                         <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                         <div>
-                            <a :href="`/`" class="link-to-parking-spot-detail">
+                            <a :href="`/api/admin/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
                                     <h1>Delete</h1>
                                 </div>
@@ -56,7 +56,7 @@
                         <h1>ID: {{post.postId}}</h1>
                         <h1>Price: {{post.price}}</h1>
                         <div>
-                            <a :href="`/`" class="link-to-parking-spot-detail">
+                            <a :href="`/api/admin/post/${post.postId}`" class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
                                     <h1>Delete</h1>
                                 </div>
@@ -74,7 +74,7 @@
                         <h1>ID: {{reservation.reservationId}}</h1>
                         <h1>Time: {{reservation.startTime}} - {{reservation.endTime}}</h1>
                         <div>
-                            <a :href="`/`" class="link-to-parking-spot-detail">
+                            <a :href="`/api/admin/reservation/${reservation.reservationId}`" class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
                                     <h1>Delete</h1>
                                 </div>

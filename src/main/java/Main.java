@@ -43,6 +43,27 @@ public class Main {
             ctx.redirect("/parking-spot");
         });
 
+        //Admin deletion
+        app.get("/api/admin/account/:account-id", ctx -> {
+            parkingSpotController.deleteAccount(ctx);
+            ctx.redirect("/admin-page");
+        });
+
+        app.get("/api/admin/parking-spot/:parking-spot-id", ctx -> {
+            parkingSpotController.deleteParkingSpot(ctx);
+            ctx.redirect("/admin-page");
+        });
+
+        app.get("/api/admin/post/:post-id", ctx -> {
+            parkingSpotController.deletePost(ctx);
+            ctx.redirect("/admin-page");
+        });
+
+        app.get("/api/admin/reservation/:reservation-id", ctx -> {
+            parkingSpotController.deleteReservation(ctx);
+            ctx.redirect("/admin-page");
+        });
+
         app.post("/api/account/:account-id/my-parking-spots/create-parking", ctx -> {
             parkingSpotController.createParking(ctx);
             ctx.redirect("/parking-spot");

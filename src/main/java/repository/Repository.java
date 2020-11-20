@@ -52,7 +52,7 @@ public class Repository implements IRepository {
     @Override
     public Post getPost(UUID postId) {
         for (Post post : posts) {
-            if (post.getParkingSpotId().equals(postId)) {
+            if (post.getPostId().equals(postId)) {
                 return post;
             }
         }
@@ -147,6 +147,11 @@ public class Repository implements IRepository {
 
     @Override
     public Reservation getReservation(UUID reservationId) {
+        for (Reservation reservation : reservations) {
+            if (reservation.getReservationId().equals(reservationId)) {
+                return reservation;
+            }
+        }
         return null;
     }
 
@@ -159,5 +164,29 @@ public class Repository implements IRepository {
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
         reservations.add(new Reservation(postId, userId, startTime, endTime));
         reservation.writeToFile(reservationPath, reservations);
+    }
+
+    @Override
+    public void deleteAccount(UUID accountId) {
+        accounts.remove(getAccount(accountId));
+        account.writeToFile(accountPath, accounts);
+    }
+
+    @Override
+    public void deleteReservation(UUID reservationId) {
+        reservations.remove(getReservation(reservationId));
+        reservation.writeToFile(reservationPath, reservations);
+    }
+
+    @Override
+    public void deletePost(UUID postId) {
+        posts.remove(getPost(postId));
+        post.writeToFile(postPath, posts);
+    }
+
+    @Override
+    public void deleteParkingSpot(UUID parkingSpotId) {
+        parkingSpots.remove(getParkingSpot(parkingSpotId));
+        parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 }

@@ -58,9 +58,29 @@ public class Controller {
         ctx.json(repo.getRentedParkingSpots(account));
     }
 
-    public void createParking(Context context) {
-        repo.createParkingSpot(context.formParamMap());
-        System.out.println(context.formParamMap());
+    public void createParking(Context ctx) {
+        repo.createParkingSpot(ctx.formParamMap());
+        System.out.println(ctx.formParamMap());
+    }
+
+    public void deleteAccount(Context ctx) {
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        repo.deleteAccount(accountId);
+    }
+
+    public void deleteParkingSpot(Context ctx) {
+        UUID parkingSpotId = UUID.fromString(ctx.pathParam(":parking-spot-id"));
+        repo.deleteParkingSpot(parkingSpotId);
+    }
+
+    public void deletePost(Context ctx) {
+        UUID postId = UUID.fromString(ctx.pathParam(":post-id"));
+        repo.deletePost(postId);
+    }
+
+    public void deleteReservation(Context ctx) {
+        UUID reservationId = UUID.fromString(ctx.pathParam(":reservation-id"));
+        repo.deleteReservation(reservationId);
     }
 
 }
