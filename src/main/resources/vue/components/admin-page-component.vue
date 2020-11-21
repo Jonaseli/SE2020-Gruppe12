@@ -14,6 +14,7 @@
                     <div class="single-parking-spot-container" >
                         <h1>ID: {{account.accountId}}</h1>
                         <h1>Display Name: {{account.displayName}}</h1>
+                        <h1>Suspended: {{account.suspended}}</h1>
                         <div>
                             <a :href="`/api/admin/account/suspend/${account.accountId}`" class="link-to-parking-spot-detail">
                                  <div class="admin-controls">
