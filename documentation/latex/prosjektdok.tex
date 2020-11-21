@@ -67,12 +67,14 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
 % definere hvilke funksjoner som er påkrevd for at kunden får det systemet de ønsker
 \section{Funksjoner i applikasjonen}
 
-    \begin{itemize}
-        \item Leie en parkeringsplass
-        \item Leie ut en parkeringplass
-        \item Opprette en parkeringplass
-        \item Kunne betale for en parkering
-    \end{itemize}
+    Programmet henter inn info om brukere, poster, parkeringsplasser og reservasjoner fra en database(i dette tilfellet json-filer). Det programmet gjør nå er å hente inn data fra controller til javalin som generer front-end for oss. Hver side henter da ut nødvendig info hva hver .json fil slik at nødvendig informasjon som adresse og ledighet til leie vises.
+
+Bruker -  Det er mulig å vise oversikt over parkeringsplasser, trykke seg inn til en parkeringsplass, og å legge til en reservasjon, brukeren kan også se oversikt over p-plassene som den har reservert. Det er mulig å legge ut en ny parkeringsplass som en utleier. Det er mulig å vise bilder av parkeringsplassen via et link system, da opplastning direkte til siden ikke er lagt inn. 
+
+Corporation bruker - kan kun legge ut parkeringsplasser. Dette gjør man ved å gå til “My parking spots” hvor “Create new parkingspot” står øverst. For å lage et nytt parkingeringsobjekt må man trykke på denne knappen og fylle ut all nødvendig info(feilmelding dersom ikke alt har noen verdi), og man kan i tillegg velge ved bruk av ikoner dersom det er handikappet eller el-bil plass. Corporation skal kunne få betalt for å leie ut p-plasser.
+
+Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poster og parkeringsplasser. Dette er en bruker-type som i senere iterasjoner kan gi rettigheter til andre brukere (f.eks. modererings-brukere).
+
 
 \section{Begreper og definisjoner}
 
@@ -400,10 +402,21 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
     \subsection{Sammendrag}
 
     \subsection{Innstallasjon}
+    For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet.
 
     \subsection{Bruksmanual}
+    For å starte programmet velger man main metoden i drop-down menyen og trykker grønn pil eller shitf+f10. Da vil javalin kjøre i konsollen i intellij, og det vil åpne seg port på http://localhost:7000/ . Når man trykker på den kommer man en hovedside med tre knapper. En for bruker, en for corporation og en for admin.
+    \\\\
+    Når man har kommet inn til localhost:7000 blir man presentert med tre knapper. En for bruker, en for corporation og en for admin. Bruker knappen leder til parkeringsplass oversikten der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en parkeringsplass, trykke seg inn til bestillings-siden, og fylle ut ordren, og trykke submit knappen for å bestille, da skal den dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
+    \\\\
+    Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie ut ved å trykke på “Create new parking spot”-knappen der de taes til en skjema for utfylling. Dersom skjema ikke er tilstrekkelig utfylt vil en feilmelding vises med all info som er nødvendig i skjemaet. Når skjema er riktig utfylt kan man trykke submit knappen, og den nye parkeringsplassen vil umiddelbart være postet til både hovedoversikten og til brukerens “My parking spots”-side. Foreløpig fungerer corporation-brukeren på lik linje som bruker-typen.
+    \\\\
+    Da man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og den kan slette parkeringsplasser, poster og reservasjoner.
+
 
     \subsection{Implementerte krav og tester}
+    For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
+
 
     \subsection{Avhengigheter}
 
