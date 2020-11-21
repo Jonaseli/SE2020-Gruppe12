@@ -17,52 +17,51 @@
 \contentsline {subsubsection}{Bruker skal kunne opprette en brukerkonto}{6}{subsubsection*.1}%
 \contentsline {subsubsection}{Bruker skal kunne opprette en bedriftskonto}{6}{subsubsection*.2}%
 \contentsline {subsubsection}{Kunden skal kunne opprette brukerkonto med administratorrettigheter}{6}{subsubsection*.3}%
-\contentsline {subsubsection}{Systemet skal sende verifiseringskode til bruker}{7}{subsubsection*.4}%
-\contentsline {subsubsection}{Systemet skal verifisere registreringen}{7}{subsubsection*.5}%
-\contentsline {paragraph}{Bruh}{7}{paragraph*.6}%
-\contentsline {subsubsection}{Systemet skal lagre dataen til den brukeren}{7}{subsubsection*.7}%
-\contentsline {subsubsection}{Derigere opprettet bruker}{7}{subsubsection*.8}%
+\contentsline {subsubsection}{Systemet skal verifisere registreringen}{7}{subsubsection*.4}%
+\contentsline {paragraph}{Koden skal være fire-sifret}{7}{paragraph*.5}%
+\contentsline {subsubsection}{Systemet skal lagre dataen til den brukeren}{7}{subsubsection*.6}%
+\contentsline {subsubsection}{Derigere opprettet bruker}{7}{subsubsection*.7}%
 \contentsline {subsection}{\numberline {10.2}Innlogging}{7}{subsection.10.2}%
-\contentsline {subsubsection}{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}{7}{subsubsection*.9}%
-\contentsline {subsubsection}{Systemet skal verifisere innloggingen}{7}{subsubsection*.10}%
-\contentsline {subsubsection}{Derigere innlogget bruker}{7}{subsubsection*.11}%
+\contentsline {subsubsection}{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}{7}{subsubsection*.8}%
+\contentsline {subsubsection}{Systemet skal verifisere innloggingen}{7}{subsubsection*.9}%
+\contentsline {subsubsection}{Derigere innlogget bruker}{7}{subsubsection*.10}%
 \contentsline {subsection}{\numberline {10.3}Presentasjon av parkeringsplasser (Feed)}{7}{subsection.10.3}%
-\contentsline {subsubsection}{Feeden skal vise en liste over relevante parkeringsplasser}{7}{subsubsection*.12}%
-\contentsline {subsubsection}{Bruker skal kunne sette et filter på feeden}{8}{subsubsection*.13}%
-\contentsline {subsubsection}{Bruker skal kunne søke etter en adresse}{8}{subsubsection*.14}%
-\contentsline {subsubsection}{Bruker skal kunne søke etter koordinater}{8}{subsubsection*.15}%
+\contentsline {subsubsection}{Feeden skal vise en liste over relevante parkeringsplasser}{7}{subsubsection*.11}%
+\contentsline {subsubsection}{Bruker skal kunne sette et filter på feeden}{7}{subsubsection*.12}%
+\contentsline {subsubsection}{Bruker skal kunne søke etter en adresse}{8}{subsubsection*.13}%
+\contentsline {subsubsection}{Bruker skal kunne søke etter koordinater}{8}{subsubsection*.14}%
 \contentsline {subsection}{\numberline {10.4}Leie parkeringsplass}{8}{subsection.10.4}%
-\contentsline {subsubsection}{Bruker skal kunne leie parkeringsplass som en brukerkonto}{8}{subsubsection*.16}%
-\contentsline {subsubsection}{Utløp av tid}{8}{subsubsection*.17}%
+\contentsline {subsubsection}{Bruker skal kunne leie parkeringsplass som en brukerkonto}{8}{subsubsection*.15}%
+\contentsline {subsubsection}{Utløp av tid}{8}{subsubsection*.16}%
 \contentsline {subsection}{\numberline {10.5}Tilbakemelding på innlegg}{8}{subsection.10.5}%
-\contentsline {subsubsection}{Bruker skal kunne gi tilbakemelding på et innlegg}{8}{subsubsection*.18}%
-\contentsline {subsubsection}{Tilbakemeldinger skal vises på hvert innlegg}{8}{subsubsection*.19}%
-\contentsline {subsubsection}{Utleier skal kunne få tilbakemeldinger via mail}{8}{subsubsection*.20}%
-\contentsline {subsection}{\numberline {10.6}Opprette parkeringsplasser}{9}{subsection.10.6}%
-\contentsline {subsubsection}{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}{9}{subsubsection*.21}%
-\contentsline {subsubsection}{Systemet skal knytte parkeringsplassen til en unik ID}{9}{subsubsection*.22}%
-\contentsline {subsubsection}{Systemet skal lagre parkeringsplassen i en database}{9}{subsubsection*.23}%
+\contentsline {subsubsection}{Bruker skal kunne gi tilbakemelding på et innlegg}{8}{subsubsection*.17}%
+\contentsline {subsubsection}{Tilbakemeldinger skal vises på hvert innlegg}{8}{subsubsection*.18}%
+\contentsline {subsubsection}{Utleier skal kunne få tilbakemeldinger via mail}{8}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {10.6}Opprette parkeringsplasser}{8}{subsection.10.6}%
+\contentsline {subsubsection}{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}{8}{subsubsection*.20}%
+\contentsline {subsubsection}{Systemet skal knytte parkeringsplassen til en unik ID}{9}{subsubsection*.21}%
+\contentsline {subsubsection}{Systemet skal lagre parkeringsplassen i en database}{9}{subsubsection*.22}%
 \contentsline {subsection}{\numberline {10.7}Leie betingeleser}{9}{subsection.10.7}%
-\contentsline {subsubsection}{Pris}{9}{subsubsection*.24}%
-\contentsline {subsubsection}{Tid}{9}{subsubsection*.25}%
-\contentsline {subsubsection}{Regler}{9}{subsubsection*.26}%
+\contentsline {subsubsection}{Pris}{9}{subsubsection*.23}%
+\contentsline {subsubsection}{Tid}{9}{subsubsection*.24}%
+\contentsline {subsubsection}{Regler}{9}{subsubsection*.25}%
 \contentsline {subsection}{\numberline {10.8}Betaling}{9}{subsection.10.8}%
-\contentsline {subsubsection}{Betale for en parkeringsplass}{9}{subsubsection*.27}%
-\contentsline {subsubsection}{Tredjepart}{9}{subsubsection*.28}%
-\contentsline {subsection}{\numberline {10.9}Administrering}{10}{subsection.10.9}%
-\contentsline {subsubsection}{Administrator skal kunne bannlyse bruker}{10}{subsubsection*.29}%
-\contentsline {subsubsection}{Administrator skal kunne slette bruker}{10}{subsubsection*.30}%
-\contentsline {subsubsection}{Administrator skal kunne slette innlegg}{10}{subsubsection*.31}%
-\contentsline {subsubsection}{Administrator skal kunne slette parkeringsplasser}{10}{subsubsection*.32}%
-\contentsline {subsubsection}{Administrator skal kunne slette reservasjoner}{10}{subsubsection*.33}%
-\contentsline {subsubsection}{Bedrift skal ha administrerende rettigheter på deres egne innlegg}{10}{subsubsection*.34}%
-\contentsline {subsubsection}{Bruker skal kunne rapportere andre brukere sine innlegg}{10}{subsubsection*.35}%
-\contentsline {subsubsection}{Bruker skal kunne rapportere andre brukere}{10}{subsubsection*.36}%
+\contentsline {subsubsection}{Betale for en parkeringsplass}{9}{subsubsection*.26}%
+\contentsline {subsubsection}{Tredjepart}{9}{subsubsection*.27}%
+\contentsline {subsection}{\numberline {10.9}Administrering}{9}{subsection.10.9}%
+\contentsline {subsubsection}{Administrator skal kunne bannlyse bruker}{9}{subsubsection*.28}%
+\contentsline {subsubsection}{Administrator skal kunne slette bruker}{9}{subsubsection*.29}%
+\contentsline {subsubsection}{Administrator skal kunne slette innlegg}{10}{subsubsection*.30}%
+\contentsline {subsubsection}{Administrator skal kunne slette parkeringsplasser}{10}{subsubsection*.31}%
+\contentsline {subsubsection}{Administrator skal kunne slette reservasjoner}{10}{subsubsection*.32}%
+\contentsline {subsubsection}{Bedrift skal ha administrerende rettigheter på deres egne innlegg}{10}{subsubsection*.33}%
+\contentsline {subsubsection}{Bruker skal kunne rapportere andre brukere sine innlegg}{10}{subsubsection*.34}%
+\contentsline {subsubsection}{Bruker skal kunne rapportere andre brukere}{10}{subsubsection*.35}%
 \contentsline {subsection}{\numberline {10.10}Persistent data}{10}{subsection.10.10}%
-\contentsline {subsubsection}{Systemet skal lagre informasjon om parkeringsplasser}{10}{subsubsection*.37}%
-\contentsline {section}{\numberline {11}Ikke funksjonelle krav}{11}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Tilgjengelighet}{11}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Sikkerhetskopi(Backup)}{11}{subsection.11.2}%
+\contentsline {subsubsection}{Systemet skal lagre informasjon om parkeringsplasser}{10}{subsubsection*.36}%
+\contentsline {section}{\numberline {11}Ikke funksjonelle krav}{10}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Tilgjengelighet}{10}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Sikkerhetskopi(Backup)}{10}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}Dependency på tredjepart}{11}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Legal and licensing issues}{11}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Nettverkstopologi}{11}{subsection.11.5}%
@@ -83,8 +82,8 @@
 \contentsline {section}{\numberline {13}Diagrammer}{11}{section.13}%
 \contentsline {subsection}{\numberline {13.1}Charis}{11}{subsection.13.1}%
 \contentsline {subsection}{\numberline {13.2}Håkon}{12}{subsection.13.2}%
-\contentsline {subsubsection}{Sekvesndiagram - Av hvordan man leier en parkeringplass}{12}{subsubsection*.38}%
-\contentsline {subsubsection}{Dataflytdiagram - Av hvordan man tilbakemelding og poengsum fungerer}{13}{subsubsection*.39}%
+\contentsline {subsubsection}{Sekvesndiagram - Av hvordan man leier en parkeringplass.}{12}{subsubsection*.37}%
+\contentsline {subsubsection}{Dataflytdiagram - Av hvordan man tilbakemelding og poengsum fungerer.}{13}{subsubsection*.38}%
 \contentsline {subsection}{\numberline {13.3}Jonas}{13}{subsection.13.3}%
 \contentsline {subsection}{\numberline {13.4}Lars}{13}{subsection.13.4}%
 \contentsline {subsection}{\numberline {13.5}Mats}{13}{subsection.13.5}%

@@ -18,12 +18,14 @@
 \setcounter{secnumdepth}{2} % enumerate
 \setcounter{tocdepth}{2}    % TOC entries
 \renewcommand{\contentsname}{Innholdsfortegnelse}
-\newcounter{esidcounter}
+\newcounter{fkcounter}
+\newcounter{ifkcounter}
 \titlespacing*{\paragraph}{\parindent}{1ex}{1em}
 \setlength{\parindent}{1cm}
 
 % commands %
-\newcommand*{\EsID}{\stepcounter{esidcounter}\textbf{EsID: FK\arabic{esidcounter}\\}}
+\newcommand*{\FK}{\stepcounter{fkcounter}\textbf{EsID: FK\arabic{fkcounter}\\}}
+\newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{EsID: IFK\arabic{ifkcounter}\\}}
 
 % environments %
 \newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
@@ -179,85 +181,85 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
     \subsection{Kontoopprettelse}
         
         \subsubsection{Bruker skal kunne opprette en brukerkonto}
-        \EsID
+        \FK
         For å oppgrette en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
 
         \subsubsection{Bruker skal kunne opprette en bedriftskonto}
-        \EsID
+        \FK
         For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
 
         \subsubsection{Kunden skal kunne opprette brukerkonto med administratorrettigheter}
-        \EsID
+        \FK
         Kunde har spesialtilgang til å opprette en administrator. 
 
         \subsubsection{Systemet skal verifisere registreringen}
-        \EsID
+        \FK
         Systemet må verifisere registreringen via en kode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden brukeren skriver inn stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden.
 
             \paragraph{Koden skal være fire-sifret}
             \begin{subreq}
-                \EsID
+                \FK
                 
             \end{subreq}
 
         \subsubsection{Systemet skal lagre dataen til den brukeren}
-        \EsID
+        \FK
         Etter at brukeropprettelsen er verifisert, blir data fra opprettelsen lagret i databasen.
 
         \subsubsection{Derigere opprettet bruker}
-        \EsID
+        \FK
         Etter opprettelse av konto skal bruker bli ført til startsiden.
     
     \subsection{Innlogging}
 
         \subsubsection{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}
-        \EsID
+        \FK
         Bruker skal kunne velge å logge inn som en brukerkonto eller bedriftskonto, og så fylle ut tekst-felter med data som stemmer i forhold til opprettelsen av kontoen.
 
         \subsubsection{Systemet skal verifisere innloggingen}
-        \EsID
+        \FK
         Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli logget inn. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
         \subsubsection{Derigere innlogget bruker}
-        \EsID
+        \FK
         Etter vellykket innlogging skal bruker bli ført til startsiden.
 
     \subsection{Presentasjon av parkeringsplasser (Feed)}
 
         \subsubsection{Feeden skal vise en liste over relevante parkeringsplasser}
-        \EsID
+        \FK
         Opplistingen skal bestå av innlegg av parkeringsplasser fra andre brukere.
         
         \subsubsection{Bruker skal kunne sette et filter på feeden}
-        \EsID
+        \FK
         Opplistingen rangeres via et brukervalgt filter. Filteret bestemmer om opplastingen rangeres basert på nærmest avstand, lavest til høyest pris, høyest til lavest pris, parkeringsplasstype og om den leies ut av en brukerkonto eller bedriftskonto. Standardinnstillingen skal være nærmest avstand.
 
         \subsubsection{Bruker skal kunne søke etter en adresse}
-        \EsID
+        \FK
         Feeden skal rangere parkeringsplassene basert på avstand i forhold til denne adressen.
 
         \subsubsection{Bruker skal kunne søke etter koordinater}
-        \EsID
+        \FK
         Feeden skal rangere parkeringsplassene basert på avstand i forhold til koordinatene.
 
     \subsection{Leie parkeringsplass}
 
         \subsubsection{Bruker skal kunne leie parkeringsplass som en brukerkonto}
-        \EsID
+        \FK
         Som en brukerkonto skal bruker kunne leie en spesifikk parkeringsplass eller flere parkeringsplasser.
 
         \subsubsection{Utløp av tid}
-        \EsID 
+        \FK 
         Når en reservert parkeri holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut.
 
     \subsection{Tilbakemelding på innlegg}
 
         \subsubsection{Bruker skal kunne gi tilbakemelding på et innlegg}
-        \EsID
+        \FK
         Dersom brukeren har brukt en parkeringsplass, skal de kunne gi tilbakemelding på innlegget til den parkeringsplassen. Innlegget må minst bestå av en poengsum fra 1 til 5, der 5 er den høyeste poengsummen. Om ønskelig kan bruker også legge til en kommentar på maks 130 tegn. Tilbakemeldingen skal lagres i databasen og tilknyttes innlegget.
 
         \subsubsection{Tilbakemeldinger skal vises på hvert innlegg}
-        \EsID
+        \FK
         Alle innlegg som tilhører et innlegg skal vises som en liste på innlegget, der nyeste tilbakemelding ligger øverst. Hver tilbakemelding skal vise poengsummen, kommentaren og brukernavn til de som lagde den. I tillegg skal en endelig rangering vises på innlegget som består av gjennomsnittet av poengsummer fra alle tilbakemeldinger knyttet til innlegget.
 
         \subsubsection{Utleier skal kunne få tilbakemeldinger via mail}
@@ -266,98 +268,98 @@ Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senter
     \subsection{Opprette parkeringsplasser}
 
         \subsubsection{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
-        \EsID
+        \FK
         For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
 
         \subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
-        \EsID
+        \FK
         Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
         
         \subsubsection{Systemet skal lagre parkeringsplassen i en database}
-        \EsID
+        \FK
         Den nylig registrerte parkeringsplassen lagres i en database, der den knyttes til en bruker (eier av parkeringsplassen).
 
     \subsection{Leie betingeleser}
 
         \subsubsection{Pris}
-        \EsID
+        \FK
         Eieren av en parkeringsplassen skal kunne justere pris på sin(e) parkeringsplass(er) (i timen).
 
         \subsubsection{Tid}
-        \EsID
+        \FK
         Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
 
         \subsubsection{Regler}
-        \EsID
+        \FK
         Eieren av en parkeringsplass skal kunne lage sine egne regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
         
     \subsection{Betaling}
 
         \subsubsection{Betale for en parkeringsplass}
-        \EsID
+        \FK
         Brukeren betaler for parkeringsplassen via valgt betalingsmetode.
 
         \subsubsection{Tredjepart}
-        \EsID
+        \FK
         Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.        
 
     \subsection{Administrering}
 
         \subsubsection{Administrator skal kunne bannlyse bruker}
-        \EsID
+        \FK
         Administrator skal ha full rett til å bannlyse en vilkårlig bruker. Den bannlyste brukeren skal få beskjed om bannlysingen via e-post og direkte i systemet. 
 
         \subsubsection{Administrator skal kunne slette bruker}
-        \EsID
+        \FK
         Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen. Den slettede brukeren skal få beskjed om slettingen via e-post.
 
         % @TODO: slette?
         % \subsubsection{Administrator skal kunne slette tilbakemeldinger}
-        % \EsID
+        % \FK
         % Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
 
         \subsubsection{Administrator skal kunne slette innlegg}
-        \EsID
+        \FK
         Administrator skal ha full rett til å slette individuelle innlegg. Bruker som lagde innlegget skal få beskjed om slettingen via e-post og direkte i systemet.
 
         \subsubsection{Administrator skal kunne slette parkeringsplasser}
-        \EsID
+        \FK
         Administrator skal ha full rett til å slette individuelle parkeringsplasser. Bruker som opprettet parkeringsplassen skal få beskjed om slettingen via e-post og direkte i systemet.
 
         \subsubsection{Administrator skal kunne slette reservasjoner}
-        \EsID
+        \FK
         Administrator skal ha full rett til å slette individuelle reservasjoner. Bruker som opprettet reservasjoner skal få beskjed om slettingen via e-post og direkte i systemet.
 
         \subsubsection{Bedrift skal ha administrerende rettigheter på deres egne innlegg}
-        \EsID
+        \FK
         Dette innebærer at bedriften kan blokkere brukere av deres egne parkeringsplasser fra å bruke de igjen og slette tilbakemeldinger på deres egne innlegg.
 
         \subsubsection{Bruker skal kunne rapportere andre brukere sine innlegg}
-        \EsID
+        \FK
         Brukere har frihet til å rapportere andre brukere sine innlegg. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
 
         \subsubsection{Bruker skal kunne rapportere andre brukere}
-        \EsID
+        \FK
         Brukere har frihet til å rapportere andre brukere. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
     
     \subsection{Persistent data}
 
         \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
-        \EsID
+        \FK
         Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
 
 \section{Ikke funksjonelle krav}
 
     \subsection{Tilgjengelighet}
-    \EsID
+    \IFK
     All brukere skal ha tilgang til applikasjonen til enhver tid.
     
     \subsection{Sikkerhetskopi(Backup)}
-    \EsID
+    \IFK
     Sikkerhetskopiering av database skal skje hver 24 time kl 04.00
 
     \subsection{Dependency på tredjepart}
-    \EsID
+    \IFK
     Betaling verifiseres og håndteres av NETS
 
     \subsection{Legal and licensing issues}
