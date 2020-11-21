@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.5)  20 NOV 2020 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.5)  21 NOV 2020 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -339,7 +339,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 60
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [4] [5] [6] [7] [8] [9] [10] [11]
-<BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=361, 1146.2825pt x 1406.25375pt>
+<BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=366, 1146.2825pt x 1406.25375pt>
 File: BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png Graphic file (type png)
 <use BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>
 Package pdftex.def Info: BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 423.
@@ -349,7 +349,7 @@ Overfull \hbox (9.195pt too wide) in paragraph at lines 423--424
 [] 
  []
 
-<BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=363, 794.97pt x 343.2825pt>
+<BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=368, 794.97pt x 343.2825pt>
 File: BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png Graphic file (type png)
 <use BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>
 Package pdftex.def Info: BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 426.
@@ -359,23 +359,23 @@ Overfull \hbox (17.13689pt too wide) in paragraph at lines 426--427
 [] 
  []
 
-[12 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>] [13 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
+[12 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>] [13 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>] [14] [15] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
-(rerunfilecheck)             Checksum: 2451DE95829A8906118D3A225F69A257;3398.
+(rerunfilecheck)             Checksum: C4D09DC6BBB531389D0E5C907FB74536;3512.
  ) 
 Here is how much of TeX's memory you used:
- 7269 strings out of 479485
- 110695 string characters out of 5875916
- 423094 words of memory out of 5000000
- 24032 multiletter control sequences out of 15000+600000
+ 7273 strings out of 479485
+ 110741 string characters out of 5875916
+ 442094 words of memory out of 5000000
+ 24033 multiletter control sequences out of 15000+600000
  552786 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,9n,72p,505b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.pdf" (13 pages, 114748 bytes).
+Output written on "c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.pdf" (15 pages, 116839 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 387 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 443 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 400 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 451 words of extra memory for PDF output out of 10000 (max. 10000000)
 
