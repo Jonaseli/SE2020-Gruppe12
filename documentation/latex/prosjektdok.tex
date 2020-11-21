@@ -13,6 +13,8 @@
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{changepage}
+\usepackage[parfill]{parskip}
+\usepackage{wrapfig}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -21,7 +23,6 @@
 \newcounter{fkcounter}
 \newcounter{ifkcounter}
 \titlespacing*{\paragraph}{\parindent}{1ex}{1em}
-\setlength{\parindent}{1cm}
 
 % commands %
 \newcommand*{\FK}{\stepcounter{fkcounter}\textbf{EsID: FK\arabic{fkcounter}\\}}
@@ -59,20 +60,13 @@ Tjenesten er bygget opp slik at alle brukere har tilgang til en feed som viser e
 
 Kunde av tjenesten vil kunne opprette administratorbrukere som har spesielle egenskaper for administrering av feeden og brukerene. Dette vil være nødvendig for å minke upassende/ulovelig innhold og øke brukeropplevelsen.
 
-
-
 \section{Begrensninger og antagelser}
 
-% avgrens hva systemtet skal ha ansvar for (og hva som håndteres av eksterne partnere)
-\section{Ansvarsområde}
 
-    \begin{itemize}
-        \item Bruker - Kjøper
-        \item Bruker - Selger
-        \item Bruker - Administrator
-    \end{itemize}
+\section{Ansvarsområde og Avhengigheter}
 
-% definere hvilke funksjoner som er påkrevd for at kunden får det systemet de ønsker
+
+
 \section{Funksjoner i applikasjonen}
 
 Programmet henter inn info om brukere, poster, parkeringsplasser og reservasjoner fra en database(i dette tilfellet json-filer). Det programmet gjør nå er å hente inn data fra controller til javalin som generer front-end for oss. Hver side henter da ut nødvendig info hva hver .json fil slik at nødvendig informasjon som adresse og ledighet til leie vises.
@@ -120,13 +114,12 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     \end{tabular}
 \end{center}
 
-\section{Avhengigheter}
-
 \section{Brukerklasser}
 
 \section{Personaer}
 
-    \subsection{Persona type 1}
+    \subsection{Jørgen Moe}
+    \includegraphics[scale=1]{bilder/persona_jorgen.jpg}\\
     \textbf{Alder:} 34\\
     \textbf{Jobb/Rolle:}
     Økonom\\
@@ -137,8 +130,10 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     \textbf{Behov:}\\
     Han må kunne forlenge antall dager han låner en parkeringsplass\\
     \textbf{Tekniske ferdigheter:} Gode
+    
 
-    \subsection{Persona type 2}
+    \subsection{Siggurd Olson}
+    \includegraphics[scale=1]{bilder/persona_siggurd.jpg}\\
     \textbf{Alder:} 42\\
     \textbf{Jobb/Rolle:} Ledelse i bedrift\\
     \textbf{Beskrivelse:}\\
@@ -149,7 +144,8 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     Han må kunne parkere nærmere arbeidsplassen og sikre seg parkeringplass ved et møte.\\
     \textbf{Tekniske ferdigheter:} Gode
 
-    \subsection{Persona type 3}
+    \subsection{Karina Gausrud}
+    \includegraphics[scale=1]{bilder/persona_karina.jpg}\\
     \textbf{Alder:} 22\\
     \textbf{Jobb/Rolle:} Uføre\\
     \textbf{Beskrivelse:}\\
@@ -160,7 +156,8 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     Hun må være sikker på at hun får en handicap-parkeringsplass\\
     \textbf{Tekniske ferdigheter:} Gode
 
-    \subsection{Persona type 4}
+    \subsection{Karin}
+    \includegraphics[scale=1]{bilder/persona_karin.jpg}\\
     \textbf{Alder:} 34 \\
     \textbf{Jobb/Rolle:} Selger\\
     \textbf{Beskrivelse:}\\
@@ -175,7 +172,8 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     Karin føler seg frustrert når hun kjører rundt nabolaget hun skal banke dører i, men aldri klarer å finne et sted det er lov å parkere. Karin er på sitt lykkeligste når hun åpner appen for å sjekke hvor hun har bestilt parkering, og vet at hun ikke trenger å tenke på å lete igje\\
     \textbf{Tekniske ferdigheter:} Gode
 
-    \subsection{Persona type 5}
+    \subsection{Jørn Berg}
+    \includegraphics[scale=1]{bilder/persona_jorn.jpg}\\
     \textbf{Alder:} 56\\
     \textbf{Jobb/Rolle:} Bonde\\
     \textbf{Beskrivelse:}\\
@@ -414,17 +412,15 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 
     \subsection{Bruksmanual}
     For å starte programmet velger man main metoden i drop-down menyen og trykker grønn pil eller shitf+f10. Da vil javalin kjøre i konsollen i intellij, og det vil åpne seg port på http://localhost:7000/ . Når man trykker på den kommer man en hovedside med tre knapper. En for bruker, en for corporation og en for admin.
-    \\\\
+    
     Når man har kommet inn til localhost:7000 blir man presentert med tre knapper. En for bruker, en for corporation og en for admin. Bruker knappen leder til parkeringsplass oversikten der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en parkeringsplass, trykke seg inn til bestillings-siden, og fylle ut ordren, og trykke submit knappen for å bestille, da skal den dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
-    \\\\
+    
     Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie ut ved å trykke på “Create new parking spot”-knappen der de taes til en skjema for utfylling. Dersom skjema ikke er tilstrekkelig utfylt vil en feilmelding vises med all info som er nødvendig i skjemaet. Når skjema er riktig utfylt kan man trykke submit knappen, og den nye parkeringsplassen vil umiddelbart være postet til både hovedoversikten og til brukerens “My parking spots”-side. Foreløpig fungerer corporation-brukeren på lik linje som bruker-typen.
-    \\\\
+    
     Da man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og den kan slette parkeringsplasser, poster og reservasjoner.
-
 
     \subsection{Implementerte krav og tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
-
 
     \subsection{Avhengigheter}
 
@@ -439,10 +435,10 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     \subsection{Håkon}
 
         \subsubsection{Sekvesndiagram - Av hvordan man leier en parkeringplass.}
-        \includegraphics[scale=0.43]{BilderTilLatex/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
+        \includegraphics[scale=0.43]{bilder/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
 
         \subsubsection{Dataflytdiagram - Av hvordan man tilbakemelding og poengsum fungerer.}
-        \includegraphics[scale=0.63]{BilderTilLatex/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
+        \includegraphics[scale=0.63]{bilder/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
 
     \subsection{Jonas}
 
