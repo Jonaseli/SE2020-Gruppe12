@@ -1,4 +1,5 @@
 package controller;
+
 import io.javalin.http.Context;
 import model.Account;
 import model.ParkingSpot;
@@ -10,21 +11,21 @@ public class Controller {
 
     private final IRepository repo;
 
-    public Controller(IRepository repo){
+    public Controller(IRepository repo) {
         this.repo = repo;
     }
 
-    public void getParkingSpots(Context ctx){
+    public void getParkingSpots(Context ctx) {
         ctx.json(repo.getParkingSpots());
     }
 
-    public void getParkingSpot(Context ctx){
+    public void getParkingSpot(Context ctx) {
         String parkingSpotId = ctx.pathParam(":parking-spot-id");
         ParkingSpot parkingSpot = repo.getParkingSpot(UUID.fromString(parkingSpotId));
         ctx.json(parkingSpot);
     }
 
-    public void getPosts(Context ctx){
+    public void getPosts(Context ctx) {
         ctx.json(repo.getPosts());
     }
 

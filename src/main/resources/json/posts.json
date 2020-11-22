@@ -1,17 +1,22 @@
-[ {
+[
+  {
     "postId": "c763b919-5031-46a7-a1ad-d19f5a476864",
     "parkingSpot": "079433fa-d2fc-42b6-9514-7cdaabf35909",
     "price": 80.0
-}, {
+  },
+  {
     "postId": "2cbbf634-19e0-4435-a035-c574fddbba23",
     "parkingSpot": "a88c0610-6dc7-4ea3-b871-f3d1672c1730",
     "price": 50.0
-}, {
+  },
+  {
     "postId": "4ac44636-fa67-4ccd-9c8e-de2c66212198",
     "parkingSpot": "95d610af-3a5f-4e67-8c72-384aeb562a5b",
     "price": 40.0
-}, {
+  },
+  {
     "postId": "7201c7df-dffa-4ac0-943c-0842ee0000c2",
     "parkingSpot": "30b0d0c3-bdb1-4d56-bb7d-f3c99c6bd57b",
     "price": 50.5
-} ]
+  }
+]

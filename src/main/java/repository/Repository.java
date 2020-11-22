@@ -105,16 +105,16 @@ public class Repository implements IRepository {
 
         boolean available = true;
         boolean handicap;
-        try{
+        try {
             handicap = values.get("handicap").get(0) != null;
-        } catch(Exception e) {
+        } catch (Exception e) {
             handicap = false;
         }
 
         boolean chargingStation;
-        try{
+        try {
             chargingStation = values.get("chargingStation").get(0) != null;
-        } catch(Exception e) {
+        } catch (Exception e) {
             chargingStation = false;
         }
 
