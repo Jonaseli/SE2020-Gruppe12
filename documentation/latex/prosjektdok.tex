@@ -16,6 +16,9 @@
 \usepackage[parfill]{parskip}
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage[table]{xcolor}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -32,6 +35,7 @@
 \newcommand*{\FKsub}{\stepcounter{fksubcounter}\textbf{ID: FK\arabic{fkcounter}.\arabic{fksubcounter} \quad}}
 \newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{ID: IFK\arabic{ifkcounter}\\}}
 \newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: FK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
+\newcommand{\invis}{\phantom{a}}
 
 % environments %
 \newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
@@ -135,13 +139,13 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 \section{Brukerklasser}
 En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
-    \subsubsection{Bruker}
+    \subsection{Bruker}
     Brukerkontoen er en standardkonto som hvem som helst kan opprette. Som en bruker, kan man registrere sine egne parkeringsplasser og leie andre brukeres parkeringsplasser i perioder. Alle brukere har sin egen profilside der de kan redigere generell informasjon og innstillinger. Brukere kan gi anmeldesler/tilbakemelding på hverandre sine innlegg, og vil bli varslet dersom en annen bruker skriver en anmeldelse på sin parkeringsplass. Ved registrering av parkeringsplass, bestemmer man selv pris og tiden den er tilgjengelig, og den vil automatisk bli vist for andre brukere via feeden eller profil. Man må først registrere bilen man parkerer med før man kan reservere en parkeringsplass.
 
-    \subsubsection{Bedrift}
+    \subsection{Bedrift}
     Det er kun organisasjoner som har tilgang til å opprette en bedriftskonto, da de må ha et organisasjonsnummer. Bedriftskontoen er sammensatt av flere brukerkontoer. En brukerkonto som er medlem av en bedrift har spesialtilgang til parkeringsplasser markert for generelle eller spesifikke bedrifter. Bedriftskontoen kan legge ut parkeringsplasser, men kan ikke leie en parkeringsplass. Det er kun bedrifter som kan markere parkeringsplasser for andre bedrifter.
 
-    \subsubsection{Administrator}
+    \subsection{Administrator}
     En administrator ligner en vanligbrukerkonto, men har moen ekstra rettigheter for administraring. De har full makt til å slette brukere, bedrifter, innlegg, parkeringsplasser, og anmeldelser, samt suspendere og oppheve brukerkontoer. Administrator er essensiell for å vedlikeholde en god brukeropplevelse og rettferdiggjøre systemet for alle brukere.
 
 \section{Personaer}
@@ -479,6 +483,38 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 \section{Estemering}
 
     \subsection{Enheter}
+
+    \begin{tabular}{|p{2cm}|
+        >{\centering\arraybackslash}p{3cm}|
+        >{\centering\arraybackslash}p{3cm}|
+        >{\centering\arraybackslash}p{3cm}|
+        >{\centering\arraybackslash}p{3cm}|}     
+        \hline 
+        \invis & \multicolumn{4}{|c|}{Utviklingsstørrelse}\\
+        \hline
+        Verdi & X-Large & Large & Medium & Small\\
+        \hline
+        X-Large &   \cellcolor{yellow!25}0 &
+                    \cellcolor{green!25}4 &
+                    \cellcolor{green!25}6 &
+                    \cellcolor{green!25}7 \\
+        \hline
+        Large &     \cellcolor{red!25}-4 &
+                    \cellcolor{yellow!25}0 &
+                    \cellcolor{lime!25}2 &
+                    \cellcolor{green!25}3 \\
+        \hline
+        Medium &    \cellcolor{red!25}-6 &
+                    \cellcolor{orange!25}-2 &
+                    \cellcolor{yellow!25}0 &
+                    \cellcolor{lime!25}1 \\
+        \hline
+        Small &     \cellcolor{red!25}-7 &
+                    \cellcolor{red!25}-3 &
+                    \cellcolor{orange!25}-1 &
+                    \cellcolor{yellow!25}0 \\
+        \hline 
+    \end{tabular}
 
     \subsection{Estimeringstabell - Funksjonelle krav}
         \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
