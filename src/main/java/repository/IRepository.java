@@ -25,9 +25,9 @@ public interface IRepository {
 
     ArrayList<ParkingSpot> getParkingSpots();
 
-    ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId);
+    ArrayList<ParkingSpot> getOwnedParkingSpots(Account account);
 
-    ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId);
+    ArrayList<ParkingSpot> getRentedParkingSpots(Account account);
 
     void createParkingSpot(Map<String, List<String>> values);
 

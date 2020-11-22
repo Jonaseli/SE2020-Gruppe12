@@ -7,15 +7,16 @@ import java.util.UUID;
 
 public class Post implements JSONReadable<Post>, JSONWritable<Post> {
 
-    private UUID postId, parkingSpotId;
+    private UUID postId;
+    private ParkingSpot parkingSpot;
     private double price;
 
     public Post() {
     }
 
-    public Post(UUID parkingSpotId, double price) {
+    public Post(ParkingSpot parkingSpot, double price) {
         this.postId = UUID.randomUUID();
-        this.parkingSpotId = parkingSpotId;
+        this.parkingSpot = parkingSpot;
         this.price = price;
     }
 
@@ -23,8 +24,8 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post> {
         return postId;
     }
 
-    public UUID getParkingSpotId() {
-        return parkingSpotId;
+    public ParkingSpot getParkingSpot() {
+        return parkingSpot;
     }
 
     public double getPrice() {

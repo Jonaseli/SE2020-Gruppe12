@@ -28,7 +28,7 @@ public class RepositoryTest {
         String[] expectedOwnerId = {"6648dfdc-9733-4a34-bfa0-e9de8c1ca78b", "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f", "d7d77c76-5b91-4fb4-8eab-80389a90d427"};
 
         for (int i = 0; i < parkingSpotId.length; i++) {
-            String actualOwnerId = repo.getParkingSpot(UUID.fromString(parkingSpotId[i])).getOwnerId().toString();
+            String actualOwnerId = repo.getParkingSpot(UUID.fromString(parkingSpotId[i])).getOwner().toString();
             Assertions.assertEquals(actualOwnerId, expectedOwnerId[i]);
         }
     }

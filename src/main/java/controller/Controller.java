@@ -1,5 +1,6 @@
 package controller;
 import io.javalin.http.Context;
+import model.Account;
 import model.ParkingSpot;
 import model.Post;
 import repository.IRepository;
@@ -21,7 +22,7 @@ public class Controller {
     public void getParkingSpot(Context ctx){
         String parkingSpotId = ctx.pathParam(":parking-spot-id");
 
-        ParkingSpot parkingSpot = repo.getParkingSpot(UUID.fromString(parkingSpotId));repo.getAccount(parkingSpot.getOwnerId());
+        ParkingSpot parkingSpot = repo.getParkingSpot(UUID.fromString(parkingSpotId));
         ctx.json(parkingSpot);
         // ctx.json(repo.getAccount(parkingSpot.getOwnerId()));
     }
@@ -38,17 +39,19 @@ public class Controller {
     }
 
     public void getAccount(Context ctx) {
-        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
-        ctx.json(repo.getAccount(account));
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        ctx.json(repo.getAccount(accountId));
     }
 
     public void getOwnedParkingSpots(Context ctx) {
-        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        Account account = repo.getAccount(accountId);
         ctx.json(repo.getOwnedParkingSpots(account));
     }
 
     public void getRentedParkingSpots(Context ctx) {
-        UUID account = UUID.fromString(ctx.pathParam(":account-id"));
+        UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
+        Account account = repo.getAccount(accountId);
         ctx.json(repo.getRentedParkingSpots(account));
     }
 

@@ -7,7 +7,8 @@ import java.util.UUID;
 
 public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
 
-    private UUID parkingSpotId, ownerId;
+    private UUID parkingSpotId;
+    private Account owner;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
     private String postalCode, city, streetAddress, streetNumber;
@@ -15,13 +16,13 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
 
     public ParkingSpot() {
     }
-    
-    public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
+
+    public ParkingSpot(Account owner, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
-                       String streetNumber, String pictureURL){
+                       String streetNumber, String pictureURL) {
 
         this.parkingSpotId = UUID.randomUUID();
-        this.ownerId = owner;
+        this.owner = owner;
         this.handicap = handicap;
         this.chargingStation = chargingStation;
         this.available = available;
@@ -39,8 +40,8 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
         return parkingSpotId;
     }
 
-    public UUID getOwnerId() {
-        return ownerId;
+    public Account getOwner() {
+        return owner;
     }
 
     public boolean getHandicap() {

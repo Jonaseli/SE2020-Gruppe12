@@ -88,8 +88,6 @@
                     <nodeVersion>v15.0.0</nodeVersion>
                 </configuration>
             </plugin>
-
-
         </plugins>
     </build>
 </project>

@@ -7,19 +7,19 @@ import java.util.UUID;
 
 public class Reservation implements JSONReadable<Reservation>, JSONWritable<Reservation> {
 
-    private UUID reservationId, postId, accountId;
-
+    private UUID reservationId;
+    private Post post;
+    private Account account;
     private String startTime;
-
     private String endTime;
 
     public Reservation() {
     }
 
-    public Reservation(UUID postId, UUID accountId, String startTime, String endTime) {
+    public Reservation(Post post, Account account, String startTime, String endTime) {
         this.reservationId = UUID.randomUUID();
-        this.postId = postId;
-        this.accountId = accountId;
+        this.post = post;
+        this.account = account;
         this.startTime = startTime;
         this.endTime = endTime;
     }
@@ -28,12 +28,12 @@ public class Reservation implements JSONReadable<Reservation>, JSONWritable<Rese
         return reservationId;
     }
 
-    public UUID getPostId() {
-        return postId;
+    public Post getPost() {
+        return post;
     }
 
-    public UUID getAccountId() {
-        return accountId;
+    public Account getAccount() {
+        return account;
     }
 
     public String getStartTime() {

@@ -52,7 +52,7 @@ public class Repository implements IRepository {
     @Override
     public Post getPost(UUID postId) {
         for (Post post : posts) {
-            if (post.getParkingSpotId().equals(postId)) {
+            if (post.getParkingSpot().equals(postId)) {
                 return post;
             }
         }
@@ -66,7 +66,7 @@ public class Repository implements IRepository {
 
     @Override
     public void createPost(UUID parkingSpotId, double price) {
-        posts.add(new Post(parkingSpotId, price));
+        posts.add(new Post(getParkingSpot(parkingSpotId), price));
         post.writeToFile(postPath, posts);
     }
 
@@ -86,10 +86,10 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId) {
+    public ArrayList<ParkingSpot> getOwnedParkingSpots(Account account) {
         ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<>();
         for (ParkingSpot parking : parkingSpots) {
-            if (parking.getOwnerId().equals(accountId)) {
+            if (parking.getOwner().equals(account)) {
                 ownedParkingSpots.add(parking);
             }
         }
@@ -97,16 +97,11 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId) {
+    public ArrayList<ParkingSpot> getRentedParkingSpots(Account account) {
         ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<>();
         for (Reservation reservation : reservations) {
-            if (reservation.getAccountId().equals(accountId)) {
-                UUID posId = reservation.getPostId();
-                for (Post post : posts) {
-                    if (post.getPostId().equals(posId)) {
-                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpotId()));
-                    }
-                }
+            if (reservation.getAccount().equals(account)) {
+                rentedParkingSpots.add(reservation.getPost().getParkingSpot());
             }
         }
         return rentedParkingSpots;
@@ -115,7 +110,7 @@ public class Repository implements IRepository {
     @Override
     public void createParkingSpot(Map<String, List<String>> values) {
         //TODO change ownerId and available so its not hardcoded
-        UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
+        Account ownerId = getAccount(UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b"));
 
         boolean available = true;
         boolean handicap;
@@ -141,7 +136,7 @@ public class Repository implements IRepository {
         String streetNumber = values.get("streetNumber").get(0);
         String pictureURL = "";
 
-        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, true, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
+        parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, available, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
         parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
     }
 
@@ -157,7 +152,7 @@ public class Repository implements IRepository {
 
     @Override
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
-        reservations.add(new Reservation(postId, userId, startTime, endTime));
+        reservations.add(new Reservation(getPost(postId), getAccount(userId), startTime, endTime));
         reservation.writeToFile(reservationPath, reservations);
     }
 }
