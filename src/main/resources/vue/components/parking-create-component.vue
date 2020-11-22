@@ -33,11 +33,7 @@
                         <input type="text" name="postalCode" id="postalCode" v-model="postalCode" placeholder="postal code">
                     </p>
                     <p>
-<<<<<<< HEAD
                         <label for="city">City</label>
-=======
-                        <label for="name">City<label>
->>>>>>> 06fd73be04ac0e6e80ff0c2c940b2b22831dcb99
                         <input type="text" name="city" id="city" v-model="city" placeholder="city">
                     </p>
                 </div>

@@ -36,7 +36,7 @@
             <li v-for="parkingSpot in allParkingSpots">
                 <a :href="`/admin-page`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container">
-                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.postalCode}}</h1>
                         <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                         <div>
                             <a :href="`/api/admin/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
