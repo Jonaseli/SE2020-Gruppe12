@@ -29,8 +29,8 @@ public class Controller {
     }
 
     public void getPost(Context ctx) {
-        String postId = ctx.pathParam(":post-id");
-        ctx.json(repo.getPost(UUID.fromString(postId)));
+        UUID postId = UUID.fromString(ctx.pathParam(":post-id"));
+        ctx.json(repo.getPost(postId));
     }
 
     public void getAccounts(Context ctx) {

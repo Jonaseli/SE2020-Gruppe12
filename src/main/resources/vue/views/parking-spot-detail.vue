@@ -17,12 +17,11 @@
                 .then(res => this.parkingSpot = res)
                 .catch(() => alert("Error while fetching parkingspot"))
             /*
-            const postId = this.$javalin.pathParams['post-id'];
-                fetch(`/api/parking-spot/${parkingSpotId}/posts/${postId}`)
+                fetch(`/api/parking-spot/${parkingSpotId}`)
                 .then(res => res.json())
                 .then(res => this.post = res)
-                .catch(() => alert("Error while fetching posts"));
-             */
+                .catch(() => alert("Error while fetching owner"));
+            */
         }
     });
 </script>
