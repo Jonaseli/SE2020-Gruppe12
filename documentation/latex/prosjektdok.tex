@@ -21,12 +21,16 @@
 \setcounter{tocdepth}{2}    % TOC entries
 \renewcommand{\contentsname}{Innholdsfortegnelse}
 \newcounter{fkcounter}
+\newcounter{fksubcounter}[fkcounter]
 \newcounter{ifkcounter}
+\newcounter{ifksubcounter}[ifkcounter]
 \titlespacing*{\paragraph}{\parindent}{1ex}{1em}
 
 % commands %
-\newcommand*{\FK}{\stepcounter{fkcounter}\textbf{EsID: FK\arabic{fkcounter}\\}}
-\newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{EsID: IFK\arabic{ifkcounter}\\}}
+\newcommand*{\FK}{\stepcounter{fkcounter}\textbf{ID: FK\arabic{fkcounter}\\}}
+\newcommand*{\FKsub}{\stepcounter{fksubcounter}\textbf{ID: FK\arabic{fkcounter}.\arabic{fksubcounter} \quad}}
+\newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{ID: IFK\arabic{ifkcounter}\\}}
+\newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: FK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
 
 % environments %
 \newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
@@ -204,10 +208,10 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \FK
         Systemet må verifisere registreringen via en kode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden brukeren skriver inn stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden.
 
-            \paragraph{Koden skal være fire-sifret}
             \begin{subreq}
-                \FK
-                
+                \FKsub Koden skal være fire-sifret
+
+                \FKsub Bruh
             \end{subreq}
 
         \subsubsection{Systemet skal lagre dataen til den brukeren}
