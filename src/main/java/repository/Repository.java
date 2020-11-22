@@ -57,7 +57,7 @@ public class Repository implements IRepository {
 
     @Override
     public void createPost(UUID parkingSpotId, double price) {
-        posts.add(new Post(getParkingSpot(parkingSpotId), price));
+        posts.add(new Post(parkingSpotId, price));
         JsonParser.writeToFile(POSTS_PATH, posts);
     }
 
@@ -77,10 +77,10 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getOwnedParkingSpots(Account account) {
+    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID account) {
         ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<>();
         for (ParkingSpot parking : parkingSpots) {
-            if (parking.getOwner().getAccountId().equals(account.getAccountId())) {
+            if (parking.getOwner().equals(account)) {
                 ownedParkingSpots.add(parking);
             }
         }
@@ -88,11 +88,16 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getRentedParkingSpots(Account account) {
+    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID account) {
         ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<>();
         for (Reservation reservation : reservations) {
-            if (reservation.getAccount().equals(account)) {
-                rentedParkingSpots.add(reservation.getPost().getParkingSpot());
+            if (reservation.getAccountId().equals(account)) {
+                UUID postId = reservation.getPostId();
+                for (Post post : posts) {
+                    if (post.getPostId().equals(postId)) {
+                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpot()));
+                    }
+                }
             }
         }
         return rentedParkingSpots;
@@ -101,7 +106,7 @@ public class Repository implements IRepository {
     @Override
     public void createParkingSpot(Map<String, List<String>> values) {
         //TODO change ownerId and available so its not hardcoded
-        Account ownerId = getAccount(UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b"));
+        UUID ownerId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
 
         boolean available = true;
         boolean handicap;
@@ -148,7 +153,7 @@ public class Repository implements IRepository {
 
     @Override
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
-        reservations.add(new Reservation(getPost(postId), getAccount(userId), startTime, endTime));
+        reservations.add(new Reservation(postId, userId, startTime, endTime));
         JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
     }
 

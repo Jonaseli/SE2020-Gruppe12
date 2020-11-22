@@ -1,8 +1,6 @@
 package controller;
 
 import io.javalin.http.Context;
-import model.Account;
-import model.ParkingSpot;
 import repository.IRepository;
 
 import java.util.UUID;
@@ -21,8 +19,8 @@ public class Controller {
 
     public void getParkingSpot(Context ctx) {
         String parkingSpotId = ctx.pathParam(":parking-spot-id");
-        ParkingSpot parkingSpot = repo.getParkingSpot(UUID.fromString(parkingSpotId));
-        ctx.json(parkingSpot);
+        UUID parkingSpot = UUID.fromString(parkingSpotId);
+        ctx.json(repo.getParkingSpot(parkingSpot));
     }
 
     public void getPosts(Context ctx) {
@@ -54,14 +52,12 @@ public class Controller {
 
     public void getOwnedParkingSpots(Context ctx) {
         UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
-        Account account = repo.getAccount(accountId);
-        ctx.json(repo.getOwnedParkingSpots(account));
+        ctx.json(repo.getOwnedParkingSpots(accountId));
     }
 
     public void getRentedParkingSpots(Context ctx) {
         UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
-        Account account = repo.getAccount(accountId);
-        ctx.json(repo.getRentedParkingSpots(account));
+        ctx.json(repo.getRentedParkingSpots(accountId));
     }
 
     public void createParking(Context ctx) {

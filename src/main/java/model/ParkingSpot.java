@@ -1,18 +1,11 @@
 package model;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import dataHandler.deserializers.StringToAccountConverter;
-import dataHandler.serializers.AccountToStringConverter;
-
 import java.util.UUID;
 
 public class ParkingSpot {
 
     private UUID parkingSpotId;
-    @JsonSerialize(converter = AccountToStringConverter.class)
-    @JsonDeserialize(converter = StringToAccountConverter.class)
-    private Account owner;
+    private UUID owner;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
     private String postalCode, city, streetAddress, streetNumber;
@@ -21,7 +14,7 @@ public class ParkingSpot {
     public ParkingSpot() {
     }
 
-    public ParkingSpot(Account owner, boolean handicap, boolean chargingStation, boolean available, int width,
+    public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL) {
         this.parkingSpotId = UUID.randomUUID();
@@ -39,7 +32,7 @@ public class ParkingSpot {
         this.pictureURL = pictureURL;
     }
 
-    public ParkingSpot(UUID parkingSpotId, Account owner, boolean handicap, boolean chargingStation, boolean available, int width,
+    public ParkingSpot(UUID parkingSpotId, UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL) {
         this.parkingSpotId = parkingSpotId;
@@ -61,7 +54,7 @@ public class ParkingSpot {
         return parkingSpotId;
     }
 
-    public Account getOwner() {
+    public UUID getOwner() {
         return owner;
     }
 

@@ -18,12 +18,13 @@ Vue.component("parking-spot-detail", {
             .then(res => {
                 this.parkingSpot = res;
 
-                const ownerId = this.parkingSpot.owner
+                let ownerId = this.parkingSpot.owner
+                console.log(this.parkingSpot)
+                console.log(ownerId)
                 fetch(`/api/account/${ownerId}`)
                     .then(res => res.json())
                     .then(res => this.owner = res)
                     .catch(() => alert("Error while fetching owner"));
-
             }).catch(() => alert("Error while fetching parking spot"));
     }
 });
