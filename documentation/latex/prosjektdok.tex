@@ -86,33 +86,37 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 \section{Begreper og definisjoner}
 
 \begin{center}
-    \begin{tabular}{|p{4cm}|p{12cm}| } 
+    \begin{tabular}{|p{4cm}|p{12cm}|} 
         \hline
-        \bf Begrep & \bf Beskrivelse \\
+        \bf Begrep & \bf Beskrivelse\\
         \hline
-        Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført \\
+        Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført\\
         \hline
-        Bruker & Besøkende som samhandler med systemet \\
+        Bruker & Besøkende som samhandler med systemet\\
         \hline
-        Brukerkonto & En som kan kun leie parkeringsplasser \\
+        Brukerkonto & En som kan kun leie parkeringsplasser\\
         \hline
-        Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre \\
+        Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre\\
         \hline
-        EsID & Estemering identifikator \\
+        Administrator & Brukerkonto med administratorrettigheter\\
         \hline
-        Feed & Opplisting av innlegg \\
+        Feed & Opplisting av innlegg\\
         \hline
-        ID & Identifikator \\
+        Tjenesten & Tjenesten denne dokumentasjonen omhandler\\
         \hline
-        Tjenesten & Tjenesten denne dokumentasjonen omhandler \\
-        \hline
-        Systemet & Det underliggende systemet til tjenesten \\
+        Systemet & Det underliggende systemet til tjenesten\\
         \hline
         Personas & Er et annet ord for rollefigur, enkeltmenneske, karakterpersonlighet\\
         \hline
-        FK & Funksjonelt Krav (brukes til EsID)\\
+        ID & Identifikator\\
+        \hline
+        FK & Funksjonelt Krav (brukes som ID)\\
+        \hline
+        IFK & Ikke-Funksjonelt Krav (brukes som ID)\\
         \hline
         Innlegg & Brukerinnlegg i systemet (post) som består av en eller flere parkeringsplasser\\
+        \hline
+        Produktet/ Tjenesten & Applikasjonen som dokumenteres\\
         \hline
         Kunde & Gruppe som eier produktet\\
         \hline
@@ -120,6 +124,16 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 \end{center}
 
 \section{Brukerklasser}
+En oversikt over roller og egenskaper for de forskjellige brukerklassene.
+
+    \subsubsection{Bruker}
+    Brukerkontoen er en standardkonto som hvem som helst kan opprette. Som en bruker, kan man registrere sine egne parkeringsplasser og leie andre brukeres parkeringsplasser i perioder. Alle brukere har sin egen profilside der de kan redigere generell informasjon og innstillinger. Brukere kan gi anmeldesler/tilbakemelding på hverandre sine innlegg, og vil bli varslet dersom en annen bruker skriver en anmeldelse på sin parkeringsplass. Ved registrering av parkeringsplass, bestemmer man selv pris og tiden den er tilgjengelig, og den vil automatisk bli vist for andre brukere via feeden eller profil. Man må først registrere bilen man parkerer med før man kan reservere en parkeringsplass.
+
+    \subsubsection{Bedrift}
+    Det er kun organisasjoner som har tilgang til å opprette en bedriftskonto, da de må ha et organisasjonsnummer. Bedriftskontoen er sammensatt av flere brukerkontoer. En brukerkonto som er medlem av en bedrift har spesialtilgang til parkeringsplasser markert for generelle eller spesifikke bedrifter. Bedriftskontoen kan legge ut parkeringsplasser, men kan ikke leie en parkeringsplass. Det er kun bedrifter som kan markere parkeringsplasser for andre bedrifter.
+
+    \subsubsection{Administrator}
+    En administrator ligner en vanligbrukerkonto, men har moen ekstra rettigheter for administraring. De har full makt til å slette brukere, bedrifter, innlegg, parkeringsplasser, og anmeldelser, samt suspendere og oppheve brukerkontoer. Administrator er essensiell for å vedlikeholde en god brukeropplevelse og rettferdiggjøre systemet for alle brukere.
 
 \section{Personaer}
 
