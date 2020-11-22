@@ -15,6 +15,7 @@
 \usepackage{changepage}
 \usepackage[parfill]{parskip}
 \usepackage{wrapfig}
+\usepackage[export]{adjustbox}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -431,23 +432,26 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
     \subsection{Begrensninger}
 
 \section{Diagrammer}
+    \subsection{Sekvesndiagram - Leie en parkeringplass.}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
 
-    \subsection{Charis}
+    \subsection{Dataflytdiagram - Tilbakemelding}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
 
-    \newpage
-    \subsection{Håkon}
+    \subsection{Sekvensdiagram - Opprette reservasjon}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprette reservasjon_sekvensdiagram.png}
 
-        \subsubsection{Sekvesndiagram - Av hvordan man leier en parkeringplass.}
-        \includegraphics[scale=0.43]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
+    \subsection{Tilstandsdiagram - Registrere parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png}
+    
+        \subsubsection{Forklaring}
+        Når bruker oppretter parkeringsplass venter systemet på en POST forespørsel med informasjon om gatenavn, adresse, bredde, lengde og høyde, samt informasjon angående parkeringsplasstype (handicap, el-bil, osv.). Dersom opplysningene ikke tilfredstiller forventningene i systemet, får bruker en feilmelding og blir nødt til å fylle ut på nytt. Dersom opplysningene er godkjent blir parkeringsplassen opprettet. 
 
-        \subsubsection{Dataflytdiagram - Av hvordan man tilbakemelding og poengsum fungerer.}
-        \includegraphics[scale=0.63]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
+    \subsection{Aktivitetsdiagram - Leie en parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/leierAktivitetBestilling.png}
 
-    \subsection{Jonas}
-
-    \subsection{Lars}
-
-    \subsection{Mats}
+    \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramLeggeUtParkering.png}
 
 \section{Estemering}
 

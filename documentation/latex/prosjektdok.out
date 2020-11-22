@@ -43,12 +43,13 @@
 \BOOKMARK [2][-]{subsection.11.5}{Avhengigheter}{section.11}% 43
 \BOOKMARK [2][-]{subsection.11.6}{Begrensninger}{section.11}% 44
 \BOOKMARK [1][-]{section.12}{Diagrammer}{}% 45
-\BOOKMARK [2][-]{subsection.12.1}{Charis}{section.12}% 46
-\BOOKMARK [2][-]{subsection.12.2}{H\345kon}{section.12}% 47
-\BOOKMARK [2][-]{subsection.12.3}{Jonas}{section.12}% 48
-\BOOKMARK [2][-]{subsection.12.4}{Lars}{section.12}% 49
-\BOOKMARK [2][-]{subsection.12.5}{Mats}{section.12}% 50
-\BOOKMARK [1][-]{section.13}{Estemering}{}% 51
-\BOOKMARK [2][-]{subsection.13.1}{Enheter}{section.13}% 52
-\BOOKMARK [2][-]{subsection.13.2}{Estimeringstabell - Funksjonelle krav}{section.13}% 53
-\BOOKMARK [2][-]{subsection.13.3}{Estimeringstabell - Ikke funksjonelle krav}{section.13}% 54
+\BOOKMARK [2][-]{subsection.12.1}{Sekvesndiagram - Leie en parkeringplass.}{section.12}% 46
+\BOOKMARK [2][-]{subsection.12.2}{Dataflytdiagram - Tilbakemelding}{section.12}% 47
+\BOOKMARK [2][-]{subsection.12.3}{Sekvensdiagram - Opprette reservasjon}{section.12}% 48
+\BOOKMARK [2][-]{subsection.12.4}{Tilstandsdiagram - Registrere parkeringsplass}{section.12}% 49
+\BOOKMARK [2][-]{subsection.12.5}{Aktivitetsdiagram - Leie en parkeringsplass}{section.12}% 50
+\BOOKMARK [2][-]{subsection.12.6}{Sekvensdiagram - Leie ut en parkeringsplass}{section.12}% 51
+\BOOKMARK [1][-]{section.13}{Estemering}{}% 52
+\BOOKMARK [2][-]{subsection.13.1}{Enheter}{section.13}% 53
+\BOOKMARK [2][-]{subsection.13.2}{Estimeringstabell - Funksjonelle krav}{section.13}% 54
+\BOOKMARK [2][-]{subsection.13.3}{Estimeringstabell - Ikke funksjonelle krav}{section.13}% 55

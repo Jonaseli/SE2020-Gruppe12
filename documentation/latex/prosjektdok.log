@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  22 NOV 2020 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  22 NOV 2020 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -233,35 +233,79 @@ Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
 \WF@box=\box49
 \WF@everypar=\toks22
 Package: wrapfig 2003/01/31  v 3.6
+) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
 )
-\c@fkcounter=\count196
-\c@fksubcounter=\count197
-\c@ifkcounter=\count198
-\c@ifksubcounter=\count199
+\XKV@depth=\count196
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (c:/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box50
+)
+\tc@llx=\dimen164
+\tc@lly=\dimen165
+\tc@urx=\dimen166
+\tc@ury=\dimen167
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen168
+\adjbox@Height=\dimen169
+\adjbox@Depth=\dimen170
+\adjbox@Totalheight=\dimen171
+\adjbox@pwidth=\dimen172
+\adjbox@pheight=\dimen173
+\adjbox@pdepth=\dimen174
+\adjbox@ptotalheight=\dimen175
+ (c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count197
+LaTeX Info: Redefining \checkoddpage on input line 45.
+) (c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box51
+\sift@deathcycles=\count198
+\@vwid@loff=\dimen176
+\@vwid@roff=\dimen177
+))
+\c@fkcounter=\count199
+\c@fksubcounter=\count266
+\c@ifkcounter=\count267
+\c@ifksubcounter=\count268
  (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count266
-\l__pdf_internal_box=\box50
+\l__kernel_color_stack_int=\count269
+\l__pdf_internal_box=\box52
 ) (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
 \openout1 = `prosjektdok.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -301,25 +345,25 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
-\scratchdimen=\dimen164
-\scratchbox=\box51
-\nofMPsegments=\count268
-\nofMParguments=\count269
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count270
-\MPscratchDim=\dimen165
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count270
+\scratchdimen=\dimen178
+\scratchbox=\box53
+\nofMPsegments=\count271
+\nofMParguments=\count272
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count273
+\MPscratchDim=\dimen179
+\MPnumerator=\count274
+\makeMPintoPDFobject=\count275
+\everyMPtoPDFconversion=\toks26
 ) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 39.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring OFF on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (c:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -327,20 +371,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count273
+\c@section@level=\count276
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out) (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out)
 \@outlinefile=\write4
 \openout4 = `prosjektdok.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -350,98 +394,131 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `prosjektdok.toc'.
 
  [3] [4]
-Overfull \hbox (4.66241pt too wide) in paragraph at lines 82--83
+Overfull \hbox (4.66241pt too wide) in paragraph at lines 83--84
 []\OT1/ptm/m/n/12 Admin - Denne bruk-eren kan sus-pendere eller slette/banlyse brukere, slette poster og park-er-ingsplasser.
  []
 
 
-Overfull \hbox (1.7463pt too wide) in paragraph at lines 82--83
+Overfull \hbox (1.7463pt too wide) in paragraph at lines 83--84
 \OT1/ptm/m/n/12 Dette er en bruker-type som i senere it-erasjoner kan gi ret-tigheter til an-dre brukere (f.eks. modererings-
  []
 
-<bilder/personaer/persona_jorgen.jpg, id=294, 173.14688pt x 225.84375pt>
+<bilder/personaer/persona_jorgen.jpg, id=299, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_jorgen.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorgen.jpg>
-Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 126.
+Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 127.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 [5 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorgen.jpg>]
-<bilder/personaer/persona_siggurd.jpg, id=299, 173.14688pt x 225.84375pt>
+<bilder/personaer/persona_siggurd.jpg, id=304, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_siggurd.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_siggurd.jpg>
-Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 140.
+Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 141.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
-<bilder/personaer/persona_karina.jpg, id=300, 173.14688pt x 225.84375pt>
+<bilder/personaer/persona_karina.jpg, id=305, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_karina.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karina.jpg>
-Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 152.
+Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 153.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [6 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
-<bilder/personaer/persona_karin.jpg, id=305, 173.14688pt x 225.84375pt>
+<bilder/personaer/persona_karin.jpg, id=310, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_karin.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karin.jpg>
-Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 164.
+Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 165.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [7 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karina.jpg> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karin.jpg>]
-<bilder/personaer/persona_jorn.jpg, id=311, 173.14688pt x 225.84375pt>
+<bilder/personaer/persona_jorn.jpg, id=316, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_jorn.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorn.jpg>
-Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 180.
+Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 181.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [8 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorn.jpg>] [9]
-Overfull \hbox (19.9749pt too wide) in paragraph at lines 260--262
+Overfull \hbox (19.9749pt too wide) in paragraph at lines 261--263
 \OT1/ptm/m/n/12 Som en bruk-erkonto skal bruker kunne leie en spe-si-fikk park-er-ingsplass eller flere park-er-ingsplasser. 
  []
 
 [10] [11] [12] [13]
-Overfull \hbox (15.42722pt too wide) in paragraph at lines 422--423
+Overfull \hbox (15.42722pt too wide) in paragraph at lines 423--424
 \OT1/ptm/m/n/12 postet til b[]ade hov-e-dover-sik-ten og til bruk-erens \My park-ing spots"-side. Forel^^\pig fun-gerer corporation-
  []
 
-[14]
-<bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=377, 1146.2825pt x 1406.25375pt>
+<bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=378, 1146.2825pt x 1406.25375pt>
 File: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 441.
-(pdftex.def)             Requested size: 492.89188pt x 604.67734pt.
+Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 436.
+(pdftex.def)             Requested size: 1146.27971pt x 1406.25032pt.
 
-Overfull \hbox (39.195pt too wide) in paragraph at lines 441--442
+Overfull \hbox (30.01231pt too wide) in paragraph at lines 436--437
 [] 
  []
 
-<bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=379, 794.97pt x 343.2825pt>
+[14]
+<bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=384, 794.97pt x 343.2825pt>
 File: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 444.
-(pdftex.def)             Requested size: 500.83376pt x 216.2691pt.
+Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 439.
+(pdftex.def)             Requested size: 794.96806pt x 343.28165pt.
 
-Overfull \hbox (47.13689pt too wide) in paragraph at lines 444--445
+Overfull \hbox (30.00897pt too wide) in paragraph at lines 439--440
 [] 
  []
 
-[15 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>] [16 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 545.
- [17] [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 545.
+[15 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>]
+<bilder/diagrammer/opprette reservasjon_sekvensdiagram.png, id=390, 825.0825pt x 515.9275pt>
+File: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png Graphic file (type png)
+<use bilder/diagrammer/opprette reservasjon_sekvensdiagram.png>
+Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 442.
+(pdftex.def)             Requested size: 825.08049pt x 515.92624pt.
+
+Overfull \hbox (30.00052pt too wide) in paragraph at lines 442--443
+[] 
+ []
+
+<bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png, id=391, 294.09875pt x 490.83376pt>
+File: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png Graphic file (type png)
+<use bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png>
+Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 445.
+(pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
+[16 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png (PNG copy)>]
+<bilder/diagrammer/leierAktivitetBestilling.png, id=397, 274.02374pt x 592.2125pt>
+File: bilder/diagrammer/leierAktivitetBestilling.png Graphic file (type png)
+<use bilder/diagrammer/leierAktivitetBestilling.png>
+Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 451.
+(pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
+ [17 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png (PNG copy)>]
+<bilder/diagrammer/sekvensdiagramLeggeUtParkering.png, id=404, 619.31375pt x 321.2pt>
+File: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png Graphic file (type png)
+<use bilder/diagrammer/sekvensdiagramLeggeUtParkering.png>
+Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 454.
+(pdftex.def)             Requested size: 619.31224pt x 321.19922pt.
+
+Overfull \hbox (30.01796pt too wide) in paragraph at lines 454--455
+[] 
+ []
+
+[18 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png (PNG copy)>] [19 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 549.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 549.
  (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 545.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 545.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 549.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 549.
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
-(rerunfilecheck)             Checksum: 32B2FB53EF6856A5AD8DD05FFF6BCAC6;3447.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 545.
+(rerunfilecheck)             Checksum: B34AB4A544FC23ACE7F8E866CF2FDD08;3712.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 549.
  ) 
 Here is how much of TeX's memory you used:
- 7741 strings out of 480893
- 115853 string characters out of 5911973
- 403405 words of memory out of 5000000
- 23085 multiletter control sequences out of 15000+600000
+ 8807 strings out of 480893
+ 134250 string characters out of 5911973
+ 421948 words of memory out of 5000000
+ 24111 multiletter control sequences out of 15000+600000
  552472 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,9n,45p,1258b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (18 pages, 407716 bytes).
+Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (20 pages, 501423 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
- 468 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 496 words of extra memory for PDF output out of 10000 (max. 10000000)
 

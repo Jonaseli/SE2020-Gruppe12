@@ -98,6 +98,26 @@ INPUT c:/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INPUT c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+INPUT c:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+INPUT c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux
@@ -201,6 +221,18 @@ INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagramme
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png
+INPUT c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out
 INPUT c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out
