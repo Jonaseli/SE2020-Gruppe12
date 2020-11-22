@@ -52,7 +52,7 @@ public class Repository implements IRepository {
     @Override
     public Post getPost(UUID postId) {
         for (Post post : posts) {
-            if (post.getParkingSpot().equals(postId)) {
+            if (post.getPostId().equals(postId)) {
                 return post;
             }
         }
