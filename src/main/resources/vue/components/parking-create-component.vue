@@ -19,45 +19,45 @@
                 </div>
                 <div class="sameLineInput">
                     <p>
-                        <label for="name">Street address<label>
+                        <label for="streetAddress">Street address</label>
                         <input type="text" name="streetAddress" id="streetAddress" v-model="streetAddress" placeholder="street address">
                     </p>
                     <p>
-                        <label for="name">Street number<label>
+                        <label for="streetNumber">Street number</label>
                         <input type="text" name="streetNumber" id="streetNumber" v-model="streetNumber" placeholder="street number">
                     </p>
                 </div>
                 <div class="sameLineInput">
                     <p>
-                        <label for="name">Postal code<label>
+                        <label for="postalCode">Postal code</label>
                         <input type="text" name="postalCode" id="postalCode" v-model="postalCode" placeholder="postal code">
                     </p>
                     <p>
-                        <label for="name">Poststed<label>
-                        <input type="text" name="poststed" id="poststed" v-model="poststed" placeholder="poststed">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" v-model="city" placeholder="city">
                     </p>
                 </div>
                 <div>
                     <p>Special Types</p>
                     <p>
-                        <label for="name"><label>
+                        <label for="handicap"></label>
                         <input type="checkbox" name="handicap" id="handicap" v-model="handicap" value="checked"><span class="handicapCheckBox"></span>
 
-                        <label for="name"><label>
-                        <input type="checkbox" name="chargingStation" id="chargingStation" v-model="chargingStation" value="checked"><span class="chargingCheckBox"></span>
+                        <label for="chargingStation"></label>
+                        <input type="checkbox" name="" id="chargingStation" v-model="chargingStation" value="checked"><span class="chargingCheckBox"></span>
                     </p>
                 </div>
                 <div class="sameLine3Input">
                     <p>
-                        <label for="name">Width (cm)<label>
+                        <label for="width">Width (cm)</label>
                         <input type="number" name="width" id="width" v-model="width" placeholder="0" min="0" max="999">
                     </p>
                    <p>
-                        <label for="name">Length (cm)<label>
+                        <label for="length">Length (cm)</label>
                         <input type="number" name="length" id="length" v-model="length" placeholder="0" min="0" max="999">
                     </p>
                     <p>
-                        <label for="name">Height (cm)<label>
+                        <label for="height">Height (cm)</label>
                         <input type="number" name="height" id="height" v-model="height" placeholder="0" min="0" max="999">
                     </p>
                 </div>

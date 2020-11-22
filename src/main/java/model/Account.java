@@ -1,11 +1,8 @@
 package model;
 
-import dataHandler.JSONReadable;
-import dataHandler.JSONWritable;
-
 import java.util.UUID;
 
-public class Account implements JSONReadable<Account>, JSONWritable<Account> {
+public class Account {
 
     private UUID accountId;
     private String displayName;
@@ -18,6 +15,12 @@ public class Account implements JSONReadable<Account>, JSONWritable<Account> {
         this.accountId = UUID.randomUUID();
         this.displayName = displayName;
         this.suspended = false;
+    }
+
+    public Account(UUID accountId, String displayName, boolean suspended) {
+        this.accountId = accountId;
+        this.displayName = displayName;
+        this.suspended = suspended;
     }
 
     public UUID getAccountId() {

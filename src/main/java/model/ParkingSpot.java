@@ -1,13 +1,17 @@
 package model;
 
-import dataHandler.JSONReadable;
-import dataHandler.JSONWritable;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import dataHandler.deserializers.StringToAccountConverter;
+import dataHandler.serializers.AccountToStringConverter;
 
 import java.util.UUID;
 
-public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
+public class ParkingSpot {
 
     private UUID parkingSpotId;
+    @JsonSerialize(converter = AccountToStringConverter.class)
+    @JsonDeserialize(converter = StringToAccountConverter.class)
     private Account owner;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
@@ -20,8 +24,25 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
     public ParkingSpot(Account owner, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL) {
-
         this.parkingSpotId = UUID.randomUUID();
+        this.owner = owner;
+        this.handicap = handicap;
+        this.chargingStation = chargingStation;
+        this.available = available;
+        this.width = width;
+        this.length = length;
+        this.height = height;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.streetAddress = streetAddress;
+        this.streetNumber = streetNumber;
+        this.pictureURL = pictureURL;
+    }
+
+    public ParkingSpot(UUID parkingSpotId, Account owner, boolean handicap, boolean chargingStation, boolean available, int width,
+                       int length, int height, String postalCode, String city, String streetAddress,
+                       String streetNumber, String pictureURL) {
+        this.parkingSpotId = parkingSpotId;
         this.owner = owner;
         this.handicap = handicap;
         this.chargingStation = chargingStation;

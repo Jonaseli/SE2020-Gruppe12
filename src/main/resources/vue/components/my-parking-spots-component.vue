@@ -22,7 +22,7 @@
             <li v-for="parkingSpot in ownedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.city}}</h1>
                         <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>
@@ -33,7 +33,7 @@
             <li v-for="parkingSpot in rentedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container" >
-                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
+                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.city}}</h1>
                         <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
                     </div>
                 </a>

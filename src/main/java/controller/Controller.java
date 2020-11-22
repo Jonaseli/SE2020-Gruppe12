@@ -21,17 +21,14 @@ public class Controller {
 
     public void getParkingSpot(Context ctx){
         String parkingSpotId = ctx.pathParam(":parking-spot-id");
-
         ParkingSpot parkingSpot = repo.getParkingSpot(UUID.fromString(parkingSpotId));
         ctx.json(parkingSpot);
-        // ctx.json(repo.getAccount(parkingSpot.getOwnerId()));
     }
 
     public void getPost(Context ctx) {
         String postId = ctx.pathParam(":parking-spot-id");
         Post post = repo.getPost(UUID.fromString(postId));
         ctx.json(post);
-        // ctx.json(repo.getParkingSpot(post.getParkingSpotId()));
     }
 
     public void getAccounts(Context ctx) {
