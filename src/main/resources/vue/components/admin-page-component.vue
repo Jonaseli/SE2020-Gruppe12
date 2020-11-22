@@ -18,7 +18,7 @@
                         <div>
                             <a :href="`/api/admin/account/suspend/${account.accountId}`" class="link-to-parking-spot-detail">
                                  <div class="admin-controls">
-                                     <h1>Suspend</h1>
+                                     <h1>Suspend/Unsuspend</h1>
                                  </div>
                             </a>
                             <a :href="`/api/admin/account/${account.accountId}`" class="link-to-parking-spot-detail">

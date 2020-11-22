@@ -192,7 +192,8 @@ public class Repository implements IRepository {
 
     @Override
     public void suspendAccount(UUID accountId) {
-        getAccount(accountId).setSuspended(true);
+        //Swap boolean value of suspended
+        getAccount(accountId).setSuspended(!getAccount(accountId).isSuspended());
         account.writeToFile(accountPath, accounts);
     }
 }
