@@ -37,4 +37,13 @@ public interface IRepository {
 
     void createReservation(UUID postId, UUID userId, String startTime, String endTime);
 
+    void deleteAccount(UUID accountId);
+
+    void deleteReservation(UUID reservationId);
+
+    void deletePost(UUID postId);
+
+    void deleteParkingSpot(UUID parkingSpotId);
+
+    void suspendAccount(UUID accountId);
 }

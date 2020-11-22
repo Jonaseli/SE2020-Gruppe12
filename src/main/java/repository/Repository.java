@@ -133,6 +133,11 @@ public class Repository implements IRepository {
 
     @Override
     public Reservation getReservation(UUID reservationId) {
+        for (Reservation reservation : reservations) {
+            if (reservation.getReservationId().equals(reservationId)) {
+                return reservation;
+            }
+        }
         return null;
     }
 
@@ -145,5 +150,36 @@ public class Repository implements IRepository {
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
         reservations.add(new Reservation(getPost(postId), getAccount(userId), startTime, endTime));
         JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
+    }
+
+    @Override
+    public void deleteAccount(UUID accountId) {
+        accounts.remove(getAccount(accountId));
+        JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
+    }
+
+    @Override
+    public void deleteReservation(UUID reservationId) {
+        reservations.remove(getReservation(reservationId));
+        JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
+    }
+
+    @Override
+    public void deletePost(UUID postId) {
+        posts.remove(getPost(postId));
+        JsonParser.writeToFile(POSTS_PATH, posts);
+    }
+
+    @Override
+    public void deleteParkingSpot(UUID parkingSpotId) {
+        parkingSpots.remove(getParkingSpot(parkingSpotId));
+        JsonParser.writeToFile(PARKING_SPOTS_PATH, parkingSpots);
+    }
+
+    @Override
+    public void suspendAccount(UUID accountId) {
+        //Swap boolean value of suspended
+        getAccount(accountId).setSuspended(!getAccount(accountId).isSuspended());
+        JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
     }
 }

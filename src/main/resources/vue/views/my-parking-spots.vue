@@ -5,7 +5,6 @@
     Vue.component("my-parking-spots", {
         template: "#my-parking-spots",
         data: () => ({
-            test: 5,
             account: null,
             ownedParkingSpots: [],
             rentedParkingSpots: [],
