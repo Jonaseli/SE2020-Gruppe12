@@ -31,11 +31,19 @@
 \titlespacing*{\paragraph}{\parindent}{1ex}{1em}
 
 % commands %
+    % counters %
 \newcommand*{\FK}{\stepcounter{fkcounter}\textbf{ID: FK\arabic{fkcounter}\\}}
 \newcommand*{\FKsub}{\stepcounter{fksubcounter}\textbf{ID: FK\arabic{fkcounter}.\arabic{fksubcounter} \quad}}
 \newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{ID: IFK\arabic{ifkcounter}\\}}
 \newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: FK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
 \newcommand{\invis}{\phantom{a}}
+
+    % colors %
+\newcommand{\cellr}{\cellcolor{red!25}}
+\newcommand{\cello}{\cellcolor{orange!25}}
+\newcommand{\celly}{\cellcolor{yellow!25}}
+\newcommand{\celll}{\cellcolor{lime!25}}
+\newcommand{\cellg}{\cellcolor{green!25}}
 
 % environments %
 \newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
@@ -494,25 +502,25 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \hline
         Verdi & X-Large & Large & Medium & Small\\
         \hline
-        X-Large &   \cellcolor{yellow!25}0 &
-                    \cellcolor{green!25}4 &
-                    \cellcolor{green!25}6 &
-                    \cellcolor{green!25}7 \\
+        X-Large &   \celly0 &
+                    \cellg4 &
+                    \cellg6 &
+                    \cellg7 \\
         \hline
-        Large &     \cellcolor{red!25}-4 &
-                    \cellcolor{yellow!25}0 &
-                    \cellcolor{lime!25}2 &
-                    \cellcolor{green!25}3 \\
+        Large &     \cellr-4 &
+                    \celly0 &
+                    \celll2 &
+                    \cellg3 \\
         \hline
-        Medium &    \cellcolor{red!25}-6 &
-                    \cellcolor{orange!25}-2 &
-                    \cellcolor{yellow!25}0 &
-                    \cellcolor{lime!25}1 \\
+        Medium &    \cellr-6 &
+                    \cello-2 &
+                    \celly0 &
+                    \celll1 \\
         \hline
-        Small &     \cellcolor{red!25}-7 &
-                    \cellcolor{red!25}-3 &
-                    \cellcolor{orange!25}-1 &
-                    \cellcolor{yellow!25}0 \\
+        Small &     \cellr-7 &
+                    \cellr-3 &
+                    \cello-1 &
+                    \celly0 \\
         \hline 
     \end{tabular}
 
