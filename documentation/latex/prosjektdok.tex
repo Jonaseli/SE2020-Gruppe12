@@ -79,18 +79,27 @@ Kunde av tjenesten vil kunne opprette administratorbrukere som har spesielle ege
 
 \section{Begrensninger og antagelser}
 
+    \subsection{Begrensninger}
+        \textbf{Tilkobling til en tredjepart :} Dette er for at brukerene av applikasjonen skal kunne betale for tjenesten og for de som gir den tjenesten skal kunne få betalt for det.
+        \\\textbf{Servere rundt i Norge :} Fordelene med å ha flere servere rundt i landet er for å gi en bedre flytt i på systemet for brukerene av applikasjonen.
+        \\\textbf{Cookies :} Dette blir brukt for å få tilgang til enkelte funksjoner i applikasjonen og gjøre det så enkelt og trykt for en bruker av applikasjonen.
+        \\\textbf{Googlemaps API :} Fordelene med å bruke Googlemaps er grunnet oppdattering og ytelse, men å bruke cookies så blir det enkelt for en bruker å finne fram til en parkeringsplass etter hvor de er.
+
+    \subsection{Antagelser}
+        \textbf{Opprette og oppdater en parkeringsplassen :} Det skal være så enkelt som mulig for en bruker å opprette en parkeringsplass uten noen problemer, sånn at de får lyst til å bruke applikasjonen videre. Og det samme gjelder for oppdattering av en parkeringsplass. De skal kunne trykke på opprett en parkeringsplassområde og beggynne å legge til parkeringsplasser etter de behovene som den plassen trenger, om det er brede og lengde, om den er handicapa osv. etter de har laget den så skal de kunne oppdatere den med behov.
+        \\\textbf{Leie :} Når en bruker skal leie en parkeringsplass så skal det så å si bare være noen få knappe trykk fra å finne en parkeringsplass og det å ha kjøpt en plass. En som skal leie skal kunne søke opp etter en plass.
+        \\\textbf{Administrator og administrer :} Skal sørge for at applikasjonen ikke blir misbrukt av andre og at alt stemmer.
+
 
 \section{Ansvarsområde og Avhengigheter}
 For at man skal kunne kjøre applikasjonen og testene er det noen ting man trenger:
 
-
-JavaJDK v11
-fasterxml.jackson 2.9.9
-maven 3.8.0
-webjars vue 2.6.10
-javalin 3.11.0
-JUnit 5.7.0
-
+\textbf{JavaJDK v11 : } For kjøring av kode.
+\\\textbf{fasterxml.jackson 2.9.9 :} Lagring av data.
+\\\textbf{maven 3.8.0 :} Bygge automatiseringsverktøy.
+\\\textbf{webjars vue 2.6.10 :} For det visuelle nettsidene.
+\\\textbf{javalin 3.11.0 :} Rammeverk for nettsiden.
+\\\textbf{JUnit 5.7.0 :} For å testeing av kodeoppsett.
 
 
 \section{Funksjoner i applikasjonen}
@@ -112,6 +121,8 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \bf Begrep & \bf Beskrivelse\\
         \hline
         Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført\\
+        \hline
+        Cookies & En type fil som brukes midlertidig for å lagre informasjon\\
         \hline
         Bruker & Besøkende som samhandler med systemet\\
         \hline
@@ -181,7 +192,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \textbf{Motivasjon:}\\
     Parkeringsplassene i byen er fullstappa.\\
     \textbf{Behov:}\\
-    Han må kunne parkere nærmere arbeidsplassen og sikre seg parkeringplass ved et møte.\\
+    Han må kunne parkere nærmere arbeidsplassen og sikre seg parkeringsplass ved et møte.\\
     \textbf{Tekniske ferdigheter:} Gode
 
     \subsection{Karina Gausrud}
@@ -491,7 +502,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Begrensninger}
 
 \section{Diagrammer}
-    \subsection{Sekvesndiagram - Leie en parkeringplass.}
+    \subsection{Sekvesndiagram - Leie en parkeringsplass.}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
 
     \subsection{Dataflytdiagram - Tilbakemelding}
