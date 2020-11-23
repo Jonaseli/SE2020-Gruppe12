@@ -467,6 +467,10 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \IFK
     All brukere skal ha tilgang til applikasjonen til enhver tid.
     
+    \subsubsection{Bruker kvalifikasjon}
+    \IFK
+    Brukere må minimum være minimum 16 år, og ha gyldig førerbevis.
+    
     \subsection{Sikkerhetskopi(Backup)}
     \IFK
     Sikkerhetskopiering av database skal skje hver 24 time kl 04.00
@@ -476,7 +480,8 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     Betaling verifiseres og håndteres av NETS
 
     \subsection{Legal and licensing issues}
-
+    \IFK
+    Brukeren skal få en Terms of service hvor de får informasjon om hvordan informasjonen deres brukes, og hva de har rettigheter på, og hvilke rettigheter vi har ovenfor deres bruk av tjenesten.
 
     \subsection{Nettverkstopologi}
 
@@ -522,8 +527,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     Vi har valgt å bruke Javalin med Vue som rammeverk for front-end. Dette har gjort at det var relativt enkelt å få en pen og oversiktelig MVP. Dette er hovedavhengigheten i programmet vårt.
 
     \subsection{Innstallasjon}
-    For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet.
-
+    For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
     \subsection{Bruksmanual}
     For å starte programmet velger man main metoden i drop-down menyen og trykker grønn pil eller shitf+f10. Da vil javalin kjøre i konsollen i intellij, og det vil åpne seg port på http://localhost:7000/ . Når man trykker på den kommer man en hovedside med tre knapper. En for bruker, en for corporation og en for admin.
     
@@ -537,8 +541,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
     \subsection{Avhengigheter}
+    Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
     \subsection{Begrensninger}
+    De bregrensningene vi har møtt på i utviklingen har for det meste vært praktiske. Vi har valgt å holde corporation og bruker som like bruker-typer i prototypen ettersom at de i hovedsak deler mange egenskaper.
+    
+    Vi møtte motstand ved lastning av fler forskjellige typer data til samme vue side, som har limitert dens totale omfang for visning, og reservasjon. Dette spesifikt da single-parking-spot seksjonen av programmet.
+    
+    Vi har forsøkt å begrense prototypen til skallet som er nødvendig før implementering av database, betalingssystem og brukerregistreringer.
+    
+    Vi har ikke lagt inn noen bil-registrering eller bruker-registrering da dette er undøvendig for funksjonaliteten i prototypen. 
+    
+    Vi ønsket å legge inn corporation-bruker som kun kunne gjøre utleiing av p-plass, men også som kunne legge til medlemmer som kan leie av de plassene spesifikt. Dette ble en for stor utfordring, og vi valgte å holde den i sin basis-form.
+    
+    Det var ment at vi skulle ha flere brukere til prototypen, men valgte å fokusere på å få én bruker til å fungere på alle stegene i utlegging og leie-prosess.
+    
+    MVP-en har ikke fått inn noe rangerings-system eller filtrering, da vi ønsker å filtrere på lokasjon, men ikke har kunnskapen til å gjøre denne typen filtrering.
 
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringplass.}
