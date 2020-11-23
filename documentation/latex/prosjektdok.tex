@@ -146,6 +146,7 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         Cookies & Informasjonskapsler \\
         \hline
         TOS & Terms of Service, liste over bruksrettigheter og bruksområde for brukerdata \\
+        \hline
     \end{tabular}
 \end{center}
 
@@ -548,26 +549,27 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 \section{Prototype}
 
     \subsection{Sammendrag}
-    Vi har laget en forenklet versjon som viser hvordan strukturen på programmet kan se ut. Vårt fokus ved prototypen var å vise en oversikt over parkeringsplasser der man kan trykke inn på en, få mer spesifikk info om selve parkeringsplassen, og å legge den til som en reservasjon. 
+    Vi har laget en forenklet versjon som viser hvordan strukturen på programmet kan se ut. Vårt fokus ved prototypen har vært å vise en oversikt over parkeringsplasser der man kan trykke inn på en spesifikk parkeringsplass og få mer informasjon om selve parkeringsplassen, og reservere den. 
 
-    Det andre fokuset var å ha en admin bruker som kan kontrollere bruken av siden ved suspendering og sletting av brukere, parkeringsplasser og reservasjoner
+    Det andre fokuset var å ha en admin bruker som kan kontrollerer bruken av siden ved å suspendere og slette brukere, parkeringsplasser og reservasjoner.
 
-    I denne forenklet versjonen, så gjør vi all lagring mot .json filer.
+    I denne forenklede versjonen, gjør vi all lagring i json filer.
 
-    Vi har lagdelt back-end koden til controller, model, datahandler og repository. Dette tillater at vi har splittet funksjonaliteten til forskjellig seksjoner av programmet og kan gjøre endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et switch til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
+    Vi har delt back-end koden i forskjellige deler som kalles controller, model, datahandler og repository. Dette gjør at funksjonaliteten splittes til forskjellig seksjoner av programmet og tillater endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et ombytte til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
 
-    Vi har valgt å bruke Javalin med Vue som rammeverk for front-end. Dette har gjort at det var relativt enkelt å få en pen og oversiktelig MVP. Dette er hovedavhengigheten i programmet vårt.
+    Vi har valgt å bruke Javalin med Vue som rammeverk til front-end. Dette har gjort det enkelt å gjøre MVP-en pen og oversiktelig, og er den største avhengigheten i programmet vårt.
 
     \subsection{Innstallasjon}
-    For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
+    For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(som skjer for npm-installasjon). Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
+
     \subsection{Bruksmanual}
-    For å starte programmet velger man main metoden i drop-down menyen og trykker grønn pil eller shitf+f10. Da vil javalin kjøre i konsollen i intellij, og det vil åpne seg port på http://localhost:7000/ . Når man trykker på den kommer man en hovedside med tre knapper. En for bruker, en for corporation og en for admin.
+    For å starte programmet velger man main metoden i dropdown-menyen og trykker grønn pil eller shitf + F10. Da vil javalin kjøre i konsollen i intellij, og det åpnes en port til http://localhost:7000/.
     
-    Når man har kommet inn til localhost:7000 blir man presentert med tre knapper. En for bruker, en for corporation og en for admin. Bruker knappen leder til parkeringsplass oversikten der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en parkeringsplass, trykke seg inn til bestillings-siden, og fylle ut ordren, og trykke submit knappen for å bestille, da skal den dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
+    Når man har kommet inn til localhost:7000 blir man presentert med tre knapper: En for bruker, en for corporation og en for admin. Bruker-knappen leder til oversikten av parkeringsplasser der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en spesifikk parkeringsplass, og videre trykke seg inn til bestillings-siden, fylle ut skjemaene, og trykke submit knappen for å bestille. Da skal parkeringsplassen dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
     
-    Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie ut ved å trykke på “Create new parking spot”-knappen der de taes til en skjema for utfylling. Dersom skjema ikke er tilstrekkelig utfylt vil en feilmelding vises med all info som er nødvendig i skjemaet. Når skjema er riktig utfylt kan man trykke submit knappen, og den nye parkeringsplassen vil umiddelbart være postet til både hovedoversikten og til brukerens “My parking spots”-side. Foreløpig fungerer corporation-brukeren på lik linje som bruker-typen.
+    Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie ut ved å trykke på “Create new parking spot”-knappen der de tas til et utfyllingsskjema. Dersom skjemaet ikke er tilstrekkelig utfylt vil en feilmelding vises med all info som er nødvendig i skjemaet. Når skjema er riktig utfylt kan man trykke submit knappen, og den nye parkeringsplassen vil umiddelbart bli lagt ut til både hovedoversikten og til “My parking spots”-siden. Foreløpig i prototypen, fungerer corporation-brukeren på lik linje som bruker-typen.
     
-    Da man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og den kan slette parkeringsplasser, poster og reservasjoner.
+    Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og i tillegg slette parkeringsplasser, poster og reservasjoner.
 
     \subsection{Implementerte krav og tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
@@ -578,17 +580,17 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Begrensninger}
     De bregrensningene vi har møtt på i utviklingen har for det meste vært praktiske. Vi har valgt å holde corporation og bruker som like bruker-typer i prototypen ettersom at de i hovedsak deler mange egenskaper.
     
-    Vi møtte motstand ved lastning av fler forskjellige typer data til samme vue side, som har limitert dens totale omfang for visning, og reservasjon. Dette spesifikt da single-parking-spot seksjonen av programmet.
+    Vi møtte motstand ved lastning av flere forskjellige typer data til samme vue side, som har limitert dens totale omfang for visning, og reservasjon. Dette spesifikt da single-parking-spot seksjonen av programmet.
     
     Vi har forsøkt å begrense prototypen til skallet som er nødvendig før implementering av database, betalingssystem og brukerregistreringer.
     
-    Vi har ikke lagt inn noen bil-registrering eller bruker-registrering da dette er undøvendig for funksjonaliteten i prototypen. 
+    Vi har ikke lagt inn bil-registrering eller brukerregistrering da dette ikke er nødvendig for funksjonaliteten i prototypen. 
     
     Vi ønsket å legge inn corporation-bruker som kun kunne gjøre utleiing av p-plass, men også som kunne legge til medlemmer som kan leie av de plassene spesifikt. Dette ble en for stor utfordring, og vi valgte å holde den i sin basis-form.
     
     Det var ment at vi skulle ha flere brukere til prototypen, men valgte å fokusere på å få én bruker til å fungere på alle stegene i utlegging og leie-prosess.
     
-    MVP-en har ikke fått inn noe rangerings-system eller filtrering, da vi ønsker å filtrere på lokasjon, men ikke har kunnskapen til å gjøre denne typen filtrering.
+    MVP-en har ikke fått inn noe rangeringssystem eller filtrering, da vi ønsker å filtrere på lokasjon, men ikke har kunnskapen til å gjøre denne typen filtrering.
 
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringplass.}
