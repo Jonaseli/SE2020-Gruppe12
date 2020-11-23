@@ -230,39 +230,41 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         
         \subsubsection{Bruker skal kunne opprette en brukerkonto}
         \FK
-        For å oppgrette en brukerkonto, må bruker oppgi unikt brukernavn, passord, e-post og telefonnummer.
+        For å oppgrette en brukerkonto, må bruker oppgi brukernavn, passord, e-post og telefonnummer.
 
-        \subsubsection{Bruker skal kunne opprette en bedriftskonto}
+            \begin{subreq}
+                \FKsub Brukernavn og passord må være unike.
+            \end{subreq}
+
+        \subsubsection{Bedrifter skal kunne opprette en bedriftskonto}
         \FK
-        For å opprette en bedriftskonto, må bruker må oppgi unikt brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
+        For å opprette en bedriftskonto, må bedriften må oppgi brukernavn, passord, e-post, bedriftsnavn og organisasjonsnummer.
+
+            \begin{subreq}
+                \FKsub Brukernavn, passord, bedriftsnavn og organisasjonsnummer må være unike.
+            \end{subreq}
 
         \subsubsection{Kunden skal kunne opprette brukerkonto med administratorrettigheter}
         \FK
-        Kunde har spesialtilgang til å opprette en administrator. 
+        Bare kunde av applikasjonen kan opprette denne brukerkontoen. For å opprette denne kontoen må kunden oppgi et brukernavn, passord og telefonnummer.
+
+            \begin{subreq}
+                \FKsub Brukernavn, passord og telefonnummer må være unike.
+            \end{subreq}
 
         \subsubsection{Systemet skal verifisere registreringen}
         \FK
-        Systemet må verifisere registreringen via en kode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden brukeren skriver inn stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden.
-
-            \begin{subreq}
-                \FKsub Koden skal være fire-sifret
-
-                \FKsub Bruh 2.1
-            \end{subreq}
-
-        \subsubsection{Systemet skal lagre dataen til den brukeren}
-        \FK
-        Etter at brukeropprettelsen er verifisert, blir data fra opprettelsen lagret i databasen.
+        Systemet må verifisere registreringen via verifiseringskode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden. Etter verifisering lagres brukerdataen i databasen.
 
         \subsubsection{Derigere opprettet bruker}
         \FK
-        Etter opprettelse av konto skal bruker bli ført til startsiden.
+        Etter opprettelse av konto skal bruker automatisk bli ført til startsiden.
     
     \subsection{Innlogging}
 
         \subsubsection{Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto}
         \FK
-        Bruker skal kunne velge å logge inn som en brukerkonto eller bedriftskonto, og så fylle ut tekst-felter med data som stemmer i forhold til opprettelsen av kontoen.
+        Bruker skal kunne velge å logge inn som en brukerkonto eller bedriftskonto, og så fylle ut tekst-felter med de samme opplysningene som da de opprettet kontoen sin.
 
         \subsubsection{Systemet skal verifisere innloggingen}
         \FK
@@ -271,6 +273,20 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \subsubsection{Derigere innlogget bruker}
         \FK
         Etter vellykket innlogging skal bruker bli ført til startsiden.
+
+        \subsubsection{Bruker skal kunne tilbakesette passord}
+        Brukere har valg om å tilbakesette passord hvis de har glemt dette. I så fall skal bruker bli sendt verifiseringskode som skrives inn i et nytt felt for å verifisere at det er samme bruker. Hvis koden stemmer kan bruker skrive inn nytt passord som skal brukes fremover.
+
+    \subsection{Verifiseringskode}
+
+        \subsubsection{Systemet skal verifisere bruker gjennom en kode}
+        Denne koden blir brukt til blant annet Kontoopprettelse, passordbytte og to-faktor autentisering. Hensikten er å gjenkjenne brukeren som gjør sikkerhetskritiske handlinger på sin profil. Når bruker gjør en av disse handlingene blir koden midlertidig lagret
+
+            \begin{subreq}
+                \FKsub Koden skal være fire-sifret
+
+                \FKsub Koden skal bli sendt via sms
+            \end{subreq}
 
     \subsection{Presentasjon av parkeringsplasser (Feed)}
 
