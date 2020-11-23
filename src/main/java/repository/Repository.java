@@ -80,7 +80,7 @@ public class Repository implements IRepository {
     public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID account) {
         ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<>();
         for (ParkingSpot parking : parkingSpots) {
-            if (parking.getOwner().equals(account)) {
+            if (parking.getOwnerId().equals(account)) {
                 ownedParkingSpots.add(parking);
             }
         }
@@ -95,7 +95,7 @@ public class Repository implements IRepository {
                 UUID postId = reservation.getPostId();
                 for (Post post : posts) {
                     if (post.getPostId().equals(postId)) {
-                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpot()));
+                        rentedParkingSpots.add(getParkingSpot(post.getParkingSpotId()));
                     }
                 }
             }

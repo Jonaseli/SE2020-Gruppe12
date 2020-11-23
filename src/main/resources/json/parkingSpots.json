@@ -1,7 +1,7 @@
 [
   {
     "parkingSpotId": "079433fa-d2fc-42b6-9514-7cdaabf35909",
-    "owner": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+    "ownerId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
     "available": true,
     "handicap": false,
     "chargingStation": false,
@@ -16,7 +16,7 @@
   },
   {
     "parkingSpotId": "a88c0610-6dc7-4ea3-b871-f3d1672c1730",
-    "owner": "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f",
+    "ownerId": "265e6a29-5c0a-41ab-9cb7-7d7292ff0b0f",
     "available": true,
     "handicap": false,
     "chargingStation": false,
@@ -31,7 +31,7 @@
   },
   {
     "parkingSpotId": "95d610af-3a5f-4e67-8c72-384aeb562a5b",
-    "owner": "d7d77c76-5b91-4fb4-8eab-80389a90d427",
+    "ownerId": "d7d77c76-5b91-4fb4-8eab-80389a90d427",
     "available": true,
     "handicap": false,
     "chargingStation": false,
@@ -46,7 +46,7 @@
   },
   {
     "parkingSpotId": "30b0d0c3-bdb1-4d56-bb7d-f3c99c6bd57b",
-    "owner": "283ec2b6-a35c-40f6-a7e2-f7feef3ac8d7",
+    "ownerId": "283ec2b6-a35c-40f6-a7e2-f7feef3ac8d7",
     "available": true,
     "handicap": false,
     "chargingStation": false,
@@ -61,7 +61,7 @@
   },
   {
     "parkingSpotId": "71a02cbe-e80c-4dca-9082-cf6f97c9446f",
-    "owner": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+    "ownerId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
     "available": true,
     "handicap": true,
     "chargingStation": false,
@@ -76,7 +76,7 @@
   },
   {
     "parkingSpotId": "ee792d38-76c7-461b-ac0f-679e22c19031",
-    "owner": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+    "ownerId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
     "available": true,
     "handicap": false,
     "chargingStation": false,
@@ -91,7 +91,7 @@
   },
   {
     "parkingSpotId": "ea5d0c8f-3766-4feb-83af-c8841f824a7a",
-    "owner": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
+    "ownerId": "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
     "available": true,
     "handicap": false,
     "chargingStation": false,

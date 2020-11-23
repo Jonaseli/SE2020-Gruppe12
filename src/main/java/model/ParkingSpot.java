@@ -5,7 +5,7 @@ import java.util.UUID;
 public class ParkingSpot {
 
     private UUID parkingSpotId;
-    private UUID owner;
+    private UUID ownerId;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
     private String postalCode, city, streetAddress, streetNumber;
@@ -14,11 +14,11 @@ public class ParkingSpot {
     public ParkingSpot() {
     }
 
-    public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
+    public ParkingSpot(UUID ownerId, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL) {
         this.parkingSpotId = UUID.randomUUID();
-        this.owner = owner;
+        this.ownerId = ownerId;
         this.handicap = handicap;
         this.chargingStation = chargingStation;
         this.available = available;
@@ -32,11 +32,11 @@ public class ParkingSpot {
         this.pictureURL = pictureURL;
     }
 
-    public ParkingSpot(UUID parkingSpotId, UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
+    public ParkingSpot(UUID parkingSpotId, UUID ownerId, boolean handicap, boolean chargingStation, boolean available, int width,
                        int length, int height, String postalCode, String city, String streetAddress,
                        String streetNumber, String pictureURL) {
         this.parkingSpotId = parkingSpotId;
-        this.owner = owner;
+        this.ownerId = ownerId;
         this.handicap = handicap;
         this.chargingStation = chargingStation;
         this.available = available;
@@ -54,8 +54,8 @@ public class ParkingSpot {
         return parkingSpotId;
     }
 
-    public UUID getOwner() {
-        return owner;
+    public UUID getOwnerId() {
+        return ownerId;
     }
 
     public boolean getHandicap() {

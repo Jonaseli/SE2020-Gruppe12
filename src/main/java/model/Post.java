@@ -5,21 +5,21 @@ import java.util.UUID;
 public class Post {
 
     private UUID postId;
-    private UUID parkingSpot;
+    private UUID parkingSpotId;
     private double price;
 
     public Post() {
     }
 
-    public Post(UUID parkingSpot, double price) {
+    public Post(UUID parkingSpotId, double price) {
         this.postId = UUID.randomUUID();
-        this.parkingSpot = parkingSpot;
+        this.parkingSpotId = parkingSpotId;
         this.price = price;
     }
 
-    public Post(UUID postId, UUID parkingSpot, double price) {
+    public Post(UUID postId, UUID parkingSpotId, double price) {
         this.postId = postId;
-        this.parkingSpot = parkingSpot;
+        this.parkingSpotId = parkingSpotId;
         this.price = price;
     }
 
@@ -27,8 +27,8 @@ public class Post {
         return postId;
     }
 
-    public UUID getParkingSpot() {
-        return parkingSpot;
+    public UUID getParkingSpotId() {
+        return parkingSpotId;
     }
 
     public double getPrice() {
