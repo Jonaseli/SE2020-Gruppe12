@@ -462,6 +462,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 \section{Prototype}
 
     \subsection{Sammendrag}
+    Vi har laget en forenklet versjon som viser hvordan strukturen på programmet kan se ut. Vårt fokus ved prototypen var å vise en oversikt over parkeringsplasser der man kan trykke inn på en, få mer spesifikk info om selve parkeringsplassen, og å legge den til som en reservasjon. 
+
+    Det andre fokuset var å ha en admin bruker som kan kontrollere bruken av siden ved suspendering og sletting av brukere, parkeringsplasser og reservasjoner
+
+    I denne forenklet versjonen, så gjør vi all lagring mot .json filer.
+
+    Vi har lagdelt back-end koden til controller, model, datahandler og repository. Dette tillater at vi har splittet funksjonaliteten til forskjellig seksjoner av programmet og kan gjøre endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et switch til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
+
+    Vi har valgt å bruke Javalin med Vue som rammeverk for front-end. Dette har gjort at det var relativt enkelt å få en pen og oversiktelig MVP. Dette er hovedavhengigheten i programmet vårt.
 
     \subsection{Innstallasjon}
     For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet.
