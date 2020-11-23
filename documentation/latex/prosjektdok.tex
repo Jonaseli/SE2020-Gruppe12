@@ -492,8 +492,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
     \subsection{Avhengigheter}
+    Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
     \subsection{Begrensninger}
+    De bregrensningene vi har møtt på i utviklingen har for det meste vært praktiske. Vi har valgt å holde corporation og bruker som like bruker-typer i prototypen ettersom at de i hovedsak deler mange egenskaper.
+    
+    Vi møtte motstand ved lastning av fler forskjellige typer data til samme vue side, som har limitert dens totale omfang for visning, og reservasjon. Dette spesifikt da single-parking-spot seksjonen av programmet.
+    
+    Vi har forsøkt å begrense prototypen til skallet som er nødvendig før implementering av database, betalingssystem og brukerregistreringer.
+    
+    Vi har ikke lagt inn noen bil-registrering eller bruker-registrering da dette er undøvendig for funksjonaliteten i prototypen. 
+    
+    Vi ønsket å legge inn corporation-bruker som kun kunne gjøre utleiing av p-plass, men også som kunne legge til medlemmer som kan leie av de plassene spesifikt. Dette ble en for stor utfordring, og vi valgte å holde den i sin basis-form.
+    
+    Det var ment at vi skulle ha flere brukere til prototypen, men valgte å fokusere på å få én bruker til å fungere på alle stegene i utlegging og leie-prosess.
+    
+    MVP-en har ikke fått inn noe rangerings-system eller filtrering, da vi ønsker å filtrere på lokasjon, men ikke har kunnskapen til å gjøre denne typen filtrering.
 
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringplass.}
