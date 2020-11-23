@@ -12,7 +12,7 @@
             <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
             <img v-else class="cover-image"
                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
-            <h1>{{ parkingSpot.owner }}</h1>
+            <h1>{{ parkingSpot.ownerId }}</h1>
             <h2>{{ owner.displayName }}</h2>
         </div>
     </div>

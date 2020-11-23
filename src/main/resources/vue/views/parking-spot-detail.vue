@@ -11,17 +11,14 @@ Vue.component("parking-spot-detail", {
     }),
     created() {
         const parkingSpotId = this.$javalin.pathParams["parking-spot-id"];
-        console.log(parkingSpotId);
 
         fetch(`/api/parking-spot/${parkingSpotId}`)
             .then(res => res.json())
             .then(res => {
                 this.parkingSpot = res;
 
-                let ownerId = this.parkingSpot.owner
-                console.log(this.parkingSpot)
-                console.log(ownerId)
-                fetch(`/api/account/${ownerId}`)
+                let owner = this.parkingSpot.ownerId
+                fetch(`/api/account/${owner}`)
                     .then(res => res.json())
                     .then(res => this.owner = res)
                     .catch(() => alert("Error while fetching owner"));
