@@ -409,9 +409,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         
     \subsection{Betaling}
 
-        \subsubsection{Betale for en parkeringsplass}
+        \subsubsection{Bruker skal betale utleieren for å opprette en reservasjon}
         \FK
-        Brukeren betaler for parkeringsplassen via valgt betalingsmetode.
+        Bruker betaler for antall timer de ønsker å leie parkeringsplassen.
 
         \subsubsection{Tredjepart}
         \FK
@@ -421,11 +421,19 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
         \subsubsection{Administrator skal kunne bannlyse bruker}
         \FK
-        Administrator skal ha full rett til å bannlyse en vilkårlig bruker. Den bannlyste brukeren skal få beskjed om bannlysingen via e-post og direkte i systemet. 
+        Administrator skal ha full rett til å bannlyse en vilkårlig bruker.
+        
+            \begin{subreq}
+                \FKsub Den bannlyste brukeren skal få beskjed om bannlysingen via e-post og direkte i systemet.
+            \end{subreq}
 
         \subsubsection{Administrator skal kunne slette bruker}
         \FK
-        Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen. Den slettede brukeren skal få beskjed om slettingen via e-post.
+        Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen.
+        
+            \begin{subreq}
+                \FKsub Den slettede brukeren skal få beskjed om slettingen via e-post.
+            \end{subreq}
 
         \subsubsection{Administrator skal kunne slette tilbakemeldinger}
         \FK
@@ -433,15 +441,27 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
         \subsubsection{Administrator skal kunne slette innlegg}
         \FK
-        Administrator skal ha full rett til å slette individuelle innlegg. Bruker som lagde innlegget skal få beskjed om slettingen via e-post og direkte i systemet.
+        Administrator skal ha full rett til å slette individuelle innlegg.
+
+            \begin{subreq}
+                \FKsub Bruker som lagde innlegget skal få beskjed om slettingen via e-post og direkte i systemet.
+            \end{subreq}
 
         \subsubsection{Administrator skal kunne slette parkeringsplasser}
         \FK
-        Administrator skal ha full rett til å slette individuelle parkeringsplasser. Bruker som opprettet parkeringsplassen skal få beskjed om slettingen via e-post og direkte i systemet.
+        Administrator skal ha full rett til å slette individuelle parkeringsplasser.
+
+            \begin{subreq}
+                \FKsub Bruker som opprettet parkeringsplassen skal få beskjed om slettingen via e-post og direkte i systemet.
+            \end{subreq}
 
         \subsubsection{Administrator skal kunne slette reservasjoner}
         \FK
-        Administrator skal ha full rett til å slette individuelle reservasjoner. Bruker som opprettet reservasjoner skal få beskjed om slettingen via e-post og direkte i systemet.
+        Administrator skal ha full rett til å slette individuelle reservasjoner.
+
+            \begin{subreq}
+                \FKsub Bruker som opprettet reservasjoner skal få beskjed om slettingen via e-post og direkte i systemet.
+            \end{subreq}
 
         \subsubsection{Bedrift skal ha administrerende rettigheter på deres egne innlegg}
         \FK
@@ -449,17 +469,25 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
         \subsubsection{Bruker skal kunne rapportere andre brukere sine innlegg}
         \FK
-        Brukere har frihet til å rapportere andre brukere sine innlegg. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+        Brukere har frihet til å rapportere andre brukere sine innlegg. Rapporteringen skal bestå av en begrunnelse.
+
+            \begin{subreq}
+                \FKsub Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+            \end{subreq}
 
         \subsubsection{Bruker skal kunne rapportere andre brukere}
         \FK
-        Brukere har frihet til å rapportere andre brukere. Rapporteringen skal bestå av en begrunnelse. Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+        Brukere har frihet til å rapportere andre brukere. Rapporteringen skal bestå av en begrunnelse.
     
+            \begin{subreq}
+                \FKsub Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+            \end{subreq}
+
     \subsection{Persistent data}
 
         \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
         \FK
-        Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database eller en lokal fil.
+        Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database, slik at endringene gjenstår.
 
 \section{Ikke funksjonelle krav}
 

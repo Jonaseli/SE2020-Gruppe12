@@ -47,14 +47,14 @@
 \contentsline {subsubsection}{Tiden skal bestemmes av bruker}{13}{subsubsection*.22}%
 \contentsline {subsubsection}{Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke}{13}{subsubsection*.23}%
 \contentsline {subsection}{\numberline {9.9}Betaling}{13}{subsection.9.9}%
-\contentsline {subsubsection}{Betale for en parkeringsplass}{13}{subsubsection*.24}%
+\contentsline {subsubsection}{Bruker skal betale utleieren for å opprette en reservasjon}{13}{subsubsection*.24}%
 \contentsline {subsubsection}{Tredjepart}{13}{subsubsection*.25}%
 \contentsline {subsection}{\numberline {9.10}Administrering}{13}{subsection.9.10}%
 \contentsline {subsubsection}{Administrator skal kunne bannlyse bruker}{13}{subsubsection*.26}%
 \contentsline {subsubsection}{Administrator skal kunne slette bruker}{13}{subsubsection*.27}%
 \contentsline {subsubsection}{Administrator skal kunne slette tilbakemeldinger}{13}{subsubsection*.28}%
 \contentsline {subsubsection}{Administrator skal kunne slette innlegg}{13}{subsubsection*.29}%
-\contentsline {subsubsection}{Administrator skal kunne slette parkeringsplasser}{13}{subsubsection*.30}%
+\contentsline {subsubsection}{Administrator skal kunne slette parkeringsplasser}{14}{subsubsection*.30}%
 \contentsline {subsubsection}{Administrator skal kunne slette reservasjoner}{14}{subsubsection*.31}%
 \contentsline {subsubsection}{Bedrift skal ha administrerende rettigheter på deres egne innlegg}{14}{subsubsection*.32}%
 \contentsline {subsubsection}{Bruker skal kunne rapportere andre brukere sine innlegg}{14}{subsubsection*.33}%
@@ -64,8 +64,8 @@
 \contentsline {section}{\numberline {10}Ikke funksjonelle krav}{14}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Tilgjengelighet}{14}{subsection.10.1}%
 \contentsline {subsubsection}{Bruker kvalifikasjon}{14}{subsubsection*.36}%
-\contentsline {subsection}{\numberline {10.2}Sikkerhetskopi(Backup)}{14}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Dependency på tredjepart}{14}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.2}Sikkerhetskopi(Backup)}{15}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Dependency på tredjepart}{15}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Legal and licensing issues}{15}{subsection.10.4}%
 \contentsline {subsection}{\numberline {10.5}Nettverkstopologi}{15}{subsection.10.5}%
 \contentsline {subsection}{\numberline {10.6}Preformance / response time}{15}{subsection.10.6}%
@@ -78,19 +78,19 @@
 \contentsline {section}{\numberline {11}Prototype}{15}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Sammendrag}{15}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Innstallasjon}{15}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Bruksmanual}{15}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.3}Bruksmanual}{16}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Implementerte krav og tester}{16}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Avhengigheter}{16}{subsection.11.5}%
 \contentsline {subsection}{\numberline {11.6}Begrensninger}{16}{subsection.11.6}%
-\contentsline {section}{\numberline {12}Diagrammer}{17}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Sekvesndiagram - Leie en parkeringplass.}{17}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Dataflytdiagram - Tilbakemelding}{18}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Sekvensdiagram - Opprette reservasjon}{18}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Tilstandsdiagram - Registrere parkeringsplass}{19}{subsection.12.4}%
-\contentsline {subsubsection}{Forklaring}{19}{subsubsection*.37}%
-\contentsline {subsection}{\numberline {12.5}Aktivitetsdiagram - Leie en parkeringsplass}{20}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Sekvensdiagram - Leie ut en parkeringsplass}{21}{subsection.12.6}%
-\contentsline {section}{\numberline {13}Estemering}{21}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Enheter}{21}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Estimeringstabell - Funksjonelle krav}{22}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Estimeringstabell - Ikke funksjonelle krav}{22}{subsection.13.3}%
+\contentsline {section}{\numberline {12}Diagrammer}{18}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Sekvesndiagram - Leie en parkeringplass.}{18}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Dataflytdiagram - Tilbakemelding}{19}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Sekvensdiagram - Opprette reservasjon}{19}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Tilstandsdiagram - Registrere parkeringsplass}{20}{subsection.12.4}%
+\contentsline {subsubsection}{Forklaring}{20}{subsubsection*.37}%
+\contentsline {subsection}{\numberline {12.5}Aktivitetsdiagram - Leie en parkeringsplass}{21}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Sekvensdiagram - Leie ut en parkeringsplass}{22}{subsection.12.6}%
+\contentsline {section}{\numberline {13}Estemering}{22}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Enheter}{22}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Estimeringstabell - Funksjonelle krav}{23}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Estimeringstabell - Ikke funksjonelle krav}{23}{subsection.13.3}%
