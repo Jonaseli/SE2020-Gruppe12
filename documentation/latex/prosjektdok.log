@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  23 NOV 2020 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  23 NOV 2020 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -473,93 +473,93 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [12] [13] [14] [15]
-Overfull \hbox (15.42722pt too wide) in paragraph at lines 532--533
+Overfull \hbox (15.42722pt too wide) in paragraph at lines 536--537
 \OT1/ptm/m/n/12 postet til b[]ade hov-e-dover-sik-ten og til bruk-erens \My park-ing spots"-side. Forel^^\pig fun-gerer corporation-
  []
 
-<bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=407, 1146.2825pt x 1406.25375pt>
+<bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=408, 1146.2825pt x 1406.25375pt>
 File: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 545.
+Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 563.
 (pdftex.def)             Requested size: 1146.27971pt x 1406.25032pt.
 
-Overfull \hbox (30.01231pt too wide) in paragraph at lines 545--546
+Overfull \hbox (30.01231pt too wide) in paragraph at lines 563--564
 [] 
  []
 
 [16]
-<bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=413, 794.97pt x 343.2825pt>
+<bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=414, 794.97pt x 343.2825pt>
 File: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 548.
+Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 566.
 (pdftex.def)             Requested size: 794.96806pt x 343.28165pt.
 
-Overfull \hbox (30.00897pt too wide) in paragraph at lines 548--549
+Overfull \hbox (30.00897pt too wide) in paragraph at lines 566--567
 [] 
  []
 
 [17 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>]
-<bilder/diagrammer/opprette reservasjon_sekvensdiagram.png, id=419, 825.0825pt x 515.9275pt>
+<bilder/diagrammer/opprette reservasjon_sekvensdiagram.png, id=420, 825.0825pt x 515.9275pt>
 File: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png Graphic file (type png)
 <use bilder/diagrammer/opprette reservasjon_sekvensdiagram.png>
-Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 551.
+Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 569.
 (pdftex.def)             Requested size: 825.08049pt x 515.92624pt.
 
-Overfull \hbox (30.00052pt too wide) in paragraph at lines 551--552
+Overfull \hbox (30.00052pt too wide) in paragraph at lines 569--570
 [] 
  []
 
-<bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png, id=420, 294.09875pt x 490.83376pt>
+<bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png, id=421, 294.09875pt x 490.83376pt>
 File: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png Graphic file (type png)
 <use bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png>
-Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 554.
+Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 572.
 (pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
 [18 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png (PNG copy)>]
-<bilder/diagrammer/leierAktivitetBestilling.png, id=426, 274.02374pt x 592.2125pt>
+<bilder/diagrammer/leierAktivitetBestilling.png, id=427, 274.02374pt x 592.2125pt>
 File: bilder/diagrammer/leierAktivitetBestilling.png Graphic file (type png)
 <use bilder/diagrammer/leierAktivitetBestilling.png>
-Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 560.
+Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 578.
 (pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
  [19 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png (PNG copy)>]
-<bilder/diagrammer/sekvensdiagramLeggeUtParkering.png, id=433, 619.31375pt x 321.2pt>
+<bilder/diagrammer/sekvensdiagramLeggeUtParkering.png, id=434, 619.31375pt x 321.2pt>
 File: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png Graphic file (type png)
 <use bilder/diagrammer/sekvensdiagramLeggeUtParkering.png>
-Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 563.
+Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 581.
 (pdftex.def)             Requested size: 619.31224pt x 321.19922pt.
 
-Overfull \hbox (30.01796pt too wide) in paragraph at lines 563--564
+Overfull \hbox (30.01796pt too wide) in paragraph at lines 581--582
 [] 
  []
 
 [20 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png (PNG copy)>]
-Overfull \hbox (7.04164pt too wide) in paragraph at lines 569--600
+Overfull \hbox (7.04164pt too wide) in paragraph at lines 587--618
 [] 
  []
 
 [21 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
  [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
  (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 708.
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
 (rerunfilecheck)             Checksum: 63E207FF6881E7B391B754BFF9D1B452;3971.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 708.
  ) 
 Here is how much of TeX's memory you used:
- 9397 strings out of 480893
- 141318 string characters out of 5911973
+ 9399 strings out of 480893
+ 141343 string characters out of 5911973
  438391 words of memory out of 5000000
- 24677 multiletter control sequences out of 15000+600000
+ 24678 multiletter control sequences out of 15000+600000
  552786 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,10n,45p,1258b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (22 pages, 508468 bytes).
+Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (22 pages, 510151 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 118 named destinations out of 1000 (max. 500000)
+ 485 PDF objects out of 1000 (max. 8388607)
+ 441 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  528 words of extra memory for PDF output out of 10000 (max. 10000000)
 
