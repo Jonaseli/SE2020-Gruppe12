@@ -15,10 +15,6 @@
 \usepackage{changepage}
 \usepackage[parfill]{parskip}
 \usepackage{wrapfig}
-\usepackage[export]{adjustbox}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage[table]{xcolor}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -31,19 +27,10 @@
 \titlespacing*{\paragraph}{\parindent}{1ex}{1em}
 
 % commands %
-    % counters %
 \newcommand*{\FK}{\stepcounter{fkcounter}\textbf{ID: FK\arabic{fkcounter}\\}}
 \newcommand*{\FKsub}{\stepcounter{fksubcounter}\textbf{ID: FK\arabic{fkcounter}.\arabic{fksubcounter} \quad}}
 \newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{ID: IFK\arabic{ifkcounter}\\}}
 \newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: FK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
-\newcommand{\invis}{\phantom{a}}
-
-    % colors %
-\newcommand{\cellr}{\cellcolor{red!25}}
-\newcommand{\cello}{\cellcolor{orange!25}}
-\newcommand{\celly}{\cellcolor{yellow!25}}
-\newcommand{\celll}{\cellcolor{lime!25}}
-\newcommand{\cellg}{\cellcolor{green!25}}
 
 % environments %
 \newenvironment{subreq}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
@@ -107,37 +94,33 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 \section{Begreper og definisjoner}
 
 \begin{center}
-    \begin{tabular}{|p{4cm}|p{12cm}|} 
+    \begin{tabular}{|p{4cm}|p{12cm}| } 
         \hline
-        \bf Begrep & \bf Beskrivelse\\
+        \bf Begrep & \bf Beskrivelse \\
         \hline
-        Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført\\
+        Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført \\
         \hline
-        Bruker & Besøkende som samhandler med systemet\\
+        Bruker & Besøkende som samhandler med systemet \\
         \hline
-        Brukerkonto & En som kan kun leie parkeringsplasser\\
+        Brukerkonto & En som kan kun leie parkeringsplasser \\
         \hline
-        Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre\\
+        Bedriftskonto & En som kan kun leie ut parkeringsplasser til andre \\
         \hline
-        Administrator & Brukerkonto med administratorrettigheter\\
+        EsID & Estemering identifikator \\
         \hline
-        Feed & Opplisting av innlegg\\
+        Feed & Opplisting av innlegg \\
         \hline
-        Tjenesten & Tjenesten denne dokumentasjonen omhandler\\
+        ID & Identifikator \\
         \hline
-        Systemet & Det underliggende systemet til tjenesten\\
+        Tjenesten & Tjenesten denne dokumentasjonen omhandler \\
+        \hline
+        Systemet & Det underliggende systemet til tjenesten \\
         \hline
         Personas & Er et annet ord for rollefigur, enkeltmenneske, karakterpersonlighet\\
         \hline
-        ID & Identifikator\\
-        \hline
-        FK & Funksjonelt Krav (brukes som ID)\\
-        \hline
-        IFK & Ikke-Funksjonelt Krav (brukes som ID)\\
+        FK & Funksjonelt Krav (brukes til EsID)\\
         \hline
         Innlegg & Brukerinnlegg i systemet (post) som består av en eller flere parkeringsplasser\\
-        \hline
-        Produktet/ Tjenesten & Applikasjonen som dokumenteres\\
         \hline
         Kunde & Gruppe som eier produktet\\
         \hline
@@ -145,16 +128,6 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
 \end{center}
 
 \section{Brukerklasser}
-En oversikt over roller og egenskaper for de forskjellige brukerklassene.
-
-    \subsection{Bruker}
-    Brukerkontoen er en standardkonto som hvem som helst kan opprette. Som en bruker, kan man registrere sine egne parkeringsplasser og leie andre brukeres parkeringsplasser i perioder. Alle brukere har sin egen profilside der de kan redigere generell informasjon og innstillinger. Brukere kan gi anmeldesler/tilbakemelding på hverandre sine innlegg, og vil bli varslet dersom en annen bruker skriver en anmeldelse på sin parkeringsplass. Ved registrering av parkeringsplass, bestemmer man selv pris og tiden den er tilgjengelig, og den vil automatisk bli vist for andre brukere via feeden eller profil. Man må først registrere bilen man parkerer med før man kan reservere en parkeringsplass.
-
-    \subsection{Bedrift}
-    Det er kun organisasjoner som har tilgang til å opprette en bedriftskonto, da de må ha et organisasjonsnummer. Bedriftskontoen er sammensatt av flere brukerkontoer. En brukerkonto som er medlem av en bedrift har spesialtilgang til parkeringsplasser markert for generelle eller spesifikke bedrifter. Bedriftskontoen kan legge ut parkeringsplasser, men kan ikke leie en parkeringsplass. Det er kun bedrifter som kan markere parkeringsplasser for andre bedrifter.
-
-    \subsection{Administrator}
-    En administrator ligner en vanligbrukerkonto, men har moen ekstra rettigheter for administraring. De har full makt til å slette brukere, bedrifter, innlegg, parkeringsplasser, og anmeldelser, samt suspendere og oppheve brukerkontoer. Administrator er essensiell for å vedlikeholde en god brukeropplevelse og rettferdiggjøre systemet for alle brukere.
 
 \section{Personaer}
 
@@ -460,8 +433,25 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 % En kunde kan bruke den samme parkeringsplassen flere ganger og vil sikkert ha en kjapp måtte å koble seg opp mot den bestemte parkeringsplassen.
 
 \section{Prototype}
+Vi har laget en forenklet versjon som viser hvordan strukturen på programmet kan se ut. Vårt fokus ved prototypen var å vise en oversikt over parkeringsplasser der man kan trykke inn på en, få mer spesifikk info om selve parkeringsplassen, og å legge den til som en reservasjon. 
+Det andre fokuset var å ha en admin bruker som kan kontrollere bruken av siden ved suspendering og sletting av brukere, parkeringsplasser og reservasjoner
+
+I denne forenklet versjonen, så gjør vi all lagring mot .json filer.
+
+Vi har lagdelt back-end koden til controller, model, datahandler og repository. Dette tillater at vi har splittet funksjonaliteten til forskjellig seksjoner av programmet og kan gjøre endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et switch til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
+
+Vi har valgt å bruke Javalin med Vue som rammeverk for front-end. Dette har gjort at det var relativt enkelt å få en pen og oversiktelig MVP. Dette er hovedavhengigheten i programmet vårt.
+
 
     \subsection{Sammendrag}
+Vi har laget en forenklet versjon som viser hvordan strukturen på programmet kan se ut. Vårt fokus ved prototypen var å vise en oversikt over parkeringsplasser der man kan trykke inn på en, få mer spesifikk info om selve parkeringsplassen, og å legge den til som en reservasjon. 
+Det andre fokuset var å ha en admin bruker som kan kontrollere bruken av siden ved suspendering og sletting av brukere, parkeringsplasser og reservasjoner
+
+I denne forenklet versjonen, så gjør vi all lagring mot .json filer.
+
+Vi har lagdelt back-end koden til controller, model, datahandler og repository. Dette tillater at vi har splittet funksjonaliteten til forskjellig seksjoner av programmet og kan gjøre endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et switch til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
+
+Vi har valgt å bruke Javalin med Vue som rammeverk for front-end. Dette har gjort at det var relativt enkelt å få en pen og oversiktelig MVP. Dette er hovedavhengigheten i programmet vårt.
 
     \subsection{Innstallasjon}
     For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(dette skjer for npm installasjon). Dersom dette skjer fullfører du installasjonen som beskrives i terminalen. Deretter må man trykke på den grønne hammeren i høyere hjørnet eller ctrl+f9 for å bygge programmet.
@@ -483,62 +473,27 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Begrensninger}
 
 \section{Diagrammer}
-    \subsection{Sekvesndiagram - Leie en parkeringplass.}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
 
-    \subsection{Dataflytdiagram - Tilbakemelding}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
+    \subsection{Charis}
 
-    \subsection{Sekvensdiagram - Opprette reservasjon}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprette reservasjon_sekvensdiagram.png}
+    \newpage
+    \subsection{Håkon}
 
-    \subsection{Tilstandsdiagram - Registrere parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png}
-    
-        \subsubsection{Forklaring}
-        Når bruker oppretter parkeringsplass venter systemet på en POST forespørsel med informasjon om gatenavn, adresse, bredde, lengde og høyde, samt informasjon angående parkeringsplasstype (handicap, el-bil, osv.). Dersom opplysningene ikke tilfredstiller forventningene i systemet, får bruker en feilmelding og blir nødt til å fylle ut på nytt. Dersom opplysningene er godkjent blir parkeringsplassen opprettet. 
+        \subsubsection{Sekvesndiagram - Av hvordan man leier en parkeringplass.}
+        \includegraphics[scale=0.43]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
 
-    \subsection{Aktivitetsdiagram - Leie en parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/leierAktivitetBestilling.png}
+        \subsubsection{Dataflytdiagram - Av hvordan man tilbakemelding og poengsum fungerer.}
+        \includegraphics[scale=0.63]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
 
-    \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramLeggeUtParkering.png}
+    \subsection{Jonas}
+
+    \subsection{Lars}
+
+    \subsection{Mats}
 
 \section{Estemering}
 
     \subsection{Enheter}
-
-    \begin{tabular}{|p{2cm}|
-        >{\centering\arraybackslash}p{3cm}|
-        >{\centering\arraybackslash}p{3cm}|
-        >{\centering\arraybackslash}p{3cm}|
-        >{\centering\arraybackslash}p{3cm}|}     
-        \hline 
-        \invis & \multicolumn{4}{|c|}{Utviklingsstørrelse}\\
-        \hline
-        Verdi & X-Large & Large & Medium & Small\\
-        \hline
-        X-Large &   \celly0 &
-                    \cellg4 &
-                    \cellg6 &
-                    \cellg7 \\
-        \hline
-        Large &     \cellr-4 &
-                    \celly0 &
-                    \celll2 &
-                    \cellg3 \\
-        \hline
-        Medium &    \cellr-6 &
-                    \cello-2 &
-                    \celly0 &
-                    \celll1 \\
-        \hline
-        Small &     \cellr-7 &
-                    \cellr-3 &
-                    \cello-1 &
-                    \celly0 \\
-        \hline 
-    \end{tabular}
 
     \subsection{Estimeringstabell - Funksjonelle krav}
         \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
