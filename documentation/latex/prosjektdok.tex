@@ -152,6 +152,11 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \hline
         Kunde & Gruppe som eier produktet\\
         \hline
+        Push-notifikasjoner & Varsler på desktop eller mobil \\
+        \hline
+        Cookies & Informasjonskapsler \\
+        \hline
+        TOS & Terms of Service, liste over bruksrettigheter og bruksområde for brukerdata \\
     \end{tabular}
 \end{center}
 
@@ -291,7 +296,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Verifiseringskode}
 
         \subsubsection{Systemet skal verifisere bruker gjennom en kode}
-        Denne koden blir brukt til blant annet Kontoopprettelse, passordbytte og to-faktor autentisering. Hensikten er å gjenkjenne brukeren som gjør sikkerhetskritiske handlinger på sin profil. Når bruker gjør en av disse handlingene blir koden midlertidig lagret
+        Denne koden blir brukt til blant annet Kontoopprettelse, passordbytte og to-faktor autentisering. Hensikten er å gjenkjenne brukeren som gjør sikkerhetskritiske handlinger på sin profil. Når bruker gjør en av disse handlingene blir koden midlertidig lagret i databasen, og videre sendt til bruker. Bruker må skrive koden inn i et tekst-felt, der den blir sjekket opp med den opprinnlige koden lagret i databasen. Hvis den stemmer er brukeren verifisert.
 
             \begin{subreq}
                 \FKsub Koden skal være fire-sifret
@@ -301,72 +306,117 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{Presentasjon av parkeringsplasser (Feed)}
 
-        \subsubsection{Feeden skal vise en liste over relevante parkeringsplasser}
+        \subsubsection{Feeden skal oppliste relevante parkeringsplasser}
         \FK
-        Opplistingen skal bestå av innlegg av parkeringsplasser fra andre brukere.
+        Alle brukertyper skal ha tilgang til en opplistingen som består av innlegg fra andre brukere. Det er her brukere ettersøker og reserverer parkeringsplasser. Standaropplistingen rangeres etter nærmest avstand fra posisjonen til brukeren.
+
+            \begin{subreq}
+                \FKsub Posisjonen hentes via cookies.
+            \end{subreq}
         
         \subsubsection{Bruker skal kunne sette et filter på feeden}
         \FK
-        Opplistingen rangeres via et brukervalgt filter. Filteret bestemmer om opplastingen rangeres basert på nærmest avstand, lavest til høyest pris, høyest til lavest pris, parkeringsplasstype og om den leies ut av en brukerkonto eller bedriftskonto. Standardinnstillingen skal være nærmest avstand.
+        Opplistingen rangeres via et brukervalgt filter. Filteret bestemmer om opplastingen rangeres basert på nærmest avstand, lavest til høyest pris, høyest til lavest pris, parkeringsplasstype og om den leies ut av en brukerkonto eller bedriftskonto.
 
-        \subsubsection{Bruker skal kunne søke etter en adresse}
+        \subsubsection{Bruker skal kunne søke etter en lokasjon}
         \FK
-        Feeden skal rangere parkeringsplassene basert på avstand i forhold til denne adressen.
+        Feeden skal rangere parkeringsplassene basert på avstand i forhold til denne lokasjonen.
 
-        \subsubsection{Bruker skal kunne søke etter koordinater}
-        \FK
-        Feeden skal rangere parkeringsplassene basert på avstand i forhold til koordinatene.
+            \begin{subreq}
+                \FKsub Søkefeltet skal akseptere adresse.
+
+                \FKsub Søkefeltet skal akseptere koordinater.
+            \end{subreq}
 
     \subsection{Leie parkeringsplass}
 
         \subsubsection{Bruker skal kunne leie parkeringsplass som en brukerkonto}
         \FK
-        Som en brukerkonto skal bruker kunne leie en spesifikk parkeringsplass eller flere parkeringsplasser.
+        Som en brukerkonto skal bruker kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
 
-        \subsubsection{Utløp av tid}
+        \subsubsection{Varsel på utløpstid}
         \FK 
-        Når en reservert parkeri holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut.
+        Når en reservert parkeringsplass holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut minst 30 minutter før.
 
-    \subsection{Tilbakemelding på innlegg}
+            \begin{subreq}
+                \FKsub Varselet skal gå gjennom SMS og push-notifikasjoner
+            \end{subreq}
+
+    \subsection{Tilbakemelding på innlegg (Anmeldelser)}
 
         \subsubsection{Bruker skal kunne gi tilbakemelding på et innlegg}
         \FK
-        Dersom brukeren har brukt en parkeringsplass, skal de kunne gi tilbakemelding på innlegget til den parkeringsplassen. Innlegget må minst bestå av en poengsum fra 1 til 5, der 5 er den høyeste poengsummen. Om ønskelig kan bruker også legge til en kommentar på maks 130 tegn. Tilbakemeldingen skal lagres i databasen og tilknyttes innlegget.
+        Dersom brukeren har brukt en parkeringsplass, skal de kunne gi tilbakemelding på innlegget til den parkeringsplassen. Innlegget må minst bestå av en poengsum. Om ønskelig kan bruker også legge til en kommentar. Tilbakemeldingen skal lagres i databasen og tilknyttes innlegget.
+
+            \begin{subreq}
+                \FKsub Hver bruker kan bare skrive en anmeldelse per innlegg.
+
+                \FKsub Kommentaren skal være på maks 130 tegn.
+
+                \FKsub Poengsummen skal være fra 1 til 5, der 5 er den høyeste poengsummen.
+            \end{subreq}
 
         \subsubsection{Tilbakemeldinger skal vises på hvert innlegg}
         \FK
-        Alle innlegg som tilhører et innlegg skal vises som en liste på innlegget, der nyeste tilbakemelding ligger øverst. Hver tilbakemelding skal vise poengsummen, kommentaren og brukernavn til de som lagde den. I tillegg skal en endelig rangering vises på innlegget som består av gjennomsnittet av poengsummer fra alle tilbakemeldinger knyttet til innlegget.
+        Alle anmeldelser som tilhører et innlegg skal vises på listeform på innlegget, der den nyeste tilbakemelding ligger øverst.
+            
+            \begin{subreq}
+                \FKsub Hver tilbakemelding skal vise poengsummen, kommentaren og brukernavn til de som lagde den.
+            \end{subreq}
 
-        \subsubsection{Utleier skal kunne få tilbakemeldinger via mail}
-        Ved valg har utleier mulighet til å få alle tilbakemeldinger sendt på mail.
+        \subsubsection{Innlegg skal vise en endelig poengsum}
+        Poengsummen består av gjennomsnittet av poengsummer fra alle tilbakemeldinger knyttet til innlegget.
+
+        \subsubsection{Utleier skal kunne få tilbakemeldingene via e-post}
+        Ved valg har utleier mulighet til å få tilsendt alle tilbakemeldinger på e-post.
 
     \subsection{Opprette parkeringsplasser}
 
-        \subsubsection{Bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
+        \subsubsection{Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser}
         \FK
-        For å registrere et parkeringsplass område må de oppgi bredde og lengde i centimeter, antall parkeringsplasser, type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.), etasjer, pris (dette skal kunne endres mauelt eller automastisk i etter kant), postaddresse, gateaddresse og gatenummer.
+        For å registrere en parkeringsplass må følgende oppgis:
+            \begin{itemize}
+                \item Bredde, lengde, høyde i centimeter
+                \item Antall parkeringsplasser
+                \item Type parkeringsplass (om det er handikapparkering, eletriskparkering, osv.)
+                \item Etasje
+                \item Pris (dette skal kunne endres mauelt eller automastisk i etter kant)
+                \item Postaddresse
+                \item Gateaddresse
+                \item Gatenummer
+            \end{itemize}
+        Etter opprettelsen lagres parkeringsplassen i databasen.
 
-        \subsubsection{Systemet skal knytte parkeringsplassen til en unik ID}
+            \begin{subreq}
+                \FKsub Bedriftskonto skal kunne markere en parkeringsplass for en spesifikk bedrift eller for bedrifter generelt
+
+                \FKsub Parkeringsplassen skal knyttes til en unik ID
+                
+                \FKsub Parkeringsplassen skal knyttes til brukeren som opprettet den.
+            \end{subreq}
+
+    \subsection{Leiebetingeleser}
+
+        \subsubsection{Pris per time skal bestemmes av bruker}
         \FK
-        Den nylig registrerte parkeringsplassen skal knyttes til en unik ID.
+        Dette er prisen som parkeringsplassen leies ut for (per timer) og bestemmes av bruker som registrerte parkeringsplassen. Den bestemmes på hver individuelle parkeringsplass.
+
+            \begin{subreq}
+                \FKsub Prisen skal kunne oppdateres etter opprettelsen.
+            \end{subreq}
+
+        \subsubsection{Tiden skal bestemmes av bruker}
+        \FK
+        Dette er fra-tid og til-tid som parkeringsplassen kan leies av andre brukere.
+
+        \subsubsection{Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke}
+        Ledig-statusen regnes ut dersom den tilgjengelige tiden samsvarer med nåværende klokkeslett.
+
+            \begin{subreq}
+                \FKsub Hvis en annen bruker låner parkeringsplassen, så skal tiden den er opptatt bli trukket fra det totale tilgjengelige tidsintervallet.
+            \end{subreq}
+
         
-        \subsubsection{Systemet skal lagre parkeringsplassen i en database}
-        \FK
-        Den nylig registrerte parkeringsplassen lagres i en database, der den knyttes til en bruker (eier av parkeringsplassen).
-
-    \subsection{Leie betingeleser}
-
-        \subsubsection{Pris}
-        \FK
-        Eieren av en parkeringsplassen skal kunne justere pris på sin(e) parkeringsplass(er) (i timen).
-
-        \subsubsection{Tid}
-        \FK
-        Eieren av en parkeringsplassen skal kunne sette en max og min tid for hvor lenge en bil kan stå parkert på en parkeringsplass
-
-        \subsubsection{Regler}
-        \FK
-        Eieren av en parkeringsplass skal kunne lage sine egne regler for hvordan parkering skal oppholde seg, om det er om tid og/eller kostnad endringer.
         
     \subsection{Betaling}
 
@@ -388,10 +438,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Administrator skal ha full rett til å slette individuelle brukere slik at all tilhørende data blir også slettet fra databasen. Den slettede brukeren skal få beskjed om slettingen via e-post.
 
-        % @TODO: slette?
-        % \subsubsection{Administrator skal kunne slette tilbakemeldinger}
-        % \FK
-        % Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
+        \subsubsection{Administrator skal kunne slette tilbakemeldinger}
+        \FK
+        Administrator skal ha full rett til å slette individuelle tilbakemeldinger på andre innlegg slik at de fjernes både fra grensesnittet og databasen.
 
         \subsubsection{Administrator skal kunne slette innlegg}
         \FK
@@ -429,6 +478,10 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \IFK
     All brukere skal ha tilgang til applikasjonen til enhver tid.
     
+    \subsubsection{Bruker kvalifikasjon}
+    \IFK
+    Brukere må minimum være minimum 16 år, og ha gyldig førerbevis.
+    
     \subsection{Sikkerhetskopi(Backup)}
     \IFK
     Sikkerhetskopiering av database skal skje hver 24 time kl 04.00
@@ -438,16 +491,21 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     Betaling verifiseres og håndteres av NETS
 
     \subsection{Legal and licensing issues}
+    \IFK
+    Brukeren skal få en Terms of service hvor de får informasjon om hvordan informasjonen deres brukes, og hva de har rettigheter på, og hvilke rettigheter vi har ovenfor deres bruk av tjenesten.
 
 
-    \subsection{Nettverkstopologi}
-
-
-    \subsection{Preformance / response time}
+    \subsection{Response time}
+    \IFK
+    Launch av Javalin til localhost:7000 skal ta mellom 800 - 900 ms.
+        \subsubsection{Page loading}
+        \IFK
+        Lasting av side skal ta ca 1 sekund.
 
 
     \subsection{Personvern}
-
+    \IFK
+    Lagring av persondata skal skje i henhold med oppdatert GDPR-lovverk.
 
     \subsection{Kvalitet}
 
@@ -498,8 +556,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
     \subsection{Avhengigheter}
+    Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
     \subsection{Begrensninger}
+    De bregrensningene vi har møtt på i utviklingen har for det meste vært praktiske. Vi har valgt å holde corporation og bruker som like bruker-typer i prototypen ettersom at de i hovedsak deler mange egenskaper.
+    
+    Vi møtte motstand ved lastning av fler forskjellige typer data til samme vue side, som har limitert dens totale omfang for visning, og reservasjon. Dette spesifikt da single-parking-spot seksjonen av programmet.
+    
+    Vi har forsøkt å begrense prototypen til skallet som er nødvendig før implementering av database, betalingssystem og brukerregistreringer.
+    
+    Vi har ikke lagt inn noen bil-registrering eller bruker-registrering da dette er undøvendig for funksjonaliteten i prototypen. 
+    
+    Vi ønsket å legge inn corporation-bruker som kun kunne gjøre utleiing av p-plass, men også som kunne legge til medlemmer som kan leie av de plassene spesifikt. Dette ble en for stor utfordring, og vi valgte å holde den i sin basis-form.
+    
+    Det var ment at vi skulle ha flere brukere til prototypen, men valgte å fokusere på å få én bruker til å fungere på alle stegene i utlegging og leie-prosess.
+    
+    MVP-en har ikke fått inn noe rangerings-system eller filtrering, da vi ønsker å filtrere på lokasjon, men ikke har kunnskapen til å gjøre denne typen filtrering.
 
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringsplass.}
