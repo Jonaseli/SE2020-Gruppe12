@@ -19,6 +19,7 @@
 \usepackage{multirow}
 \usepackage{array}
 \usepackage[table]{xcolor}
+\usepackage{longtable,booktabs}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -686,108 +687,249 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{Estimeringstabell - Funksjonelle krav}
 
-    \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+    \begin{longtable}{|p{2cm}|p{6cm}|
+        >{\centering\arraybackslash}p{2cm}|
+        >{\centering\arraybackslash}p{2cm}|
+        >{\centering\arraybackslash}p{2cm}|} 
         \hline
-        \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+        \bf ID & \bf Krav & \bf Vikitighet & \bf Vanskelighet & \bf Størrelse\\
         \hline
-        FK1 & M & M & 0\\
+        FK1
+        &
+        Bruker skal kunne opprette en brukerkonto
+        & M & M & \celly 0\\
         \hline
-        FK2 & M & M & 0\\
+        FK2
+        &
+        Bedrifter skal kunne opprette en bedriftskonto
+        & M & M & \celly 0\\
         \hline
-        FK3 & S & M & -1\\
+        FK3
+        &
+        Kunden skal kunne opprette brukerkonto med administratorrettigheter
+        & S & M & \cello -1\\
         \hline
-        FK4 & L & L & 0\\
+        FK4
+        &
+        Systemet skal verifisere registreringen
+        & L & L & \celly 0\\
         \hline
-        FK5 & S & S & 0\\ % implementert
+        FK5
+        &
+        Derigere opprettet bruker
+        & S & S & \celly 0\\ % implementert
         \hline
-        FK6 & XL & M & 6\\
+        FK6
+        &
+        Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
+        & XL & M & \cellg 6\\
         \hline
-        FK7 & XL & S & 7\\
+        FK7
+        &
+        Systemet skal verifisere innloggingen
+        & XL & S & \cellg 7\\
         \hline
-        FK8 & S & S & 0\\
+        FK8
+        &
+        Derigere innlogget bruker
+        & S & S & \celly 0\\
         \hline
-        FK9 & XL & L & 4\\
+        FK9
+        &
+        Systemet skal verifisere bruker gjennom en kode
+        & XL & L & \cellg 4\\
         \hline
-        FK10 & XL & M & 6\\
+        FK10
+        &
+        Feeden skal oppliste relevante parkeringsplasser
+        & XL & M & \cellg 6\\
         \hline
-        FK11 & L & XL & -4\\
+        FK11
+        &
+        Bruker skal kunne sette et filter på feeden
+        & L & XL & \cellr -4\\
         \hline
-        FK12 & M & L & -2\\
+        FK12
+        &
+        Bruker skal kunne søke etter en lokasjon
+        & M & L & \cello -2\\
         \hline
-        FK13 & XL & M & 6\\
+        FK13
+        &
+        Bruker skal kunne leie parkeringsplass som en brukerkonto
+        & XL & M & \cellg 6\\
         \hline
-        FK14 & M & M & 0\\
+        FK14
+        &
+        Varsel på utløpstid
+        & M & M & \celly 0\\
         \hline
-        FK15 & S & L & -3\\
+        FK15
+        &
+        Bruker skal kunne gi tilbakemelding på et innlegg
+        & S & L & \cellr -3\\
         \hline
-        FK16 & S & M & -1\\
+        FK16
+        &
+        Tilbakemeldinger skal vises på hvert innlegg
+        & S & M & \cello -1\\
         \hline
-        FK17 & S & S & 0\\
+        FK17
+        &
+        Utleier skal kunne få tilbakemeldingene via e-post
+        & S & S & \cellg 0\\
         \hline
-        FK18 & XL & XL & 0\\
+        FK18
+        &
+        Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser
+        & XL & XL & \cellg 0\\
         \hline
-        FK19 & M & S & 1\\
+        FK19
+        &
+        Pris per time skal bestemmes av utleier
+        & M & S & \celll 1\\
         \hline
-        FK20 & L & M & 2\\
+        FK20
+        &
+        Tiden skal bestemmes av bruker
+        & L & M & \celll 2\\
         \hline
-        FK21 & L & M & 2\\
+        FK21
+        &
+        Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke
+        & L & M & \celll 2\\
         \hline
-        FK22 & L & M & 2\\
+        FK22
+        &
+        Bruker skal betale utleieren for å opprette en reservasjon
+        & L & M & \celll 2\\
         \hline
-        FK23 & L & S & 3\\
+        FK23
+        &
+        Tredjepart
+        & L & S & \cellg 3\\
         \hline
-        FK24 & S & S & 0\\
+        FK24
+        &
+        Administrator skal kunne bannlyse bruker
+        & S & S & \celly 0\\
         \hline
-        FK25 & M & S & 1\\
+        FK25
+        &
+        Administrator skal kunne slette bruker
+        & M & S & \celll 1\\
         \hline
-        FK26 & S & S & 0\\
+        FK26
+        &
+        Administrator skal kunne slette tilbakemeldinger
+        & S & S & \celly 0\\
         \hline
-        FK27 & L & S & 3\\
+        FK27
+        &
+        Administrator skal kunne slette innlegg
+        & L & S & \cellg 3\\
         \hline
-        FK28 & L & S & 3\\
+        FK28
+        &
+        Administrator skal kunne slette parkeringsplasser
+        & L & S & \cellg 3\\
         \hline
-        FK29 & XL & S & 7\\
+        FK29
+        &
+        Administrator skal kunne slette reservasjoner
+        & XL & S & \cellg 7\\
         \hline
-        FK30 & S & M & -1\\
+        FK30
+        &
+        Bedrift skal ha administrerende rettigheter på deres egne innlegg
+        & S & M & \cello -1\\
         \hline
-        FK31 & M & S & 1\\
+        FK31
+        &
+        Bruker skal kunne rapportere andre brukere sine innlegg
+        & M & S & \celll 1\\
         \hline
-        FK32 & M & S & 1\\
+        FK32
+        &
+        Bruker skal kunne rapportere andre brukere
+        & M & S & \celll 1\\
         \hline
-        FK33 & XL & XL & 0\\
+        FK33
+        &
+        Systemet skal lagre informasjon om parkeringsplasser
+        & XL & XL & \celly 0\\
         \hline
-    \end{tabular}
+    \end{longtable}
 
     \subsection{Estimeringstabell - Ikke funksjonelle krav}
 
-    \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+    \begin{longtable}{|p{2cm}|p{6cm}|
+        >{\centering\arraybackslash}p{2cm}|
+        >{\centering\arraybackslash}p{2cm}|
+        >{\centering\arraybackslash}p{2cm}|}
         \hline
-        \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+        \bf ID & \bf Krav & \bf Vikitighet & \bf Vanskelighet & \bf Størrelse\\
         \hline
-        IFK1 & XL & XL & 0\\
+        IFK1
+        &
+        Tilgjengelighet
+        & XL & XL & \celly 0\\
         \hline
-        IFK2 & L & M & 2\\
+        IFK2
+        &
+        Bruker kvalifikasjon
+        & L & M & \celll 2\\
         \hline
-        IFK3 & XL & S & 7\\
+        IFK3
+        &
+        Sikkerhetskopi(Backup)
+        & XL & S & \cellg 7\\
         \hline
-        IFK4 & XL & S & 7\\
+        IFK4
+        &
+        Dependency på tredjepart
+        & XL & S & \cellg 7\\
         \hline
-        IFK5 & L & M & 2\\
+        IFK5
+        &
+        Legal and licensing issues
+        & L & M & \celll 2\\
         \hline
-        IFK6 & S & L & -3\\
+        IFK6
+        &
+        Response time - Lokalt
+        & S & L & \cellr -3\\
         \hline
-        IFK7 & S & M & -1\\
+        IFK7
+        &
+        Page loading
+        & S & M & \cello -1\\
         \hline
-        IFK8 & XL & XL & 0\\
+        IFK8
+        &
+        Personvern
+        & XL & XL & \celly 0\\
         \hline
-        IFK9 & XL & L & 4\\
+        IFK9
+        &
+        Sikkerhet
+        & XL & L & \cellg 4\\
         \hline
-        IFK10 & M & L & -2\\
+        IFK10
+        &
+        Supportability
+        & M & L & \cello -2\\
         \hline
-        IFK11 & S & M & -1\\
+        IFK11
+        &
+        Usability
+        & S & M & \cello -1\\
         \hline
-        IFK12 & M & S & 1\\
+        IFK12
+        &
+        Compliance
+        & M & S & \celll 1\\
         \hline
-    \end{tabular}
+    \end{longtable}
 
 \end{document}
