@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  24 NOV 2020 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  24 NOV 2020 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -443,11 +443,11 @@ LaTeX Info: Redefining \nameref on input line 53.
 \@outlinefile=\write4
 \openout4 = `prosjektdok.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -457,12 +457,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `prosjektdok.toc'.
 
  [3] [4] [5]
-Overfull \hbox (4.66241pt too wide) in paragraph at lines 127--128
+Overfull \hbox (4.66241pt too wide) in paragraph at lines 132--133
 []\OT1/ptm/m/n/12 Admin - Denne bruk-eren kan sus-pendere eller slette/banlyse brukere, slette poster og park-er-ingsplasser.
  []
 
 
-Overfull \hbox (1.7463pt too wide) in paragraph at lines 127--128
+Overfull \hbox (1.7463pt too wide) in paragraph at lines 132--133
 \OT1/ptm/m/n/12 Dette er en bruker-type som i senere it-erasjoner kan gi ret-tigheter til an-dre brukere (f.eks. modererings-
  []
 
@@ -470,56 +470,56 @@ Overfull \hbox (1.7463pt too wide) in paragraph at lines 127--128
 <bilder/personaer/persona_jorgen.jpg, id=333, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_jorgen.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorgen.jpg>
-Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 193.
+Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 198.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [7 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorgen.jpg>]
 <bilder/personaer/persona_siggurd.jpg, id=339, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_siggurd.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_siggurd.jpg>
-Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 207.
+Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 212.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 <bilder/personaer/persona_karina.jpg, id=340, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_karina.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karina.jpg>
-Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 219.
+Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 224.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [8 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
 <bilder/personaer/persona_karin.jpg, id=345, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_karin.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karin.jpg>
-Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 231.
+Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 236.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
  [9 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karina.jpg> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karin.jpg>]
 <bilder/personaer/persona_jorn.jpg, id=350, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_jorn.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorn.jpg>
-Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 247.
+Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 252.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 
-Overfull \hbox (1.11258pt too wide) in paragraph at lines 263--265
+Overfull \hbox (1.11258pt too wide) in paragraph at lines 268--270
 \OT1/ptm/m/n/12 For []a opp-grette en bruk-erkonto, m[]a bruker oppgi bruk-er-navn, pas-sord, e-post og tele-fon-num-mer. 
  []
 
 [10 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorn.jpg>] [11] [12]
-Overfull \hbox (9.58177pt too wide) in paragraph at lines 376--378
+Overfull \hbox (9.58177pt too wide) in paragraph at lines 381--383
 \OT1/ptm/m/n/12 Alle an-meldelser som tilh^^\rer et inn-legg skal vises p[]a lis-te-form p[]a inn-legget, der den nyeste tilbakemeld-
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 393.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 398.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [13] [14] [15]
-Overfull \hbox (14.95888pt too wide) in paragraph at lines 555--557
+Overfull \hbox (14.95888pt too wide) in paragraph at lines 560--562
 \OT1/ptm/m/n/12 Programvareutviklingen skal skje i samr[]ad med datatil-synets an-be-fal-ning om in-nebygd per-son-vern. 
  []
 
 [16]
-Overfull \hbox (4.698pt too wide) in paragraph at lines 563--565
+Overfull \hbox (4.698pt too wide) in paragraph at lines 568--570
 \OT1/ptm/m/n/12 Alle metoder/funksjoner som er ofte i bruk skal ha tester for []a sikre at pro-gram-mets vik-tig-ste funksjoner
  []
 
 
-Overfull \hbox (3.48613pt too wide) in paragraph at lines 568--570
+Overfull \hbox (3.48613pt too wide) in paragraph at lines 573--575
 \OT1/ptm/m/n/12 Parkeringsplasser reg-istr-ert m[]a f^^\lge nasjonale, re-gionale og lokale ret-ningslin-jer for manu-vreringsrom
  []
 
@@ -527,10 +527,10 @@ Overfull \hbox (3.48613pt too wide) in paragraph at lines 568--570
 <bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=421, 1146.2825pt x 1406.25375pt>
 File: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 627.
+Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 632.
 (pdftex.def)             Requested size: 1146.27971pt x 1406.25032pt.
 
-Overfull \hbox (30.01231pt too wide) in paragraph at lines 627--628
+Overfull \hbox (30.01231pt too wide) in paragraph at lines 632--633
 [] 
  []
 
@@ -538,47 +538,47 @@ Overfull \hbox (30.01231pt too wide) in paragraph at lines 627--628
 <bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=427, 794.97pt x 343.2825pt>
 File: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png Graphic file (type png)
 <use bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>
-Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 632.
+Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 637.
 (pdftex.def)             Requested size: 794.96806pt x 343.28165pt.
 
-Overfull \hbox (30.00897pt too wide) in paragraph at lines 632--633
+Overfull \hbox (30.00897pt too wide) in paragraph at lines 637--638
 [] 
  []
 
 [19 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>]
-Overfull \hbox (15.11441pt too wide) in paragraph at lines 634--635
+Overfull \hbox (15.11441pt too wide) in paragraph at lines 639--640
 \OT1/ptm/m/n/12 (Tilbakemeld-ing og po-eng-sum) som er knyt-tet til den park-er-ingsplassen (post, databasen) og tilbakemeld-
  []
 
 <bilder/diagrammer/opprette reservasjon_sekvensdiagram.png, id=435, 825.0825pt x 515.9275pt>
 File: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png Graphic file (type png)
 <use bilder/diagrammer/opprette reservasjon_sekvensdiagram.png>
-Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 637.
+Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 642.
 (pdftex.def)             Requested size: 825.08049pt x 515.92624pt.
 
-Overfull \hbox (30.00052pt too wide) in paragraph at lines 637--638
+Overfull \hbox (30.00052pt too wide) in paragraph at lines 642--643
 [] 
  []
 
 <bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png, id=436, 294.09875pt x 490.83376pt>
 File: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png Graphic file (type png)
 <use bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png>
-Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 640.
+Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 645.
 (pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
 [20 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png (PNG copy)>]
 <bilder/diagrammer/leierAktivitetBestilling.png, id=443, 274.02374pt x 592.2125pt>
 File: bilder/diagrammer/leierAktivitetBestilling.png Graphic file (type png)
 <use bilder/diagrammer/leierAktivitetBestilling.png>
-Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 646.
+Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 651.
 (pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
  [21 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png (PNG copy)>]
 <bilder/diagrammer/sekvensdiagramLeggeUtParkering.png, id=449, 619.31375pt x 321.2pt>
 File: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png Graphic file (type png)
 <use bilder/diagrammer/sekvensdiagramLeggeUtParkering.png>
-Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 649.
+Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 654.
 (pdftex.def)             Requested size: 619.31224pt x 321.19922pt.
 
-Overfull \hbox (30.01796pt too wide) in paragraph at lines 649--650
+Overfull \hbox (30.01796pt too wide) in paragraph at lines 654--655
 [] 
  []
 
@@ -586,55 +586,50 @@ Overfull \hbox (30.01796pt too wide) in paragraph at lines 649--650
 <bilder/diagrammer/DataflytOpprettParkering.png, id=454, 428.65144pt x 289.08pt>
 File: bilder/diagrammer/DataflytOpprettParkering.png Graphic file (type png)
 <use bilder/diagrammer/DataflytOpprettParkering.png>
-Package pdftex.def Info: bilder/diagrammer/DataflytOpprettParkering.png  used on input line 652.
+Package pdftex.def Info: bilder/diagrammer/DataflytOpprettParkering.png  used on input line 657.
 (pdftex.def)             Requested size: 428.65039pt x 289.07928pt.
 
-Overfull \hbox (7.04164pt too wide) in paragraph at lines 658--689
+Overfull \hbox (7.04164pt too wide) in paragraph at lines 663--694
 [] 
  []
 
 [23 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png (PNG copy)> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/DataflytOpprettParkering.png>]
-Overfull \hbox (8.54176pt too wide) in paragraph at lines 697--697
- []|\OT1/ptm/b/n/12 Vanskelighet| 
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 702--702
+ []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 706--707
+Underfull \hbox (badness 1112) in paragraph at lines 711--712
 []|\OT1/ptm/m/n/12 Bedrifter skal kunne op-prette en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
+Underfull \hbox (badness 10000) in paragraph at lines 716--717
 []|\OT1/ptm/m/n/12 Kunden skal kunne op-prette
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 741--742
+Underfull \hbox (badness 7433) in paragraph at lines 746--747
 []|\OT1/ptm/m/n/12 Systemet skal ver-i-fis-ere bruker
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 761--762
+Underfull \hbox (badness 4303) in paragraph at lines 766--767
 []|\OT1/ptm/m/n/12 Bruker skal kunne leie park-er-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 776--777
+Underfull \hbox (badness 7012) in paragraph at lines 781--782
 []|\OT1/ptm/m/n/12 Tilbakemeldinger skal vises p[]a
  []
 
 
-Underfull \vbox (badness 10000) detected at line 793
+Underfull \vbox (badness 10000) detected at line 798
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 801--802
+Underfull \hbox (badness 4713) in paragraph at lines 806--807
 []|\OT1/ptm/m/n/12 Brukere skal kunne se ut ifra
- []
-
-
-Underfull \hbox (badness 5374) in paragraph at lines 821--822
-[]|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
@@ -643,7 +638,7 @@ Underfull \hbox (badness 5374) in paragraph at lines 826--827
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 836--837
+Underfull \hbox (badness 5374) in paragraph at lines 831--832
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
@@ -652,24 +647,29 @@ Underfull \hbox (badness 5374) in paragraph at lines 841--842
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
+
+Underfull \hbox (badness 5374) in paragraph at lines 846--847
+[]|\OT1/ptm/m/n/12 Administrator skal kunne slette
+ []
+
 [24]
-Overfull \hbox (8.54176pt too wide) in paragraph at lines 873--873
- []|\OT1/ptm/b/n/12 Vanskelighet| 
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 878--878
+ []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 935
+Underfull \vbox (badness 10000) detected at line 940
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 937.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 942.
 [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 937.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 942.
  (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 937.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 942.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 942.
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
 (rerunfilecheck)             Checksum: D918B91BFC794A9B15010AA14AFECEC3;4051.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 937.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 942.
  ) 
 Here is how much of TeX's memory you used:
  9549 strings out of 480893
@@ -680,7 +680,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  43i,10n,45p,1370b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (25 pages, 549598 bytes).
+Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (25 pages, 549724 bytes).
 PDF statistics:
  511 PDF objects out of 1000 (max. 8388607)
  462 compressed objects within 5 object streams

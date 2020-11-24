@@ -53,8 +53,14 @@
 \begin{document}
 \title{%
     Kravspesifikasjon\\
-    \large Parkeringsplass reservasjons-app }
-\author{Gruppe 12}
+    \large Reservasjonssystem for parkeringsplasser}
+\author{%
+    Gruppe 12:\\
+    Jonas Eliassen\\
+    Mats Engelien\\
+    Lars Erik Faber\\
+    Håkon Marthinsen\\
+    Charis Schille}
 \date{}
 \maketitle
 
@@ -68,7 +74,6 @@
 
 Ofte finner man ikke parkeringsplass mens man er i farta. Det er tett på senterene, gateparkering er privat eller ulovlig og man har ofte dårlig tid. Gjerne etter litt leting finner man en parkering 500 meter unna, og når man kommer dit er det selvfølgelig fullt. Hvordan kan man unngå å miste så mye tid, og i tillegg finne en parkeringsplass?
 
-% Kunden og eksterne partnere kan lese gjennom dokumentasjonen og forstå problemet, hva som skal utvikles og hva som er viktig med systemet som utvikles
 \section{Løsningen}
 Tjenesten baserer seg på delingsøkonomi og enheten som deles er parkeringsplasser. Ideen er at bedrifter og enkeltpersoner kan registrere en eller flere parkeringsplasser de eier for utleie til enkeltpersoner. Dermed kan disse utleierene tjene penger passivt, samt gjøre det enklere for privatpersoner å forsørge parkering. Parkeringsplassen de legger ut vil være merket med bredde, lengde og høyde, samt om den er reservert for el-biler eller handicappede. På denne måten kan alle som bruker tjenesten få et godt innblikk i parkerings-bildet.
 
@@ -287,7 +292,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Systemet må verifisere registreringen via verifiseringskode som sjekkes. Denne må bli sendt til brukeren slik at de kan skrive inn koden til programmet. Hvis koden stemmer med den som er lagret i databasen, er registreringen verifisert. Hvis ikke skal de få en feilmelding på samme siden. Etter verifisering lagres brukerdataen i databasen.
 
-        \subsubsection{Derigere opprettet bruker}
+        \subsubsection{Dirigere opprettet bruker}
         \FK
         Etter opprettelse av konto skal bruker automatisk bli ført til startsiden.
     
@@ -301,7 +306,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli logget inn. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-        \subsubsection{Derigere innlogget bruker}
+        \subsubsection{Dirigere innlogget bruker}
         \FK
         Etter vellykket innlogging skal bruker bli ført til startsiden.
 
@@ -694,7 +699,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         >{\centering\arraybackslash}p{2cm}|
         >{\centering\arraybackslash}p{2cm}|} 
         \hline
-        \bf ID & \bf Krav & \bf Vikitighet & \bf Vanskelighet & \bf Størrelse\\
+        \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
         \hline
         FK1
         &
@@ -718,7 +723,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \hline
         FK5
         &
-        Derigere opprettet bruker
+        Dirigere opprettet bruker
         & S & S & \celly 0\\ % implementert
         \hline
         FK6
@@ -733,7 +738,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \hline
         FK8
         &
-        Derigere innlogget bruker
+        Dirigere innlogget bruker
         & S & S & \celly 0\\
         \hline
         FK9
@@ -870,7 +875,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         >{\centering\arraybackslash}p{2cm}|
         >{\centering\arraybackslash}p{2cm}|}
         \hline
-        \bf ID & \bf Krav & \bf Vikitighet & \bf Vanskelighet & \bf Størrelse\\
+        \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
         \hline
         IFK1
         &
