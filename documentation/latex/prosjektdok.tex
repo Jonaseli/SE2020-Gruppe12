@@ -527,7 +527,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     Brukeren skal få en Terms of service hvor de får informasjon om hvordan informasjonen deres brukes, og hva de har rettigheter på, og hvilke rettigheter vi har ovenfor deres bruk av tjenesten.
 
 
-    \subsection{Response time}
+    \subsection{Response time - Lokalt}
     \IFK
     Launch av Javalin til localhost:7000 skal ta mellom 800 - 900 ms.
         \subsubsection{Page loading}
@@ -539,18 +539,23 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \IFK
     Lagring av persondata skal skje i henhold med oppdatert GDPR-lovverk.
 
-    \subsection{Kvalitet}
-
-
+   
     \subsection{Sikkerhet}
-
+    \IFK
+    Programvareutviklingen skal skje i samråd med datatilsynets anbefalning om innebygd personvern.
 
     \subsection{Supportability}
+    \IFK
+    Systemet skal være lag-delt slik at det er kost-effektivt å vedlikeholde eller gjøre endringer.
 
-
-    \subsection{Testability}
+    \subsection{Usability}
+    \IFK
+    Alle metoder/funksjoner som er ofte i bruk skal ha tester for å sikre at programmets viktigste funksjoner holder.
         
-    \subsection{Interface}
+    
+    \subsection{Compliance}
+    \IFK
+    Parkeringsplasser registrert må følge nasjonale, regionale og lokale retningslinjer for manuvreringsrom og areale for parkeringsplass.
 
 % @TODO: Fremtidig implementasjon
 %
@@ -609,9 +614,13 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringsplass.}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
+            \subsubsection{Forklaring}
+            Når en bruker har kommet seg inn på applikasjonen så skal de kunne trykke på en knapp som fører dem til et sted som sørger for at de skal søke/lete etter en parkeringsplass. Etter de har funnet en parkeringsplass så skal de fylle inn enkelt informasjon om parkeringen for å betsille den. Hvis bestillingen går igjennom så skal de få tilbake en kvitering/bevis på at alt har fungert og at de leier den parkeringsplassen de har betalt for.
 
     \subsection{Dataflytdiagram - Tilbakemelding}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
+        \subsubsection{Forklaring}
+        Etter at en bruker har leie parkeringsplass hos en utleier så skal de kunne gi tilbakemelding og en poengsum, gjennom en applikasjonen. Når de gir en tilbakemelding så blir den lagret i en database (Tilbakemelding og poengsum) som er knyttet til den parkeringsplassen (post, databasen) og tilbakemelding skal være synlig for brukeren selv og andre, man kan også se hvem som har skrevet hva.
 
     \subsection{Sekvensdiagram - Opprette reservasjon}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/opprette reservasjon_sekvensdiagram.png}
