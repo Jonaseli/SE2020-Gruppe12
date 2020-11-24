@@ -193,12 +193,13 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 \section{Use Case diagrammer}
 
     \subsection{Use Case - Bruker (Leietaker)}
-    \includegraphics[scale=0.6]{bilder/diagrammer/LeierUML.png}\\
+    \includegraphics[scale=0.6]{bilder/diagrammer/uc_leietaker.png}\\
     
     \subsection{Use Case - Bedrift}
-    \includegraphics[scale=0.75]{bilder/diagrammer/corporationUC.png}\\
+    \includegraphics[scale=0.75]{bilder/diagrammer/uc_corp.png}\\
 
     \subsection{Use Case - Administrator}
+    \includegraphics[scale=0.6]{bilder/diagrammer/uc_admin.png}\\
     
 
 \section{Personaer}
@@ -638,32 +639,32 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
 \section{Diagrammer}
     \subsection{Sekvesndiagram - Leie en parkeringsplass.}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_leietaker.png}
             \subsubsection{Forklaring}
             Når en bruker har kommet seg inn på applikasjonen så skal de kunne trykke på en knapp som fører dem til et sted som sørger for at de skal søke/lete etter en parkeringsplass. Etter de har funnet en parkeringsplass så skal de fylle inn enkelt informasjon om parkeringen for å betsille den. Hvis bestillingen går igjennom så skal de få tilbake en kvitering/bevis på at alt har fungert og at de leier den parkeringsplassen de har betalt for.
 
     \subsection{Dataflytdiagram - Tilbakemelding}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_tilbakemelding.png}
         \subsubsection{Forklaring}
         Etter at en bruker har leie parkeringsplass hos en utleier så skal de kunne gi tilbakemelding og en poengsum, gjennom en applikasjonen. Når de gir en tilbakemelding så blir den lagret i en database (Tilbakemelding og poengsum) som er knyttet til den parkeringsplassen (post, databasen) og tilbakemelding skal være synlig for brukeren selv og andre, man kan også se hvem som har skrevet hva.
 
     \subsection{Sekvensdiagram - Opprette reservasjon}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprette reservasjon_sekvensdiagram.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_opprette reservasjon.png}
 
     \subsection{Tilstandsdiagram - Registrere parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/tilstand_opprett_parkeringsplass.png}
     
         \subsubsection{Forklaring}
         Når bruker oppretter parkeringsplass venter systemet på en POST forespørsel med informasjon om gatenavn, adresse, bredde, lengde og høyde, samt informasjon angående parkeringsplasstype (handicap, el-bil, osv.). Dersom opplysningene ikke tilfredstiller forventningene i systemet, får bruker en feilmelding og blir nødt til å fylle ut på nytt. Dersom opplysningene er godkjent blir parkeringsplassen opprettet. 
 
     \subsection{Aktivitetsdiagram - Leie en parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/leierAktivitetBestilling.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/aktivitet_leier_bestilling.png}
 
     \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramLeggeUtParkering.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_legge_ut_parkering.png}
 
     \subsection{Dataflytdiagram - Opprett Parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/DataflytOpprettParkering.png}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_opprett_parkering.png}
 
 \section{Estemering}
 
