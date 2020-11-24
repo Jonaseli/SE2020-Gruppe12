@@ -9,15 +9,23 @@
             <a id="lastLink" href="/">Logout</a>
         </nav>
         <div v-if="parkingSpot" class="detail-parking-spot-container">
-            <h1 id="parkingName">{{ parkingSpot.streetAddress }}  {{parkingSpot.streetNumber}}</h1>
-            <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
-            <img v-else class="cover-image"
-                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
-
-            <h3>{{ owner.displayName }}</h3>
-        </div>
-        <div>
-            <button onclick="window.location.href='/parking-spot/:parking-spot-id/payment'">Bestill</button>
+            <div id="imgDiv">
+                <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
+                <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
+            </div>
+            <div id="txtDiv">
+                <h1 id="street">{{ parkingSpot.streetAddress }}  {{parkingSpot.streetNumber}}</h1>
+                <h1 id="city">{{ parkingSpot.postalCode }}  {{parkingSpot.city}}</h1>
+                <h1 id="width">Width: {{ parkingSpot.width }}cm</h1>
+                <h1 id="length">Length: {{ parkingSpot.length }}cm</h1>
+                <h1 id="height">Height: {{ parkingSpot.height }}cm</h1>
+                <h1>Owner: {{ owner.displayName }}</h3>
+                <div id="orderButton" >
+                    <a :href="`/parking-spot/${parkingSpot.parkingSpotId}/payment`" class="link-to-parking-spot-detail">
+                        <h1>Rent parking spot</h1>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -46,10 +54,25 @@
     });
 </script>
 <style>
+
+    #orderButton h1{
+    padding-bottom: 10px;
+        background-color: #434346;
+    }
+
+    #txtDiv {
+        width: 35%;
+    }
+
+    #imgDiv {
+        width: 300px;
+        height: 300px;
+    }
+
     .detail-parking-spot-container {
         color: black;
-        /* display: flex;
-        flex-wrap: wrap;*/
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
@@ -123,7 +146,7 @@
 
     img.cover-image {
         height: auto;
-        width: 50%;
+        width: 100%;
         margin: 5px;
     }
 
