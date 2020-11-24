@@ -103,6 +103,7 @@ Her er en fullstendig liste:\\
 \\\textbf{webjars vue 2.6.10} For det visuelle nettsidene.
 \\\textbf{javalin 3.11.0} Rammeverk for nettsiden.
 \\\textbf{JUnit 5.7.0} For å testeing av kodeoppsett.
+Nets 
 
 
 \section{Funksjoner i applikasjonen}
@@ -400,7 +401,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{Leiebetingeleser}
 
-        \subsubsection{Pris per time skal bestemmes av bruker}
+        \subsubsection{Pris per time skal bestemmes av utleier}
         \FK
         Dette er prisen som parkeringsplassen leies ut for (per timer) og bestemmes av bruker som registrerte parkeringsplassen. Den bestemmes på hver individuelle parkeringsplass.
 
@@ -413,6 +414,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         Dette er fra-tid og til-tid som parkeringsplassen kan leies av andre brukere.
 
         \subsubsection{Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke}
+        \FK
         Ledig-statusen regnes ut dersom den tilgjengelige tiden samsvarer med nåværende klokkeslett.
 
             \begin{subreq}
@@ -681,65 +683,71 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \hline
         \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
         \hline
-        FK1 & Medium & Medium & 0\\
+        FK1 & M & M & 0\\
         \hline
-        FK2 & Medium & Medium & 0\\
+        FK2 & M & M & 0\\
         \hline
-        FK3 & Small & Medium & -1\\
+        FK3 & S & M & -1\\
         \hline
-        FK4 & Large & Large & 0\\
+        FK4 & L & L & 0\\
         \hline
-        FK5 & Small & Small & 0\\ % implementert
+        FK5 & S & S & 0\\ % implementert
         \hline
-        FK6 & X-Large & Medium & 6\\
+        FK6 & XL & M & 6\\
         \hline
-        FK7 & X-Large & Small & 7\\
+        FK7 & XL & S & 7\\
         \hline
-        FK8 & Small & Small & 0\\
+        FK8 & S & S & 0\\
         \hline
-        FK9 & NULL & NULL & NULL\\
+        FK9 & XL & L & 4\\
         \hline
-        FK10 & NULL & NULL & NULL\\
+        FK10 & XL & M & 6\\
         \hline
-        FK11 & NULL & NULL & NULL\\
+        FK11 & L & XL & -4\\
         \hline
-        FK12 & NULL & NULL & NULL\\
+        FK12 & M & L & -2\\
         \hline
-        FK13 & NULL & NULL & NULL\\
+        FK13 & XL & M & 6\\
         \hline
-        FK14 & NULL & NULL & NULL\\
+        FK14 & M & M & 0\\
         \hline
-        FK15 & NULL & NULL & NULL\\
+        FK15 & S & L & -3\\
         \hline
-        FK16 & NULL & NULL & NULL\\
+        FK16 & S & M & -1\\
         \hline
-        FK17 & NULL & NULL & NULL\\
+        FK17 & S & S & 0\\
         \hline
-        FK18 & NULL & NULL & NULL\\
+        FK18 & XL & XL & 0\\
         \hline
-        FK19 & NULL & NULL & NULL\\
+        FK19 & M & S & 1\\
         \hline
-        FK20 & NULL & NULL & NULL\\
+        FK20 & L & M & 2\\
         \hline
-        FK21 & NULL & NULL & NULL\\
+        FK21 & L & M & 2\\
         \hline
-        FK22 & NULL & NULL & NULL\\
+        FK22 & L & M & 2\\
         \hline
-        FK23 & NULL & NULL & NULL\\
+        FK23 & L & S & 3\\
         \hline
-        FK24 & NULL & NULL & NULL\\
+        FK24 & S & S & 0\\
         \hline
-        FK25 & NULL & NULL & NULL\\
+        FK25 & M & S & 1\\
         \hline
-        FK26 & NULL & NULL & NULL\\
+        FK26 & S & S & 0\\
         \hline
-        FK27 & NULL & NULL & NULL\\
+        FK27 & L & S & 3\\
         \hline
-        FK28 & NULL & NULL & NULL\\
+        FK28 & L & S & 3\\
         \hline
-        FK29 & NULL & NULL & NULL\\
+        FK29 & XL & S & 7\\
         \hline
-        FK30 & NULL & NULL & NULL\\
+        FK30 & S & M & -1\\
+        \hline
+        FK31 & M & S & 1\\
+        \hline
+        FK32 & M & S & 1\\
+        \hline
+        FK33 & XL & XL & 0\\
         \hline
     \end{tabular}
 
@@ -749,7 +757,29 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \hline
         \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
         \hline
-        IFK1 & NULL & NULL & NULL\\
+        IFK1 & XL & XL & 0\\
+        \hline
+        IFK2 & L & M & 2\\
+        \hline
+        IFK3 & XL & S & 7\\
+        \hline
+        IFK4 & XL & S & 7\\
+        \hline
+        IFK5 & L & M & 2\\
+        \hline
+        IFK6 & S & L & -3\\
+        \hline
+        IFK7 & S & M & -1\\
+        \hline
+        IFK8 & XL & XL & 0\\
+        \hline
+        IFK9 & XL & L & 4\\
+        \hline
+        IFK10 & M & L & -2\\
+        \hline
+        IFK11 & S & M & -1\\
+        \hline
+        IFK12 & M & S & 1\\
         \hline
     \end{tabular}
 
