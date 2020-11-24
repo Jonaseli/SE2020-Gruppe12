@@ -300,6 +300,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Verifiseringskode}
 
         \subsubsection{Systemet skal verifisere bruker gjennom en kode}
+        \FK
         Denne koden blir brukt til blant annet Kontoopprettelse, passordbytte og to-faktor autentisering. Hensikten er å gjenkjenne brukeren som gjør sikkerhetskritiske handlinger på sin profil. Når bruker gjør en av disse handlingene blir koden midlertidig lagret i databasen, og videre sendt til bruker. Bruker må skrive koden inn i et tekst-felt, der den blir sjekket opp med den opprinnlige koden lagret i databasen. Hvis den stemmer er brukeren verifisert.
 
             \begin{subreq}
@@ -368,10 +369,8 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
                 \FKsub Hver tilbakemelding skal vise poengsummen, kommentaren og brukernavn til de som lagde den.
             \end{subreq}
 
-        \subsubsection{Innlegg skal vise en endelig poengsum}
-        Poengsummen består av gjennomsnittet av poengsummer fra alle tilbakemeldinger knyttet til innlegget.
-
         \subsubsection{Utleier skal kunne få tilbakemeldingene via e-post}
+        \FK
         Ved valg har utleier mulighet til å få tilsendt alle tilbakemeldinger på e-post.
 
     \subsection{Opprette parkeringsplasser}
@@ -677,92 +676,81 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \end{tabular}
 
     \subsection{Estimeringstabell - Funksjonelle krav}
-        \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
-            \hline
-            \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
-            \hline
-            FK1 & NULL & NULL & NULL\\
-            \hline
-            FK2 & NULL & NULL & NULL\\
-            \hline
-            FK3 & NULL & NULL & NULL\\
-            \hline
-            FK4 & NULL & NULL & NULL\\
-            \hline
-            FK5 & NULL & NULL & NULL\\
-            \hline
-            FK6 & NULL & NULL & NULL\\
-            \hline
-            FK7 & NULL & NULL & NULL\\
-            \hline
-            FK8 & NULL & NULL & NULL\\
-            \hline
-            FK9 & NULL & NULL & NULL\\
-            \hline
-            FK10 & NULL & NULL & NULL\\
-            \hline
-            FK11 & NULL & NULL & NULL\\
-            \hline
-            FK12 & NULL & NULL & NULL\\
-            \hline
-            FK13 & NULL & NULL & NULL\\
-            \hline
-            FK14 & NULL & NULL & NULL\\
-            \hline
-            FK15 & NULL & NULL & NULL\\
-            \hline
-            FK16 & NULL & NULL & NULL\\
-            \hline
-            FK17 & NULL & NULL & NULL\\
-            \hline
-            FK18 & NULL & NULL & NULL\\
-            \hline
-            FK19 & NULL & NULL & NULL\\
-            \hline
-            FK20 & NULL & NULL & NULL\\
-            \hline
-            FK21 & NULL & NULL & NULL\\
-            \hline
-            FK22 & NULL & NULL & NULL\\
-            \hline
-            FK23 & NULL & NULL & NULL\\
-            \hline
-            FK24 & NULL & NULL & NULL\\
-            \hline
-            FK25 & NULL & NULL & NULL\\
-            \hline
-            FK26 & NULL & NULL & NULL\\
-            \hline
-            FK27 & NULL & NULL & NULL\\
-            \hline
-            FK28 & NULL & NULL & NULL\\
-            \hline
-            FK29 & NULL & NULL & NULL\\
-            \hline
-            FK30 & NULL & NULL & NULL\\
-            \hline
-            FK31 & NULL & NULL & NULL\\
-            \hline
-            FK32 & NULL & NULL & NULL\\
-            \hline
-            FK33 & NULL & NULL & NULL\\
-            \hline
-            FK34 & NULL & NULL & NULL\\
-            \hline
-            FK35 & NULL & NULL & NULL\\
-            \hline
-            FK36 & NULL & NULL & NULL\\
-            \hline
-        \end{tabular}
+
+    \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+        \hline
+        \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+        \hline
+        FK1 & Medium & Medium & 0\\
+        \hline
+        FK2 & Medium & Medium & 0\\
+        \hline
+        FK3 & Small & Medium & -1\\
+        \hline
+        FK4 & Large & Large & 0\\
+        \hline
+        FK5 & Small & Small & 0\\ % implementert
+        \hline
+        FK6 & X-Large & Medium & 6\\
+        \hline
+        FK7 & X-Large & Small & 7\\
+        \hline
+        FK8 & Small & Small & 0\\
+        \hline
+        FK9 & NULL & NULL & NULL\\
+        \hline
+        FK10 & NULL & NULL & NULL\\
+        \hline
+        FK11 & NULL & NULL & NULL\\
+        \hline
+        FK12 & NULL & NULL & NULL\\
+        \hline
+        FK13 & NULL & NULL & NULL\\
+        \hline
+        FK14 & NULL & NULL & NULL\\
+        \hline
+        FK15 & NULL & NULL & NULL\\
+        \hline
+        FK16 & NULL & NULL & NULL\\
+        \hline
+        FK17 & NULL & NULL & NULL\\
+        \hline
+        FK18 & NULL & NULL & NULL\\
+        \hline
+        FK19 & NULL & NULL & NULL\\
+        \hline
+        FK20 & NULL & NULL & NULL\\
+        \hline
+        FK21 & NULL & NULL & NULL\\
+        \hline
+        FK22 & NULL & NULL & NULL\\
+        \hline
+        FK23 & NULL & NULL & NULL\\
+        \hline
+        FK24 & NULL & NULL & NULL\\
+        \hline
+        FK25 & NULL & NULL & NULL\\
+        \hline
+        FK26 & NULL & NULL & NULL\\
+        \hline
+        FK27 & NULL & NULL & NULL\\
+        \hline
+        FK28 & NULL & NULL & NULL\\
+        \hline
+        FK29 & NULL & NULL & NULL\\
+        \hline
+        FK30 & NULL & NULL & NULL\\
+        \hline
+    \end{tabular}
 
     \subsection{Estimeringstabell - Ikke funksjonelle krav}
-        \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
-            \hline
-            \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
-            \hline
-            IFK1 & NULL & NULL & NULL\\
-            \hline
-        \end{tabular}
 
+    \begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}| } 
+        \hline
+        \bf EsID & \bf Vikitighet & \bf Vanskelighetsgrad & \bf Utviklingsstørrelse\\
+        \hline
+        IFK1 & NULL & NULL & NULL\\
+        \hline
+    \end{tabular}
 
 \end{document}
