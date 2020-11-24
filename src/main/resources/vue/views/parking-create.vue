@@ -40,10 +40,10 @@
                 <div>
                     <p>Special Types</p>
                     <p>
-                        <label for="handicap"></label>
+                        <label for="name"><label>
                         <input type="checkbox" name="handicap" id="handicap" v-model="handicap" value="checked"><span class="handicapCheckBox"></span>
 
-                        <label for="chargingStation"></label>
+                        <label for="name"><label>
                         <input type="checkbox" name="chargingStation" id="chargingStation" v-model="chargingStation" value="checked"><span class="chargingCheckBox"></span>
                     </p>
                 </div>
