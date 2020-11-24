@@ -1,16 +1,13 @@
 package model;
 
-import dataHandler.JSONReadable;
-import dataHandler.JSONWritable;
-
 import java.util.UUID;
 
-public class Reservation implements JSONReadable<Reservation>, JSONWritable<Reservation> {
+public class Reservation {
 
-    private UUID reservationId, postId, accountId;
-
+    private UUID reservationId;
+    private UUID postId;
+    private UUID accountId;
     private String startTime;
-
     private String endTime;
 
     public Reservation() {
@@ -18,6 +15,14 @@ public class Reservation implements JSONReadable<Reservation>, JSONWritable<Rese
 
     public Reservation(UUID postId, UUID accountId, String startTime, String endTime) {
         this.reservationId = UUID.randomUUID();
+        this.postId = postId;
+        this.accountId = accountId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public Reservation(UUID reservationId, UUID postId, UUID accountId, String startTime, String endTime) {
+        this.reservationId = reservationId;
         this.postId = postId;
         this.accountId = accountId;
         this.startTime = startTime;

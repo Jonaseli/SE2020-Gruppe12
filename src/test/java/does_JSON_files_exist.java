@@ -9,25 +9,25 @@ public class does_JSON_files_exist {
 
     @Test
     public void does_accounts_file_exist() {
-        Path path = Paths.get("source/accountsTest.json");
+        Path path = Paths.get("source/accounts.json");
         Assertions.assertTrue(Files.exists(path));
     }
 
     @Test
     public void does_parkingSpots_file_exist() {
-        Path path = Paths.get("source/parkingSpotsTest.json");
+        Path path = Paths.get("source/parkingSpots.json");
         Assertions.assertTrue(Files.exists(path));
     }
 
     @Test
     public void does_posts_file_exist() {
-        Path path = Paths.get("source/postsTest.json");
+        Path path = Paths.get("source/posts.json");
         Assertions.assertTrue(Files.exists(path));
     }
 
     @Test
     public void does_reservations_file_exist() {
-        Path path = Paths.get("source/reservationsTest.json");
+        Path path = Paths.get("source/reservations.json");
         Assertions.assertTrue(Files.exists(path));
     }
 

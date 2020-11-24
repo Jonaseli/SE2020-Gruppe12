@@ -1,5 +1,5 @@
 <template id="my-parking-spots">
-   <div>
+    <div>
         <header>
             <h1>EZpark</h1>
         </header>
@@ -11,7 +11,7 @@
         <ul class="parking-spots-overview-list">
             <li>
                 <a :href="`/account/${account}/my-parking-spots/create-parking`" class="link-to-parking-spot-detail">
-                    <div class="single-parking-spot-container" >
+                    <div class="single-parking-spot-container">
                         <h1>Create new parking spot</h1>
                     </div>
                 </a>
@@ -21,9 +21,9 @@
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in ownedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
-                    <div class="single-parking-spot-container" >
-                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
-                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
+                    <div class="single-parking-spot-container">
+                        <h1>Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
+                        <h1>Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
                     </div>
                 </a>
             </li>
@@ -32,14 +32,14 @@
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in rentedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
-                    <div class="single-parking-spot-container" >
-                        <h1>Location: {{parkingSpot.postalCode}} {{parkingSpot.poststed}}</h1>
-                        <h1>Address: {{parkingSpot.streetAddress}} {{parkingSpot.streetNumber}}</h1>
+                    <div class="single-parking-spot-container">
+                        <h1>Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
+                        <h1>Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
                     </div>
                 </a>
             </li>
         </ul>
-   </div>
+    </div>
 </template>
 <script>
 </script>
