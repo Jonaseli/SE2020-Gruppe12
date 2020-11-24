@@ -187,4 +187,393 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count195
 \Field@Width=\dimen164
-\
+\Fld@charsize=\dimen165
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+ (c:/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
+)
+\Hy@abspage=\count196
+\c@Item=\count197
+\c@Hfootnote=\count198
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (c:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+ (c:/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
+)
+\Fld@listcount=\count199
+\c@bookmark@seq@number=\count266
+ (c:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (c:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip63
+) (c:/texlive/2020/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
+ (c:/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count267
+)) (c:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen166
+\WF@size=\dimen167
+\c@WF@wrappedlines=\count268
+\WF@box=\box51
+\WF@everypar=\toks22
+Package: wrapfig 2003/01/31  v 3.6
+) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count269
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (c:/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box52
+)
+\tc@llx=\dimen168
+\tc@lly=\dimen169
+\tc@urx=\dimen170
+\tc@ury=\dimen171
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen172
+\adjbox@Height=\dimen173
+\adjbox@Depth=\dimen174
+\adjbox@Totalheight=\dimen175
+\adjbox@pwidth=\dimen176
+\adjbox@pheight=\dimen177
+\adjbox@pdepth=\dimen178
+\adjbox@ptotalheight=\dimen179
+ (c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count270
+LaTeX Info: Redefining \checkoddpage on input line 45.
+) (c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box53
+\sift@deathcycles=\count271
+\@vwid@loff=\dimen180
+\@vwid@roff=\dimen181
+)) (c:/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count272
+\multirow@dima=\skip65
+\bigstrutjot=\dimen182
+) (c:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ (c:/texlive/2020/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks25
+\minrowclearance=\skip66
+)
+\rownum=\count273
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+\c@fkcounter=\count274
+\c@fksubcounter=\count275
+\c@ifkcounter=\count276
+\c@ifksubcounter=\count277
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 52.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count278
+\l__pdf_internal_box=\box54
+) (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
+\openout1 = `prosjektdok.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(28.45274pt, 773.91498pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=773.91498pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count279
+\scratchdimen=\dimen183
+\scratchbox=\box55
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen184
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks27
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring OFF on input line 52.
+ (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ (c:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count285
+)
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
+ (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.out) (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.out)
+\@outlinefile=\write4
+\openout4 = `prosjektdok.out'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+ (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+ (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.toc [2])
+\tf@toc=\write5
+\openout5 = `prosjektdok.toc'.
+
+ [3] [4]
+Overfull \hbox (4.66241pt too wide) in paragraph at lines 117--118
+[]\OT1/ptm/m/n/12 Admin - Denne bruk-eren kan sus-pendere eller slette/banlyse brukere, slette poster og park-er-ingsplasser.
+ []
+
+
+Overfull \hbox (1.7463pt too wide) in paragraph at lines 117--118
+\OT1/ptm/m/n/12 Dette er en bruker-type som i senere it-erasjoner kan gi ret-tigheter til an-dre brukere (f.eks. modererings-
+ []
+
+[5] [6]
+<bilder/personaer/persona_jorgen.jpg, id=333, 173.14688pt x 225.84375pt>
+File: bilder/personaer/persona_jorgen.jpg Graphic file (type jpg)
+<use bilder/personaer/persona_jorgen.jpg>
+Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 183.
+(pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
+<bilder/personaer/persona_siggurd.jpg, id=334, 173.14688pt x 225.84375pt>
+File: bilder/personaer/persona_siggurd.jpg Graphic file (type jpg)
+<use bilder/personaer/persona_siggurd.jpg>
+Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 197.
+(pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
+ [7 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
+<bilder/personaer/persona_karina.jpg, id=340, 173.14688pt x 225.84375pt>
+File: bilder/personaer/persona_karina.jpg Graphic file (type jpg)
+<use bilder/personaer/persona_karina.jpg>
+Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 209.
+(pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
+<bilder/personaer/persona_karin.jpg, id=341, 173.14688pt x 225.84375pt>
+File: bilder/personaer/persona_karin.jpg Graphic file (type jpg)
+<use bilder/personaer/persona_karin.jpg>
+Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 221.
+(pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
+ [8 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_karina.jpg>]
+<bilder/personaer/persona_jorn.jpg, id=346, 173.14688pt x 225.84375pt>
+File: bilder/personaer/persona_jorn.jpg Graphic file (type jpg)
+<use bilder/personaer/persona_jorn.jpg>
+Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 237.
+(pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
+ [9 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_karin.jpg>]
+Overfull \hbox (1.11258pt too wide) in paragraph at lines 253--255
+\OT1/ptm/m/n/12 For []a opp-grette en bruk-erkonto, m[]a bruker oppgi bruk-er-navn, pas-sord, e-post og tele-fon-num-mer. 
+ []
+
+[10 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_jorn.jpg>] [11]
+Overfull \hbox (9.58177pt too wide) in paragraph at lines 366--368
+\OT1/ptm/m/n/12 Alle an-meldelser som tilh^^\rer et inn-legg skal vises p[]a lis-te-form p[]a inn-legget, der den nyeste tilbakemeld-
+ []
+
+[12]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 383.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [13] [14] [15]
+Overfull \hbox (14.95888pt too wide) in paragraph at lines 545--547
+\OT1/ptm/m/n/12 Programvareutviklingen skal skje i samr[]ad med datatil-synets an-be-fal-ning om in-nebygd per-son-vern. 
+ []
+
+
+Overfull \hbox (4.698pt too wide) in paragraph at lines 553--555
+\OT1/ptm/m/n/12 Alle metoder/funksjoner som er ofte i bruk skal ha tester for []a sikre at pro-gram-mets vik-tig-ste funksjoner
+ []
+
+
+Overfull \hbox (3.48613pt too wide) in paragraph at lines 558--560
+\OT1/ptm/m/n/12 Parkeringsplasser reg-istr-ert m[]a f^^\lge nasjonale, re-gionale og lokale ret-ningslin-jer for manu-vreringsrom
+ []
+
+[16] [17]
+<bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png, id=421, 1146.2825pt x 1406.25375pt>
+File: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png Graphic file (type png)
+<use bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>
+Package pdftex.def Info: bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png  used on input line 617.
+(pdftex.def)             Requested size: 1146.27971pt x 1406.25032pt.
+
+Overfull \hbox (30.01231pt too wide) in paragraph at lines 617--618
+[] 
+ []
+
+[18]
+<bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png, id=427, 794.97pt x 343.2825pt>
+File: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png Graphic file (type png)
+<use bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png>
+Package pdftex.def Info: bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png  used on input line 622.
+(pdftex.def)             Requested size: 794.96806pt x 343.28165pt.
+
+Overfull \hbox (30.00897pt too wide) in paragraph at lines 622--623
+[] 
+ []
+
+[19 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/Sekvensdiagram-LeieEnParkeringsplass-Håkon.png>]
+Overfull \hbox (15.11441pt too wide) in paragraph at lines 624--625
+\OT1/ptm/m/n/12 (Tilbakemeld-ing og po-eng-sum) som er knyt-tet til den park-er-ingsplassen (post, databasen) og tilbakemeld-
+ []
+
+<bilder/diagrammer/opprette reservasjon_sekvensdiagram.png, id=435, 825.0825pt x 515.9275pt>
+File: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png Graphic file (type png)
+<use bilder/diagrammer/opprette reservasjon_sekvensdiagram.png>
+Package pdftex.def Info: bilder/diagrammer/opprette reservasjon_sekvensdiagram.png  used on input line 627.
+(pdftex.def)             Requested size: 825.08049pt x 515.92624pt.
+
+Overfull \hbox (30.00052pt too wide) in paragraph at lines 627--628
+[] 
+ []
+
+<bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png, id=436, 294.09875pt x 490.83376pt>
+File: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png Graphic file (type png)
+<use bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png>
+Package pdftex.def Info: bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png  used on input line 630.
+(pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
+[20 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/Dataflytdiagram-TilbakemeldingOgPoengsum-Håkon.png> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/opprette reservasjon_sekvensdiagram.png (PNG copy)>]
+<bilder/diagrammer/leierAktivitetBestilling.png, id=443, 274.02374pt x 592.2125pt>
+File: bilder/diagrammer/leierAktivitetBestilling.png Graphic file (type png)
+<use bilder/diagrammer/leierAktivitetBestilling.png>
+Package pdftex.def Info: bilder/diagrammer/leierAktivitetBestilling.png  used on input line 636.
+(pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
+ [21 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/opprett_parkeringsplass_tilstandsdiagram.png (PNG copy)>]
+<bilder/diagrammer/sekvensdiagramLeggeUtParkering.png, id=449, 619.31375pt x 321.2pt>
+File: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png Graphic file (type png)
+<use bilder/diagrammer/sekvensdiagramLeggeUtParkering.png>
+Package pdftex.def Info: bilder/diagrammer/sekvensdiagramLeggeUtParkering.png  used on input line 639.
+(pdftex.def)             Requested size: 619.31224pt x 321.19922pt.
+
+Overfull \hbox (30.01796pt too wide) in paragraph at lines 639--640
+[] 
+ []
+
+[22 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/leierAktivitetBestilling.png (PNG copy)>]
+<bilder/diagrammer/DataflytOpprettParkering.png, id=454, 428.65144pt x 289.08pt>
+File: bilder/diagrammer/DataflytOpprettParkering.png Graphic file (type png)
+<use bilder/diagrammer/DataflytOpprettParkering.png>
+Package pdftex.def Info: bilder/diagrammer/DataflytOpprettParkering.png  used on input line 642.
+(pdftex.def)             Requested size: 428.65039pt x 289.07928pt.
+
+Overfull \hbox (7.04164pt too wide) in paragraph at lines 648--679
+[] 
+ []
+
+[23 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvensdiagramLeggeUtParkering.png (PNG copy)> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/DataflytOpprettParkering.png>] [24] [25] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
+Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
+(rerunfilecheck)             Checksum: D918B91BFC794A9B15010AA14AFECEC3;4051.
+ ) 
+Here is how much of TeX's memory you used:
+ 9382 strings out of 479485
+ 142949 string characters out of 5875916
+ 495856 words of memory out of 5000000
+ 26056 multiletter control sequences out of 15000+600000
+ 552786 words of font info for 72 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 66i,10n,72p,1311b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on "c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.pdf" (25 pages, 544964 bytes).
+PDF statistics:
+ 508 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 541 words of extra memory for PDF output out of 10000 (max. 10000000)
+
