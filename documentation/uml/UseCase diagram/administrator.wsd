@@ -1,0 +1,39 @@
+@startuml administrator
+left to right direction
+
+actor "Administrator" as admin
+
+rectangle EZpark {
+    usecase "Se bruker" as inspectu
+    usecase "Suspendere bruker" as suspend
+    usecase "Oppheve suspendert bruker" as unsuspend
+    usecase "Slette reservasjon" as deleter
+
+    usecase "Se e-post" as mail
+
+    usecase "Se innlegg" as inspecti
+    usecase "Slette innlegg" as deletei
+    usecase "Slette tilbakemelding" as deletet
+
+    usecase "Se p-plass" as inspectp
+    usecase "Slette p-plass" as deletep
+
+}
+
+
+admin --> mail
+mail --> inspectu
+inspectu --> suspend
+inspectu <.right. unsuspend : <<extend>>
+inspectu --> deleter
+
+mail --> inspecti
+inspecti --> deletei
+inspecti --> deletet
+
+mail --> inspectp
+
+admin --> inspectp
+inspectp -left-> deletep
+
+@enduml
