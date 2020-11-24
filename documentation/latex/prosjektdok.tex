@@ -92,23 +92,17 @@ Kunde av tjenesten vil kunne opprette administratorbrukere som har spesielle ege
 
 
 \section{Ansvarsområde og Avhengigheter}
-Tjenesten skal i førsteomgang dekke e 
+Tjenesten skal dekke områder som framvisning, utleie og reservasjon av parkeringsplasser, brukerinnstillinger, lagring av brukerdata gjennom cookies, lagring av parkeringsplasser, lagring av brukeranmeldelser. Tjenesten skal ikke håndtere transaksjoner, men etterspør bank. GPS koordinater håndteres av en tredjepart. Tjenesten har heller ikke ansvar for hosting.
 
-Ikke vårt Ansvarsområde:
-Banken
-Cookies
-Databaseleverandør
-Serverleverandør -> Hosting
+Applikasjonen bygger på automatiseringsverktøy Maven med JDK versjon 11. Jackson brukes for datalagring for datalagring og Vue som er et åpent visningsrammeverk og brukes for visning av tjenesten. Javalin er web-rammeverket som brukes, og testene kjøres med JUnit.
 
-
-For at man skal kunne kjøre applikasjonen og testene er det noen ting man trenger:
-
-\textbf{JavaJDK v11 : } For kjøring av kode.
-\\\textbf{fasterxml.jackson 2.9.9 :} Lagring av data.
-\\\textbf{maven 3.8.0 :} Bygge automatiseringsverktøy.
-\\\textbf{webjars vue 2.6.10 :} For det visuelle nettsidene.
-\\\textbf{javalin 3.11.0 :} Rammeverk for nettsiden.
-\\\textbf{JUnit 5.7.0 :} For å testeing av kodeoppsett.
+Her er en fullstendig liste:\\
+\textbf{JavaJDK v11} For kjøring av kode.
+\\\textbf{fasterxml.jackson 2.9.9} Lagring av data.
+\\\textbf{maven 3.8.0} Bygge automatiseringsverktøy.
+\\\textbf{webjars vue 2.6.10} For det visuelle nettsidene.
+\\\textbf{javalin 3.11.0} Rammeverk for nettsiden.
+\\\textbf{JUnit 5.7.0} For å testeing av kodeoppsett.
 
 
 \section{Funksjoner i applikasjonen}
