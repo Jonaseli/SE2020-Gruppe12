@@ -4,13 +4,13 @@
             <h1>Login Page</h1>
         </header>
         <main>
-            <div class="login-button">
+            <div class="login-button" id="userLoginButton">
                 <a href="/parking-spot">Login as User</a>
             </div>
-            <div class="login-button">
+            <div class="login-button" id="corporationLoginButton">
                 <a href="/parking-spot">Login as Corporation</a>
             </div>
-            <div class="login-button">
+            <div class="login-button" id="adminLoginButton">
                 <a href="/admin-page">Login as Admin</a>
             </div>
         </main>
