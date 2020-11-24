@@ -1,13 +1,11 @@
 package model;
 
-import dataHandler.JSONReadable;
-import dataHandler.JSONWritable;
-
 import java.util.UUID;
 
-public class Post implements JSONReadable<Post>, JSONWritable<Post> {
+public class Post {
 
-    private UUID postId, parkingSpotId;
+    private UUID postId;
+    private UUID parkingSpotId;
     private double price;
 
     public Post() {
@@ -15,6 +13,12 @@ public class Post implements JSONReadable<Post>, JSONWritable<Post> {
 
     public Post(UUID parkingSpotId, double price) {
         this.postId = UUID.randomUUID();
+        this.parkingSpotId = parkingSpotId;
+        this.price = price;
+    }
+
+    public Post(UUID postId, UUID parkingSpotId, double price) {
+        this.postId = postId;
         this.parkingSpotId = parkingSpotId;
         this.price = price;
     }

@@ -83,17 +83,17 @@
   "streetNumber" : "testing",
   "pictureURL" : ""
 }, {
-  "parkingSpotId" : "57eacb27-ed9a-4693-8c4a-259b0d930cb0",
+  "parkingSpotId" : "ea5d0c8f-3766-4feb-83af-c8841f824a7a",
   "ownerId" : "6648dfdc-9733-4a34-bfa0-e9de8c1ca78b",
   "available" : true,
   "handicap" : false,
   "chargingStation" : false,
-  "width" : 333,
-  "length" : 222,
-  "height" : 111,
-  "postalCode" : "789",
-  "city" : "012",
-  "streetAddress" : "123",
-  "streetNumber" : "456",
+  "width" : 200,
+  "length" : 400,
+  "height" : 500,
+  "postalCode" : "6823",
+  "city" : "SJOKO",
+  "streetAddress" : "Litago",
+  "streetNumber" : "29",
   "pictureURL" : ""
 } ]

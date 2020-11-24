@@ -42,11 +42,10 @@
             <artifactId>vue</artifactId>
             <version>2.6.10</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin -->
         <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-kotlin</artifactId>
-            <version>2.9.9</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.11.3</version>
         </dependency>
 
         <!-- Javalin Testing -->
@@ -87,35 +86,6 @@
                     <target>14</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <!--https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
-                <version>1.9.1</version>
-                <executions>
-                    <execution>
-                        <id>install node and npm</id>
-                        <goals>
-                            <goal>install-node-and-npm</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>npm ci</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>ci</arguments>
-                        </configuration>
-                        <phase>generate-resources</phase>
-                    </execution>
-                </executions>
-                <configuration>
-                    <nodeVersion>v15.0.0</nodeVersion>
-                </configuration>
-            </plugin>
-
-
         </plugins>
     </build>
 </project>

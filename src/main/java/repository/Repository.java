@@ -1,31 +1,22 @@
 package repository;
 
+import dataHandler.JsonParser;
 import model.*;
 
 import java.util.*;
 
 public class Repository implements IRepository {
-    private final ArrayList<Account> accounts;
-    private final ArrayList<ParkingSpot> parkingSpots;
-    private final ArrayList<Post> posts;
-    private final ArrayList<Reservation> reservations;
+    public static final String ACCOUNTS_PATH = "src/main/resources/json/accounts.json";
+    public static final String PARKING_SPOTS_PATH = "src/main/resources/json/parkingSpots.json";
+    public static final String POSTS_PATH = "src/main/resources/json/posts.json";
+    public static final String RESERVATIONS_PATH = "src/main/resources/json/reservations.json";
 
-    private final Account account = new Account();
-    private final ParkingSpot parkingSpot = new ParkingSpot();
-    private final Post post = new Post();
-    private final Reservation reservation = new Reservation();
-
-    private final String prePath = "src/main/resources/json/";
-    private final String accountPath = prePath + "accounts.json";
-    private final String parkingSpotPath = prePath + "parkingSpots.json";
-    private final String postPath = prePath + "posts.json";
-    private final String reservationPath = prePath + "reservations.json";
+    public static final ArrayList<Account> accounts = JsonParser.readFromFile(ACCOUNTS_PATH, Account.class);
+    public static final ArrayList<ParkingSpot> parkingSpots = JsonParser.readFromFile(PARKING_SPOTS_PATH, ParkingSpot.class);
+    public static final ArrayList<Post> posts = JsonParser.readFromFile(POSTS_PATH, Post.class);
+    public static final ArrayList<Reservation> reservations = JsonParser.readFromFile(RESERVATIONS_PATH, Reservation.class);
 
     public Repository() {
-        accounts = account.readFromFile(accountPath, Account[].class);
-        parkingSpots = parkingSpot.readFromFile(parkingSpotPath, ParkingSpot[].class);
-        posts = post.readFromFile(postPath, Post[].class);
-        reservations = reservation.readFromFile(reservationPath, Reservation[].class);
     }
 
     @Override
@@ -46,7 +37,7 @@ public class Repository implements IRepository {
     @Override
     public void createAccount(String displayName) {
         accounts.add(new Account(displayName));
-        account.writeToFile(accountPath, accounts);
+        JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
     }
 
     @Override
@@ -67,7 +58,7 @@ public class Repository implements IRepository {
     @Override
     public void createPost(UUID parkingSpotId, double price) {
         posts.add(new Post(parkingSpotId, price));
-        post.writeToFile(postPath, posts);
+        JsonParser.writeToFile(POSTS_PATH, posts);
     }
 
     @Override
@@ -86,10 +77,10 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID accountId) {
+    public ArrayList<ParkingSpot> getOwnedParkingSpots(UUID account) {
         ArrayList<ParkingSpot> ownedParkingSpots = new ArrayList<>();
         for (ParkingSpot parking : parkingSpots) {
-            if (parking.getOwnerId().equals(accountId)) {
+            if (parking.getOwnerId().equals(account)) {
                 ownedParkingSpots.add(parking);
             }
         }
@@ -97,13 +88,13 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID accountId) {
+    public ArrayList<ParkingSpot> getRentedParkingSpots(UUID account) {
         ArrayList<ParkingSpot> rentedParkingSpots = new ArrayList<>();
         for (Reservation reservation : reservations) {
-            if (reservation.getAccountId().equals(accountId)) {
-                UUID posId = reservation.getPostId();
+            if (reservation.getAccountId().equals(account)) {
+                UUID postId = reservation.getPostId();
                 for (Post post : posts) {
-                    if (post.getPostId().equals(posId)) {
+                    if (post.getPostId().equals(postId)) {
                         rentedParkingSpots.add(getParkingSpot(post.getParkingSpotId()));
                     }
                 }
@@ -119,16 +110,16 @@ public class Repository implements IRepository {
 
         boolean available = true;
         boolean handicap;
-        try{
+        try {
             handicap = values.get("handicap").get(0) != null;
-        } catch(Exception e) {
+        } catch (Exception e) {
             handicap = false;
         }
 
         boolean chargingStation;
-        try{
+        try {
             chargingStation = values.get("chargingStation").get(0) != null;
-        } catch(Exception e) {
+        } catch (Exception e) {
             chargingStation = false;
         }
 
@@ -142,7 +133,7 @@ public class Repository implements IRepository {
         String pictureURL = "";
 
         parkingSpots.add(new ParkingSpot(ownerId, handicap, chargingStation, available, width, length, height, postalCode, city, streetAddress, streetNumber, pictureURL));
-        parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
+        JsonParser.writeToFile(PARKING_SPOTS_PATH, parkingSpots);
     }
 
     @Override
@@ -163,37 +154,37 @@ public class Repository implements IRepository {
     @Override
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
         reservations.add(new Reservation(postId, userId, startTime, endTime));
-        reservation.writeToFile(reservationPath, reservations);
+        JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
     }
 
     @Override
     public void deleteAccount(UUID accountId) {
         accounts.remove(getAccount(accountId));
-        account.writeToFile(accountPath, accounts);
+        JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
     }
 
     @Override
     public void deleteReservation(UUID reservationId) {
         reservations.remove(getReservation(reservationId));
-        reservation.writeToFile(reservationPath, reservations);
+        JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
     }
 
     @Override
     public void deletePost(UUID postId) {
         posts.remove(getPost(postId));
-        post.writeToFile(postPath, posts);
+        JsonParser.writeToFile(POSTS_PATH, posts);
     }
 
     @Override
     public void deleteParkingSpot(UUID parkingSpotId) {
         parkingSpots.remove(getParkingSpot(parkingSpotId));
-        parkingSpot.writeToFile(parkingSpotPath, parkingSpots);
+        JsonParser.writeToFile(PARKING_SPOTS_PATH, parkingSpots);
     }
 
     @Override
     public void suspendAccount(UUID accountId) {
         //Swap boolean value of suspended
         getAccount(accountId).setSuspended(!getAccount(accountId).isSuspended());
-        account.writeToFile(accountPath, accounts);
+        JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
     }
 }

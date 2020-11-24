@@ -1,13 +1,11 @@
 package model;
 
-import dataHandler.JSONReadable;
-import dataHandler.JSONWritable;
-
 import java.util.UUID;
 
-public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<ParkingSpot> {
+public class ParkingSpot {
 
-    private UUID parkingSpotId, ownerId;
+    private UUID parkingSpotId;
+    private UUID ownerId;
     private boolean available, handicap, chargingStation;
     private int width, length, height;
     private String postalCode, city, streetAddress, streetNumber;
@@ -15,13 +13,30 @@ public class ParkingSpot implements JSONReadable<ParkingSpot>, JSONWritable<Park
 
     public ParkingSpot() {
     }
-    
-    public ParkingSpot(UUID owner, boolean handicap, boolean chargingStation, boolean available, int width,
-                       int length, int height, String postalCode, String city, String streetAddress,
-                       String streetNumber, String pictureURL){
 
+    public ParkingSpot(UUID ownerId, boolean handicap, boolean chargingStation, boolean available, int width,
+                       int length, int height, String postalCode, String city, String streetAddress,
+                       String streetNumber, String pictureURL) {
         this.parkingSpotId = UUID.randomUUID();
-        this.ownerId = owner;
+        this.ownerId = ownerId;
+        this.handicap = handicap;
+        this.chargingStation = chargingStation;
+        this.available = available;
+        this.width = width;
+        this.length = length;
+        this.height = height;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.streetAddress = streetAddress;
+        this.streetNumber = streetNumber;
+        this.pictureURL = pictureURL;
+    }
+
+    public ParkingSpot(UUID parkingSpotId, UUID ownerId, boolean handicap, boolean chargingStation, boolean available, int width,
+                       int length, int height, String postalCode, String city, String streetAddress,
+                       String streetNumber, String pictureURL) {
+        this.parkingSpotId = parkingSpotId;
+        this.ownerId = ownerId;
         this.handicap = handicap;
         this.chargingStation = chargingStation;
         this.available = available;
