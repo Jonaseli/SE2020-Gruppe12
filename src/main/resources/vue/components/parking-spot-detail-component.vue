@@ -9,11 +9,15 @@
             <a id="lastLink" href="/">Logout</a>
         </nav>
         <div v-if="parkingSpot" class="detail-parking-spot-container">
+            <h1 id="parkingName">{{ parkingSpot.streetAddress }}  {{parkingSpot.streetNumber}}</h1>
             <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
             <img v-else class="cover-image"
                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
-            <h1>{{ parkingSpot.ownerId }}</h1>
-            <h2>{{ owner.displayName }}</h2>
+
+            <h3>{{ owner.displayName }}</h3>
+        </div>
+        <div>
+            <button onclick="window.location.href='/parking-spot/:parking-spot-id/payment'">Bestill</button>
         </div>
     </div>
 </template>
@@ -23,8 +27,8 @@
 
 .detail-parking-spot-container {
     color: black;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap;*/
     justify-content: space-around;
 }
 
@@ -50,8 +54,13 @@
     font-weight: bold;
 }
 
+
 #sortList li:hover {
     border: 2px solid white;
+}
+
+#parkingName {
+
 }
 
 div.detail-parking-spot-container {
@@ -95,7 +104,6 @@ img.cover-image {
     height: auto;
     width: 50%;
     margin: 5px;
-    float: left;
 }
 
 img.list-image {
