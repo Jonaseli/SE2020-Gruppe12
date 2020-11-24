@@ -10,8 +10,7 @@
         </nav>
         <div class="form-style">
             <h2>Create new parking spot</h2>
-            <form class="create" @submit="checkForm" :action=`/api/account/${accountId}/my-parking-spots/create-parking`
-                  method="post">
+            <form class="create" @submit="checkForm" :action=`/api/account/${accountId}/my-parking-spots/create-parking` method="post">
                 <div v-if="errors.length">
                     <b>Please correct the following error(s):</b>
                     <ul>
@@ -21,20 +20,17 @@
                 <div class="sameLineInput">
                     <p>
                         <label for="streetAddress">Street address</label>
-                        <input type="text" name="streetAddress" id="streetAddress" v-model="streetAddress"
-                               placeholder="street address">
+                        <input type="text" name="streetAddress" id="streetAddress" v-model="streetAddress" placeholder="street address">
                     </p>
                     <p>
                         <label for="streetNumber">Street number</label>
-                        <input type="text" name="streetNumber" id="streetNumber" v-model="streetNumber"
-                               placeholder="street number">
+                        <input type="text" name="streetNumber" id="streetNumber" v-model="streetNumber" placeholder="street number">
                     </p>
                 </div>
                 <div class="sameLineInput">
                     <p>
                         <label for="postalCode">Postal code</label>
-                        <input type="text" name="postalCode" id="postalCode" v-model="postalCode"
-                               placeholder="postal code">
+                        <input type="text" name="postalCode" id="postalCode" v-model="postalCode" placeholder="postal code">
                     </p>
                     <p>
                         <label for="city">City</label>
@@ -45,12 +41,10 @@
                     <p>Special Types</p>
                     <p>
                         <label for="handicap"></label>
-                        <input type="checkbox" name="handicap" id="handicap" v-model="handicap" value="checked"><span
-                        class="handicapCheckBox"></span>
+                        <input type="checkbox" name="handicap" id="handicap" v-model="handicap" value="checked"><span class="handicapCheckBox"></span>
 
                         <label for="chargingStation"></label>
-                        <input type="checkbox" name="" id="chargingStation" v-model="chargingStation"
-                               value="checked"><span class="chargingCheckBox"></span>
+                        <input type="checkbox" name="chargingStation" id="chargingStation" v-model="chargingStation" value="checked"><span class="chargingCheckBox"></span>
                     </p>
                 </div>
                 <div class="sameLine3Input">
@@ -60,13 +54,11 @@
                     </p>
                     <p>
                         <label for="length">Length (cm)</label>
-                        <input type="number" name="length" id="length" v-model="length" placeholder="0" min="0"
-                               max="999">
+                        <input type="number" name="length" id="length" v-model="length" placeholder="0" min="0" max="999">
                     </p>
                     <p>
                         <label for="height">Height (cm)</label>
-                        <input type="number" name="height" id="height" v-model="height" placeholder="0" min="0"
-                               max="999">
+                        <input type="number" name="height" id="height" v-model="height" placeholder="0" min="0" max="999">
                     </p>
                 </div>
                 <p>
