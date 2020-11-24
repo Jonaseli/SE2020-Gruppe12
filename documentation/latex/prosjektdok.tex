@@ -81,14 +81,23 @@ Kunde av tjenesten vil kunne opprette administratorbrukere som har spesielle ege
 
     \subsection{Begrensninger}
         \textbf{Tilkobling til en tredjepart :} Dette er for at brukerene av applikasjonen skal kunne betale for tjenesten og for de som gir den tjenesten skal kunne få betalt for det.
-        \\\textbf{Servere rundt i Norge :} Fordelene med å ha flere servere rundt i landet er for å gi en bedre flytt i på systemet for brukerene av applikasjonen.
-        \\\textbf{Cookies :} Dette blir brukt for å få tilgang til enkelte funksjoner i applikasjonen og gjøre det så enkelt og trykt for en bruker av applikasjonen.
-        \\\textbf{Googlemaps API :} Fordelene med å bruke Googlemaps er grunnet oppdattering og ytelse, men å bruke cookies så blir det enkelt for en bruker å finne fram til en parkeringsplass etter hvor de er.
+        
+        \textbf{Servere rundt i landet :} Fordelene med å ha flere servere rundt i landet er for å gi en bedre flytt i på systemet for brukerene av applikasjonen.
+        
+        \textbf{Cookies :} Dette blir brukt for å få tilgang til enkelte funksjoner i applikasjonen og gjøre det så enkelt og trykt for en bruker av applikasjonen.
+        
+        \textbf{Googlemaps API :} Fordelene med å bruke Googlemaps er grunnet oppdattering og ytelse, men å bruke cookies så blir det enkelt for en bruker å finne fram til en parkeringsplass etter hvor de er.
+        
+        \textbf{Data lagring :}
 
     \subsection{Antagelser}
-        \textbf{Opprette og oppdater en parkeringsplassen :} Det skal være så enkelt som mulig for en bruker å opprette en parkeringsplass uten noen problemer, sånn at de får lyst til å bruke applikasjonen videre. Og det samme gjelder for oppdattering av en parkeringsplass. De skal kunne trykke på opprett en parkeringsplassområde og beggynne å legge til parkeringsplasser etter de behovene som den plassen trenger, om det er brede og lengde, om den er handicapa osv. etter de har laget den så skal de kunne oppdatere den med behov.
-        \\\textbf{Leie :} Når en bruker skal leie en parkeringsplass så skal det så å si bare være noen få knappe trykk fra å finne en parkeringsplass og det å ha kjøpt en plass. En som skal leie skal kunne søke opp etter en plass.
-        \\\textbf{Administrator og administrer :} Skal sørge for at applikasjonen ikke blir misbrukt av andre og at alt stemmer.
+        \textbf{Opprette en parkeringsplassen i applikasjonen :} Når en bruker skal opprette en parkeringsplass for første eller for de neste alle andre gangene fremover, så skal det det være så enkelt og kjapt som mulig at de ikke får følesen av at de kaster bort tid (og penger). Det skal være så enkelt at når en bruker har logget seg inn så skal det stå opprett en parkeringsplass. Der skal de kunne fylle in informasjon om, hvor mange etasjer det er, hvor stort er område er det, hvor ligger den, skal den ha noen parkeringsregler for område. Når eieren for parkeringsplassen har opprette starts delen for parkeringsplassområdet så er det vikitg at de kan fylle innholdet på parkeringsplassen, som hvor mange parkeringsplasser det i hver etasjer, hva slags parkeringsplass er det (er plassen handicappede, eletrisk, motorsykkel osv.), skal parkeringsplassen ha en bestemt ID og time prisen for å parker hos dem. Imens eieren for parkeringsplassen oppretter den så er det vikitg at systemt lagrer / tar backups av det de gjør i tilfelle noe skulle skje. Når de er ferdig med å opprette en parkeringsplass, så skal det være så enkelt at de kan si at den er åpen for bruk og alt etter dette her skal skje automatisk, når det gjelder å leie fra dem.
+        
+        \textbf{Oppdater en parkeringsplassen i applikasjonen :} Eieren av en parkeringsplass vil kanskje endre på noe i den fysiske eller det som ligger ut i applikasjonen om det skulle være, om det er å legge til en ekstra etasje, flere/fære parkeringsplasser, endring av strukturen av parkeringsplassen, informasjonsfeil. Da er det vikitg at de kan endre på ting med på trykk. De skal finne en knapp vedsiden av parkeringsplassen som de eier på applikasjonen i minne parkeringsplassener. Når de trykker på rediger parkeringsplass, så skal de få muligheten til å rediger/endre på informasjonen som er lagret i den parkeringsplassen. Når eiren er ferdig med å rediger/endre så skal de kunne trykke lagre og da vil systemet gjøre resten.
+        
+        \textbf{Leie :} Når en bruker trenger et sted å parkere, så skal det være så enkelt som å logge seg på og finne knappen lei en parkeringsplass. Når brukeren har trykket på lei en parkeringsplass så vil de bli ført til en side der de kan søke etter bestemte parkeringsplasser etter dems behov, om det er handicappede parkering, eletrisk parkering eller om det er en normal parkeringplass. De har også muligheten for å bestemme hvor de skal parker om det er på dems vanlige parkeringsplass eller om det er på et nytt område. Når de har valgt hvor de skal parker og oppfylt alt av informasjon som trengs så skal de kunne betale for det, men før de kan betale for parkingen så må de velge tiden fra og til -tiden de skal stå der. Da vil applikasjoen kalkulere prisen for tiden bruken skal stå der (time pris) og de skal de kunne betale for det. Etter de har trykket betal så skal de få en melding om at det er godkjent og en kvitering for at de har betalt for den.
+        
+        \textbf{Administrator og administrer :} Det er viktig som en administrator at alt som i applikasjoen som vises fra til de andre brukeren på stemmer. At ingeng lager flaske brukere og oppretter falske parkeringsplasser som kan bli brukt til svindel eller stjeling av andres privatinformasjon. Det kan hende at man må slette disse brukerne eller banlyse dem og det samme gjelder for de falske parkeringsplassen. 
 
 
 \section{Ansvarsområde og Avhengigheter}
