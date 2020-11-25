@@ -1,8 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.5)  25 NOV 2020 14:04
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  25 NOV 2020 14:31
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  25 NOV 2020 14:31
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -492,12 +502,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--201
  []
 
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [7 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_leietaker.png (PNG copy)>]
 <bilder/diagrammer/uc_admin.png, id=340, 763.85374pt x 400.49625pt>
 =======
 [7 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_leietaker.png (PNG copy)>]
 <bilder/diagrammer/uc_admin.png, id=355, 763.85374pt x 400.49625pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+[7 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_leietaker.png (PNG copy)>]
+<bilder/diagrammer/uc_admin.png, id=355, 763.85374pt x 400.49625pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/diagrammer/uc_admin.png Graphic file (type png)
 <use bilder/diagrammer/uc_admin.png>
 Package pdftex.def Info: bilder/diagrammer/uc_admin.png  used on input line 203.
@@ -513,23 +534,45 @@ File: bilder/personaer/persona_jorgen.jpg Graphic file (type jpg)
 Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 209.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [8 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_corp.png (PNG copy)> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_admin.png (PNG copy)>]
 <bilder/personaer/persona_siggurd.jpg, id=346, 173.14688pt x 225.84375pt>
 =======
 [8 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_corp.png (PNG copy)> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_admin.png (PNG copy)>]
 <bilder/personaer/persona_siggurd.jpg, id=361, 173.14688pt x 225.84375pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+[8 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_corp.png (PNG copy)> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_admin.png (PNG copy)>]
+<bilder/personaer/persona_siggurd.jpg, id=361, 173.14688pt x 225.84375pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/personaer/persona_siggurd.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_siggurd.jpg>
 Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 223.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
  [9 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
 <bilder/personaer/persona_karina.jpg, id=351, 173.14688pt x 225.84375pt>
 =======
  [9 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
 <bilder/personaer/persona_karina.jpg, id=366, 173.14688pt x 225.84375pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+ [9 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
+<bilder/personaer/persona_karina.jpg, id=366, 173.14688pt x 225.84375pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/personaer/persona_karina.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karina.jpg>
 Package pdftex.def Info: bilder/personaer/persona_karina.jpg  used on input line 235.
@@ -540,12 +583,23 @@ File: bilder/personaer/persona_karin.jpg Graphic file (type jpg)
 Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 247.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
  [10 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_karina.jpg>]
 <bilder/personaer/persona_jorn.jpg, id=357, 173.14688pt x 225.84375pt>
 =======
  [10 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karina.jpg>]
 <bilder/personaer/persona_jorn.jpg, id=372, 173.14688pt x 225.84375pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+ [10 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karina.jpg>]
+<bilder/personaer/persona_jorn.jpg, id=372, 173.14688pt x 225.84375pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/personaer/persona_jorn.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorn.jpg>
 Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 263.
@@ -591,12 +645,23 @@ Overfull \hbox (30.00897pt too wide) in paragraph at lines 687--688
  []
 
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [21 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_leietaker.png>]
 Overfull \hbox (15.11441pt too wide) in paragraph at lines 665--666
 =======
 [22 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_leietaker.png>]
 Overfull \hbox (15.11441pt too wide) in paragraph at lines 689--690
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+[22 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_leietaker.png>]
+Overfull \hbox (15.11441pt too wide) in paragraph at lines 689--690
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 \OT1/ptm/m/n/12 (Tilbakemeld-ing og po-eng-sum) som er knyt-tet til den park-er-ingsplassen (post, databasen) og tilbakemeld-
  []
 
@@ -616,23 +681,45 @@ File: bilder/diagrammer/tilstand_opprett_parkeringsplass.png Graphic file (type 
 Package pdftex.def Info: bilder/diagrammer/tilstand_opprett_parkeringsplass.png  used on input line 695.
 (pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [22 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/dataflyt_tilbakemelding.png> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_opprette reservasjon.png (PNG copy)>]
 <bilder/diagrammer/aktivitet_leier_bestilling.png, id=465, 274.02374pt x 592.2125pt>
 =======
 [23 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_tilbakemelding.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_opprette reservasjon.png (PNG copy)>]
 <bilder/diagrammer/aktivitet_leier_bestilling.png, id=483, 274.02374pt x 592.2125pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+[23 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_tilbakemelding.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_opprette reservasjon.png (PNG copy)>]
+<bilder/diagrammer/aktivitet_leier_bestilling.png, id=483, 274.02374pt x 592.2125pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/diagrammer/aktivitet_leier_bestilling.png Graphic file (type png)
 <use bilder/diagrammer/aktivitet_leier_bestilling.png>
 Package pdftex.def Info: bilder/diagrammer/aktivitet_leier_bestilling.png  used on input line 701.
 (pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
  [23 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/tilstand_opprett_parkeringsplass.png (PNG copy)>]
 <bilder/diagrammer/sekvens_legge_ut_parkering.png, id=471, 619.31375pt x 321.2pt>
 =======
  [24 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/tilstand_opprett_parkeringsplass.png (PNG copy)>]
 <bilder/diagrammer/sekvens_legge_ut_parkering.png, id=489, 619.31375pt x 321.2pt>
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+ [24 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/tilstand_opprett_parkeringsplass.png (PNG copy)>]
+<bilder/diagrammer/sekvens_legge_ut_parkering.png, id=489, 619.31375pt x 321.2pt>
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 File: bilder/diagrammer/sekvens_legge_ut_parkering.png Graphic file (type png)
 <use bilder/diagrammer/sekvens_legge_ut_parkering.png>
 Package pdftex.def Info: bilder/diagrammer/sekvens_legge_ut_parkering.png  used on input line 704.
@@ -643,6 +730,10 @@ Overfull \hbox (30.01796pt too wide) in paragraph at lines 704--705
  []
 
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [24 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/aktivitet_leier_bestilling.png (PNG copy)>]
 <bilder/diagrammer/dataflyt_opprett_parkering.png, id=476, 428.65144pt x 289.08pt>
 File: bilder/diagrammer/dataflyt_opprett_parkering.png Graphic file (type png)
@@ -650,12 +741,23 @@ File: bilder/diagrammer/dataflyt_opprett_parkering.png Graphic file (type png)
 Package pdftex.def Info: bilder/diagrammer/dataflyt_opprett_parkering.png  used on input line 683.
 (pdftex.def)             Requested size: 428.65039pt x 289.07928pt.
 =======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
 [25 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/aktivitet_leier_bestilling.png (PNG copy)>]
 <bilder/diagrammer/dataflyt_sletting.png, id=495, 388.45125pt x 250.23488pt>
 File: bilder/diagrammer/dataflyt_sletting.png Graphic file (type png)
 <use bilder/diagrammer/dataflyt_sletting.png>
 Package pdftex.def Info: bilder/diagrammer/dataflyt_sletting.png  used on input line 707.
 (pdftex.def)             Requested size: 388.45029pt x 250.23425pt.
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+=======
+>>>>>>> Stashed changes
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
 
 Overfull \hbox (7.04164pt too wide) in paragraph at lines 713--744
@@ -663,12 +765,23 @@ Overfull \hbox (7.04164pt too wide) in paragraph at lines 713--744
  []
 
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [25 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_legge_ut_parkering.png (PNG copy)> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/dataflyt_opprett_parkering.png>]
 Overfull \hbox (9.77751pt too wide) in paragraph at lines 730--730
 =======
 
 Overfull \hbox (9.77751pt too wide) in paragraph at lines 754--754
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+<<<<<<< Updated upstream
+=======
+=======
+
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 754--754
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
@@ -928,6 +1041,10 @@ Overfull \hbox (7.04163pt too wide) in paragraph at lines 1167--1180
  []
 
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 [29] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
 (rerunfilecheck)             Checksum: BA16697F678E4BD130B7F87775EBF90A;4057.
@@ -954,6 +1071,22 @@ Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1181.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
+=======
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1181.
+[30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1181.
+ (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1181.
+Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
+(rerunfilecheck)             Checksum: D91D8DF7E0895CC62D6AB6E4BBCF5661;4347.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1181.
+ ) 
+Here is how much of TeX's memory you used:
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+>>>>>>> Stashed changes
  9601 strings out of 480893
  144069 string characters out of 5911973
  437940 words of memory out of 5000000
@@ -963,6 +1096,12 @@ Here is how much of TeX's memory you used:
  43i,10n,45p,1392b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (30 pages, 677333 bytes).
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
+=======
+>>>>>>> Stashed changes
 >>>>>>> 80e3e7b66319e4c0f9d36e2897f868ca0fe14569
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
