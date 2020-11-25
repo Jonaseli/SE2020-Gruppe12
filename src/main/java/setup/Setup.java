@@ -53,6 +53,12 @@ public class Setup {
             ctx.redirect("/parking-spot");
         });
 
+        //User controls
+        app.get("/api/user/delete-parking-spot/:parking-spot-id", ctx -> {
+            parkingSpotController.deleteParkingSpot(ctx);
+            ctx.redirect("/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots");
+        });
+
         //Admin controls
         app.get("/api/admin/account/suspend/:account-id", ctx -> {
             parkingSpotController.suspendAccount(ctx);
