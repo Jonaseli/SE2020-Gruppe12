@@ -95,13 +95,13 @@ Kunde av tjenesten vil kunne opprette administratorbrukere som har spesielle ege
     \textbf{Googlemaps API :} På grunn av begrenset tid og ressurser så er vi ikke stad til å lage vårt eget kart API.
 
     \subsection{Antagelser}
-    \textbf{Opprette en parkeringsplassen i applikasjonen :} Når en bruker skal opprette en parkeringsplass for første gangen eller for alle andre ganger, så skal det det være så enkelt og kjapt som mulig, at de ikke får følesen av at de kaster bort tid (og penger). Det skal være så enkelt at når en bruker har logget seg inn så skal det være en kanpp som stå opprett en parkeringsplass. Der skal de kunne fylle in informasjon om, hvor mange etasjer det er, hvor stort område er, hvor ligger den og hva skal parkeringsregler har og ikke har for område. Når eieren for parkeringsplassen har opprette starts delen for parkeringsplassområdet så er det vikitg at de kan fylle innholdet på parkeringsplassen, som hvor mange parkeringsplasser det i hver etasjer, hva slags parkeringsplass er det (er plassen handicappede, eletrisk, motorsykkel osv.), skal parkeringsplassen ha en bestemt ID og time prisen for å parker hos dem. Imens eieren for parkeringsplassen oppretter den så er det vikitg at systemt lagrer / tar backups av det de gjør i tilfelle noe skulle skje. Når de er ferdig med å opprette en parkeringsplass, så skal det være så enkelt at de kan si at den er åpen for bruk og alt etter dette punkte her så skal alt skje automatisk, når det gjelder å leie fra dem.
+    \textbf{Opprette en parkeringsplassen i applikasjonen :} Når en bruker skal opprette en parkeringsplass for første gangen eller for alle andre ganger, så skal det det være så enkelt og kjapt som mulig, at de ikke får følesen av at de kaster bort tid (og penger). Det skal være så enkelt at når en bruker har logget seg inn så skal det være en kanpp som stå opprett en parkeringsplass. Der skal de kunne fylle in informasjon om, hvor mange etasjer det er, hvor stort område er, hvor ligger den og hva skal parkeringsregler har og ikke har for område. Når eieren for parkeringsplassen har opprette starts delen for parkeringsplassområdet så er det vikitg at de kan fylle innholdet på parkeringsplassen, som hvor mange parkeringsplasser det i hver etasjer, hva slags parkeringsplass er det (er plassen handicappede, eletrisk, motorsykkel osv.), skal parkeringsplassen ha en bestemt ID og time prisen for å parker hos dem. Imens eieren for parkeringsplassen oppretter den så er det vikitg at systemt lagrer / tar backups av det de gjør i tilfelle noe skulle skje. Når de er ferdig med å opprette en parkeringsplass, så skal det være så enkelt at de kan si at den er åpen for bruk og alt etter dette punkte her automatisk, når det gjelder å leie en parkeringsplass fra denne utleieren.
     
     \textbf{Oppdater en parkeringsplassen i applikasjonen :} Eieren av en parkeringsplass vil kanskje endre på noe i den fysiske eller det som ligger ut i applikasjonen om det generelle informasjoen, om det er å legge til en ekstra etasje, flere/fære parkeringsplasser, endring av strukturen av parkeringsplassen, informasjonsfeil. De skal finne en knapp vedsiden av parkeringsplassen som de eier på applikasjonen i minne parkeringsplassener. Når de trykker på rediger parkeringsplass, så skal de få muligheten til å rediger/endre på informasjonen som er lagret i den parkeringsplassen. Når eiren er ferdig med å rediger/endre så skal de kunne trykke lagre og da vil systemet gjøre resten.
     
-    \textbf{Leie :} Når en bruker trenger et sted å parkere, så skal det være så enkelt som å logge seg på og finne knappen lei en parkeringsplass. Når brukeren har trykket på lei en parkeringsplass så vil de bli ført til en side der de kan søke etter bestemte parkeringsplasser etter dems behov, om det er handicappede parkering, eletrisk parkering eller om det er en normal parkeringplass. De har også muligheten for å bestemme hvor de skal parker om det er på dems vanlige parkeringsplass eller om det er på et nytt område. Når de har valgt hvor de skal parker og oppfylt alt av informasjon som trengs så skal de kunne betale for det, men før de kan betale for parkingen så må de velge tiden fra og til -tiden de skal stå der. Da vil applikasjoen kalkulere prisen for tiden bruken skal stå der (time pris) og da skal de kunne betale for det. Etter de har trykket betal så skal de få en melding om at det er godkjent og en kvitering for at de har betalt for den.
+    \textbf{Leie :} Når en bruker trenger et sted å parkere, så skal det være så enkelt som å logge seg på og finne knappen lei en parkeringsplass. Når brukeren har trykket på lei en parkeringsplass så vil de bli ført til en side der de kan søke etter bestemte parkeringsplasser etter dems behov, om det er handicappede parkering, eletrisk parkering eller om det er en normal parkeringplass. De har også muligheten for å bestemme hvor de skal parker om det er på dems vanlige parkeringsplass eller om det er på et nytt område. Når de har valgt hvor de skal parker og oppfylt alt av informasjon som trengs så skal de kunne betale for det, hvis de har valgt tid de skal stå der (fra og til tid). Da vil applikasjoen kalkulere prisen for tiden bruken skal stå der (i time pris) og da skal de kunne betale for det. Etter de har trykket betal så skal de få en melding om at det er godkjent og en kvitering for at de har betalt for den.
     
-    \textbf{Administrator og administrer :} Det er viktig som en administrator at alt som er applikasjoen som vises fra til de andre brukeren stemmer. At ingeng lager flaske brukere og oppretter falske parkeringsplasser som kan bli brukt til svindel eller stjeling av andres privatinformasjon. Det kan hende at man må slette disse brukerne eller banlyse dem og det samme gjelder for de falske parkeringsplassen. 
+    \textbf{Administrator og administrer :} Det er viktig som en administrator at alt som er applikasjoen som vises fra til de andre brukeren stemmer. At ingeng lager flaske brukere og oppretter falske parkeringsplasser som kan bli brukt til svindel eller stjeling av andres privatinformasjon. Det kan hende at man må slette disse brukerne eller banlyse dem og det samme gjelder for de falske parkeringsplassen.
 
 
 \section{Ansvarsområde og Avhengigheter}
@@ -110,18 +110,18 @@ Tjenesten skal dekke områder som framvisning, utleie og reservasjon av parkerin
 Applikasjonen bygger på automatiseringsverktøy Maven med JDK versjon 11. Jackson brukes for datalagring for datalagring og Vue som er et åpent visningsrammeverk og brukes for visning av tjenesten. Javalin er web-rammeverket som brukes, og testene kjøres med JUnit.
 
 Her er en fullstendig liste:\\
-\textbf{JavaJDK v11} For kjøring av kode.
-\\\textbf{fasterxml.jackson 2.9.9} Lagring av data.
-\\\textbf{maven 3.8.0} Bygge automatiseringsverktøy.
-\\\textbf{webjars vue 2.6.10} For det visuelle nettsidene.
-\\\textbf{javalin 3.11.0} Rammeverk for nettsiden.
-\\\textbf{JUnit 5.7.0} For å testeing av kodeoppsett.
-Nets 
+\textbf{JavaJDK v11 :} For kjøring av kode.
+\\\textbf{fasterxml.jackson 2.9.9 :} Lagring av data.
+\\\textbf{maven 3.8.0 :} Bygge automatiseringsverktøy.
+\\\textbf{webjars vue 2.6.10 :} For det visuelle nettsidene.
+\\\textbf{javalin 3.11.0 :} Rammeverk for nettsiden.
+\\\textbf{JUnit 5.7.0 :} For å testeing av kodeoppsett.
+\\\textbf{Nets :} Elektronisk betalingsløsning. 
 
 
 \section{Funksjoner i applikasjonen}
 
-Programmet henter inn info om brukere, poster, parkeringsplasser og reservasjoner fra en database(i dette tilfellet json-filer). Det programmet gjør nå er å hente inn data fra controller til javalin som generer front-end for oss. Hver side henter da ut nødvendig info hva hver .json fil slik at nødvendig informasjon som adresse og ledighet til leie vises.
+Programmet henter inn info om brukere, poster, parkeringsplasser og reservasjoner fra en database (i dette tilfellet json-filer). Det programmet gjør nå er å hente inn data fra controller til javalin som generer front-end for oss. Hver side henter da ut nødvendig info hva hver .json fil slik at nødvendig informasjon som adresse og ledighet til leie vises.
 
 Bruker -  Det er mulig å vise oversikt over parkeringsplasser, trykke seg inn til en parkeringsplass, og å legge til en reservasjon, brukeren kan også se oversikt over p-plassene som den har reservert. Det er mulig å legge ut en ny parkeringsplass som en utleier. Det er mulig å vise bilder av parkeringsplassen via et link system, da opplastning direkte til siden ikke er lagt inn. 
 
@@ -367,7 +367,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Brukerkonto skal kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
 
-        \subsubsection{Applikasjonen skal varsle utløpstid}
+        \subsubsection{Varsel på utløpstid}
         \FK 
         Når en reservert parkeringsplass holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut minst 30 minutter før.
 
@@ -456,6 +456,10 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Bruker betaler for antall timer de ønsker å leie parkeringsplassen.
 
+        \subsubsection{Transaksjoner skal gå gjennom en tredjepart}
+        \FK
+        Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.
+
     \subsection{Administrering}
 
         \subsubsection{Administrator skal kunne bannlyse bruker}
@@ -527,18 +531,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
         \FK
         Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database, slik at endringene gjenstår.
-
-        \subsection{Systemet skal lagre informasjon om innlegg}
-        \FK
-        Systemet skal lagre all informasjon relatert til hvert innlegg i en tabell i en database, slik at endringene gjenstår.
-        
-        \subsection{Systemet skal lagre informasjon om brukere}
-        \FK
-        Systemet skal lagre nødvendig innlogging og brukerinformasjon for at bruker skal kunne ha bruk av systemet. Dette skal lagres i en tabell i en database, slik at endringene gjenstår.
-        
-        \subsection{Systemet skal lagre informasjon om reservasjoner}
-        \FK
-        Systemet skal lagre all informasjon relatert til enhver reservasjon i en tabell i en database, slik at endringene gjenstår.
 
 \section{Ikke-funksjonelle krav}
 
@@ -643,22 +635,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Implementerte krav og tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
-    FK6 - Innlogging som bedrift / bruker
-    FK8 - Dirigere innlogget bruker
-    FK11 - Feed
-    FK14 - Leie parkeringsplass
-    FK19 - Opprette parkeringsplass
-            - Minus Etasje, Pris, Antall
-    FK23 - Betale for å opprette reservasjon
-    FK24 - Admin bannlyse bruker
-    FK25 - Admin slette bruker
-    FK27 - Admin slette innlegg/posts
-    FK28 - Admin slette p-plass
-    FK29 - Admin slette reservasjon
-    FK33 - Lagre p-plass
-            - PS: Legg til mer stoopid
-
-
     \subsection{Avhengigheter}
     Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
@@ -703,11 +679,8 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_legge_ut_parkering.png}
 
-    \subsection{Dataflytdiagram - Slette Parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_sletting.png}
-
-    \subsection{Aktivitetsdiagram - Legge til medlem i organisasjon}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/aktivitet_medlem.png}
+    \subsection{Dataflytdiagram - Opprett Parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_opprett_parkering.png}
 
 \section{Estemering}
 
@@ -872,7 +845,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             FK15
             &
-            Applikasjonen skal varsle utløpstidløpstid
+            Varsel på utløpstid
             & M & M & \celly 0\\
             \hline
         \end{tabular}
@@ -959,6 +932,11 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             Bruker skal betale utleieren for å opprette en reservasjon
             & L & M & \celll 2\\
             \hline
+            FK24
+            &
+            Tredjepart
+            & L & S & \cellg 3\\
+            \hline
         \end{tabular}
         
         \subsubsection{Administrering}
@@ -970,47 +948,47 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK24
+            FK25
             &
             Administrator skal kunne bannlyse bruker
             & S & S & \celly 0\\
             \hline
-            FK25
+            FK26
             &
             Administrator skal kunne slette bruker
             & M & S & \celll 1\\
             \hline
-            FK26
+            FK27
             &
             Administrator skal kunne slette tilbakemeldinger
             & S & S & \celly 0\\
             \hline
-            FK27
+            FK28
             &
             Administrator skal kunne slette innlegg
             & L & S & \cellg 3\\
             \hline
-            FK28
+            FK29
             &
             Administrator skal kunne slette parkeringsplasser
             & L & S & \cellg 3\\
             \hline
-            FK29
+            FK30
             &
             Administrator skal kunne slette reservasjoner
             & XL & S & \cellg 7\\
             \hline
-            FK30
+            FK31
             &
             Bedrift skal ha administrerende rettigheter på deres egne innlegg
             & S & M & \cello -1\\
             \hline
-            FK31
+            FK32
             &
             Bruker skal kunne rapportere andre brukere sine innlegg
             & M & S & \celll 1\\
             \hline
-            FK32
+            FK33
             &
             Bruker skal kunne rapportere andre brukere
             & M & S & \celll 1\\
@@ -1026,25 +1004,10 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK33
-            &
-            Systemet skal lagre informasjon om parkeringsplasser
-            & XL & L & \celly 4\\
-            \hline
             FK34
             &
-            Systemet skal lagre informasjon om innlegg
-            & XL & L & \celly 4\\
-            \hline
-            FK35
-            &
-            Systemet skal lagre informasjon om brukere
-            & XL & L & \celly 4\\
-            \hline
-            FK36
-            &
-            Systemet skal lagre informasjon om reservasjoner
-            & XL & L & \celly 4\\
+            Systemet skal lagre informasjon om parkeringsplasser
+            & XL & XL & \celly 0\\
             \hline
         \end{tabular}
 
