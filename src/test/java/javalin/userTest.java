@@ -1,23 +1,16 @@
 package javalin;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.junit.jupiter.api.*;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import setup.Setup;
 
-import java.io.File;
 import java.io.IOException;
 
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class userTest {
 
     static Setup javalinRunner;
@@ -43,6 +36,7 @@ public class userTest {
     }
 
     @Test
+    @Order(1)
     public void userCreatesParkingSpot() throws IOException {
         driver.get("http://localhost:7000/");
         driver.findElement(By.linkText("Login as User")).click();
@@ -63,6 +57,28 @@ public class userTest {
         Assertions.assertTrue(driver.findElement(By.id("width")).getText().contains("Width: " + width));
         Assertions.assertTrue(driver.findElement(By.id("length")).getText().contains("Length: " + length));
         Assertions.assertTrue(driver.findElement(By.id("height")).getText().contains("Height: " + height));
+    }
+
+    @Test
+    @Order(2)
+    public void userDeletesParkingSpot() {
+        driver.get("http://localhost:7000/");
+        driver.findElement(By.linkText("Login as User")).click();
+        driver.findElement(By.linkText("My Parking spots")).click();
+
+        Assertions.assertTrue(driver.getPageSource().contains("Address: " + streetAddress + " " + streetNumber));
+
+        //Navigate to delete button, and press enter
+        driver.findElement(By.partialLinkText("Address: " + streetAddress + " " + streetNumber)).sendKeys(Keys.TAB, Keys.TAB, Keys.ENTER);
+
+        //Sleep to make sure enough time is given to delete before exiting
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Assertions.assertFalse(driver.getPageSource().contains("Address: " + streetAddress + " " + streetNumber));
     }
 
     @AfterAll
