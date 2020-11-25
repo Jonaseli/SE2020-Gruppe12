@@ -135,7 +135,6 @@
         float: left;
     }
 
-
     div.admin-controls:hover {
         background-color: #7b0606f5;
     }

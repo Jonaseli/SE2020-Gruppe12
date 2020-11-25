@@ -41,7 +41,6 @@
         vertical-align: text-bottom;
     }
 
-
     header {
         text-align: center;
     }

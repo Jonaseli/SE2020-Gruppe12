@@ -8,5 +8,4 @@ public class Corporation extends Account {
     public Corporation(String displayName) {
         super(displayName);
     }
-
 }

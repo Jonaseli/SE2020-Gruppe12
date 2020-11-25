@@ -94,7 +94,6 @@ public class Controller {
         repo.suspendAccount(accountId);
     }
 
-
     public void createPayment(Context ctx) {
         //Unusual implementation of post creation because it wont be completed in mvp
         UUID postId = createPost(UUID.fromString(ctx.pathParam(":parking-spot-id")));

@@ -8,5 +8,4 @@ public class User extends Account {
     public User(String displayName) {
         super(displayName);
     }
-
 }

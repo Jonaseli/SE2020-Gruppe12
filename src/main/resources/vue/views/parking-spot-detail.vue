@@ -138,7 +138,6 @@
         margin-left: 34%;
     }
 
-
     div.single-star-container:hover {
         height: 115px;
         opacity: 1.0;
