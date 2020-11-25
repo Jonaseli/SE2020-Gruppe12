@@ -36,7 +36,7 @@
 \newcommand*{\FK}{\stepcounter{fkcounter}\textbf{ID: FK\arabic{fkcounter}\\}}
 \newcommand*{\FKsub}{\stepcounter{fksubcounter}\textbf{ID: FK\arabic{fkcounter}.\arabic{fksubcounter} \quad}}
 \newcommand*{\IFK}{\stepcounter{ifkcounter}\textbf{ID: IFK\arabic{ifkcounter}\\}}
-\newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: FK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
+\newcommand*{\IFKsub}{\stepcounter{ifksubcounter}\textbf{ID: IFK\arabic{ifkcounter}.\arabic{ifksubcounter} \quad}}
 \newcommand{\invis}{\phantom{a}}
 
     % colors %
@@ -175,6 +175,8 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \hline
         TOS & Terms of Service, liste over bruksrettigheter og bruksområde for brukerdata \\
         \hline
+        EZpark & Kodeord for applikasjonen som dokumenteres \\
+        \hline
     \end{tabular}
 \end{center}
 
@@ -191,7 +193,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     En administrator ligner en vanligbrukerkonto, men har moen ekstra rettigheter for administraring. De har full makt til å slette brukere, bedrifter, innlegg, parkeringsplasser, og anmeldelser, samt suspendere og oppheve brukerkontoer. Administrator er essensiell for å vedlikeholde en god brukeropplevelse og rettferdiggjøre systemet for alle brukere.
 
 \section{Use Case diagrammer}
-
     \subsection{Use Case - Bruker (Leietaker)}
     \includegraphics[scale=0.6]{bilder/diagrammer/uc_leietaker.png}\\
     
@@ -265,9 +266,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \textbf{Beskrivelse:}\\
     Jørn bor i nærheten av et vakkert tjern som er populært blant unge å bade i, men siden det ikke er noen parkeringsplass der må folk parkere langs veien. Jørn eier en fin tomt i nærheten der folk kan parkere tryggere.\\
     \textbf{Motivasjon:}\\
-    Han vil at tilby parkeringsplasser slik at ungdommene mer sannsynligvis kommer tilbake til tjernet og bader.\\
+    Han ønsker å tilby parkeringsplasser slik at ungdommer mer sannsynligvis kommer tilbake til tjernet og bader.\\
     \textbf{Behov:}\\
-    En omtale system som kan bidra å spre det gode rykte videre. Han vil leie ut tomten for en inntekt ved siden av gårsdriften.\\
+    Et omtalesystem som kan bidra å spre det gode rykte videre. Han vil leie ut tomten for en inntekt ved siden av gårsdriften.\\
     \textbf{Tekniske ferdigheter:} Dårlig
 
 \section{Funksjonelle krav}
@@ -321,6 +322,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         Etter vellykket innlogging skal bruker bli ført til startsiden.
 
         \subsubsection{Bruker skal kunne tilbakesette passord}
+        \FK
         Brukere har valg om å tilbakesette passord hvis de har glemt dette. I så fall skal bruker bli sendt verifiseringskode som skrives inn i et nytt felt for å verifisere at det er samme bruker. Hvis koden stemmer kan bruker skrive inn nytt passord som skal brukes fremover.
 
     \subsection{Verifiseringskode}
@@ -363,7 +365,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
         \subsubsection{Bruker skal kunne leie parkeringsplass som en brukerkonto}
         \FK
-        Som en brukerkonto skal bruker kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
+        Brukerkonto skal kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
 
         \subsubsection{Varsel på utløpstid}
         \FK 
@@ -454,9 +456,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Bruker betaler for antall timer de ønsker å leie parkeringsplassen.
 
-        \subsubsection{Tredjepart}
+        \subsubsection{Transaksjoner skal gå gjennom en tredjepart}
         \FK
-        Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.        
+        Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.
 
     \subsection{Administrering}
 
@@ -530,66 +532,80 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database, slik at endringene gjenstår.
 
-\section{Ikke funksjonelle krav}
+\section{Ikke-funksjonelle krav}
 
     \subsection{Tilgjengelighet}
-    \IFK
-    All brukere skal ha tilgang til applikasjonen til enhver tid.
-    
-    \subsubsection{Bruker kvalifikasjon}
-    \IFK
-    Brukere må minimum være minimum 16 år, og ha gyldig førerbevis.
-    
-    \subsection{Sikkerhetskopi(Backup)}
-    \IFK
-    Sikkerhetskopiering av database skal skje hver 24 time kl 04.00
 
-    \subsection{Dependency på tredjepart}
-    \IFK
-    Betaling verifiseres og håndteres av NETS
-
-    \subsection{Legal and licensing issues}
-    \IFK
-    Brukeren skal få en Terms of service hvor de får informasjon om hvordan informasjonen deres brukes, og hva de har rettigheter på, og hvilke rettigheter vi har ovenfor deres bruk av tjenesten.
-
-
-    \subsection{Response time - Lokalt}
-    \IFK
-    Launch av Javalin til localhost:7000 skal ta mellom 800 - 900 ms.
-        \subsubsection{Page loading}
+        \subsubsection{Bruker skal ha tilgang til applikasjonen}
         \IFK
-        Lasting av side skal ta ca 1 sekund.
-
-
-    \subsection{Personvern}
-    \IFK
-    Lagring av persondata skal skje i henhold med oppdatert GDPR-lovverk.
-
-   
-    \subsection{Sikkerhet}
-    \IFK
-    Programvareutviklingen skal skje i samråd med datatilsynets anbefalning om innebygd personvern.
-
-    \subsection{Supportability}
-    \IFK
-    Systemet skal være lag-delt slik at det er kost-effektivt å vedlikeholde eller gjøre endringer.
-
-    \subsection{Usability}
-    \IFK
-    Alle metoder/funksjoner som er ofte i bruk skal ha tester for å sikre at programmets viktigste funksjoner holder.
-        
+        All brukere skal ha tilgang til applikasjonen til enhver tid, overalt i landet.
     
-    \subsection{Compliance}
-    \IFK
-    Parkeringsplasser registrert må følge nasjonale, regionale og lokale retningslinjer for manuvreringsrom og areale for parkeringsplass.
+        \subsubsection{Bruker må kvalifiseres ved tilgang til applikasjonen}
+        \IFK
+        Brukere ska være minimum 16 år og ha gyldig førerbevis for å få tilgang til applikasjonen.
+    
+    \subsection{Sikkerhetskopi}
 
-% @TODO: Fremtidig implementasjon
-%
-% \subsubsection{Bruker kan ha flere biler}
-% Når en kunde skal resevere en parkeringsplass, så kan det hende at de har tilgang på flere biler og de skal de bilen være lagret etter bruk i brukerns database.
-%
-% \subsubsection{Lagre/Favorit}
-% En kunde kan bruke den samme parkeringsplassen flere ganger og vil sikkert ha en kjapp måtte å koble seg opp mot den bestemte parkeringsplassen.
+        \subsubsection{Kunde skal ta delvis backup av database}
+        \IFK
+        Delvis sikkerhetskopiering av database skal skje hver 24 time kl 04.00.
+
+        \subsubsection{Kunde skal ta full backup av database}
+        \IFK
+        Full sikkerhetskopiering av database skal skje minst en gang i måneden.
+
+    \subsection{Tredjepart}
+    
+        \subsubsection{Betaling skal gå gjennom en tredjepart}
+        \IFK
+        Betaling verifiseres og håndteres av NETS
+
+    \subsection{Brukerdata og sikkerhet}
+
+        \subsubsection{Applikasjonen skal opplyse om vilkår for bruk}
+        \IFK
+        Brukeren skal få en oversikt over informasjon knyttit til bruksområder for deres brukerdata, hvilke rettigheter de har, og hvilke rettigheter kunden har ovenfor deres bruk av tjenesten. Denne oversikten skal være på form av TOS (Terms of Service).
+
+        \subsubsection{Applikasjonen skal utdype om personvern}
+        \IFK
+        Lagring av persondata skal skje i henhold med oppdatert GDPR-lovverk.
+
+        \subsubsection{Applikasjonen skal følge en standard for sikkerhet}
+        \IFK
+        Programvareutviklingen skal skje i samråd med datatilsynets anbefalning om innebygd personvern.
+
+            \begin{subreq}
+                \IFKsub Applikasjonen skal minst følge standarden NS-EN ISO/IEC 27000.
+            \end{subreq}
+
+    
+    \subsection{Programvare}
+        
+        \subsubsection{Tidsrom ved oppstart skal være tilstrekkelig}
+        \IFK
+        Oppstart av Javalin til localhost:7000 skal ta mellom 800 - 900 ms.
+    
+        \subsubsection{Tidsrom ved sidebytte skal være tilstrekkelig}
+        \IFK
+        For at å bevare brukeropplevelse må tiden det tar for å utføre handlinger på applikasjonen være begrenset. Det innebærer at applikasjonen ikke henger seg opp.
+        
+            \begin{subreq}
+                \IFKsub Lasting av side skal ta minimum 2 sekund.
+            \end{subreq}
+
+        \subsubsection{Programvaren skal kunne støtte drastiske endringer}
+        \IFK
+        Systemet skal være lag-delt slik at det er kost-effektivt å vedlikeholde eller gjøre endringer.
+
+        \subsubsection{Viktige deler av programvaren skal testes}
+        \IFK
+        Alle metoder/funksjoner som er ofte i bruk skal ha tester for å sikre at kjernelogikken stemmer.
+    
+    \subsection{Samsvar}
+    
+        \subsubsection{Parkeringsplasser må samsvare med retningslinjer}
+        \IFK
+        Parkeringsplasser som er registrert må følge nasjonale, regionale og lokale retningslinjer for manuvreringsrom og areale for parkeringsplass.
 
 \section{Prototype}
 
@@ -704,249 +720,423 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{Estimeringstabell - Funksjonelle krav}
 
-    \begin{longtable}{|p{2cm}|p{6cm}|
-        >{\centering\arraybackslash}p{2cm}|
-        >{\centering\arraybackslash}p{2cm}|
-        >{\centering\arraybackslash}p{2cm}|} 
-        \hline
-        \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
-        \hline
-        FK1
-        &
-        Bruker skal kunne opprette en brukerkonto
-        & M & M & \celly 0\\
-        \hline
-        FK2
-        &
-        Bedrifter skal kunne opprette en bedriftskonto
-        & M & M & \celly 0\\
-        \hline
-        FK3
-        &
-        Kunden skal kunne opprette brukerkonto med administratorrettigheter
-        & S & M & \cello -1\\
-        \hline
-        FK4
-        &
-        Systemet skal verifisere registreringen
-        & L & L & \celly 0\\
-        \hline
-        FK5
-        &
-        Dirigere opprettet bruker
-        & S & S & \celly 0\\ % implementert
-        \hline
-        FK6
-        &
-        Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
-        & XL & M & \cellg 6\\
-        \hline
-        FK7
-        &
-        Systemet skal verifisere innloggingen
-        & XL & S & \cellg 7\\
-        \hline
-        FK8
-        &
-        Dirigere innlogget bruker
-        & S & S & \celly 0\\
-        \hline
-        FK9
-        &
-        Systemet skal verifisere bruker gjennom en kode
-        & XL & L & \cellg 4\\
-        \hline
-        FK10
-        &
-        Feeden skal oppliste relevante parkeringsplasser
-        & XL & M & \cellg 6\\
-        \hline
-        FK11
-        &
-        Bruker skal kunne sette et filter på feeden
-        & L & XL & \cellr -4\\
-        \hline
-        FK12
-        &
-        Bruker skal kunne søke etter en lokasjon
-        & M & L & \cello -2\\
-        \hline
-        FK13
-        &
-        Bruker skal kunne leie parkeringsplass som en brukerkonto
-        & XL & M & \cellg 6\\
-        \hline
-        FK14
-        &
-        Varsel på utløpstid
-        & M & M & \celly 0\\
-        \hline
-        FK15
-        &
-        Bruker skal kunne gi tilbakemelding på et innlegg
-        & S & L & \cellr -3\\
-        \hline
-        FK16
-        &
-        Tilbakemeldinger skal vises på hvert innlegg
-        & S & M & \cello -1\\
-        \hline
-        FK17
-        &
-        Utleier skal kunne få tilbakemeldingene via e-post
-        & S & S & \cellg 0\\
-        \hline
-        FK18
-        &
-        Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser
-        & XL & XL & \cellg 0\\
-        \hline
-        FK19
-        &
-        Pris per time skal bestemmes av utleier
-        & M & S & \celll 1\\
-        \hline
-        FK20
-        &
-        Tiden skal bestemmes av bruker
-        & L & M & \celll 2\\
-        \hline
-        FK21
-        &
-        Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke
-        & L & M & \celll 2\\
-        \hline
-        FK22
-        &
-        Bruker skal betale utleieren for å opprette en reservasjon
-        & L & M & \celll 2\\
-        \hline
-        FK23
-        &
-        Tredjepart
-        & L & S & \cellg 3\\
-        \hline
-        FK24
-        &
-        Administrator skal kunne bannlyse bruker
-        & S & S & \celly 0\\
-        \hline
-        FK25
-        &
-        Administrator skal kunne slette bruker
-        & M & S & \celll 1\\
-        \hline
-        FK26
-        &
-        Administrator skal kunne slette tilbakemeldinger
-        & S & S & \celly 0\\
-        \hline
-        FK27
-        &
-        Administrator skal kunne slette innlegg
-        & L & S & \cellg 3\\
-        \hline
-        FK28
-        &
-        Administrator skal kunne slette parkeringsplasser
-        & L & S & \cellg 3\\
-        \hline
-        FK29
-        &
-        Administrator skal kunne slette reservasjoner
-        & XL & S & \cellg 7\\
-        \hline
-        FK30
-        &
-        Bedrift skal ha administrerende rettigheter på deres egne innlegg
-        & S & M & \cello -1\\
-        \hline
-        FK31
-        &
-        Bruker skal kunne rapportere andre brukere sine innlegg
-        & M & S & \celll 1\\
-        \hline
-        FK32
-        &
-        Bruker skal kunne rapportere andre brukere
-        & M & S & \celll 1\\
-        \hline
-        FK33
-        &
-        Systemet skal lagre informasjon om parkeringsplasser
-        & XL & XL & \celly 0\\
-        \hline
-    \end{longtable}
+        \subsubsection{Kontoopprettelse}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK1
+            &
+            Bruker skal kunne opprette en brukerkonto
+            & M & M & \celly 0\\
+            \hline
+            FK2
+            &
+            Bedrifter skal kunne opprette en bedriftskonto
+            & M & M & \celly 0\\
+            \hline
+            FK3
+            &
+            Kunden skal kunne opprette brukerkonto med administratorrettigheter
+            & S & M & \cello -1\\
+            \hline
+            FK4
+            &
+            Systemet skal verifisere registreringen
+            & L & L & \celly 0\\
+            \hline
+            FK5
+            &
+            Dirigere opprettet bruker
+            & S & S & \celly 0\\ % implementert
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Innlogging}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK6
+            &
+            Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
+            & XL & M & \cellg 6\\
+            \hline
+            FK7
+            &
+            Systemet skal verifisere innloggingen
+            & XL & S & \cellg 7\\
+            \hline
+            FK8
+            &
+            Dirigere innlogget bruker
+            & S & S & \celly 0\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Verifiseringskode}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK9
+            &
+            Systemet skal verifisere bruker gjennom en kode
+            & XL & L & \cellg 4\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Presentasjon av parkeringsplasser (Feed)}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK11
+            &
+            Feeden skal oppliste relevante parkeringsplasser
+            & XL & M & \cellg 6\\
+            \hline
+            FK12
+            &
+            Bruker skal kunne sette et filter på feeden
+            & L & XL & \cellr -4\\
+            \hline
+            FK13
+            &
+            Bruker skal kunne søke etter en lokasjon
+            & M & L & \cello -2\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Leie parkeringsplass}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK14
+            &
+            Bruker skal kunne leie parkeringsplass som en brukerkonto
+            & XL & M & \cellg 6\\
+            \hline
+            FK15
+            &
+            Varsel på utløpstid
+            & M & M & \celly 0\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Tilbakemelding på innlegg (Anmeldelser)}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK16
+            &
+            Bruker skal kunne gi tilbakemelding på et innlegg
+            & S & L & \cellr -3\\
+            \hline
+            FK17
+            &
+            Tilbakemeldinger skal vises på hvert innlegg
+            & S & M & \cello -1\\
+            \hline
+            FK18
+            &
+            Utleier skal kunne få tilbakemeldingene via e-post
+            & S & S & \cellg 0\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Opprette parkeringsplasser}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK19
+            &
+            Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser
+            & XL & XL & \cellg 0\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Leiebetingelser}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK20
+            &
+            Pris per time skal bestemmes av utleier
+            & M & S & \celll 1\\
+            \hline
+            FK21
+            &
+            Tiden skal bestemmes av bruker
+            & L & M & \celll 2\\
+            \hline
+            FK22
+            &
+            Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke
+            & L & M & \celll 2\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Betaling}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK23
+            &
+            Bruker skal betale utleieren for å opprette en reservasjon
+            & L & M & \celll 2\\
+            \hline
+            FK24
+            &
+            Tredjepart
+            & L & S & \cellg 3\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Administrering}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK25
+            &
+            Administrator skal kunne bannlyse bruker
+            & S & S & \celly 0\\
+            \hline
+            FK26
+            &
+            Administrator skal kunne slette bruker
+            & M & S & \celll 1\\
+            \hline
+            FK27
+            &
+            Administrator skal kunne slette tilbakemeldinger
+            & S & S & \celly 0\\
+            \hline
+            FK28
+            &
+            Administrator skal kunne slette innlegg
+            & L & S & \cellg 3\\
+            \hline
+            FK29
+            &
+            Administrator skal kunne slette parkeringsplasser
+            & L & S & \cellg 3\\
+            \hline
+            FK30
+            &
+            Administrator skal kunne slette reservasjoner
+            & XL & S & \cellg 7\\
+            \hline
+            FK31
+            &
+            Bedrift skal ha administrerende rettigheter på deres egne innlegg
+            & S & M & \cello -1\\
+            \hline
+            FK32
+            &
+            Bruker skal kunne rapportere andre brukere sine innlegg
+            & M & S & \celll 1\\
+            \hline
+            FK33
+            &
+            Bruker skal kunne rapportere andre brukere
+            & M & S & \celll 1\\
+            \hline
+        \end{tabular}
+        
+        \subsubsection{Persistent data}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|} 
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            FK34
+            &
+            Systemet skal lagre informasjon om parkeringsplasser
+            & XL & XL & \celly 0\\
+            \hline
+        \end{tabular}
 
     \subsection{Estimeringstabell - Ikke funksjonelle krav}
 
-    \begin{longtable}{|p{2cm}|p{6cm}|
-        >{\centering\arraybackslash}p{2cm}|
-        >{\centering\arraybackslash}p{2cm}|
-        >{\centering\arraybackslash}p{2cm}|}
-        \hline
-        \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
-        \hline
-        IFK1
-        &
-        Tilgjengelighet
-        & XL & XL & \celly 0\\
-        \hline
-        IFK2
-        &
-        Bruker kvalifikasjon
-        & L & M & \celll 2\\
-        \hline
-        IFK3
-        &
-        Sikkerhetskopi(Backup)
-        & XL & S & \cellg 7\\
-        \hline
-        IFK4
-        &
-        Dependency på tredjepart
-        & XL & S & \cellg 7\\
-        \hline
-        IFK5
-        &
-        Legal and licensing issues
-        & L & M & \celll 2\\
-        \hline
-        IFK6
-        &
-        Response time - Lokalt
-        & S & L & \cellr -3\\
-        \hline
-        IFK7
-        &
-        Page loading
-        & S & M & \cello -1\\
-        \hline
-        IFK8
-        &
-        Personvern
-        & XL & XL & \celly 0\\
-        \hline
-        IFK9
-        &
-        Sikkerhet
-        & XL & L & \cellg 4\\
-        \hline
-        IFK10
-        &
-        Supportability
-        & M & L & \cello -2\\
-        \hline
-        IFK11
-        &
-        Usability
-        & S & M & \cello -1\\
-        \hline
-        IFK12
-        &
-        Compliance
-        & M & S & \celll 1\\
-        \hline
-    \end{longtable}
+        \subsubsection{Tilgjengelighet}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK1
+            &
+            Bruker skal ha tilgang til applikasjonen
+            & XL & XL & \celly 0\\
+            \hline
+            IFK2
+            &
+            Bruker må kvalifiseres ved tilgang til applikasjonen
+            & L & M & \celll 2\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Sikkerhetskopi}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK3
+            &
+            Kunde skal ta delvis backup av database
+            & XL & S & \cellg 7\\
+            \hline
+            IFK4
+            &
+            Kunde skal ta full backup av database
+            & XL & S & \cellg 7\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Tredjepart}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK5
+            &
+            Betaling skal gå gjennom en tredjepart
+            & XL & S & \cellg 7\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Brukerdata og sikkerhet}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK6
+            &
+            Applikasjonen skal opplyse om vilkår for bruk
+            & L & M & \celll 2\\
+            \hline
+            IFK7
+            &
+            Applikasjonen skal utdype om personvern
+            & XL & XL & \celly 0\\
+            \hline
+            IFK8
+            &
+            Applikasjonen skal følge en standard for sikkerhet
+            & XL & L & \cellg 4\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Programvare}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK9
+            &
+            Tidsrom ved oppstart skal være tilstrekkelig
+            & S & L & \cellr -3\\
+            \hline
+            IFK10
+            &
+            Tidsrom ved sidebytte skal være tilstrekkelig
+            & S & M & \cello -1\\
+            \hline
+            IFK11
+            &
+            Programvaren skal kunne støtte drastiske endringer
+            & M & L & \cello -2\\
+            \hline
+            IFK12
+            &
+            Viktige deler av programvaren skal testes
+            & S & M & \cello -1\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Samsvar}
+        
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK13
+            &
+            Parkeringsplasser må samsvare med retningslinjer
+            & M & S & \celll 1\\
+            \hline
+        \end{tabular}
 
 \end{document}
