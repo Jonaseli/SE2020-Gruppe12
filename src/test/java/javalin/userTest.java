@@ -1,6 +1,7 @@
 package javalin;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
 
 import org.openqa.selenium.*;
@@ -8,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import setup.Setup;
 
+import java.io.File;
 import java.io.IOException;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -37,7 +39,7 @@ public class userTest {
 
     @Test
     @Order(1)
-    public void userCreatesParkingSpot() throws IOException {
+    public void userCreatesParkingSpot() {
         driver.get("http://localhost:7000/");
         driver.findElement(By.linkText("Login as User")).click();
         driver.findElement(By.linkText("My Parking spots")).click();
@@ -61,23 +63,50 @@ public class userTest {
 
     @Test
     @Order(2)
-    public void userDeletesParkingSpot() {
+    public void userCreatesReservation() {
+        driver.get("http://localhost:7000/");
+        driver.findElement(By.linkText("Login as User")).click();
+        driver.findElement(By.linkText("My Parking spots")).click();
+        driver.findElement(By.partialLinkText("Address: " + streetAddress + " " + streetNumber)).click();
+        driver.findElement(By.linkText("Rent parking spot")).click();
+        driver.findElement(By.linkText("Successful payment")).click();
+
+        Assertions.assertTrue(driver.getPageSource().contains("Rented Address: " + streetAddress + " " + streetNumber));
+
+    }
+
+    @Test
+    @Order(3)
+    public void userDeletesReservation() {
         driver.get("http://localhost:7000/");
         driver.findElement(By.linkText("Login as User")).click();
         driver.findElement(By.linkText("My Parking spots")).click();
 
-        Assertions.assertTrue(driver.getPageSource().contains("Address: " + streetAddress + " " + streetNumber));
-
+        Assertions.assertTrue(driver.getPageSource().contains("Rented Address: " + streetAddress + " " + streetNumber));
         //Navigate to delete button, and press enter
-        driver.findElement(By.partialLinkText("Address: " + streetAddress + " " + streetNumber)).sendKeys(Keys.TAB, Keys.TAB, Keys.ENTER);
-
+        driver.findElement(By.partialLinkText("Rented Address: " + streetAddress + " " + streetNumber)).sendKeys(Keys.TAB, Keys.TAB, Keys.ENTER);
         //Sleep to make sure enough time is given to delete before exiting
         try {
-            Thread.sleep(2000);
+            Thread.sleep(200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        Assertions.assertFalse(driver.getPageSource().contains("Rented Address: " + streetAddress + " " + streetNumber));
+    }
 
+    @Test
+    @Order(4)
+    public void userDeletesParkingSpot() {
+        driver.get("http://localhost:7000/");
+        driver.findElement(By.linkText("Login as User")).click();
+        driver.findElement(By.linkText("My Parking spots")).click();
+        Assertions.assertTrue(driver.getPageSource().contains("Owned Address: " + streetAddress + " " + streetNumber));
+        driver.findElement(By.partialLinkText("Owned Address: " + streetAddress + " " + streetNumber)).sendKeys(Keys.TAB, Keys.TAB, Keys.ENTER);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Assertions.assertFalse(driver.getPageSource().contains("Address: " + streetAddress + " " + streetNumber));
     }
 

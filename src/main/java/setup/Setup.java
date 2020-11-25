@@ -50,7 +50,7 @@ public class Setup {
 
         app.get("/api/parking-spot/:parking-spot-id/payment", ctx -> {
             parkingSpotController.createPayment(ctx);
-            ctx.redirect("/parking-spot");
+            ctx.redirect("/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots");
         });
 
         //User controls

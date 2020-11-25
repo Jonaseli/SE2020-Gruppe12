@@ -22,13 +22,13 @@
             <li v-for="parkingSpot in ownedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container">
-                        <h1>Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
-                        <h1>Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
+                        <h1>Owned Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
+                        <h1>Owned Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
                         <div>
                             <a :href="`/api/user/delete-parking-spot/${parkingSpot.parkingSpotId}`"
                                class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
-                                    <h1>Delete</h1>
+                                    <h1>Delete Parking spot</h1>
                                 </div>
                             </a>
                         </div>
@@ -41,13 +41,13 @@
             <li v-for="parkingSpot in rentedParkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">
                     <div class="single-parking-spot-container">
-                        <h1>Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
-                        <h1>Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
+                        <h1>Rented Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
+                        <h1>Rented Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
                         <div>
                             <a :href="`/api/user/delete-reservation/${parkingSpot.parkingSpotId}`"
                                class="link-to-parking-spot-detail">
                                 <div class="admin-controls">
-                                    <h1>Delete</h1>
+                                    <h1>Delete Reservation</h1>
                                 </div>
                             </a>
                         </div>
