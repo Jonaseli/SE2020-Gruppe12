@@ -56,9 +56,13 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public void createPost(UUID parkingSpotId, double price) {
-        posts.add(new Post(parkingSpotId, price));
+    public UUID createPost(UUID parkingSpotId, double price) {
+        Post mockPost = new Post(parkingSpotId, price);
+        posts.add(mockPost);
         JsonParser.writeToFile(POSTS_PATH, posts);
+
+        //Returning UUID to help mock post creation, as it wont be completed in the mvp
+        return mockPost.getPostId();
     }
 
     @Override
@@ -153,6 +157,7 @@ public class Repository implements IRepository {
 
     @Override
     public void createReservation(UUID postId, UUID userId, String startTime, String endTime) {
+
         reservations.add(new Reservation(postId, userId, startTime, endTime));
         JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
     }
@@ -186,5 +191,25 @@ public class Repository implements IRepository {
         //Swap boolean value of suspended
         getAccount(accountId).setSuspended(!getAccount(accountId).isSuspended());
         JsonParser.writeToFile(ACCOUNTS_PATH, accounts);
+    }
+
+    @Override
+    public void deleteReservationByParkingId(UUID parkingSpotId) {
+        UUID postId;
+        looping:
+        for (Post post : posts) {
+            if (post.getParkingSpotId().equals(parkingSpotId)) {
+                postId = post.getPostId();
+                for (Reservation reservation : reservations) {
+                    if (reservation.getPostId().equals(postId)) {
+                        reservations.remove(reservation);
+                        posts.remove(post);
+                        break looping;
+                    }
+                }
+            }
+        }
+        JsonParser.writeToFile(RESERVATIONS_PATH, reservations);
+        JsonParser.writeToFile(POSTS_PATH, posts);
     }
 }
