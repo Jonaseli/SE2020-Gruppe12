@@ -54,7 +54,6 @@
     });
 </script>
 <style>
-
     #orderButton h1{
         padding-bottom: 10px;
         background-color: #434346;
@@ -98,13 +97,8 @@
         font-weight: bold;
     }
 
-
     #sortList li:hover {
         border: 2px solid white;
-    }
-
-    #parkingName {
-
     }
 
     div.detail-parking-spot-container {
@@ -120,72 +114,14 @@
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
     }
 
-    div.single-planet-container {
-        overflow: hidden;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.98);
-        margin: 0 auto;
-        opacity: 0.96;
-        text-align: center;
-    }
-
-    .single-star-container {
-        height: 100px;
-        width: 40%;
-        background-color: #F0FFFF;
-        opacity: 0.96;
-        text-align: center;
-        margin-left: 34%;
-    }
-
-    div.single-star-container:hover {
-        height: 115px;
-        opacity: 1.0;
-    }
-
     img.cover-image {
         height: auto;
         width: 100%;
         margin: 5px;
     }
 
-    img.list-image {
-        width: 140px;
-        padding-bottom: 20px;
-        transition: transform .2s;
-    }
-
-    .list-image:hover {
-        transform: scale(1.1);
-    }
-
     h1 {
         font-size: 18px;
         padding-top: 10px;
-    }
-
-    .link-to-planet-details {
-        width: 400px;
-        height: 100px;
-        text-decoration: none;
-        color: black;
-    }
-
-    .button {
-        padding: 10px;
-        margin: 10px;
-        border: 1px solid white;
-        color: white;
-        border-radius: 15px;
-    }
-
-    button a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .button:hover {
-        border: 2px solid white;
     }
 </style>
