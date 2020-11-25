@@ -113,11 +113,4 @@
     div.single-parking-spot-container:hover {
         background-color: #0d0d0d;
     }
-
-    img.cover-image-frontpage {
-        height: auto;
-        width: 100%;
-        padding-bottom: 20px;
-        max-height: 280px;
-    }
 </style>
