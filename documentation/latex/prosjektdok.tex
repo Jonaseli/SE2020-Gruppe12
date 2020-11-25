@@ -367,7 +367,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Brukerkonto skal kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
 
-        \subsubsection{Varsel på utløpstid}
+        \subsubsection{Applikasjonen skal varsle utløpstid}
         \FK 
         Når en reservert parkeringsplass holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut minst 30 minutter før.
 
@@ -456,10 +456,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Bruker betaler for antall timer de ønsker å leie parkeringsplassen.
 
-        \subsubsection{Transaksjoner skal gå gjennom en tredjepart}
-        \FK
-        Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.
-
     \subsection{Administrering}
 
         \subsubsection{Administrator skal kunne bannlyse bruker}
@@ -531,6 +527,18 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \subsubsection{Systemet skal lagre informasjon om parkeringsplasser}
         \FK
         Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database, slik at endringene gjenstår.
+
+        \subsection{Systemet skal lagre informasjon om innlegg}
+        \FK
+        Systemet skal lagre all informasjon relatert til hvert innlegg i en tabell i en database, slik at endringene gjenstår.
+        
+        \subsection{Systemet skal lagre informasjon om brukere}
+        \FK
+        Systemet skal lagre nødvendig innlogging og brukerinformasjon for at bruker skal kunne ha bruk av systemet. Dette skal lagres i en tabell i en database, slik at endringene gjenstår.
+        
+        \subsection{Systemet skal lagre informasjon om reservasjoner}
+        \FK
+        Systemet skal lagre all informasjon relatert til enhver reservasjon i en tabell i en database, slik at endringene gjenstår.
 
 \section{Ikke-funksjonelle krav}
 
@@ -635,6 +643,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Implementerte krav og tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
+    FK6 - Innlogging som bedrift / bruker
+    FK8 - Dirigere innlogget bruker
+    FK11 - Feed
+    FK14 - Leie parkeringsplass
+    FK19 - Opprette parkeringsplass
+            - Minus Etasje, Pris, Antall
+    FK23 - Betale for å opprette reservasjon
+    FK24 - Admin bannlyse bruker
+    FK25 - Admin slette bruker
+    FK27 - Admin slette innlegg/posts
+    FK28 - Admin slette p-plass
+    FK29 - Admin slette reservasjon
+    FK33 - Lagre p-plass
+            - PS: Legg til mer stoopid
+
+
     \subsection{Avhengigheter}
     Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
@@ -679,8 +703,11 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_legge_ut_parkering.png}
 
-    \subsection{Dataflytdiagram - Opprett Parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_opprett_parkering.png}
+    \subsection{Dataflytdiagram - Slette Parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_sletting.png}
+
+    \subsection{Aktivitetsdiagram - Legge til medlem i organisasjon}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/aktivitet_medlem.png}
 
 \section{Estemering}
 
@@ -845,7 +872,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             FK15
             &
-            Varsel på utløpstid
+            Applikasjonen skal varsle utløpstidløpstid
             & M & M & \celly 0\\
             \hline
         \end{tabular}
@@ -932,11 +959,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             Bruker skal betale utleieren for å opprette en reservasjon
             & L & M & \celll 2\\
             \hline
-            FK24
-            &
-            Tredjepart
-            & L & S & \cellg 3\\
-            \hline
         \end{tabular}
         
         \subsubsection{Administrering}
@@ -948,47 +970,47 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK25
+            FK24
             &
             Administrator skal kunne bannlyse bruker
             & S & S & \celly 0\\
             \hline
-            FK26
+            FK25
             &
             Administrator skal kunne slette bruker
             & M & S & \celll 1\\
             \hline
-            FK27
+            FK26
             &
             Administrator skal kunne slette tilbakemeldinger
             & S & S & \celly 0\\
             \hline
-            FK28
+            FK27
             &
             Administrator skal kunne slette innlegg
             & L & S & \cellg 3\\
             \hline
-            FK29
+            FK28
             &
             Administrator skal kunne slette parkeringsplasser
             & L & S & \cellg 3\\
             \hline
-            FK30
+            FK29
             &
             Administrator skal kunne slette reservasjoner
             & XL & S & \cellg 7\\
             \hline
-            FK31
+            FK30
             &
             Bedrift skal ha administrerende rettigheter på deres egne innlegg
             & S & M & \cello -1\\
             \hline
-            FK32
+            FK31
             &
             Bruker skal kunne rapportere andre brukere sine innlegg
             & M & S & \celll 1\\
             \hline
-            FK33
+            FK32
             &
             Bruker skal kunne rapportere andre brukere
             & M & S & \celll 1\\
@@ -1004,10 +1026,25 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK34
+            FK33
             &
             Systemet skal lagre informasjon om parkeringsplasser
-            & XL & XL & \celly 0\\
+            & XL & L & \celly 4\\
+            \hline
+            FK34
+            &
+            Systemet skal lagre informasjon om innlegg
+            & XL & L & \celly 4\\
+            \hline
+            FK35
+            &
+            Systemet skal lagre informasjon om brukere
+            & XL & L & \celly 4\\
+            \hline
+            FK36
+            &
+            Systemet skal lagre informasjon om reservasjoner
+            & XL & L & \celly 4\\
             \hline
         \end{tabular}
 
