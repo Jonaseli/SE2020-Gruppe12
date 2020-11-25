@@ -367,7 +367,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Brukerkonto skal kunne leie en eller flere parkeringsplasser. Dette gjøres ved at systemet oppretter en reservasjon for der parkeringsplassen knyttes opp til brukeren som leier den.
 
-        \subsubsection{Varsel på utløpstid}
+        \subsubsection{Applikasjonen skal varsle utløpstid}
         \FK 
         Når en reservert parkeringsplass holder på å gå tom for tid, så skal brukeren som har leid parkeringsplassen få en varsel om at den holder på å gå ut minst 30 minutter før.
 
@@ -455,10 +455,6 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \subsubsection{Bruker skal betale utleieren for å opprette en reservasjon}
         \FK
         Bruker betaler for antall timer de ønsker å leie parkeringsplassen.
-
-        \subsubsection{Transaksjoner skal gå gjennom en tredjepart}
-        \FK
-        Når en bruker sender inn en forespørsel om å kunne leie en parkeringsplass, så må tredjepart verifisere kjøpet før en bruker kan leie.
 
     \subsection{Administrering}
 
@@ -635,6 +631,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Implementerte krav og tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
+    FK6 - Innlogging som bedrift / bruker
+    FK8 - Dirigere innlogget bruker
+    FK11 - Feed
+    FK14 - Leie parkeringsplass
+    FK19 - Opprette parkeringsplass
+            - Minus Etasje, Pris, Antall
+    FK23 - Betale for å opprette reservasjon
+    FK24 - Admin bannlyse bruker
+    FK25 - Admin slette bruker
+    FK27 - Admin slette innlegg/posts
+    FK28 - Admin slette p-plass
+    FK29 - Admin slette reservasjon
+    FK33 - Lagre p-plass
+            - PS: Legg til mer stoopid
+
+
     \subsection{Avhengigheter}
     Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
 
@@ -679,8 +691,8 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Sekvensdiagram - Leie ut en parkeringsplass}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvens_legge_ut_parkering.png}
 
-    \subsection{Dataflytdiagram - Opprett Parkeringsplass}
-    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_opprett_parkering.png}
+    \subsection{Dataflytdiagram - Slette Parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/dataflyt_sletting.png}
 
 \section{Estemering}
 
@@ -845,7 +857,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             FK15
             &
-            Varsel på utløpstid
+            Applikasjonen skal varsle utløpstidløpstid
             & M & M & \celly 0\\
             \hline
         \end{tabular}
