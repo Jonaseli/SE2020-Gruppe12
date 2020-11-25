@@ -23,6 +23,15 @@ public class userTest {
     static Setup javalinRunner;
     static WebDriver driver;
 
+    //Data for creation of parking spot, and assertions
+    String streetAddress = "ks0eq";
+    String streetNumber = "88q0r";
+    String postalCode = "qrrjz";
+    String city = "guw05";
+    String width = "2099";
+    String length = "8864";
+    String height = "7155";
+
     @BeforeAll
     static void startup(){
         javalinRunner = new Setup();
@@ -36,23 +45,24 @@ public class userTest {
     @Test
     public void userCreatesParkingSpot() throws IOException {
         driver.get("http://localhost:7000/");
-
-        driver.findElement(By.id("userLoginButton")).click();
+        driver.findElement(By.linkText("Login as User")).click();
         driver.findElement(By.linkText("My Parking spots")).click();
         driver.findElement(By.linkText("Create new parking spot")).click();
-        driver.findElement(By.id("streetAddress")).sendKeys("123");
-        driver.findElement(By.id("streetNumber")).sendKeys("456");
-        driver.findElement(By.id("postalCode")).sendKeys("789");
-        driver.findElement(By.id("city")).sendKeys("012");
-        driver.findElement(By.id("width")).sendKeys("333");
-        driver.findElement(By.id("length")).sendKeys("222");
-        driver.findElement(By.id("height")).sendKeys("111");
+        driver.findElement(By.id("streetAddress")).sendKeys(streetAddress);
+        driver.findElement(By.id("streetNumber")).sendKeys(streetNumber);
+        driver.findElement(By.id("postalCode")).sendKeys(postalCode);
+        driver.findElement(By.id("city")).sendKeys(city);
+        driver.findElement(By.id("width")).sendKeys(width);
+        driver.findElement(By.id("length")).sendKeys(length);
+        driver.findElement(By.id("height")).sendKeys(height);
         driver.findElement(By.id("height")).submit();
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("./image.png"));
-        //Assertions.assertTrue(driver.getPageSource().contains("<h1>EZpark</h1>"));
+        driver.findElement(By.partialLinkText("Address: " + streetAddress + " " + streetNumber)).click();
 
-
+        Assertions.assertTrue(driver.findElement(By.id("street")).getText().contains(streetAddress + " " + streetNumber));
+        Assertions.assertTrue(driver.findElement(By.id("city")).getText().contains(postalCode + " " + city));
+        Assertions.assertTrue(driver.findElement(By.id("width")).getText().contains("Width: " + width));
+        Assertions.assertTrue(driver.findElement(By.id("length")).getText().contains("Length: " + length));
+        Assertions.assertTrue(driver.findElement(By.id("height")).getText().contains("Height: " + height));
     }
 
     @AfterAll

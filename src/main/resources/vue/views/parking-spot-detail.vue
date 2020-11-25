@@ -19,7 +19,7 @@
                 <h1 id="width">Width: {{ parkingSpot.width }}cm</h1>
                 <h1 id="length">Length: {{ parkingSpot.length }}cm</h1>
                 <h1 id="height">Height: {{ parkingSpot.height }}cm</h1>
-                <h1>Owner: {{ owner.displayName }}</h3>
+                <h1 id="owner">Owner: {{ owner.displayName }}</h3>
                 <div id="orderButton" >
                     <a :href="`/parking-spot/${parkingSpot.parkingSpotId}/payment`" class="link-to-parking-spot-detail">
                         <h1>Rent parking spot</h1>
