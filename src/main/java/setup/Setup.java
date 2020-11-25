@@ -48,14 +48,19 @@ public class Setup {
 
         app.get("api/reservation", parkingSpotController::getReservations);
 
-        app.post("/api/parking-spot/:parking-spot-id/payment", ctx -> {
-            //parkingSpotController.createPayment(ctx);
+        app.get("/api/parking-spot/:parking-spot-id/payment", ctx -> {
+            parkingSpotController.createPayment(ctx);
             ctx.redirect("/parking-spot");
         });
 
         //User controls
         app.get("/api/user/delete-parking-spot/:parking-spot-id", ctx -> {
             parkingSpotController.deleteParkingSpot(ctx);
+            ctx.redirect("/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots");
+        });
+
+        app.get("/api/user/delete-reservation/:parking-spot-id", ctx -> {
+            parkingSpotController.deleteReservationByParkingId(ctx);
             ctx.redirect("/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots");
         });
 

@@ -19,7 +19,8 @@ public interface IRepository {
 
     ArrayList<Post> getPosts();
 
-    void createPost(UUID parkingSpotId, double price);
+    //This returns UUID to help mock Post creation
+    UUID createPost(UUID parkingSpotId, double price);
 
     ParkingSpot getParkingSpot(UUID parkingSpotId);
 
@@ -46,4 +47,6 @@ public interface IRepository {
     void deleteParkingSpot(UUID parkingSpotId);
 
     void suspendAccount(UUID accountId);
+
+    void deleteReservationByParkingId(UUID parkingSpotId);
 }

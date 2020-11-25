@@ -8,7 +8,7 @@
             <a href="/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots">My Parking spots</a>
             <a id="lastLink" href="/">Logout</a>
         </nav>
-        <h1>Parking</h1>
+        <h1>Available parking spots</h1>
         <ul class="parking-spots-overview-list">
             <li v-for="parkingSpot in parkingSpots">
                 <a :href="`/parking-spot/${parkingSpot.parkingSpotId}`" class="link-to-parking-spot-detail">

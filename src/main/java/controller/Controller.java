@@ -64,6 +64,11 @@ public class Controller {
         System.out.println(ctx.formParamMap());
     }
 
+    public UUID createPost(UUID parkingSpotId) {
+        //Post system is not completed, this method is only used to be able to create reservations.
+        return repo.createPost(parkingSpotId, 50);
+    }
+
     public void deleteAccount(Context ctx) {
         UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
         repo.deleteAccount(accountId);
@@ -87,5 +92,19 @@ public class Controller {
     public void suspendAccount(Context ctx) {
         UUID accountId = UUID.fromString(ctx.pathParam(":account-id"));
         repo.suspendAccount(accountId);
+    }
+
+
+    public void createPayment(Context ctx) {
+        //Unusual implementation of post creation because it wont be completed in mvp
+        UUID postId = createPost(UUID.fromString(ctx.pathParam(":parking-spot-id")));
+        //AccountID is hardcoded as login system is not created
+        UUID accountId = UUID.fromString("6648dfdc-9733-4a34-bfa0-e9de8c1ca78b");
+        repo.createReservation(postId, accountId, "00:00", "12:00");
+    }
+
+    public void deleteReservationByParkingId(Context ctx) {
+        UUID parkingSpotId = UUID.fromString(ctx.pathParam(":parking-spot-id"));
+        repo.deleteReservationByParkingId(parkingSpotId);
     }
 }

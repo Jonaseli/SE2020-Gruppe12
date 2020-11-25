@@ -43,6 +43,14 @@
                     <div class="single-parking-spot-container">
                         <h1>Location: {{ parkingSpot.postalCode }} {{ parkingSpot.city }}</h1>
                         <h1>Address: {{ parkingSpot.streetAddress }} {{ parkingSpot.streetNumber }}</h1>
+                        <div>
+                            <a :href="`/api/user/delete-reservation/${parkingSpot.parkingSpotId}`"
+                               class="link-to-parking-spot-detail">
+                                <div class="admin-controls">
+                                    <h1>Delete</h1>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </a>
             </li>

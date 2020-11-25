@@ -13,7 +13,7 @@
                 <img v-if="parkingSpot.pictureURL" class="cover-image" v-bind:src="parkingSpot.pictureURL">
                 <img v-else class="cover-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/480px-Icon-round-Question_mark.svg.png">
             </div>
-            <div id="txtDiv">
+            <div id="txtDiv" v-if="owner">
                 <h1 id="street">{{ parkingSpot.streetAddress }}  {{parkingSpot.streetNumber}}</h1>
                 <h1 id="city">{{ parkingSpot.postalCode }}  {{parkingSpot.city}}</h1>
                 <h1 id="width">Width: {{ parkingSpot.width }}cm</h1>
@@ -56,7 +56,7 @@
 <style>
 
     #orderButton h1{
-    padding-bottom: 10px;
+        padding-bottom: 10px;
         background-color: #434346;
     }
 

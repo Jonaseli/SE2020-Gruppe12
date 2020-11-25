@@ -8,27 +8,20 @@
             <a href="/account/6648dfdc-9733-4a34-bfa0-e9de8c1ca78b/my-parking-spots">My Parking spots</a>
             <a id="lastLink" href="/">Logout</a>
         </nav>
-        <div class="form-style">
-            <h2>Create new reservation for {{ parkingSpotId }}</h2>
-            <form class="create" @submit="checkForm" :action=`/api/parking-spot/${parkingSpotId}/payment` method="post">
-                <div v-if="errors.length">
-                    <b>Please correct the following error(s):</b>
-                    <ul>
-                        <li v-for="error in errors">{{ error }}</li>
-                    </ul>
+        <div class="form-style" v-if="parkingSpot">
+            <h2>Create new reservation for {{ parkingSpot.width }}</h2>
+            <div id="tester">
+                <div class="rentButton" id="Success">
+                    <a :href="`/api/parking-spot/${parkingSpot.parkingSpotId}/payment`" class="link-to-parking-spot-detail">
+                    <h1>Successful payment</h1>
+                    </a>
                 </div>
-                <p>
-                    <label for="name">Start date<label>
-                        <input type="text" name="startDate" id="startDate" v-model="startDate">
-                </p>
-                <p>
-                    <label for="name">End date<label>
-                        <input type="text" name="endDate" id="endDate" v-model="endDate">
-                </p>
-                <p>
-                    <input type="submit" value="Create Payment">
-                </p>
-            </form>
+                <div class="rentButton" id="failed">
+                    <a :href="`/parking-spot/${parkingSpot.parkingSpotId}/payment`" class="link-to-parking-spot-detail" v-on:click="failedPayment">
+                    <h1>Failed payment</h1>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -36,32 +29,64 @@
     Vue.component("payment-page", {
         template: "#payment-page",
         data: () => ({
-            parkingSpotId: null,
-            startDate: null,
-            endDate: null,
+            parkingSpot: null,
             errors: []
         }),
         created() {
-            fetch(`/api/parking-spot/${parkingSpotId}/available`)
+            const idee = this.$javalin.pathParams["parking-spot-id"];
+            fetch(`/api/parking-spot/${idee}`)
                 .then(res => res.json())
-                .then(res => {
-                    this.available = res.available
-                })
-                .catch(() => alert("Error finding parking spot availability"))
-        },
-        methods: {
-            checkForm: function (e) {
-                const urlRegex = "/^(?:(?:(?:https?|ftp):)?\\/\\/)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\\.(?:[a-z\u00a1-\uffff]{2,})))(?::\\d{2,5})?(?:[/?#]\\S*)?$/i";
-                if (this.startDate && this.endDate) return true;
-                this.errors = [];
-                if (!this.startDate) this.errors.push("Start date required");
-                if (!this.endDate) this.errors.push("End date required");
-                e.preventDefault();
-            }
-        }
+                .then(res => this.parkingSpot = res)
+                .catch(() => alert("Error finding parking spot"))
+
+        },  methods: {
+              failedPayment: function (event) {
+                  alert("Payment failed (This is a stub)")
+              }
+            },
     });
 </script>
 <style>
+
+    #tester {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div.rentButton {
+        margin-left: 10px;
+        background-color: red;
+
+    }
+
+    div.rentButton a{
+        overflow: hidden;
+        display: block;
+        width: 200px;
+        height: 50px;
+    }
+
+    div.rentButton h1{
+        padding: 0px;
+    }
+
+    div.rentButton#success {
+        background-color: #075712;
+    }
+
+    div.rentButton#success:hover {
+        background-color: #0e7a1d;
+    }
+
+    div.rentButton#failed {
+        background-color: #5a0606f5;
+    }
+
+    div.rentButton#failed:hover {
+        background-color: #7b0606f5;
+    }
+
     .form-style {
         font-family: 'Open Sans Condensed', arial, sans;
         width: 500px;
@@ -85,60 +110,8 @@
         margin: -30px -30px 30px -30px;
     }
 
-    .form-style input[type="text"],
-    .form-style input[type="date"],
-    .form-style input[type="datetime"],
-    .form-style input[type="email"],
-    .form-style input[type="number"],
-    .form-style input[type="search"],
-    .form-style input[type="time"],
-    .form-style input[type="url"],
-    .form-style input[type="password"],
-    .form-style textarea,
-    .form-style select {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        display: block;
-        width: 100%;
-        padding: 7px;
-        border: none;
-        color: white;
-        border-bottom: 1px solid #ddd;
-        background: transparent;
-        margin-bottom: 10px;
-        font: 16px Arial, Helvetica, sans-serif;
-        height: 45px;
-    }
-
     .form-style textarea {
         resize: none;
         overflow: hidden;
-    }
-
-    .form-style input[type="button"],
-    .form-style input[type="submit"] {
-        background: none;
-        display: inline-block;
-        cursor: pointer;
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 14px;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 10px;
-        margin: 10px;
-        border: 1px solid white;
-        color: white;
-        border-radius: 15px;
-    }
-
-    .form-style input[type="button"]:hover,
-    .form-style input[type="submit"]:hover {
-        border: 2px solid white;
-    }
-
-    .create {
-        color: white;
     }
 </style>
