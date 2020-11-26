@@ -751,14 +751,14 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \begin{itemize}
         \item \textbf{FK6} - Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
         
-        \textit{Tester}
+            \textit{Tester}
             \begin{itemize}
                 \item doesPageLoad, frontPageLoads()
             \end{itemize}
 
         \item \textbf{FK8} - Dirigere innlogget brukerkonto / bedriftskonto
         
-        \textit{Tester}
+            \textit{Tester}
             \begin{itemize}
                 \item doesPageLoad, parkingSpotOVerviewPageLoads()
                 \item isRedirectedToCorrectURL, isUserRedirectedToFrontPage()
@@ -768,55 +768,81 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
         \item \textbf{FK15} - Bruker skal kunne leie parkeringsplass som en brukerkonto 
         
-        \textit{Tester}
+            \textit{Tester}
             \begin{itemize}
                 \item doesPageLoad, parkingSpotDetailPageLoads()
             \end{itemize}
+        
+        \item \textbf{FK21} - Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser
+        
+        Denne er implementert, med unntak på variabler for etasje, pris og antall.
+
+            \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, createParkingSpotPageLoads()
+                \item userEndToEnd, userCreatesParkingSPot()
+            \end{itemize}
+        
+        \item \textbf{FK26} - Bruker skal betale utleieren for å opprette en reservasjon
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, parkingSpotPaymentPageLoads()
+                \item userEndToEnd, userCreatesReservation()
+            \end{itemize}
+        
+        \item \textbf{FK17} - Bruker skal ha tilgang til en oversikt over reserverte parkeringsplasser
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, myParkingSpotPageLoads()
+            \end{itemize}
+
+        \item \textbf{FK22} - Bruker skal ha tilgang til en oversikt over sine opprettede parkeringsplasser
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, myParkingSPotPageLoads()
+            \end{itemize}
+
+        \item \textbf{FK36} - Bruker skal kunne slette sine reservasjoner
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item userEndToEnd, userDeletesReservation()
+            \end{itemize}
+
+        \item \textbf{FK37} - Bruker skal kunne slette sine parkeringsplasser
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item userEndToEnd, userDeletesParkingSpot()
+            \end{itemize}
+
+        \item \textbf{FK27} - Administrator skal kunne bannlyse bruker
+        
+        \item \textbf{FK28} - Administrator skal kunne slette bruker
+        
+        \item \textbf{FK30} - Administrator skal kunne slette innlegg
+        
+        \item \textbf{FK31} - Administrator skal kunne slette parkeringsplasser
+        
+        \item \textbf{FK32} - Administrator skal kunne slette reservasjoner
+        
+        \item \textbf{FK9} - Dirigere innlogget administrator
+        
+            \textit{Tester}
+            \begin{itemize}
+                \item isRedirectedToCorrectURL, isAdminRedirectedToAdminPage()
+            \end{itemize}
     \end{itemize}
-    
-    FK19 - Opprette parkeringsplass
-            - Minus Etasje, Pris, Antall
-        doesPageLoad
-        -> createParkingSpotPageLoads()
-        userEndToEnd
-        -> userCreatesParkingSpot()
 
-    FK23 - Betale for å opprette reservasjon
-        doesPageLoad
-        -> parkingSpotPaymentPageLoads()
-        userEndToEnd
-        -> userCreatesReservation()
 
-    FK.. Bruker skal ha tilgang til en oversikt over reserverte parkeringsplasser
-        doesPageLoad
-        -> myParkingSpotPageLoads()
-
-    FKBlabla Bruker skal ha tilgang til en oversikt over sine 
-        opprettede parkeringsplasser
-        doesPageLoad
-        -> myParkingSpotPageLoads()
-
-    FK - Bruker skal kunne slette sine reservasjoner
-        userEndToEnd
-        -> userDeletesReservation()
-
-    FK - Bruker skal kunne slette sine parkeringsplasser
-        userEndToEnd
-        -> userDeletesParkingSpot()
-
-    Admin
-
-    FK - Dirigere innlogget administrator
-        isRedirectedToCorrectURL
-        -> isAdminRedirectedToAdminPage()
-
-    FK24 - Admin bannlyse bruker
-    FK25 - Admin slette bruker
-    FK27 - Admin slette innlegg/posts
-    FK28 - Admin slette p-plass
-    FK29 - Admin slette reservasjon
-        doesPageLoad
-        -> adminPageLoads()
+    %Admin
+    %   doesPageLoad
+    %Admin
+    %    doesPageLoad
+    %    -> adminPageLoads()
 
 
     \subsection{Avhengigheter}
