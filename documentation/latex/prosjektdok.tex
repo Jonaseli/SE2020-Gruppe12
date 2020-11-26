@@ -317,9 +317,13 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Dersom innloggingsopplysningene er korrekte i forhold til opplysningene i brukeropprettingen, skal brukeren bli logget inn. Dersom de er ukorrekte, skal brukeren få en feilmeldingen på hva som gikk galt.
 
-        \subsubsection{Dirigere innlogget bruker}
+        \subsubsection{Dirigere innlogget brukerkonto / bedriftskonto}
         \FK
-        Etter vellykket innlogging skal bruker bli ført til startsiden.
+        Etter vellykket innlogging av bruker/ bedrift skal brukeren bli ført til startsiden.
+
+        \subsubsection{Dirigere innlogget administrator}
+        \FK
+        Etter vellykket innlogging av administrator skal brukeren bli ført til administrator-siden.
 
         \subsubsection{Bruker skal kunne tilbakesette passord}
         \FK
@@ -375,6 +379,10 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
                 \FKsub Varselet skal gå gjennom SMS og push-notifikasjoner
             \end{subreq}
 
+        \subsubsection{Bruker skal ha tilgang til en oversikt over reserverte parkeringsplasser}
+        \FK
+        Denne oversikten viser alle parkeringsplasser som denne brukeren har reservert sortert fra nyest til eldst.
+
     \subsection{Tilbakemelding på innlegg (Anmeldelser)}
 
         \subsubsection{Bruker skal kunne gi tilbakemelding på et innlegg}
@@ -425,6 +433,11 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
                 
                 \FKsub Parkeringsplassen skal knyttes til brukeren som opprettet den.
             \end{subreq}
+
+        \subsubsection{Bruker skal ha tilgang til en oversikt over sine 
+        opprettede parkeringsplasser}
+        \FK
+        Denne oversikten viser alle opprettede parkeringsplasser fra denne brukeren sortert fra nyest til eldst.
 
     \subsection{Leiebetingeleser}
 
@@ -520,6 +533,32 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     
             \begin{subreq}
                 \FKsub Brukeren som har lagd innlegget skal få varsel via e-post om rapporteringen.
+            \end{subreq}
+        
+        \subsubsection{Bruker skal kunne slette sine reservasjoner}
+        \FK
+        Bruker har frihet til å slette en reservasjon de har opprettet.
+        
+            \begin{subreq}
+                \FKsub Utleieren av parkeringsplassen få en varsel på at parkeringsplassen ikke lenger er reservert.
+
+                \FKsub Innlegget skal oppdatere seg slik at reservasjonen fjernes, og er nå ledig.
+            \end{subreq}
+
+        \subsubsection{Bruker skal kunne slette sine parkeringsplasser}
+        \FK
+        Bruker har frihet til å slette parkeringsplasser de har opprettet.
+
+            \begin{subreq}
+                \FKsub Innlegget for denne parkeringsplassen skal også slettes.
+            \end{subreq}
+        
+        \subsubsection{Bruker skal kunne slette sine innlegg}
+        \FK
+        Bruker har frihet til å slette sine innlegg
+
+            \begin{subreq}
+                \FKsub Feed skal oppdateres slik at dette innlegget ikke blir opplistet.
             \end{subreq}
 
     \subsection{Persistent data}
@@ -644,20 +683,66 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
     \subsection{Implementerte tester}
+
+
     FK6 - Innlogging som bedrift / bruker
-    FK8 - Dirigere innlogget bruker
-    FK11 - Feed
+        doesPageLoad        
+        -> frontPageLoads()
+
+    FK8 - Dirigere innlogget bruker / bedrift
+        doesPageLoad
+        -> parkingSpotOverviewPageLoads()
+        isRedirectedToCorrectURL
+        -> isUserRedirectedToFrontPage()
+
+        FK11 - Feed
     FK14 - Leie parkeringsplass
+        doesPageLoad
+        -> parkingSpotDetailPageLoads()
+    
     FK19 - Opprette parkeringsplass
             - Minus Etasje, Pris, Antall
+        doesPageLoad
+        -> createParkingSpotPageLoads()
+        userEndToEnd
+        -> userCreatesParkingSpot()
+
     FK23 - Betale for å opprette reservasjon
+        doesPageLoad
+        -> parkingSpotPaymentPageLoads()
+        userEndToEnd
+        -> userCreatesReservation()
+
+    FK.. Bruker skal ha tilgang til en oversikt over reserverte parkeringsplasser
+        doesPageLoad
+        -> myParkingSpotPageLoads()
+
+    FKBlabla Bruker skal ha tilgang til en oversikt over sine 
+        opprettede parkeringsplasser
+        doesPageLoad
+        -> myParkingSpotPageLoads()
+
+    FK - Bruker skal kunne slette sine reservasjoner
+        userEndToEnd
+        -> userDeletesReservation()
+
+    FK - Bruker skal kunne slette sine parkeringsplasser
+        userEndToEnd
+        -> userDeletesParkingSpot()
+
+    Admin
+
+    FK - Dirigere innlogget administrator
+        isRedirectedToCorrectURL
+        -> isAdminRedirectedToAdminPage()
+
     FK24 - Admin bannlyse bruker
     FK25 - Admin slette bruker
     FK27 - Admin slette innlegg/posts
     FK28 - Admin slette p-plass
     FK29 - Admin slette reservasjon
-    FK33 - Lagre p-plass
-            - PS: Legg til mer stoopid
+        doesPageLoad
+        -> adminPageLoads()
 
 
     \subsection{Avhengigheter}
