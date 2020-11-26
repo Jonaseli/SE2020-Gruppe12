@@ -20,6 +20,7 @@
 \usepackage{array}
 \usepackage[table]{xcolor}
 \usepackage{longtable,booktabs}
+\usepackage{float}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -109,6 +110,7 @@ Tjenesten skal dekke områder som framvisning, utleie og reservasjon av parkerin
 
 Applikasjonen bygger på automatiseringsverktøy Maven med JDK versjon 11. Jackson brukes for datalagring for datalagring og Vue som er et åpent visningsrammeverk og brukes for visning av tjenesten. Javalin er web-rammeverket som brukes, og testene kjøres med JUnit.
 
+<<<<<<< HEAD
 Her er en fullstendig liste:\\
 \textbf{JavaJDK v11 :} For kjøring av kode.
 \\\textbf{fasterxml.jackson 2.9.9 :} Lagring av data.
@@ -117,6 +119,9 @@ Her er en fullstendig liste:\\
 \\\textbf{javalin 3.11.0 :} Rammeverk for nettsiden.
 \\\textbf{JUnit 5.7.0 :} For å testeing av kodeoppsett.
 \\\textbf{Nets :} Elektronisk betalingsløsning. 
+=======
+\textit{Avhengigheter er listet under ikke-funksjonelle krav.} 
+>>>>>>> 74690e7fe9b5e01accbd163a8ffbb95c889643d1
 
 
 \section{Funksjoner i applikasjonen}
@@ -138,8 +143,6 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \bf Begrep & \bf Beskrivelse\\
         \hline
         Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført\\
-        \hline
-        Cookies & En type fil som brukes midlertidig for å lagre informasjon\\
         \hline
         Bruker & Besøkende som samhandler med systemet\\
         \hline
@@ -654,6 +657,46 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \IFK
         Parkeringsplasser som er registrert må følge nasjonale, regionale og lokale retningslinjer for manuvreringsrom og areale for parkeringsplass.
 
+
+    \subsection{Avhengigheter}
+
+        \subsubsection{JavaJDK 11}
+        \IFK
+        Kompilerer og kjører back-end koden.
+
+        \subsubsection{Maven 3.6.3}
+        \IFK
+        Bygge automatiseringsverktøy
+
+        \subsubsection{Javalin 3.11.0}
+        \IFK
+        Web rammeverk for lokal webserver
+
+        \subsubsection{Jackson 2.11.3}
+        \IFK
+        Java JSON library for serialisering og deserialisering av data
+
+        \subsubsection{JUnit-Jupiter 5.7.0}
+        \IFK
+        Rammeverk for testing i Java
+
+        \subsubsection{Vue 2.6.10}
+        \IFK
+        Open-source Front-end modell-visning-modellvisningsrammeverk for å bygge brukergrensesnitt.
+
+        \subsubsection{Selenium 3.141.59}
+        \IFK
+        Rammeverk for testing av web applikasjoner.
+
+        \subsubsection{Webdrivermanager 4.2.2}
+        \IFK
+        Bibliotek for installasjon av webdrivere for bruk i testing.
+
+        \subsubsection{Unirest 1.4.9}
+        \IFK
+        Bibliotek for HTTP klienter brukt i testing.
+
+
 \section{Prototype}
 
     \subsection{Sammendrag}
@@ -666,6 +709,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     Vi har delt back-end koden i forskjellige deler som kalles controller, model, datahandler og repository. Dette gjør at funksjonaliteten splittes til forskjellig seksjoner av programmet og tillater endringer uten å påvirke den generelle funksjonaliteten i programmet. Dette gjør for eksempel at et ombytte til en database-modell ville kun trengt endring i datahandler seksjonen av programmet.
 
     Vi har valgt å bruke Javalin med Vue som rammeverk til front-end. Dette har gjort det enkelt å gjøre MVP-en pen og oversiktelig, og er den største avhengigheten i programmet vårt.
+
+
+    \subsection{UML}
+    Intensjonen med disse UML-ene var å ha en oversikt over hvordan koblingene mellom klassene skulle fungere. Selvfølgelig har prototypen endret seg i løpet av utviklingsprosessen, men de opprinnlige UML-diagrammene var et fint startpunkt.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{bilder/prototypen/klassediagram_v1.png}
+        \caption{Dette diagrammet viser den originale planlagte klassestrukturen for MVP-en}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{bilder/prototypen/klassediagram_v2.png}
+        \caption{Dette diagrammet viser klasse strukturen og koblingen i MVP-en}
+    \end{figure}
 
     \subsection{Innstallasjon}
     For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(som skjer for npm-installasjon). Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
@@ -682,25 +741,38 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Kjøre tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
-    \includegraphics[scale=1]{bilder/prototypen/testveiledning.png}
+    \includegraphics[max width=\textwidth]{bilder/prototypen/testveiledning.png}
 
-    \subsection{Implementerte tester}
+    \subsection{Implementerte krav med tester}
+    Kravutvalget for prototypen innebærer for det meste grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her.
+    
+    Her er en de implementerte kravene:
 
+    \begin{itemize}
+        \item \textbf{FK6} - Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, frontPageLoads()
+            \end{itemize}
 
-    FK6 - Innlogging som bedrift / bruker
-        doesPageLoad        
-        -> frontPageLoads()
+        \item \textbf{FK8} - Dirigere innlogget brukerkonto / bedriftskonto
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, parkingSpotOVerviewPageLoads()
+                \item isRedirectedToCorrectURL, isUserRedirectedToFrontPage()
+            \end{itemize}
+        
+        \item \textbf{FK12} - Presentasjon av parkeringsplasser (Feed)
 
-    FK8 - Dirigere innlogget bruker / bedrift
-        doesPageLoad
-        -> parkingSpotOverviewPageLoads()
-        isRedirectedToCorrectURL
-        -> isUserRedirectedToFrontPage()
-
-        FK11 - Feed
-    FK14 - Leie parkeringsplass
-        doesPageLoad
-        -> parkingSpotDetailPageLoads()
+        \item \textbf{FK15} - Bruker skal kunne leie parkeringsplass som en brukerkonto 
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, parkingSpotDetailPageLoads()
+            \end{itemize}
+    \end{itemize}
     
     FK19 - Opprette parkeringsplass
             - Minus Etasje, Pris, Antall
@@ -802,9 +874,18 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Aktivitetsdiagram - Legge til medlem i organisasjon}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/aktivitet_medlem.png}
 
+<<<<<<< HEAD
 \section{Estemering}
+Denne seksjonen blir brukt til å visualisere estimeringen for hvert funksjonelt og ikke-funksjonelt krav. Verdiene for viktighet og utviklingstid kommer i utgangspunktet fra erfaringen på prototypen, særdeles de kravene som faktisk er implementert. Det er også blitt tatt noe insperasjon fra eksisterende tjenester som Easypark for å bedømme vanskelighetsgraden på enkelte krav, hovedsakelig ikke-funksjonelle krav.
+=======
+    \subsection{Sekvensdiagram - Oppdatere Parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramOppdaterPplass.png}
 
-    \subsection{Enheter}
+\section{Estimering}
+>>>>>>> 071c48634dad3963cb42c9c9df129162ed5d0761
+
+    \subsection{Størrelser}
+    Disse størrelsene blir brukt til å visualisere prioriterten på hvert krav. I prinsippet er krav med 0 på størrelse nøytrale, det vil si at dersom den er like viktig som tiden det tar å utvikle den (i henhold til t-shirt sizing), så er den nøytral. Krav med størrelse over 0 er mer prioriterte enn krav under 0. Når det er sagt er det fremdeles verdt å inspisere både viktighet og utviklingstid på hvert krav.
 
     \begin{tabular}{|p{2cm}|
         >{\centering\arraybackslash}p{3cm}|
