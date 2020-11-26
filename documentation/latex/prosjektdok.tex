@@ -732,7 +732,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \includegraphics[max width=\textwidth]{bilder/prototypen/testveiledning.png}
 
     \subsection{Implementerte krav med tester}
-    Kravutvalget for prototypen innebærer for det meste grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her.
+    Krav for prototypen går mye på grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her. Opplistingen nedenfor består først av ID-en, kravet og testene i prototypen som tester kravet.
     
     Her er en de implementerte kravene:
 
@@ -822,16 +822,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \textit{Tester}
             \begin{itemize}
                 \item isRedirectedToCorrectURL, isAdminRedirectedToAdminPage()
+                \item doesPageLoad, adminPageLoads()
             \end{itemize}
     \end{itemize}
-
-
-    %Admin
-    %   doesPageLoad
-    %Admin
-    %    doesPageLoad
-    %    -> adminPageLoads()
-
 
     \subsection{Avhengigheter}
     Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
@@ -1401,37 +1394,37 @@ Denne seksjonen blir brukt til å visualisere estimeringen for hvert funksjonelt
             \hline
             IFK14
             &
-            JavaDK 11
+            Systemet skal bruke JavaJDK 11
             & XL & S & \cellg 7\\
             \hline
             IFK15
             &
-            Maven 3.6.3
+            Systemet skal bruke Maven
             & L & S & \cellg 3\\
             \hline
             IFK16
             &
-            Javalin 3.11.0
+            Systemet skal bruke Javalin
             & XL & S & \cellg 7\\
             \hline
             IFK17
             &
-            Jackson 2.11.3
+            Systemet skal bruke Java JSON biblioteket Jackson
             & M & M & \celly 0\\
             \hline
             IFK18
             &
-            JUnit-Jupiter 5.7.0
+            Systemet skal bruke JUnit-Jupiter
             & L & XL & \cellr -4\\
             \hline
             IFK19
             &
-            Vue 2.6.10
+            Systemet skal bruke Vue.js
             & XL & XL & \celly 0\\
             \hline
             IFK20
             &
-            Selenium 3.141.59 + Webdrivermanager 4.2.2 + Unirest 1.4.9
+            Systemet skal ha testing for web
             & M & M & \celly 0\\
             \hline
         \end{tabular}
