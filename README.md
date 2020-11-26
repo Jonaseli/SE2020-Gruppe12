@@ -7,7 +7,7 @@ Man kan finne dokumentasjonen til systemet ligger i mappen som heter documentati
 Man kan finne individuelle evalueringer i mappen som heter individuell_evaluering, denne mappen ligger i documentation-mappen.
 
 ## Innstallasjon
-For ̊å bygge og kjøre programmet, høyre-klikk mappen og velg å åpne som et intellij prosjekt, eller åpne intelliJ og trykk på fil, velg åpne mappe prosjekt, velg mappen og last inn prosjektet.  Da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse iterminalen i intelliJ. Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen.  Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
+For å bygge og kjøre programmet, høyre-klikk mappen og velg å åpne som et intellij prosjekt, eller åpne intelliJ og trykk på fil, velg åpne mappe prosjekt, velg mappen og last inn prosjektet.  Da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse iterminalen i intelliJ. Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen.  Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
 
 ## Bruksmanual
 For å starte programmet velg main klassen i src mappen, velg så main metoden og trykk grønn pil ved siden av Public Class Main, for å kjøre run configuration trykk på add configuration, trykk så på application og velg run. Trykk shift + F10, eller grønn pil ved siden av run configuration.  Da vil javalin kjøre i konsollen i intellij, og det åpnes en port til http://localhost:7000/.
@@ -19,7 +19,7 @@ Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie 
 Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og i tillegg slette parkeringsplasser, poster og reservasjoner.
 
 ## Kjøre tester
-For ̊a kjøre testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen og velge Run ‘All Tests’ With Coverage. Da kjører testene og man kan se andelen av programmet der det er test-dekning.
+For å kjøre testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen og velge Run ‘All Tests’ With Coverage. Da kjører testene og man kan se andelen av programmet der det er test-dekning.
 
 Man bør ikke gjøre endringer inne i applikasjonen da dette kan medføre feil i kjøring av repositorytester.
 
