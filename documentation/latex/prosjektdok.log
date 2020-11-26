@@ -1,27 +1,27 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  26 NOV 2020 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.5)  26 NOV 2020 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.tex
-(c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-08-07> (c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+**"c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.tex"
+(c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-10-27> xparse <2020-03-03> (c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (c:/texlive/2020/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
+\bibindent=\dimen138
 ) (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
@@ -53,38 +53,38 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count176
-\Gm@cntv=\count177
-\c@Gm@tempcnt=\count178
-\Gm@bindingoffset=\dimen135
-\Gm@wd@mp=\dimen136
-\Gm@odd@mp=\dimen137
-\Gm@even@mp=\dimen138
-\Gm@layoutwidth=\dimen139
-\Gm@layoutheight=\dimen140
-\Gm@layouthoffset=\dimen141
-\Gm@layoutvoffset=\dimen142
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks17
 ) (c:/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip58
-\enit@outerparindent=\dimen143
+\enit@outerparindent=\dimen147
 \enit@toks=\toks18
-\enit@inbox=\box45
-\enit@count@id=\count179
-\enitdp@description=\count180
+\enit@inbox=\box47
+\enit@count@id=\count186
+\enitdp@description=\count187
 ) (c:/texlive/2020/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 ) (c:/texlive/2020/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count181
-\cp@tempcnt=\count182
+\c@cp@cntr=\count188
+\cp@tempcnt=\count189
 ) (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -92,44 +92,44 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
  (c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen144
-\Gin@req@width=\dimen145
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
 ) (c:/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
  (c:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen146
-\ar@mcellbox=\box46
-\extrarowheight=\dimen147
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen150
+\ar@mcellbox=\box48
+\extrarowheight=\dimen151
 \NC@list=\toks19
 \extratabsurround=\skip59
 \backup@length=\skip60
-\ar@cellbox=\box47
+\ar@cellbox=\box49
 )
-\TX@col@width=\dimen148
-\TX@old@table=\dimen149
-\TX@old@col=\dimen150
-\TX@target=\dimen151
-\TX@delta=\dimen152
-\TX@cols=\count183
+\TX@col@width=\dimen152
+\TX@old@table=\dimen153
+\TX@old@col=\dimen154
+\TX@target=\dimen155
+\TX@delta=\dimen156
+\TX@cols=\count190
 \TX@ftn=\toks20
 ) (c:/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box48
+\ttl@box=\box50
 \beforetitleunit=\skip61
 \aftertitleunit=\skip62
-\ttl@plus=\dimen153
-\ttl@minus=\dimen154
+\ttl@plus=\dimen157
+\ttl@minus=\dimen158
 \ttl@toksa=\toks21
-\titlewidth=\dimen155
-\titlewidthlast=\dimen156
-\titlewidthfirst=\dimen157
+\titlewidth=\dimen159
+\titlewidthlast=\dimen160
+\titlewidthfirst=\dimen161
 ) (c:/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
  (c:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (c:/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (c:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -151,11 +151,11 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (c:/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (c:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen158
-\Hy@linkcounter=\count184
-\Hy@pagecounter=\count185
+\@linkdim=\dimen162
+\Hy@linkcounter=\count191
+\Hy@pagecounter=\count192
  (c:/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -165,7 +165,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (c:/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count186
+\Hy@SavedSpaceFactor=\count193
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -173,21 +173,21 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count187
+\c@Hy@tempcnt=\count194
  (c:/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen159
+\XeTeXLinkMargin=\dimen163
  (c:/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count188
-\Field@Width=\dimen160
-\Fld@charsize=\dimen161
+\Fld@menulength=\count195
+\Field@Width=\dimen164
+\Fld@charsize=\dimen165
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -197,22 +197,23 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
- (c:/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+ (c:/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
 )
-\Hy@abspage=\count189
-\c@Item=\count190
-\c@Hfootnote=\count191
+\Hy@abspage=\count196
+\c@Item=\count197
+\c@Hfootnote=\count198
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
- (c:/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
+ (c:/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
 )
-\Fld@listcount=\count192
-\c@bookmark@seq@number=\count193
+\Fld@listcount=\count199
+\c@bookmark@seq@number=\count266
  (c:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  (c:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -224,13 +225,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (c:/texlive/2020/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
  (c:/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count194
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count267
 )) (c:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen162
-\WF@size=\dimen163
-\c@WF@wrappedlines=\count195
-\WF@box=\box49
+\wrapoverhang=\dimen166
+\WF@size=\dimen167
+\c@WF@wrappedlines=\count268
+\WF@box=\box51
 \WF@everypar=\toks22
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
@@ -241,7 +242,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
 )
-\XKV@depth=\count196
+\XKV@depth=\count269
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -249,40 +250,40 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
  (c:/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box50
+\collectedbox=\box52
 )
-\tc@llx=\dimen164
-\tc@lly=\dimen165
-\tc@urx=\dimen166
-\tc@ury=\dimen167
+\tc@llx=\dimen168
+\tc@lly=\dimen169
+\tc@urx=\dimen170
+\tc@ury=\dimen171
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (c:/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen168
-\adjbox@Height=\dimen169
-\adjbox@Depth=\dimen170
-\adjbox@Totalheight=\dimen171
-\adjbox@pwidth=\dimen172
-\adjbox@pheight=\dimen173
-\adjbox@pdepth=\dimen174
-\adjbox@ptotalheight=\dimen175
+\adjbox@Width=\dimen172
+\adjbox@Height=\dimen173
+\adjbox@Depth=\dimen174
+\adjbox@Totalheight=\dimen175
+\adjbox@pwidth=\dimen176
+\adjbox@pheight=\dimen177
+\adjbox@pdepth=\dimen178
+\adjbox@ptotalheight=\dimen179
  (c:/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count197
+\c@checkoddpage=\count270
 LaTeX Info: Redefining \checkoddpage on input line 45.
 ) (c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box51
-\sift@deathcycles=\count198
-\@vwid@loff=\dimen176
-\@vwid@roff=\dimen177
+\@vwid@box=\box53
+\sift@deathcycles=\count271
+\@vwid@loff=\dimen180
+\@vwid@roff=\dimen181
 )) (c:/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip64
-\multirow@cntb=\count199
+\multirow@cntb=\count272
 \multirow@dima=\skip65
-\bigstrutjot=\dimen178
+\bigstrutjot=\dimen182
 ) (c:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -294,7 +295,7 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks25
 \minrowclearance=\skip66
 )
-\rownum=\count266
+\rownum=\count273
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -310,46 +311,49 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip68
 \LTpre=\skip69
 \LTpost=\skip70
-\LTchunksize=\count267
-\LTcapwidth=\dimen179
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count268
-\LT@rows=\count269
-\c@LT@tables=\count270
-\c@LT@chunks=\count271
+\LTchunksize=\count274
+\LTcapwidth=\dimen183
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@cols=\count275
+\LT@rows=\count276
+\c@LT@tables=\count277
+\c@LT@chunks=\count278
 \LT@p@ftn=\toks26
 ) (c:/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen180
-\lightrulewidth=\dimen181
-\cmidrulewidth=\dimen182
-\belowrulesep=\dimen183
-\belowbottomsep=\dimen184
-\aboverulesep=\dimen185
-\abovetopsep=\dimen186
-\cmidrulesep=\dimen187
-\cmidrulekern=\dimen188
-\defaultaddspace=\dimen189
-\@cmidla=\count272
-\@cmidlb=\count273
-\@aboverulesep=\dimen190
-\@belowrulesep=\dimen191
-\@thisruleclass=\count274
-\@lastruleclass=\count275
-\@thisrulewidth=\dimen192
+\heavyrulewidth=\dimen184
+\lightrulewidth=\dimen185
+\cmidrulewidth=\dimen186
+\belowrulesep=\dimen187
+\belowbottomsep=\dimen188
+\aboverulesep=\dimen189
+\abovetopsep=\dimen190
+\cmidrulesep=\dimen191
+\cmidrulekern=\dimen192
+\defaultaddspace=\dimen193
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen194
+\@belowrulesep=\dimen195
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen196
 )
-\c@fkcounter=\count276
-\c@fksubcounter=\count277
-\c@ifkcounter=\count278
-\c@ifksubcounter=\count279
- (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count280
-\l__pdf_internal_box=\box56
-) (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
+\c@fkcounter=\count283
+\c@fksubcounter=\count284
+\c@ifkcounter=\count285
+\c@ifksubcounter=\count286
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 53.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count287
+\l__pdf_internal_box=\box58
+) (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
 \openout1 = `prosjektdok.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -368,10 +372,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 53.
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -408,16 +409,16 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen193
-\scratchbox=\box57
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\scratchcounter=\count288
+\scratchdimen=\dimen197
+\scratchbox=\box59
+\nofMPsegments=\count289
+\nofMParguments=\count290
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen194
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen198
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
 \everyMPtoPDFconversion=\toks28
 ) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -425,7 +426,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box58
 Package hyperref Info: Link coloring OFF on input line 53.
  (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -434,12 +434,12 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count287
+\c@section@level=\count294
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
 LaTeX Info: Redefining \nameref on input line 53.
- (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out) (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.out)
+ (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.out) (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.out)
 \@outlinefile=\write4
 \openout4 = `prosjektdok.out'.
 
@@ -452,7 +452,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.toc [2])
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.toc [2])
 \tf@toc=\write5
 \openout5 = `prosjektdok.toc'.
 
@@ -487,7 +487,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-[7 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_leietaker.png (PNG copy)>]
+[7 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_leietaker.png (PNG copy)>]
 <bilder/diagrammer/uc_admin.png, id=355, 763.85374pt x 400.49625pt>
 File: bilder/diagrammer/uc_admin.png Graphic file (type png)
 <use bilder/diagrammer/uc_admin.png>
@@ -503,13 +503,13 @@ File: bilder/personaer/persona_jorgen.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorgen.jpg>
 Package pdftex.def Info: bilder/personaer/persona_jorgen.jpg  used on input line 209.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
-[8 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_corp.png (PNG copy)> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/uc_admin.png (PNG copy)>]
+[8 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_corp.png (PNG copy)> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/uc_admin.png (PNG copy)>]
 <bilder/personaer/persona_siggurd.jpg, id=361, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_siggurd.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_siggurd.jpg>
 Package pdftex.def Info: bilder/personaer/persona_siggurd.jpg  used on input line 223.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
- [9 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
+ [9 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_jorgen.jpg> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_siggurd.jpg>]
 <bilder/personaer/persona_karina.jpg, id=366, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_karina.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karina.jpg>
@@ -520,18 +520,18 @@ File: bilder/personaer/persona_karin.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_karin.jpg>
 Package pdftex.def Info: bilder/personaer/persona_karin.jpg  used on input line 247.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
- [10 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karina.jpg>]
+ [10 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_karina.jpg>]
 <bilder/personaer/persona_jorn.jpg, id=372, 173.14688pt x 225.84375pt>
 File: bilder/personaer/persona_jorn.jpg Graphic file (type jpg)
 <use bilder/personaer/persona_jorn.jpg>
 Package pdftex.def Info: bilder/personaer/persona_jorn.jpg  used on input line 263.
 (pdftex.def)             Requested size: 173.14645pt x 225.84319pt.
- [11 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_karin.jpg>]
+ [11 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_karin.jpg>]
 Overfull \hbox (1.11258pt too wide) in paragraph at lines 279--281
 \OT1/ptm/m/n/12 For []a opp-grette en bruk-erkonto, m[]a bruker oppgi bruk-er-navn, pas-sord, e-post og tele-fon-num-mer. 
  []
 
-[12 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/personaer/persona_jorn.jpg>] [13] [14]
+[12 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/personaer/persona_jorn.jpg>] [13] [14]
 Overfull \hbox (9.58177pt too wide) in paragraph at lines 401--403
 \OT1/ptm/m/n/12 Alle an-meldelser som tilh^^\rer et inn-legg skal vises p[]a lis-te-form p[]a inn-legget, der den nyeste tilbakemeld-
  []
@@ -545,379 +545,383 @@ Overfull \hbox (14.95888pt too wide) in paragraph at lines 621--623
  []
 
 [19] [20]
-Overfull \hbox (2.29823pt too wide) in paragraph at lines 729--732
+<bilder/prototypen/testveiledning.png, id=471, 630.355pt x 362.35374pt>
+File: bilder/prototypen/testveiledning.png Graphic file (type png)
+<use bilder/prototypen/testveiledning.png>
+Package pdftex.def Info: bilder/prototypen/testveiledning.png  used on input line 685.
+(pdftex.def)             Requested size: 630.35345pt x 362.35286pt.
+
+Overfull \hbox (176.65659pt too wide) in paragraph at lines 685--686
+[][] 
+ []
+
+[21 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/prototypen/testveiledning.png>]
+Overfull \hbox (2.29823pt too wide) in paragraph at lines 731--734
 []\OT1/ptm/m/n/12 FK - Bruker skal kunne slette sine park-er-ingsplasser userEnd-ToEnd -> userDeletes-Park-ingSpot() 
  []
 
-[21]
-<bilder/diagrammer/sekvens_leietaker.png, id=475, 1146.2825pt x 1406.25375pt>
+<bilder/diagrammer/sekvens_leietaker.png, id=478, 1146.2825pt x 1406.25375pt>
 File: bilder/diagrammer/sekvens_leietaker.png Graphic file (type png)
 <use bilder/diagrammer/sekvens_leietaker.png>
-Package pdftex.def Info: bilder/diagrammer/sekvens_leietaker.png  used on input line 768.
+Package pdftex.def Info: bilder/diagrammer/sekvens_leietaker.png  used on input line 770.
 (pdftex.def)             Requested size: 1146.27971pt x 1406.25032pt.
 
-Overfull \hbox (30.01231pt too wide) in paragraph at lines 768--769
+Overfull \hbox (30.01231pt too wide) in paragraph at lines 770--771
 [] 
  []
 
 [22]
-<bilder/diagrammer/dataflyt_tilbakemelding.png, id=481, 794.97pt x 343.2825pt>
+<bilder/diagrammer/dataflyt_tilbakemelding.png, id=483, 794.97pt x 343.2825pt>
 File: bilder/diagrammer/dataflyt_tilbakemelding.png Graphic file (type png)
 <use bilder/diagrammer/dataflyt_tilbakemelding.png>
-Package pdftex.def Info: bilder/diagrammer/dataflyt_tilbakemelding.png  used on input line 775.
+Package pdftex.def Info: bilder/diagrammer/dataflyt_tilbakemelding.png  used on input line 777.
 (pdftex.def)             Requested size: 794.96806pt x 343.28165pt.
 
-Overfull \hbox (30.00897pt too wide) in paragraph at lines 775--776
+Overfull \hbox (30.00897pt too wide) in paragraph at lines 777--778
 [] 
  []
 
-[23 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_leietaker.png>]
-Overfull \hbox (15.11441pt too wide) in paragraph at lines 777--778
+[23 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_leietaker.png>]
+Overfull \hbox (15.11441pt too wide) in paragraph at lines 779--780
 \OT1/ptm/m/n/12 (Tilbakemeld-ing og po-eng-sum) som er knyt-tet til den park-er-ingsplassen (post, databasen) og tilbakemeld-
  []
 
-<bilder/diagrammer/sekvens_opprette reservasjon.png, id=488, 825.0825pt x 515.9275pt>
+<bilder/diagrammer/sekvens_opprette reservasjon.png, id=490, 825.0825pt x 515.9275pt>
 File: bilder/diagrammer/sekvens_opprette reservasjon.png Graphic file (type png)
 <use bilder/diagrammer/sekvens_opprette reservasjon.png>
-Package pdftex.def Info: bilder/diagrammer/sekvens_opprette reservasjon.png  used on input line 780.
+Package pdftex.def Info: bilder/diagrammer/sekvens_opprette reservasjon.png  used on input line 782.
 (pdftex.def)             Requested size: 825.08049pt x 515.92624pt.
 
-Overfull \hbox (30.00052pt too wide) in paragraph at lines 780--781
+Overfull \hbox (30.00052pt too wide) in paragraph at lines 782--783
 [] 
  []
 
-<bilder/diagrammer/tilstand_opprett_parkeringsplass.png, id=489, 294.09875pt x 490.83376pt>
+<bilder/diagrammer/tilstand_opprett_parkeringsplass.png, id=491, 294.09875pt x 490.83376pt>
 File: bilder/diagrammer/tilstand_opprett_parkeringsplass.png Graphic file (type png)
 <use bilder/diagrammer/tilstand_opprett_parkeringsplass.png>
-Package pdftex.def Info: bilder/diagrammer/tilstand_opprett_parkeringsplass.png  used on input line 783.
+Package pdftex.def Info: bilder/diagrammer/tilstand_opprett_parkeringsplass.png  used on input line 785.
 (pdftex.def)             Requested size: 294.09802pt x 490.83255pt.
-[24 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_tilbakemelding.png> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_opprette reservasjon.png (PNG copy)>]
-<bilder/diagrammer/aktivitet_leier_bestilling.png, id=496, 274.02374pt x 592.2125pt>
+[24 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/dataflyt_tilbakemelding.png> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_opprette reservasjon.png (PNG copy)>]
+<bilder/diagrammer/aktivitet_leier_bestilling.png, id=498, 274.02374pt x 592.2125pt>
 File: bilder/diagrammer/aktivitet_leier_bestilling.png Graphic file (type png)
 <use bilder/diagrammer/aktivitet_leier_bestilling.png>
-Package pdftex.def Info: bilder/diagrammer/aktivitet_leier_bestilling.png  used on input line 789.
+Package pdftex.def Info: bilder/diagrammer/aktivitet_leier_bestilling.png  used on input line 791.
 (pdftex.def)             Requested size: 274.02307pt x 592.21104pt.
- [25 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/tilstand_opprett_parkeringsplass.png (PNG copy)>]
-<bilder/diagrammer/sekvens_legge_ut_parkering.png, id=503, 619.31375pt x 321.2pt>
+ [25 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/tilstand_opprett_parkeringsplass.png (PNG copy)>]
+<bilder/diagrammer/sekvens_legge_ut_parkering.png, id=505, 619.31375pt x 321.2pt>
 File: bilder/diagrammer/sekvens_legge_ut_parkering.png Graphic file (type png)
 <use bilder/diagrammer/sekvens_legge_ut_parkering.png>
-Package pdftex.def Info: bilder/diagrammer/sekvens_legge_ut_parkering.png  used on input line 792.
+Package pdftex.def Info: bilder/diagrammer/sekvens_legge_ut_parkering.png  used on input line 794.
 (pdftex.def)             Requested size: 619.31224pt x 321.19922pt.
 
-Overfull \hbox (30.01796pt too wide) in paragraph at lines 792--793
+Overfull \hbox (30.01796pt too wide) in paragraph at lines 794--795
 [] 
  []
 
-[26 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/aktivitet_leier_bestilling.png (PNG copy)>]
-<bilder/diagrammer/dataflyt_opprett_parkering.png, id=508, 428.65144pt x 289.08pt>
+[26 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/aktivitet_leier_bestilling.png (PNG copy)>]
+<bilder/diagrammer/dataflyt_opprett_parkering.png, id=510, 428.65144pt x 289.08pt>
 File: bilder/diagrammer/dataflyt_opprett_parkering.png Graphic file (type png)
 <use bilder/diagrammer/dataflyt_opprett_parkering.png>
-Package pdftex.def Info: bilder/diagrammer/dataflyt_opprett_parkering.png  used on input line 795.
+Package pdftex.def Info: bilder/diagrammer/dataflyt_opprett_parkering.png  used on input line 797.
 (pdftex.def)             Requested size: 428.65039pt x 289.07928pt.
-<bilder/diagrammer/dataflyt_sletting.png, id=509, 388.45125pt x 250.23488pt>
+<bilder/diagrammer/dataflyt_sletting.png, id=511, 388.45125pt x 250.23488pt>
 File: bilder/diagrammer/dataflyt_sletting.png Graphic file (type png)
 <use bilder/diagrammer/dataflyt_sletting.png>
-Package pdftex.def Info: bilder/diagrammer/dataflyt_sletting.png  used on input line 798.
+Package pdftex.def Info: bilder/diagrammer/dataflyt_sletting.png  used on input line 800.
 (pdftex.def)             Requested size: 388.45029pt x 250.23425pt.
- [27 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/sekvens_legge_ut_parkering.png (PNG copy)> <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_opprett_parkering.png>]
-<bilder/diagrammer/aktivitet_medlem.png, id=515, 284.06125pt x 510.90875pt>
+ [27 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/sekvens_legge_ut_parkering.png (PNG copy)> <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/dataflyt_opprett_parkering.png>]
+<bilder/diagrammer/aktivitet_medlem.png, id=517, 284.06125pt x 510.90875pt>
 File: bilder/diagrammer/aktivitet_medlem.png Graphic file (type png)
 <use bilder/diagrammer/aktivitet_medlem.png>
-Package pdftex.def Info: bilder/diagrammer/aktivitet_medlem.png  used on input line 801.
+Package pdftex.def Info: bilder/diagrammer/aktivitet_medlem.png  used on input line 803.
 (pdftex.def)             Requested size: 284.06053pt x 510.9075pt.
- [28 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_sletting.png>]
-Overfull \hbox (7.04164pt too wide) in paragraph at lines 807--838
+ [28 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/dataflyt_sletting.png>]
+Overfull \hbox (7.04164pt too wide) in paragraph at lines 809--840
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 848--848
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 850--850
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 857--858
+Underfull \hbox (badness 1112) in paragraph at lines 859--860
 []|\OT1/ptm/m/n/12 Bedrifter skal kunne op-prette en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--863
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 []|\OT1/ptm/m/n/12 Kunden skal kunne op-prette
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 843--876
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 845--878
 [] 
  []
 
-[29 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/aktivitet_medlem.png (PNG copy)>]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 884--884
+[29 <c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/bilder/diagrammer/aktivitet_medlem.png (PNG copy)>]
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 886--886
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 898--899
+Underfull \hbox (badness 1990) in paragraph at lines 900--901
 []|\OT1/ptm/m/n/12 Dirigere innlogget bruk-erkonto /
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 879--912
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 881--914
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 920--920
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 922--922
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 924--925
+Underfull \hbox (badness 7433) in paragraph at lines 926--927
 []|\OT1/ptm/m/n/12 Systemet skal ver-i-fis-ere bruker
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 915--928
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 917--930
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 936--936
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 938--938
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 931--954
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 933--956
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 962--962
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 964--964
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 966--967
+Underfull \hbox (badness 4303) in paragraph at lines 968--969
 []|\OT1/ptm/m/n/12 Bruker skal kunne leie park-er-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 957--975
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 959--977
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 983--983
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 985--985
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 992--993
+Underfull \hbox (badness 7012) in paragraph at lines 994--995
 []|\OT1/ptm/m/n/12 Tilbakemeldinger skal vises p[]a
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 978--1001
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 980--1003
 [] 
  []
 
 [30]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1009--1009
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1011--1011
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 1018--1019
+Underfull \hbox (badness 1127) in paragraph at lines 1020--1021
 \OT1/ptm/m/n/12 sikt over sine op-pret-tede park-er-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1004--1022
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1006--1024
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1030--1030
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1032--1032
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1044--1045
+Underfull \hbox (badness 4713) in paragraph at lines 1046--1047
 []|\OT1/ptm/m/n/12 Brukere skal kunne se ut ifra
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1025--1048
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1027--1050
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1056--1056
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1058--1058
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1051--1064
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1053--1066
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1072--1072
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1074--1074
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1081--1082
+Underfull \hbox (badness 5374) in paragraph at lines 1083--1084
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1086--1087
+Underfull \hbox (badness 5374) in paragraph at lines 1088--1089
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1096--1097
+Underfull \hbox (badness 5374) in paragraph at lines 1098--1099
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1101--1102
+Underfull \hbox (badness 5374) in paragraph at lines 1103--1104
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1067--1135
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1069--1137
 [] 
  []
 
 [31]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1143--1143
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1145--1145
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1138--1166
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1140--1168
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1176--1176
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1178--1178
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 1180--1181
+Underfull \hbox (badness 2772) in paragraph at lines 1182--1183
 []|\OT1/ptm/m/n/12 Bruker skal ha til-gang til ap-p-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1171--1189
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1173--1191
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1197--1197
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1199--1199
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 1201--1202
+Underfull \hbox (badness 1360) in paragraph at lines 1203--1204
 []|\OT1/ptm/m/n/12 Kunde skal ta delvis backup av
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 1206--1207
+Underfull \hbox (badness 5147) in paragraph at lines 1208--1209
 []|\OT1/ptm/m/n/12 Kunde skal ta full backup av
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1192--1210
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1194--1212
 [] 
  []
 
 [32]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1218--1218
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1220--1220
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1213--1226
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1215--1228
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1234--1234
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1236--1236
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 1238--1239
+Underfull \hbox (badness 4859) in paragraph at lines 1240--1241
 []|\OT1/ptm/m/n/12 Applikasjonen skal op-pl-yse om
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1229--1252
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1231--1254
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1260--1260
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1262--1262
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 1264--1265
+Underfull \hbox (badness 2134) in paragraph at lines 1266--1267
 []|\OT1/ptm/m/n/12 Tidsrom ved opp-start skal v^^Zre
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 1274--1275
+Underfull \hbox (badness 4608) in paragraph at lines 1276--1277
 []|\OT1/ptm/m/n/12 Programvaren skal kunne st^^\tte
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1255--1283
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1257--1285
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1291--1291
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1293--1293
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
 []|\OT1/ptm/m/n/12 Parkeringsplasser m[]a samsvare
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1286--1299
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1288--1301
 [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1300.
-[33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1300.
- (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1300.
+[33] (c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.aux)
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
 (rerunfilecheck)             Checksum: 12C00BC42969382E9295CECB51E44BEB;4312.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1300.
  ) 
 Here is how much of TeX's memory you used:
- 9625 strings out of 480893
- 144755 string characters out of 5911973
- 437940 words of memory out of 5000000
- 24839 multiletter control sequences out of 15000+600000
+ 9606 strings out of 479485
+ 146354 string characters out of 5875916
+ 485567 words of memory out of 5000000
+ 26220 multiletter control sequences out of 15000+600000
  552786 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,45p,1392b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,10n,72p,1437b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (33 pages, 729874 bytes).
+Output written on "c:/Users/haako/Documents/skole/skole/2020 sommer/Software/Gruppe oppgave/SE2020-Gruppe12/documentation/latex/prosjektdok.pdf" (33 pages, 744042 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
+ 610 PDF objects out of 1000 (max. 8388607)
  544 compressed objects within 6 object streams
  172 named destinations out of 1000 (max. 500000)
- 590 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 595 words of extra memory for PDF output out of 10000 (max. 10000000)
 
