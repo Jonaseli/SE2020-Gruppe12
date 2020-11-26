@@ -904,6 +904,8 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramOppdaterPplass.png}
 
 \section{Estimering}
+Denne seksjonen blir brukt til å visualisere estimeringen for hvert funksjonelt og ikke-funksjonelt krav. Verdiene for viktighet og utviklingstid kommer i utgangspunktet fra erfaringen på prototypen, særdeles de kravene som faktisk er implementert. Det er også blitt tatt noe insperasjon fra eksisterende tjenester som Easypark for å bedømme vanskelighetsgraden på enkelte krav, hovedsakelig ikke-funksjonelle krav.
+
     \subsection{Størrelser}
     Disse størrelsene blir brukt til å visualisere prioriterten på hvert krav. I prinsippet er krav med 0 på størrelse nøytrale, det vil si at dersom den er like viktig som tiden det tar å utvikle den (i henhold til t-shirt sizing), så er den nøytral. Krav med størrelse over 0 er mer prioriterte enn krav under 0. Når det er sagt er det fremdeles verdt å inspisere både viktighet og utviklingstid på hvert krav.
 
@@ -1397,6 +1399,52 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             &
             Parkeringsplasser må samsvare med retningslinjer
             & M & S & \celll 1\\
+            \hline
+        \end{tabular}
+
+        \subsubsection{Avhengigheter}
+
+        \begin{tabular}{|p{2cm}|p{6cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|
+            >{\centering\arraybackslash}p{2cm}|}
+            \hline
+            \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
+            \hline
+            IFK14
+            &
+            JavaDK 11
+            & XL & S & \cellg 7\\
+            \hline
+            IFK15
+            &
+            Maven 3.6.3
+            & L & S & \cellg 3\\
+            \hline
+            IFK16
+            &
+            Javalin 3.11.0
+            & XL & S & \cellg 7\\
+            \hline
+            IFK17
+            &
+            Jackson 2.11.3
+            & M & M & \celly 0\\
+            \hline
+            IFK18
+            &
+            JUnit-Jupiter 5.7.0
+            & L & XL & \cellr -4\\
+            \hline
+            IFK19
+            &
+            Vue 2.6.10
+            & XL & XL & \celly 0\\
+            \hline
+            IFK20
+            &
+            Selenium 3.141.59 + Webdrivermanager 4.2.2 + Unirest 1.4.9
+            & M & M & \celly 0\\
             \hline
         \end{tabular}
 
