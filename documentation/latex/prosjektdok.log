@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  26 NOV 2020 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.2)  26 NOV 2020 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -626,295 +626,295 @@ File: bilder/diagrammer/aktivitet_medlem.png Graphic file (type png)
 Package pdftex.def Info: bilder/diagrammer/aktivitet_medlem.png  used on input line 801.
 (pdftex.def)             Requested size: 284.06053pt x 510.9075pt.
  [28 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/dataflyt_sletting.png>]
-Overfull \hbox (7.04164pt too wide) in paragraph at lines 807--838
-[] 
+Overfull \hbox (7.04164pt too wide) in paragraph at lines 809--840
+[][] 
  []
 
-
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 848--848
+[29 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/aktivitet_medlem.png (PNG copy)>]
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 850--850
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 857--858
+Underfull \hbox (badness 1112) in paragraph at lines 859--860
 []|\OT1/ptm/m/n/12 Bedrifter skal kunne op-prette en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--863
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 []|\OT1/ptm/m/n/12 Kunden skal kunne op-prette
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 843--876
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 845--878
 [] 
  []
 
-[29 <c:/Users/47917/Documents/operation_se/documentation/latex/bilder/diagrammer/aktivitet_medlem.png (PNG copy)>]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 884--884
+
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 886--886
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 898--899
+Underfull \hbox (badness 1990) in paragraph at lines 900--901
 []|\OT1/ptm/m/n/12 Dirigere innlogget bruk-erkonto /
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 879--912
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 881--914
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 920--920
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 922--922
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 924--925
+Underfull \hbox (badness 7433) in paragraph at lines 926--927
 []|\OT1/ptm/m/n/12 Systemet skal ver-i-fis-ere bruker
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 915--928
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 917--930
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 936--936
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 938--938
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 931--954
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 933--956
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 962--962
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 964--964
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 966--967
+Underfull \hbox (badness 4303) in paragraph at lines 968--969
 []|\OT1/ptm/m/n/12 Bruker skal kunne leie park-er-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 957--975
-[] 
- []
-
-
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 983--983
- []|\OT1/ptm/b/n/12 Utviklingstid| 
- []
-
-
-Underfull \hbox (badness 7012) in paragraph at lines 992--993
-[]|\OT1/ptm/m/n/12 Tilbakemeldinger skal vises p[]a
- []
-
-
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 978--1001
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 959--977
 [] 
  []
 
 [30]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1009--1009
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 985--985
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 1018--1019
+Underfull \hbox (badness 7012) in paragraph at lines 994--995
+[]|\OT1/ptm/m/n/12 Tilbakemeldinger skal vises p[]a
+ []
+
+
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 980--1003
+[] 
+ []
+
+
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1011--1011
+ []|\OT1/ptm/b/n/12 Utviklingstid| 
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 1020--1021
 \OT1/ptm/m/n/12 sikt over sine op-pret-tede park-er-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1004--1022
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1006--1024
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1030--1030
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1032--1032
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1044--1045
+Underfull \hbox (badness 4713) in paragraph at lines 1046--1047
 []|\OT1/ptm/m/n/12 Brukere skal kunne se ut ifra
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1025--1048
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1027--1050
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1056--1056
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1058--1058
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1051--1064
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1053--1066
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1072--1072
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1074--1074
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1081--1082
+Underfull \hbox (badness 5374) in paragraph at lines 1083--1084
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1086--1087
+Underfull \hbox (badness 5374) in paragraph at lines 1088--1089
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1096--1097
+Underfull \hbox (badness 5374) in paragraph at lines 1098--1099
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1101--1102
+Underfull \hbox (badness 5374) in paragraph at lines 1103--1104
 []|\OT1/ptm/m/n/12 Administrator skal kunne slette
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1067--1135
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1069--1137
 [] 
  []
 
 [31]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1143--1143
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1145--1145
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1138--1166
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1140--1168
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1176--1176
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1178--1178
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 1180--1181
+Underfull \hbox (badness 2772) in paragraph at lines 1182--1183
 []|\OT1/ptm/m/n/12 Bruker skal ha til-gang til ap-p-
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1171--1189
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1173--1191
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1197--1197
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1199--1199
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 1201--1202
+Underfull \hbox (badness 1360) in paragraph at lines 1203--1204
 []|\OT1/ptm/m/n/12 Kunde skal ta delvis backup av
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 1206--1207
+Underfull \hbox (badness 5147) in paragraph at lines 1208--1209
 []|\OT1/ptm/m/n/12 Kunde skal ta full backup av
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1192--1210
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1194--1212
 [] 
  []
 
 [32]
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1218--1218
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1220--1220
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1213--1226
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1215--1228
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1234--1234
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1236--1236
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 1238--1239
+Underfull \hbox (badness 4859) in paragraph at lines 1240--1241
 []|\OT1/ptm/m/n/12 Applikasjonen skal op-pl-yse om
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1229--1252
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1231--1254
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1260--1260
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1262--1262
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 1264--1265
+Underfull \hbox (badness 2134) in paragraph at lines 1266--1267
 []|\OT1/ptm/m/n/12 Tidsrom ved opp-start skal v^^Zre
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 1274--1275
+Underfull \hbox (badness 4608) in paragraph at lines 1276--1277
 []|\OT1/ptm/m/n/12 Programvaren skal kunne st^^\tte
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1255--1283
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1257--1285
 [] 
  []
 
 
-Overfull \hbox (9.77751pt too wide) in paragraph at lines 1291--1291
+Overfull \hbox (9.77751pt too wide) in paragraph at lines 1293--1293
  []|\OT1/ptm/b/n/12 Utviklingstid| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
 []|\OT1/ptm/m/n/12 Parkeringsplasser m[]a samsvare
  []
 
 
-Overfull \hbox (7.04163pt too wide) in paragraph at lines 1286--1299
+Overfull \hbox (7.04163pt too wide) in paragraph at lines 1288--1301
 [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1300.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1302.
 [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1300.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1302.
  (c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1300.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1302.
 Package rerunfilecheck Info: File `prosjektdok.out' has not changed.
-(rerunfilecheck)             Checksum: 12C00BC42969382E9295CECB51E44BEB;4312.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1300.
+(rerunfilecheck)             Checksum: 9698F442E5071864120A958892369136;4318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1302.
  ) 
 Here is how much of TeX's memory you used:
  9625 strings out of 480893
  144755 string characters out of 5911973
- 437940 words of memory out of 5000000
+ 439940 words of memory out of 5000000
  24839 multiletter control sequences out of 15000+600000
  552786 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,10n,45p,1392b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (33 pages, 729874 bytes).
+Output written on c:/Users/47917/Documents/operation_se/documentation/latex/prosjektdok.pdf (33 pages, 730780 bytes).
 PDF statistics:
  608 PDF objects out of 1000 (max. 8388607)
  544 compressed objects within 6 object streams
