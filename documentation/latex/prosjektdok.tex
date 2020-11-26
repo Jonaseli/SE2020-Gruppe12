@@ -732,7 +732,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \includegraphics[max width=\textwidth]{bilder/prototypen/testveiledning.png}
 
     \subsection{Implementerte krav med tester}
-    Kravutvalget for prototypen innebærer for det meste grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her.
+    Krav for prototypen går mye på grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her. Opplistingen nedenfor består først av ID-en, kravet og testene i prototypen som tester kravet.
     
     Her er en de implementerte kravene:
 
@@ -822,16 +822,9 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \textit{Tester}
             \begin{itemize}
                 \item isRedirectedToCorrectURL, isAdminRedirectedToAdminPage()
+                \item doesPageLoad, adminPageLoads()
             \end{itemize}
     \end{itemize}
-
-
-    %Admin
-    %   doesPageLoad
-    %Admin
-    %    doesPageLoad
-    %    -> adminPageLoads()
-
 
     \subsection{Avhengigheter}
     Avhengigheter blir automatisk lastet inn av maven ved åpning av programmet. Dersom dette ikke skjer kan man gjøre det manuelt i intelliJ.
