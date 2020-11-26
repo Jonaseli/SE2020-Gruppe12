@@ -22,11 +22,6 @@ public class doesPageLoad {
     static Javalin app;
     HttpResponse response;
 
-    /*
-        Not tested yet
-        app.get("/parking-spot/:parking-spot-id/posts/:post-id", new VueComponent("parking-spot-detail"));
-        app.get("/account", new VueComponent("accounts-overview"));
-     */
     @BeforeAll
     public static void setup(){
         app = Javalin.create().start(7000);
