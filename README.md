@@ -1,38 +1,24 @@
 # SE2020-Gruppe12
 
-# Oppgaven - En forenkling
+# Manual
 
-En prototype
-- der bedrifter og privatpersoner kan leie ut parkeringsplasser til andre
-- der aktører kan registrere tilgjengelige plasser som kan leies ut
-- der sluttbrukerne kan se, reservere og betale for parkeringsplasser i den tiden de trenger det
-- som inneholder tester til kravene i dokumentasjonen
+## Dokumentasjon
+Man kan finne dokumentasjonen til systemet ligger i mappen som heter documentation, filen heter prosjektdok.pdf.
+Man kan finne individuelle evalueringer i mappen som heter individuell_evaluering, denne mappen ligger i documentation-mappen.
 
-En dokumentasjon som
-- beskriver eksterne avhengigheter, og hva som håndteres av eksterne partnere
-- beskriver hvilke funksjoner som er påkrevd for at kunden får systemet de ønsker
-- forklarer problemstilling og løsningen vi kom fram til
-- er lesbar for folk uten domenekunnskap
-- inneholder kravene til systemet, forklart på en måte at eksterne selskap kan videreutvikle, teste og evaluere systemet.
+## Innstallasjon
+For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ. Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
 
-"Hvert krav skal inneholde gruppens eget estimat til utviklingsomfang og forretningsnytte i henhold til 'T-Shirt sizing'-estimeringsmetoden (Small/Medium/Large/X-Large)"
-Testing
-- automatiske tester som viser at prototypen tilfredstiller kravene i dokumentasjonen
-- testene skal vise hvordan funksjonene fungerer
-- testene skal eksponere feilsituasjonene som kan oppstå under bruk
+## Bruksmanual
+For å starte programmet velger man main metoden i dropdown-menyen og trykker grønn pil eller shitf + F10. Da vil javalin kjøre i konsollen i intellij, og det åpnes en port til http://localhost:7000/.
 
-"Dere skal ikke integrere mot noen eksterne leverandører i prototypen, men bør skrive små 'stubs' som gir dere muligheten til å teste funksjonaliteter som avhenger av dem."
+Når man har kommet inn til localhost:7000 blir man presentert med tre knapper: En for bruker, en for corporation og en for admin. Bruker-knappen og corporation-knappen fungerer foreløpig helt likt og leder til oversikten av parkeringsplasser der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en spesifikk parkeringsplass, og videre trykke seg inn til bestillings-siden, fylle ut skjemaene, og trykke submit knappen for å bestille. Da skal parkeringsplassen dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
 
-Innleveringen
-- skal leveres som et Git-repository som viser utviklingen av prototypen over prosjektperioden
-- "sørg for at det er beskrevet hvordan en person uten dyptgående IT-kunnskap kan bygge, kjøre og teste prototypen deres"
-- "avhengigheter i applikasjonen skal innstalleres automatisk ved hjelp av et pakkesystem for språket eller rammeverket dere benytter"
+Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie ut ved å trykke på “Create new parking spot”-knappen der de tas til et utfyllingsskjema. Dersom skjemaet ikke er tilstrekkelig utfylt vil en feilmelding vises med all info som er nødvendig i skjemaet. Når skjema er riktig utfylt kan man trykke submit knappen, og den nye parkeringsplassen vil umiddelbart bli lagt ut til både hovedoversikten og til “My parking spots”-siden. Foreløpig i prototypen, fungerer corporation-brukeren på lik linje som bruker-typen.
 
-Hver deltaker på gruppa skal levere
-- enkelt dokument som består av
-    - beskrivelse av den valgte måten å organisere gruppa på
-    - arbeidsfordeling og hvem som har gjort hva
-    - fokus på hvordan organisasjonen av arbeidet i gruppa fungerte (positiver/negativer)
-    - arbeidsfordeling og lærdom til senere prosjekter
+Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og i tillegg slette parkeringsplasser, poster og reservasjoner.
 
-"Merk at prosjektoppgaven skal inneholde minst to forskjellige diagram fra alle deltakerne i gruppa. Disse diagrammene kan være enten dataflytdiagram, sekvensdiagram,tilstandsdiagram eller aktivitetsdiagram. Diagrammene skal vise ulike funksjoner i systemet."
+## Kjøre tester
+For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
+
+<img src="./documentation/latex/bilder/prototypen/testveiledning.png" alt="Bildet viser hvor man finner Run test with coverage">
