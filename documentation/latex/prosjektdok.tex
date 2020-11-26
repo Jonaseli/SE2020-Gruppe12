@@ -140,8 +140,6 @@ Admin - Denne brukeren kan suspendere eller slette/banlyse brukere, slette poste
         \hline
         Applikasjon &  Et programvare som benytter datamaskinens ressurser til en oppgave som brukeren ønsker utført\\
         \hline
-        Cookies & En type fil som brukes midlertidig for å lagre informasjon\\
-        \hline
         Bruker & Besøkende som samhandler med systemet\\
         \hline
         Brukerkonto & En som kan kun leie parkeringsplasser\\
@@ -658,31 +656,40 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{Avhengigheter}
 
-        \subsection{JavaJDK 11}
+        \subsubsection{JavaJDK 11}
+        \IFK
         Kompilerer ok kjører back-end koden.
 
-        \subsection{Maven 3.6.3}
+        \subsubsection{Maven 3.6.3}
+        \IFK
         Installerer avhengigheter
 
-        \subsection{Javalin 3.11.0}
+        \subsubsection{Javalin 3.11.0}
+        \IFK
         Web rammeverk for lokal webserver
 
-        \subsection{Jackson 2.11.3}
+        \subsubsection{Jackson 2.11.3}
+        \IFK
         Java JSON library for serialisering av data
 
-        \subsection{JUnit-Jupiter 5.7.0}
+        \subsubsection{JUnit-Jupiter 5.7.0}
+        \IFK
         Rammeverk for testing i java
 
-        \subsection{Vue 2.6.10}
+        \subsubsection{Vue 2.6.10}
+        \IFK
         Front-end rammeverk for å bygge brukergrensesnitt
 
-        \subsection{Selenium 3.141.59}
+        \subsubsection{Selenium 3.141.59}
+        \IFK
         Rammeverk for testing av web applikasjoner
 
-        \subsection{Webdrivermanager 4.2.2}
+        \subsubsection{Webdrivermanager 4.2.2}
+        \IFK
         Bibliotek for installasjon av webdrivere for bruk i testing
 
-        \subsection{Unirest 1.4.9}
+        \subsubsection{Unirest 1.4.9}
+        \IFK
         Bibliotek for HTTP klienter brukt i testing
 
 
@@ -863,8 +870,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Aktivitetsdiagram - Legge til medlem i organisasjon}
     \includegraphics[max width=\textwidth]{bilder/diagrammer/aktivitet_medlem.png}
 
+<<<<<<< HEAD
 \section{Estemering}
 Denne seksjonen blir brukt til å visualisere estimeringen for hvert funksjonelt og ikke-funksjonelt krav. Verdiene for viktighet og utviklingstid kommer i utgangspunktet fra erfaringen på prototypen, særdeles de kravene som faktisk er implementert. Det er også blitt tatt noe insperasjon fra eksisterende tjenester som Easypark for å bedømme vanskelighetsgraden på enkelte krav, hovedsakelig ikke-funksjonelle krav.
+=======
+    \subsection{Sekvensdiagram - Oppdatere Parkeringsplass}
+    \includegraphics[max width=\textwidth]{bilder/diagrammer/sekvensdiagramOppdaterPplass.png}
+
+\section{Estimering}
+>>>>>>> 071c48634dad3963cb42c9c9df129162ed5d0761
 
     \subsection{Størrelser}
     Disse størrelsene blir brukt til å visualisere prioriterten på hvert krav. I prinsippet er krav med 0 på størrelse nøytrale, det vil si at dersom den er like viktig som tiden det tar å utvikle den (i henhold til t-shirt sizing), så er den nøytral. Krav med størrelse over 0 er mer prioriterte enn krav under 0. Når det er sagt er det fremdeles verdt å inspisere både viktighet og utviklingstid på hvert krav.
