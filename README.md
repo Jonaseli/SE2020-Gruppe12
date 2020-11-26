@@ -17,4 +17,4 @@ Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkerin
 ## Kjøre tester
 For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
-<img src="./documentation/latex/bilder/prototypen/testveiledning.png">
+<img src="./documentation/latex/bilder/prototypen/testveiledning.png" alt="Bildet viser hvor man finner Run test with coverage">
