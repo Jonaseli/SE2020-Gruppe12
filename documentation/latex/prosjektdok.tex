@@ -667,6 +667,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     Vi har valgt å bruke Javalin med Vue som rammeverk til front-end. Dette har gjort det enkelt å gjøre MVP-en pen og oversiktelig, og er den største avhengigheten i programmet vårt.
 
+
+    \subsection{UML}
+    Intensjonen med disse UML-ene var å ha en oversikt over hvordan koblingene mellom klassene skulle fungere. Selvfølgelig har prototypen endret seg i løpet av utviklingsprosessen, men de opprinnlige UML-diagrammene var et fint startpunkt.
+    \includegraphics[max width=\textwidth]{bilder/prototypen/klassediagram_v1.png}
+    \caption*{Dette diagrammet viser den originale planlagte klassestrukturen for MVP-en}
+
+    \includegraphics[max width=\textwidth]{bilder/prototypen/klassediagram_v2.png}
+    \caption*{Dette diagrammet viser klasse strukturen og koblingen i MVP-en}
+
     \subsection{Innstallasjon}
     For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(som skjer for npm-installasjon). Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
 
@@ -682,7 +691,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
     \subsection{Kjøre tester}
     For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
 
-    \includegraphics[scale=1]{bilder/prototypen/testveiledning.png}
+    \includegraphics[max width=\textwidth]{bilder/prototypen/testveiledning.png}
 
     \subsection{Implementerte tester}
 
