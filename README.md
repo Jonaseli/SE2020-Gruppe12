@@ -19,7 +19,7 @@ Inne på denne siden kan brukeren opprette parkeringsplasser de ønsker å leie 
 Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkeringsplasser, poster og reservasjoner. Admin kan suspendere eller slette kontoer, og i tillegg slette parkeringsplasser, poster og reservasjoner.
 
 ## Kjøre tester
-For ̊a kjøre testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen og velge Run ‘All Tests’ With Coverage. Da kjører testene og man kan se andelen av programmet der det er test-dekning.
+For å kjøre testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen og velge Run ‘All Tests’ With Coverage. Da kjører testene og man kan se andelen av programmet der det er test-dekning.
 
 Man bør ikke gjøre endringer inne i applikasjonen da dette kan medføre feil i kjøring av repositorytester.
 
