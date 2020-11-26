@@ -3,7 +3,7 @@
 # Manual
 
 ## Dokumentasjon
-Man kan finne dokumentasjonen til systemet ligger i mappen som heter documentation, filen heter prosjektdok.pdf.
+Man kan finne dokumentasjonen til systemet i mappen som heter documentation, filen heter prosjektdok.pdf.
 Man kan finne individuelle evalueringer i mappen som heter individuell_evaluering, denne mappen ligger i documentation-mappen.
 
 ## Innstallasjon
