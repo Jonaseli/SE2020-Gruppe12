@@ -20,6 +20,7 @@
 \usepackage{array}
 \usepackage[table]{xcolor}
 \usepackage{longtable,booktabs}
+\usepackage{float}
 
 % settings %
 \setcounter{secnumdepth}{2} % enumerate
@@ -701,11 +702,18 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \subsection{UML}
     Intensjonen med disse UML-ene var å ha en oversikt over hvordan koblingene mellom klassene skulle fungere. Selvfølgelig har prototypen endret seg i løpet av utviklingsprosessen, men de opprinnlige UML-diagrammene var et fint startpunkt.
-    \includegraphics[max width=\textwidth]{bilder/prototypen/klassediagram_v1.png}
-    \caption*{Dette diagrammet viser den originale planlagte klassestrukturen for MVP-en}
 
-    \includegraphics[max width=\textwidth]{bilder/prototypen/klassediagram_v2.png}
-    \caption*{Dette diagrammet viser klasse strukturen og koblingen i MVP-en}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{bilder/prototypen/klassediagram_v1.png}
+        \caption{Dette diagrammet viser den originale planlagte klassestrukturen for MVP-en}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{bilder/prototypen/klassediagram_v2.png}
+        \caption{Dette diagrammet viser klasse strukturen og koblingen i MVP-en}
+    \end{figure}
 
     \subsection{Innstallasjon}
     For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ(som skjer for npm-installasjon). Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
@@ -724,23 +732,36 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
 
     \includegraphics[max width=\textwidth]{bilder/prototypen/testveiledning.png}
 
-    \subsection{Implementerte tester}
+    \subsection{Implementerte krav med tester}
+    Kravutvalget for prototypen innebærer for det meste grunnleggende funksjonalitet. Krav som ikke er essensielle for å tilfedstille kunden har blitt mindre priroritert her.
+    
+    Her er en de implementerte kravene:
 
+    \begin{itemize}
+        \item \textbf{FK6} - Bruker skal kunne logge inn som en brukerkonto eller bedriftskonto
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, frontPageLoads()
+            \end{itemize}
 
-    FK6 - Innlogging som bedrift / bruker
-        doesPageLoad        
-        -> frontPageLoads()
+        \item \textbf{FK8} - Dirigere innlogget brukerkonto / bedriftskonto
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, parkingSpotOVerviewPageLoads()
+                \item isRedirectedToCorrectURL, isUserRedirectedToFrontPage()
+            \end{itemize}
+        
+        \item \textbf{FK12} - Presentasjon av parkeringsplasser (Feed)
 
-    FK8 - Dirigere innlogget bruker / bedrift
-        doesPageLoad
-        -> parkingSpotOverviewPageLoads()
-        isRedirectedToCorrectURL
-        -> isUserRedirectedToFrontPage()
-
-        FK11 - Feed
-    FK14 - Leie parkeringsplass
-        doesPageLoad
-        -> parkingSpotDetailPageLoads()
+        \item \textbf{FK15} - Bruker skal kunne leie parkeringsplass som en brukerkonto 
+        
+        \textit{Tester}
+            \begin{itemize}
+                \item doesPageLoad, parkingSpotDetailPageLoads()
+            \end{itemize}
+    \end{itemize}
     
     FK19 - Opprette parkeringsplass
             - Minus Etasje, Pris, Antall
