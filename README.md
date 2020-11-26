@@ -7,10 +7,11 @@ Man kan finne dokumentasjonen til systemet ligger i mappen som heter documentati
 Man kan finne individuelle evalueringer i mappen som heter individuell_evaluering, denne mappen ligger i documentation-mappen.
 
 ## Innstallasjon
-For å bygge og kjøre programmet åpner man hele mappen som et intellij prosjekt, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ. Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
+For å bygge og kjøre programmet, høyre-klikk mappen og velg å åpne som et intellij prosjekt, eller åpne intelliJ, trykk på fil, velg åpne mappe prosjekt, velg mappen og last inn prosjektet, da vil også alle avhengigheter bli installert, eller det vil komme en installasjonsprompt med beskrivelse i terminalen i  intelliJ. Dersom dette skjer, må man fullføre installasjonen som står beskrevet i terminalen. Deretter trykker man på den grønne hammeren i høyere hjørnet eller trykker ctrl + F9 for å bygge programmet. Om det fortsatt ikke kjører, last inn maven avhengigheter på nytt ved å trykke på søkeknappen i høyre hjørne av intelliJ, skriv maven, og trykk reload maven dependencies.
+
 
 ## Bruksmanual
-For å starte programmet velger man main metoden i dropdown-menyen og trykker grønn pil eller shitf + F10. Da vil javalin kjøre i konsollen i intellij, og det åpnes en port til http://localhost:7000/.
+For å starte programmet velger man main klassen i src mappen, velger så main metoden  og trykker grønn pil ved siden av Public Class Main, for å kjøre run configuration må man trykke på add configuration, trykke på application og velge run, så trykke shitf + F10. Da vil javalin kjøre i konsollen i intellij, og det åpnes en port til http://localhost:7000/.
 
 Når man har kommet inn til localhost:7000 blir man presentert med tre knapper: En for bruker, en for corporation og en for admin. Bruker-knappen og corporation-knappen fungerer foreløpig helt likt og leder til oversikten av parkeringsplasser der alle tilgjengelige plasser vises. Derfra kan bruker trykke seg inn på en spesifikk parkeringsplass, og videre trykke seg inn til bestillings-siden, fylle ut skjemaene, og trykke submit knappen for å bestille. Da skal parkeringsplassen dukke opp i “My parking spots” på bunnen av siden der det står reservasjoner.
 
@@ -20,5 +21,7 @@ Dersom man trykker admin-typen kommer man til en oversikt over brukere, parkerin
 
 ## Kjøre tester
 For å kjøre backend testene må man åpne test-mappen i intelliJ og høyre-klikke på den grønne java-mappen, og velge Run ‘All Tests’ With Coverage. Da kjører man testene og kan se andelen av programmet der det er test-dekning.
+Man bør ikke gjøre endringer inne i applikasjonen da dette kan medføre feil i kjøring av repository tester.
+Det går ikke å ha to instanser av applikasjonen kjørende samtidig da den vil prøve å opprette en port som allerede eksisterer, og tester vil ikke bli kjørt.
 
 <img src="./documentation/latex/bilder/prototypen/testveiledning.png" alt="Bildet viser hvor man finner Run test with coverage">
