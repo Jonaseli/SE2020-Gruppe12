@@ -567,15 +567,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
         \FK
         Systemet skal lagre all informasjon relatert til enhver parkeringsplass i en tabell i en database, slik at endringene gjenstår.
 
-        \subsection{Systemet skal lagre informasjon om innlegg}
+        \subsubsection{Systemet skal lagre informasjon om innlegg}
         \FK
         Systemet skal lagre all informasjon relatert til hvert innlegg i en tabell i en database, slik at endringene gjenstår.
         
-        \subsection{Systemet skal lagre informasjon om brukere}
+        \subsubsection{Systemet skal lagre informasjon om brukere}
         \FK
         Systemet skal lagre nødvendig innlogging og brukerinformasjon for at bruker skal kunne ha bruk av systemet. Dette skal lagres i en tabell i en database, slik at endringene gjenstår.
         
-        \subsection{Systemet skal lagre informasjon om reservasjoner}
+        \subsubsection{Systemet skal lagre informasjon om reservasjoner}
         \FK
         Systemet skal lagre all informasjon relatert til enhver reservasjon i en tabell i en database, slik at endringene gjenstår.
 
@@ -895,10 +895,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             FK8
             &
-            Dirigere innlogget bruker
+            Dirigere innlogget brukerkonto / bedriftskonto
             & S & S & \celly 0\\
             \hline
             FK9
+            &
+            Dirigere innlogget administrator
+            & S & S & \celly 0\\
+            \hline
+            FK10
             &
             Bruker skal kunne tilbakesette passord
             & S & M & \cello -1\\
@@ -914,7 +919,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK10
+            FK11
             &
             Systemet skal verifisere bruker gjennom en kode
             & XL & L & \cellg 4\\
@@ -930,17 +935,17 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK11
+            FK12
             &
             Feeden skal oppliste relevante parkeringsplasser
             & XL & M & \cellg 6\\
             \hline
-            FK12
+            FK13
             &
             Bruker skal kunne sette et filter på feeden
             & L & XL & \cellr -4\\
             \hline
-            FK13
+            FK14
             &
             Bruker skal kunne søke etter en lokasjon
             & M & L & \cello -2\\
@@ -956,14 +961,14 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK14
+            FK15
             &
             Bruker skal kunne leie parkeringsplass som en brukerkonto
             & XL & M & \cellg 6\\
             \hline
-            FK15
+            FK16
             &
-            Applikasjonen skal varsle utløpstidløpstid
+            Applikasjonen skal varsle utløpstid
             & M & M & \celly 0\\
             \hline
         \end{tabular}
@@ -977,17 +982,17 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK16
+            FK18
             &
             Bruker skal kunne gi tilbakemelding på et innlegg
             & S & L & \cellr -3\\
             \hline
-            FK17
+            FK19
             &
             Tilbakemeldinger skal vises på hvert innlegg
             & S & M & \cello -1\\
             \hline
-            FK18
+            FK20
             &
             Utleier skal kunne få tilbakemeldingene via e-post
             & S & S & \cellg 0\\
@@ -1003,10 +1008,15 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK19
+            FK21
             &
             Brukerkonto og bedriftskonto skal kunne registrere en eller flere parkeringsplasser
             & XL & XL & \cellg 0\\
+            \hline
+            FK22
+            &
+            Bruker skal ha tilgang til en oversikt over sine opprettede parkeringsplasser
+            & XL & S & \cellg 7 \\
             \hline
         \end{tabular}
 
@@ -1019,17 +1029,17 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK20
+            FK23
             &
             Pris per time skal bestemmes av utleier
             & M & S & \celll 1\\
             \hline
-            FK21
+            FK24
             &
             Tiden skal bestemmes av bruker
             & L & M & \celll 2\\
             \hline
-            FK22
+            FK25
             &
             Brukere skal kunne se ut ifra innlegget om parkeringsplassen er ledig eller ikke
             & L & M & \celll 2\\
@@ -1045,7 +1055,7 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK23
+            FK26
             &
             Bruker skal betale utleieren for å opprette en reservasjon
             & L & M & \celll 2\\
@@ -1061,50 +1071,65 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK24
+            FK27
             &
             Administrator skal kunne bannlyse bruker
             & S & S & \celly 0\\
             \hline
-            FK25
+            FK28
             &
             Administrator skal kunne slette bruker
             & M & S & \celll 1\\
             \hline
-            FK26
+            FK29
             &
             Administrator skal kunne slette tilbakemeldinger
             & S & S & \celly 0\\
             \hline
-            FK27
+            FK30
             &
             Administrator skal kunne slette innlegg
             & L & S & \cellg 3\\
             \hline
-            FK28
+            FK31
             &
             Administrator skal kunne slette parkeringsplasser
             & L & S & \cellg 3\\
             \hline
-            FK29
+            FK32
             &
             Administrator skal kunne slette reservasjoner
             & XL & S & \cellg 7\\
             \hline
-            FK30
+            FK33
             &
             Bedrift skal ha administrerende rettigheter på deres egne innlegg
             & S & M & \cello -1\\
             \hline
-            FK31
+            FK34
             &
             Bruker skal kunne rapportere andre brukere sine innlegg
             & M & S & \celll 1\\
             \hline
-            FK32
+            FK35
             &
             Bruker skal kunne rapportere andre brukere
             & M & S & \celll 1\\
+            \hline
+            FK36
+            &
+            Bruker skal kunne slette sine reservasjoner
+            & M & L & \cello -2\\
+            \hline
+            FK37
+            &
+            Bruker skal kunne slette sine parkeringsplasser
+            & L & M & \cellg 2\\
+            \hline
+            FK38
+            &
+            Bruker skal kunne slette sine innlegg
+            & S & M & \cello -1 \\
             \hline
         \end{tabular}
         
@@ -1117,22 +1142,22 @@ En oversikt over roller og egenskaper for de forskjellige brukerklassene.
             \hline
             \bf ID & \bf Krav & \bf Vikitighet & \bf Utviklingstid & \bf Størrelse\\
             \hline
-            FK33
+            FK39
             &
             Systemet skal lagre informasjon om parkeringsplasser
             & XL & L & \celly 4\\
             \hline
-            FK34
+            FK40
             &
             Systemet skal lagre informasjon om innlegg
             & XL & L & \celly 4\\
             \hline
-            FK35
+            FK41
             &
             Systemet skal lagre informasjon om brukere
             & XL & L & \celly 4\\
             \hline
-            FK36
+            FK42
             &
             Systemet skal lagre informasjon om reservasjoner
             & XL & L & \celly 4\\
